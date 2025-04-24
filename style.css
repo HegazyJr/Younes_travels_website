@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+:root{
+    --main-color:#EEEEEE;
+    --secend-color:#201E43;
+    --third-color:#134B70;
+    --fourth-color:#508C9B;
+}
+
+body{
+    background-color:var(--main-color);
+    color: var(--secend-color);
+}
+
+.starter{
+    display: flex;
+    gap:28rem;
+    overflow-x: hidden;
+    overflow: hidden;
+}
+.box{
+    display: flex;
+    flex: 1; 
+    flex-wrap:wrap ;
+    padding-left: 4rem;
+    justify-content: center;
+    gap: 1rem;
+
+}
+.box-container{
+    margin-top: 11rem;
+}
+.box-container >*{
+    margin-bottom: 2rem;
+}
+.text-box{
+    font-size: 1.5rem;
+}
+.description{
+    width: 300px;
+}
+.btn-box a{
+    text-decoration: none;
+    padding: 5px;
+    padding-left:20px ;
+    padding-right:20px ;
+    border-radius: 2px;
+    font-weight: 600;
+    color: var(--main-color);
+    background-color: var(--secend-color);
+}
+.img-box{ 
+    display: flex; 
+    position: relative; 
+} 
+.img-box img:nth-child(1){ 
+    height: 100vh; 
+    width: 25rem; 
+    z-index: 2; 
+    box-shadow: rgba(44, 49, 53, 0.48) 6px 2px 16px 0px, rgba(192, 192, 192, 0.8) -6px -2px 20px 0px;
+    position: relative; 
+    filter: brightness(90%);
+} 
+.img-box img:nth-child(2){ 
+    height: 100vh; 
+    width: 25rem; 
+    z-index: 1; 
+    box-shadow: rgba(44, 49, 53, 0.48) 6px 2px 16px 0px, rgba(192, 192, 192, 0.8) -6px -2px 16px 0px;
+    margin-left: -19rem;
+    position: relative; /* Added this */
+    filter: brightness(80%);
+} 
+.img-box img:nth-child(3){ 
+    height: 100vh; 
+    width: 25rem; 
+    z-index: 0; 
+    margin-left: -10rem;
+    box-shadow: rgba(44, 49, 53, 0.48) 6px 2px 16px 0px, rgba(192, 192, 192, 0.8) -6px -2px 16px 0px;
+    position: relative; 
+    filter: brightness(60%);
+
+}
+/* Tablet Responsive Styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .starter {
+        gap: 14rem;
+    }
+    
+    .box {
+        padding-left: 2rem;
+    }
+    
+    .box-container {
+        margin-top: 8rem;
+    }
+    
+    /* Adjust image sizes for tablet */
+    .img-box img:nth-child(1) {
+        height: 50vh;
+        width: 18rem;
+    }
+    
+    .img-box img:nth-child(2) {
+        height: 50vh;
+        width: 18rem;
+        margin-left: -12rem;
+    }
+    
+    .img-box img:nth-child(3) {
+        height: 50vh;
+        width: 18rem;
+        margin-left: -8rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .starter {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .box {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .box-container {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    
+    .text-box {
+        font-size: 1.2rem;
+    }
+    
+    .description {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Image stacking for mobile */
+    .img-box {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    
+    .img-box img {
+        height: auto !important;
+        width: 90% !important;
+        max-width: 300px;
+        margin-bottom: 1rem;
+    }
+    
+    .img-box img:nth-child(1) {
+        z-index: 3;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+    
+    .img-box img:nth-child(2) {
+        z-index: 1;
+        margin-top: -31rem;
+        margin-left:3rem;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+    
+    .img-box img:nth-child(3) {
+        z-index: 2;
+        margin-top: -34rem;
+        margin-left:-4rem;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+}
