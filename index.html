@@ -7,8 +7,49 @@
     <title>Home | Younes travels</title>
     <link rel="icon" href="./IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (2).png">
 </head>
-<body>
-    <div class="container">
+<body class="body">
+    <div class="container_novbar" id="container_novbar">
+        <div class="header_box">
+            <div class="logo_box">
+                <img src="./IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview.png" alt="logo.img">
+            </div>
+            </button>
+            <div class="links_box">
+                <div class="link"><a href=""><h2>Home</h2></a></div>
+                <div class="link"><a href=""><h2>Travels</h2></a></div>
+                <div class="link"><a href=""><h2>Offers</h2></a></div>
+                <div class="link"><a href=""><h2>About us</h2></a></div>
+            </div>
+
+            <div class="btn_contact">
+                <a href="">Contact us</a>
+            </div>
+            <div class="menu-style" onclick="open_pop()">
+                <div class=""></div>
+                <div class=""></div>
+                <div class=""></div>
+            </div>
+            <div class="pop_up" id="pop">
+                <div class="exit" id="exit" onclick="exit()">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="logo_box-p">
+                    <img src="./IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview.png" alt="logo.img">
+                </div>
+                <div class="links_box-p">
+                    <div class="link"><a href=""><h2>Home</h2></a></div>
+                    <div class="link"><a href=""><h2>Travels</h2></a></div>
+                    <div class="link"><a href=""><h2>Offers</h2></a></div>
+                    <div class="link"><a href=""><h2>About us</h2></a></div>
+                </div>
+                <div class="btn_contact-p">
+                    <a href="">Contact us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="container">
         <div class="starter">
             <div class="box">
                 <div class="box-container">
@@ -25,12 +66,13 @@
                 </div>
                 </div>
             </div>
-            <div class="img-box">
-                <img src="./IMG/WhatsApp Image 2025-04-24 at 22.03.14_6bb30d02.jpg" alt="tursim-style-img">     
-                <img src="./IMG/WhatsApp Image 2025-04-24 at 22.03.13_9d9bf0aa.jpg" alt="tursim-style-img">
-                <img src="./IMG/WhatsApp Image 2025-04-24 at 22.03.13_f5757c10.jpg" alt="tursim-style-img">
-            </div>
+                <div class="img-box" id="slider">
+                    <img src="./IMG/WhatsApp Image 2025-04-24 at 22.03.14_6bb30d02.jpg">
+                    <img src="./IMG/WhatsApp Image 2025-04-24 at 22.03.13_9d9bf0aa.jpg">
+                    <img src="./IMG/WhatsApp Image 2025-04-24 at 22.03.13_f5757c10.jpg">
+                </div>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>

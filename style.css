@@ -14,6 +14,142 @@
     --secend-color:#201E43;
     --third-color:#134B70;
     --fourth-color:#508C9B;
+    --active-color:#EB5A3C;
+}
+.pop_up{
+    display: flex;
+    transition: 1s;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--main-color);
+    z-index: 11;
+    width: 0%;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    left: 0;
+    gap: 2rem;
+    position: fixed;
+}
+.pop_up >*{
+    transition: 1s;
+}
+.exit div:nth-child(1){
+    position: absolute;
+    right: 0;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    height: 3px;
+    width: 20px;
+    transform:rotate(135deg);
+    background-color: var(--secend-color);
+}
+.menu-style{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-left: 15rem;
+    margin-top:1rem;
+    display: none;
+}
+.menu-style div {
+    height: 0.2rem;
+    background-color: var(--secend-color);
+    width: 2rem;
+}
+.exit div:nth-child(2){
+    position: absolute;
+    right: 0;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    transform:rotate(45deg);
+    height: 3px;
+    width: 20px;
+    background-color: var(--secend-color);
+}
+.pop_up .links_box-p a h2{
+    font-size: 2rem;
+    color: var(--secend-color);
+}
+.pop_up .links_box-p a{
+    text-decoration: none;
+}
+.pop_up .links_box-p {
+    margin-left: 2rem;
+    margin-top: -1rem;
+}
+.pop_up .links_box-p >*{
+    margin-bottom: 1rem;
+}
+.pop_up .btn_contact-p a{
+    padding-left: 2.5rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--main-color);
+    background-color: var(--secend-color);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top-right-radius:5px ;
+    border-bottom-right-radius:5px ;
+    padding-right: 10px;
+}
+.pop_up .logo_box-p img{
+    width: 10rem;
+    height: 10rem;
+    margin-top: 3rem;
+    margin-left:0rem;
+}
+.header_box{
+    display: flex;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 400;
+    height: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.247) 4px 2px 10px;
+    z-index: 10;
+    text-decoration: none;
+    position: fixed;
+    background-color: var(--main-color);
+    gap: 1rem;
+}
+.header_box .links_box a h2{
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--secend-color);
+}
+.header_box .links_box a h2:hover{
+    color: var(--fourth-color);
+}
+.btn_contact a{
+    text-decoration: none;
+    padding: 5px;
+    font-size: 1.2rem;
+    padding-left:10px ;
+    padding-right:10px ;
+    border-radius: 5px;
+    font-weight: 500;
+    color: var(--main-color);
+    background-color: var(--secend-color);
+    margin-left: 45rem;
+}
+.btn_contact{
+    margin-top: 0.7rem;
+}
+.header_box .links_box{
+    display: flex;
+    margin-top: 0.8rem;
+    gap: 1.3rem;
+}
+.header_box .links_box a {
+    text-decoration: none;
+}
+.header_box .btn_contact a {
+    text-decoration: none;
+}
+.header_box .logo_box img{
+    width: 5rem;
+    filter: brightness(90%);
+    margin-top: -0.5rem;
+    height: 5rem;
 }
 
 body{
@@ -61,7 +197,11 @@ body{
 .img-box{ 
     display: flex; 
     position: relative; 
+    
 } 
+.img-box >*{
+    cursor: pointer;
+}
 .img-box img:nth-child(1){ 
     height: 100vh; 
     width: 25rem; 
@@ -89,6 +229,46 @@ body{
     filter: brightness(60%);
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Tablet Responsive Styles */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .starter {
@@ -102,7 +282,6 @@ body{
     .box-container {
         margin-top: 8rem;
     }
-    
     /* Adjust image sizes for tablet */
     .img-box img:nth-child(1) {
         height: 50vh;
@@ -124,11 +303,22 @@ body{
 
 
 @media screen and (max-width: 768px) {
+
+    .menu-style{
+        display: flex;
+    }
+    .header_box .links_box{
+        display: none;
+    }
+    .header_box .btn_contact{
+        display: none;
+    }
     .starter {
         flex-direction: column;
         gap: 2rem;
+
     }
-    
+
     .box {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -140,6 +330,7 @@ body{
     }
     
     .text-box {
+        margin-top: 4rem;
         font-size: 1.2rem;
     }
     
