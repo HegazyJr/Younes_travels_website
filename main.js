@@ -1,3 +1,4 @@
+
 // Set up the slider functionality
 function setupSlider() {
     const slider = document.getElementById("slider");
@@ -53,14 +54,24 @@ function moveToFront(clickedImage) {
 // Call this function when the page loads
 window.onload = setupSlider;
 
-
+ 
 function exit() {
     document.getElementById('pop').style="width: 0%;overflow:hidden"
     document.getElementById('container').style = "filter:blur(0px);"
+    setTimeout(() => {
+        document.getElementById('logo_menu').style = "display: none;";
+        document.getElementById('links_menu').style = "display: none;";
+        document.getElementById('btn_menu').style = "display: none;";
+    }, 500);
 }
 function open_pop() {
     document.getElementById('pop').style="width:65%;overflow:show"
     document.getElementById('container').style = "filter:blur(1px);"
+    setTimeout(() => {
+        document.getElementById('logo_menu').style = "display: block;";
+        document.getElementById('links_menu').style = "display: block;";
+        document.getElementById('btn_menu').style = "display: block;";
+    }, 1000);
     document.getElementById('container').addEventListener('click',function () {
         exit()
     })
