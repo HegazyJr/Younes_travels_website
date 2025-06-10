@@ -161,10 +161,10 @@
 }
 .middle-page .kinds .left .up img{
     margin-top: -rem;
-    margin-left: 3.5rem;
+    margin-left: 2.5rem;
 }
 .middle-page .kinds .left .up img:nth-child(1){
-    margin-right: -2.5rem;
+    margin-right: -1.5rem;
 }
 .middle-page .kinds .left .down h1{
     margin-top: -3rem;
@@ -174,7 +174,7 @@
     width: 35rem;
     height: 20rem;
     margin-top: -1rem;
-    margin-left: 3.5rem;
+    margin-left: 2.5rem;
 }
 .middle-page .kinds .left{
     display: flex;
