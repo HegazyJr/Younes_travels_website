@@ -16,419 +16,681 @@
     --fourth-color:#508C9B;
     --active-color:#EB5A3C;
 }
-.pop_up{
-    display: flex;
-    transition: 2s;
-    flex-direction: column;
+.lending-page .background-imgs {
+    position: relative;
     height: 100vh;
-    background-color: var(--main-color);
-    z-index: 11;
-    width: 0%;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.lending-page .background-imgs img:nth-child(1) {
+    width: 75rem;
+    height: 100vh;
+    position: absolute;
+    top: 0;
     left: 0;
-    gap: 2rem;
-    position: fixed;
+    z-index: 3;
+    filter: brightness(85%);
 }
-.pop_up *{
-    transition: 1s;
-}
-.exit div:nth-child(1){
+
+.lending-page .background-imgs img:nth-child(2) {
+    width: 80%;
+    height: 100vh;
+    margin-left: 12rem;
     position: absolute;
-    right: 0;
-    margin-right: 1rem;
-    margin-top: 2rem;
-    height: 3px;
-    width: 20px;
-    transform:rotate(135deg);
-    background-color: var(--secend-color);
+    top: 0;
+    left: 0;
+    z-index: 2; /* Use positive value */
+    filter: brightness(35%);
+
 }
-.menu-style{
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    margin-left: 15rem;
-    margin-top:1rem;
-    display: none;
-}
-.menu-style div {
-    height: 0.2rem;
-    background-color: var(--secend-color);
-    width: 2rem;
-}
-.exit div:nth-child(2){
+.lending-page .background-imgs img:nth-child(3) {
+    width: 80%;
+    height: 100vh;
+    margin-left: 16.9rem;
     position: absolute;
-    right: 0;
-    margin-right: 1rem;
-    margin-top: 2rem;
-    transform:rotate(45deg);
-    height: 3px;
-    width: 20px;
-    background-color: var(--secend-color);
+    top: 0;
+    left: 0;
+    z-index: 1; /* Use positive value */
+    filter: brightness(10%);
+
 }
-.pop_up .links_box-p a h2{
-    font-size: 2rem;
-    color: var(--secend-color);
+.next-controller{
+    position: absolute;
+    top: 38rem;
+    border: 1px none;
+    background-color:#eeeeee25;
+    backdrop-filter: blur(7px);
+    border-radius: 5px;
+    z-index: 9;
+    left: 76rem;
+    transition: .3s;
+
 }
-.pop_up .links_box-p a{
-    text-decoration: none;
-}
-.pop_up .links_box-p {
-    margin-left: 2rem;
-    margin-top: -1rem;
-}
-.pop_up .links_box-p >*{
-    margin-bottom: 1rem;
-}
-.pop_up .btn_contact-p a{
-    padding-left: 2.5rem;
-    font-size: 1.4rem;
-    text-decoration: none;
+.next-controller h1{
+    padding: 0px 10px 5px 10px;
     color: var(--main-color);
-    background-color: var(--secend-color);
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-top-right-radius:5px ;
-    border-bottom-right-radius:5px ;
-    padding-right: 10px;
-}
-.pop_up .logo_box-p img{
-    width: 10rem;
-    height: 10rem;
-    margin-top: 3rem;
-    margin-left:0rem;
-}
-.header_box{
-    display: flex;
-    width: 100%;
-    font-size: 1.3rem;
-    font-weight: 400;
-    height: 3rem;
-    box-shadow: rgba(0, 0, 0, 0.247) 4px 2px 10px;
-    z-index: 10;
-    text-decoration: none;
-    position: fixed;
-    background-color: var(--main-color);
-    gap: 1rem;
-}
-.header_box .links_box a h2{
-    font-size: 0.8rem;
-    text-decoration: none;
-    font-weight: 700;
-    color: var(--secend-color);
-}
-.header_box .links_box a h2:hover{
-    color: var(--fourth-color);
-}
-.btn_contact a{
-    text-decoration: none;
-    padding: 5px;
-    font-size: 1.2rem;
-    padding-left:10px ;
-    padding-right:10px ;
-    border-radius: 1px;
-    font-weight: 500;
-    color: var(--main-color);
-    background-color: var(--secend-color);
-    margin-left: 45rem;
-}
-.btn_contact{
-    margin-top: 0.7rem;
-}
-.header_box .links_box{
-    display: flex;
-    margin-top: 1rem;
-    gap: 1.3rem;
-}
-.header_box .links_box a {
-    text-decoration: none;
-}
-.header_box .btn_contact a {
-    text-decoration: none;
-}
-.header_box .logo_box img{
-    width: 5rem;
-    filter: brightness(90%);
-    margin-top: -0.5rem;
-    height: 5rem;
-}
-
-body{
-    background-color:var(--main-color);
-    color: var(--secend-color);
-}
-
-.starter{
-    display: flex;
-    gap:28rem;
-    overflow-x: hidden;
-    overflow: hidden;
-}
-.box{
-    display: flex;
-    flex: 1; 
-    flex-wrap:wrap ;
-    padding-left: 4rem;
-    justify-content: center;
-    gap: 1rem;
+    transition: .3s;
+    cursor: pointer;
 
 }
-.box-container{
-    margin-top: 11rem;
-}
-.box-container >*{
-    margin-bottom: 2rem;
+.next-controller:hover{
+    color:#201e43b9;
+    background-color: #eeeeee86;
+    backdrop-filter: blur(7px);
+    border-radius: 5px;
 }
 .text-box{
-    font-size: 1.5rem;
+    background-color:#201e4359;
+    backdrop-filter:blur(7px) ;
+    margin-top: -20rem;
+    z-index: 9;
+    color: var(--main-color);
+    padding-left: 2rem;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    position: absolute;
+    padding-bottom: 2rem;
 }
-.description{
-    width: 300px;
+.text-box .title{
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+    font-size: 20px;
 }
-.btn-box a{
+.text-box p{
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+}
+.text-box a{
     text-decoration: none;
-    padding: 5px;
-    padding-left:20px ;
-    padding-right:20px ;
-    border-radius: 2px;
-    font-weight: 600;
+    color: var(--main-color);
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    border: 1px solid #eeeeee75;
+    padding: 5px 20px 5px 20px;
+    transition: .5s;
+}
+.text-box a:hover{
+    color:var(--secend-color);
+    background-color:#eeeeee6b;
+    backdrop-filter: blur(7px);
+    border-color: #eeeeee00;
+}
+.middle-page .kinds{
+    display: flex;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+.middle-page .kinds h1{
+    font-size: 20px;
     color: var(--main-color);
     background-color: var(--secend-color);
+    z-index: 4;
+    position: absolute;
+    padding: 5px 20px 5px 20px;
 }
-.img-box{ 
-    display: flex; 
-    position: relative; 
-    
-} 
-.img-box >*{
-    cursor: pointer;
+.middle-page .kinds .right img{
+    width: 43rem;
+    margin-left: -1rem;
+    border-radius: 15px;
+    height: 36rem;
 }
-.img-box img:nth-child(1){ 
-    height: 100vh; 
-    width: 25rem; 
-    z-index: 2; 
-    box-shadow: rgba(44, 49, 53, 0.48) 6px 2px 16px 0px, rgba(192, 192, 192, 0.8) -6px -2px 20px 0px;
-    position: relative; 
-    filter: brightness(90%);
-} 
-.img-box img:nth-child(2){ 
-    height: 100vh; 
-    width: 25rem; 
-    z-index: 1; 
-    box-shadow: rgba(44, 49, 53, 0.48) 6px 2px 16px 0px, rgba(192, 192, 192, 0.8) -6px -2px 16px 0px;
-    margin-left: -19rem;
-    position: relative; /* Added this */
-    filter: brightness(80%);
-} 
-.img-box img:nth-child(3){ 
-    height: 100vh; 
-    width: 25rem; 
-    z-index: 0; 
-    margin-left: -10rem;
-    box-shadow: rgba(44, 49, 53, 0.48) 6px 2px 16px 0px, rgba(192, 192, 192, 0.8) -6px -2px 16px 0px;
-    position: relative; 
-    filter: brightness(60%);
-
+.middle-page .kinds .right h1{
+    font-size: 20px;
+    color: var(--main-color);
+    background-color: var(--secend-color);
+    margin-top: -3rem;
+    margin-left: 1rem;
+    z-index: 4;
+    position: absolute;
+    padding: 5px 20px 5px 20px;
 }
-.logo_box-p{
-    display: none;
-}
-.links_box-p{
-    display: none;
-
-}
-.btn_contact-p{
-    display: none;
-}
-.gallery{
+.middle-page .kinds .left .up{
     display: flex;
-    gap: 0;
 }
-.gallery *{
+.middle-page .kinds .left img{
+    width:17rem;
+    height: 15rem;
+    border-radius: 20px;
+}
+.middle-page .kinds .left .up .label-one{
+    margin-top: 12rem;
+    margin-left: 5rem;
+}
+.middle-page .kinds .left .up .label-two{
+    margin-top: 12rem;
+    margin-left: 23rem;
+}
+.middle-page .kinds .left .up img{
+    margin-top: -rem;
+    margin-left: 3.5rem;
+}
+.middle-page .kinds .left .up img:nth-child(1){
+    margin-right: -2.5rem;
+}
+.middle-page .kinds .left .down h1{
+    margin-top: -3rem;
+    margin-left: 5rem;
+}
+.middle-page .kinds .left .down img{
+    width: 35rem;
+    height: 20rem;
+    margin-top: -1rem;
+    margin-left: 3.5rem;
+}
+.middle-page .kinds .left{
     display: flex;
+    gap: 2rem;
     flex-direction: column;
-
-}
-
-.gallery div{
-    background-color: var(--third-color);
-}
-.gallery img{
-    width:18.15rem;
-    height: 23rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-.gallery .column_2 :first-child{
-    width: 20rem;
-    height: 20rem;
-}
-.gallery .column_2 img:last-child{
-    width: 30rem;
-    height: 20rem;
-}
-/* review-box */
-.review-slider{
-    display: flex;
-    margin-top: 5%;
-}
-.review-slider h1{
-    font-size: 19px;
-}
-.review-slider .text-box{
-    width: 500px;
-
-}
-.review-slider p{
-    font-size: 18px;
-}
-.review-slider .review-box{
-    background-color: var(--fourth-color);
-    width:40rem;
-    height: 45rem;
-    border-radius: 10px;
-}
-.review-box .profile-img{
-    width: 50px;
-    height: 50px;
-    background-color: var(--main-color);
-    border-radius: 50px;
 }
 
 
+/* Add this to your existing style.css file */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Tablet Responsive Styles */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .starter {
-        gap: 14rem;
-    }
-    
-    .box {
-        padding-left: 2rem;
-    }
-    
-    .box-container {
-        margin-top: 8rem;
-    }
-    /* Adjust image sizes for tablet */
-    .img-box img:nth-child(1) {
-        height: 50vh;
-        width: 18rem;
-    }
-    
-    .img-box img:nth-child(2) {
-        height: 50vh;
-        width: 18rem;
-        margin-left: -12rem;
-    }
-    
-    .img-box img:nth-child(3) {
-        height: 50vh;
-        width: 18rem;
-        margin-left: -8rem;
-    }
-}
-
-
+/* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
-
-    .menu-style{
-        display: flex;
-    }
-    .header_box .links_box{
-        display: none;
-    }
-    .header_box .btn_contact{
-        display: none;
-    }
-    .starter {
-        flex-direction: column;
-        gap: 2rem;
-
+    /* Reset container */
+    .containar {
+        width: 100%;
+        overflow-x: hidden;
     }
 
-    .box {
-        padding-left: 1rem;
-        padding-right: 1rem;
+    /* Landing page background images - mobile layout */
+    .lending-page .background-imgs {
+        height: 100vh;
+        position: relative;
     }
-    
-    .box-container {
-        margin-top: 2rem;
+
+    .lending-page .background-imgs img:nth-child(1) {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        filter: brightness(60%);
+        object-fit: cover;
+    }
+
+    .lending-page .background-imgs img:nth-child(2) {
+        display: none; /* Hide layered images on mobile for simplicity */
+    }
+
+    .lending-page .background-imgs img:nth-child(3) {
+        display: none; /* Hide layered images on mobile for simplicity */
+    }
+
+    /* Next controller - mobile positioning */
+    .next-controller {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        left: auto;
+        transform: translateY(-50%);
+        z-index: 9;
+        padding: 0.5rem;
+    }
+
+    .next-controller h1 {
+        padding: 8px 12px;
+        font-size: 18px;
+    }
+
+    /* Text box - mobile layout */
+    .text-box {
+        background-color: #201e4380;
+        backdrop-filter: blur(10px);
+        position: absolute;
+        bottom: 2rem;
+        left: 1rem;
+        right: 1rem;
+        margin-top: 0;
+        padding: 1.5rem;
+        border-radius: 10px;
         text-align: center;
     }
-    
-    .text-box {
-        margin-top: 4rem;
-        font-size: 1.2rem;
-    }
-    
-    .description {
-        width: 100%;
-        max-width: 300px;
-    }
-    
-    /* Image stacking for mobile */
-    .img-box {
-        flex-direction: column;
-        height: auto;
-        align-items: center;
-        margin-top: 2rem;
-    }
-    
-    .img-box img {
-        height: auto !important;
-        width: 90% !important;
-        max-width: 300px;
+
+    .text-box .title {
         margin-bottom: 1rem;
+        padding-top: 0;
+        font-size: 16px;
     }
-    
-    .img-box img:nth-child(1) {
+
+    .text-box .title h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .text-box p {
+        padding-right: 0;
+        margin-bottom: 1.5rem;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .text-box a {
+        font-size: 16px;
+        padding: 8px 16px;
+        display: inline-block;
+    }
+
+    /* Middle page - mobile layout */
+    .middle-page {
+        padding: 1rem;
+    }
+
+    .middle-page .kinds {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        gap: 1.5rem;
+    }
+
+    /* Left section - mobile stacked layout */
+    .middle-page .kinds .left {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        order: 2; /* Put left section after right on mobile */
+    }
+
+    .middle-page .kinds .left .up {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .middle-page .kinds .left .up img {
+        width: 100%;
+        max-width: 280px;
+        height: 180px;
+        margin: 0;
+        object-fit: cover;
+    }
+    .middle-page .kinds .left .up img:nth-child(1) {
+        width: 100%;
+        margin-left: -2rem;
+        max-width: 280px;
+        height: 180px;
+        margin: 0;
+        object-fit: cover;
+    }
+
+    .middle-page .kinds .left .up .label-one,
+    .middle-page .kinds .left .up .label-two {
+        position: relative;
+        margin: -3.5rem 0 1rem 0;
+        font-size: 16px;
+        padding: 8px 16px;
+        border-radius: 5px;
+        text-align: center;
+        width: fit-content;
+        align-self: center;
+    }
+
+    .middle-page .kinds .left .down {
+        text-align: center;
+    }
+
+    .middle-page .kinds .left .down img {
+        width: 100%;
+        max-width: 320px;
+        height: 200px;
+        margin: 0;
+        object-fit: cover;
+    }
+
+    .middle-page .kinds .left .down h1 {
+        margin: -3rem 0 1rem 0;
+        font-size: 16px;
+        padding: 8px 16px;
+        border-radius: 5px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    /* Right section - mobile layout */
+    .middle-page .kinds .right {
+        text-align: center;
+        order: 1; /* Put right section first on mobile */
+    }
+
+    .middle-page .kinds .right img {
+        width: 100%;
+        max-width: 350px;
+        height: 250px;
+        margin: 0;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .middle-page .kinds .right h1 { 
+        margin: -3rem auto 1rem auto;
+        font-size: 16px;
+        padding: 8px 16px;
+        border-radius: 5px;
+        width: fit-content;
+        position: relative;
+    }
+
+    /* General mobile improvements */
+    .middle-page .kinds h1 {
+        font-size: 16px;
+        z-index: 4;
+        position: relative;
+        background-color: var(--secend-color);
+        color: var(--main-color);
+        border-radius: 5px;
+    }
+}
+
+/* Extra small mobile devices */
+@media screen and (max-width: 480px) {
+    .text-box {
+        left: 0.5rem;
+        right: 0.5rem;
+        padding: 1rem;
+    }
+
+    .text-box .title h1 {
+        font-size: 1.5rem;
+    }
+
+    .text-box p {
+        font-size: 13px;
+    }
+
+    .middle-page {
+        padding: 0.5rem;
+    }
+
+    .middle-page .kinds {
+        gap: 1rem;
+    }
+
+    .middle-page .kinds .left .up img,
+    .middle-page .kinds .left .down img,
+    .middle-page .kinds .right img {
+        border-radius: 10px;
+    }
+
+    .next-controller {
+        right: 0.5rem;
+    }
+}
+
+/* Landscape mobile orientation */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .lending-page .background-imgs {
+        height: 100vh;
+    }
+
+    .text-box {
+        bottom: 1rem;
+        left: 1rem;
+        right: 50%;
+        padding: 1rem;
+    }
+
+    .text-box .title h1 {
+        font-size: 1.6rem;
+    }
+
+    .middle-page .kinds .left .up {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .middle-page .kinds .left .up img {
+        max-width: 45%;
+    }
+}
+/* Tablet Responsive Styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Container adjustments */
+    .containar {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Landing page background images - tablet layout */
+    .lending-page .background-imgs {
+        height: 100vh;
+        position: relative;
+    }
+
+    .lending-page .background-imgs img:nth-child(1) {
+        width: 60rem;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
         z-index: 3;
-        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        filter: brightness(80%);
+        object-fit: cover;
     }
-    
-    .img-box img:nth-child(2) {
-        z-index: 1;
-        margin-top: -31rem;
-        margin-left:3rem;
-        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    }
-    
-    .img-box img:nth-child(3) {
+
+    .lending-page .background-imgs img:nth-child(2) {
+        width: 70%;
+        height: 100vh;
+        margin-left: 8rem;
+        position: absolute;
+        top: 0;
+        left: 0;
         z-index: 2;
-        margin-top: -34rem;
-        margin-left:-4rem;
-        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        filter: brightness(40%);
+        object-fit: cover;
+    }
+
+    .lending-page .background-imgs img:nth-child(3) {
+        width: 70%;
+        height: 100vh;
+        margin-left: 12rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        filter: brightness(15%);
+        object-fit: cover;
+    }
+
+    /* Next controller - tablet positioning */
+    .next-controller {
+        position: absolute;
+        top: 50%;
+        left: 58rem;
+        transform: translateY(-50%);
+        z-index: 9;
+        padding: 0.5rem;
+    }
+
+    .next-controller h1 {
+        padding: 8px 14px;
+        font-size: 20px;
+    }
+
+    /* Text box - tablet layout */
+    .text-box {
+        background-color: #201e4370;
+        backdrop-filter: blur(8px);
+        margin-top: -18rem;
+        z-index: 9;
+        color: var(--main-color);
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+        position: absolute;
+        padding-bottom: 2rem;
+        max-width: 400px;
+    }
+
+    .text-box .title {
+        margin-bottom: 1.2rem;
+        padding-top: 2rem;
+        font-size: 18px;
+    }
+
+    .text-box .title h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .text-box p {
+        margin-bottom: 2rem;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .text-box a {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+
+    /* Middle page - tablet layout */
+    .middle-page {
+        padding: 2rem;
+    }
+
+    .middle-page .kinds {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2rem;
+        gap: 1.5rem;
+        justify-content: space-between;
+    }
+
+    /* Left section - tablet adjustments */
+    .middle-page .kinds .left {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        flex: 1;
+    }
+
+    .middle-page .kinds .left .up {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+
+    .middle-page .kinds .left .up img {
+        width: 12rem;
+        height: 12rem;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+
+    .middle-page .kinds .left .up .label-one {
+        margin-top: 9rem;
+        margin-left: 2rem;
+        font-size: 16px;
+        padding: 6px 16px;
+    }
+
+    .middle-page .kinds .left .up .label-two {
+        margin-top: 9rem;
+        margin-left: 14rem;
+        font-size: 16px;
+        padding: 6px 16px;
+    }
+
+    .middle-page .kinds .left .down {
+        position: relative;
+    }
+
+    .middle-page .kinds .left .down img {
+        width: 100%;
+        max-width: 26rem;
+        height: 16rem;
+        margin: 0;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .middle-page .kinds .left .down h1 {
+        margin-top: -3rem;
+        margin-left: 2rem;
+        font-size: 16px;
+        padding: 6px 16px;
+    }
+
+    /* Right section - tablet layout */
+    .middle-page .kinds .right {
+        flex: 1;
+        position: relative;
+    }
+
+    .middle-page .kinds .right img {
+        width: 100%;
+        max-width: 32rem;
+        height: 30rem;
+        margin: 0;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .middle-page .kinds .right h1 {
+        margin-top: -3rem;
+        margin-left: 1rem;
+        font-size: 16px;
+        padding: 6px 16px;
+    }
+
+    /* General tablet improvements */
+    .middle-page .kinds h1 {
+        font-size: 16px;
+        background-color: var(--secend-color);
+        color: var(--main-color);
+        border-radius: 6px;
+        z-index: 4;
+        position: absolute;
+    }
+}
+
+/* Tablet Portrait (768px - 834px) */
+@media screen and (min-width: 768px) and (max-width: 834px) and (orientation: portrait) {
+    .lending-page .background-imgs img:nth-child(1) {
+        width: 55rem;
+    }
+
+    .lending-page .background-imgs img:nth-child(2) {
+        width: 65%;
+        margin-left: 20rem;
+    }
+
+    .lending-page .background-imgs img:nth-child(3) {
+        width: 65%;
+        margin-left: 10rem;
+    }
+    .text-box{
+        margin-top: -43rem;
+    }
+    .next-controller {
+        left: 48rem;
+    }
+
+    .middle-page .kinds .left .up {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .middle-page .kinds .left .up img:nth-child(1){
+        margin-left: -2.5rem;
+    }
+    .middle-page .kinds .left .up img {
+        width: 23rem;
+        margin-left: 0rem;
+        height: 10rem;
+    }
+
+    .middle-page .kinds .left .up .label-one,
+    .middle-page .kinds .left .up .label-two {
+        margin: -2.5rem 0 0 0;
+        position: relative;
+    }
+    .middle-page .kinds .right img{
+        height: 40.5rem;
     }
 }

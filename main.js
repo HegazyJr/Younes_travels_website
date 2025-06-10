@@ -1,84 +1,33 @@
 
-// Set up the slider functionality
-function setupSlider() {
-    const slider = document.getElementById("slider");
-    const images = slider.getElementsByTagName("img");
+// FIXED VERSION:
+
+// Image cycling functionality
+const imgOne = document.getElementById('img-one');
+const imgTwo = document.getElementById('img-two');
+const imgThree = document.getElementById('img-three');
+const nextBtn = document.getElementById('next'); // ✅ Correct variable name
+
+// Store original image sources
+// const originalSources = [
+//     imgOne.src,
+//     imgTwo.src,
+//     imgThree.src
+// ];
+
+function cycleImages() {
+    // Get current sources
+    const current = [imgOne.src, imgTwo.src, imgThree.src];
     
-    // Add click event listeners to each image
-    for (let i = 0; i < images.length; i++) {
-        images[i].addEventListener("click", function() {
-            moveToFront(this);
-        });
-    }
+    // Cycle them: 1→2, 2→3, 3→1
+    imgOne.src = current[2];   // img1 gets img3's source
+    imgTwo.src = current[0];   // img2 gets img1's source
+    imgThree.src = current[1]; // img3 gets img2's source
+    
+    console.log('Images cycled successfully');
 }
 
-// Function to move clicked image to front
-function moveToFront(clickedImage) {
-    const slider = document.getElementById("slider");
-    const images = slider.getElementsByTagName("img");
-    
-    // Store all the current image sources
-    const imageSources = [];
-    for (let i = 0; i < images.length; i++) {
-        imageSources.push(images[i].src);
-    }
-    
-    // Find the clicked image source
-    const clickedSrc = clickedImage.src;
-    
-    // Find the position of the clicked image
-    let clickedIndex = -1;
-    for (let i = 0; i < imageSources.length; i++) {
-        if (imageSources[i] === clickedSrc) {
-            clickedIndex = i;
-            break;
-        }
-    }
-    
-    if (clickedIndex > 0) {  // Only rearrange if not already in first position
-        // Move clicked image to first position and shift others
-        const newSources = [clickedSrc];
-        for (let i = 0; i < imageSources.length; i++) {
-            if (i !== clickedIndex) {
-                newSources.push(imageSources[i]);
-            }
-        }
-        
-        // Apply new sources
-        for (let i = 0; i < images.length; i++) {
-            images[i].src = newSources[i];
-        }
-    }
-}
-
-// Call this function when the page loads
-window.onload = setupSlider;
-
- 
-function exit() {
-    document.getElementById('pop').style="width: 0%;overflow:hidden"
-    document.getElementById('container').style = "filter:blur(0px);"
-    setTimeout(() => {
-        document.getElementById('logo_menu').style = "display: none;";
-        document.getElementById('links_menu').style = "display: none;";
-        document.getElementById('btn_menu').style = "display: none;";
-    }, 500);
-}
-function open_pop() {
-    document.getElementById('pop').style="width:65%;overflow:show"
-    document.getElementById('container').style = "filter:blur(1px);"
-    setTimeout(() => {
-        document.getElementById('logo_menu').style = "display: block;";
-        document.getElementById('links_menu').style = "display: block;";
-        document.getElementById('btn_menu').style = "display: block;";
-    }, 1000);
-    document.getElementById('container').addEventListener('click',function () {
-        exit()
-    })
-}
-
-window.onload = setupSlider,exit();
-window.addEventListener("scroll", function () {
-    exit()
-  });
+// ✅ Correct variable name and function call
+nextBtn.addEventListener("click", () => {
+    cycleImages(); // ✅ Actually call the function
+});
 
