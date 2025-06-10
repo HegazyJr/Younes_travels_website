@@ -301,7 +301,7 @@
 
     .middle-page .kinds .left .up img {
         width: 100%;
-        max-width: 280px;
+        max-width: 21.5rem;
         height: 180px;
         margin: 0;
         object-fit: cover;
@@ -309,11 +309,12 @@
     .middle-page .kinds .left .up img:nth-child(1) {
         width: 100%;
         margin-left: -2rem;
-        max-width: 280px;
+        max-width: 21.5rem;
         height: 180px;
         margin: 0;
         object-fit: cover;
     }
+
 
     .middle-page .kinds .left .up .label-one,
     .middle-page .kinds .left .up .label-two {
@@ -333,7 +334,7 @@
 
     .middle-page .kinds .left .down img {
         width: 100%;
-        max-width: 320px;
+        max-width:  21.5rem;
         height: 200px;
         margin: 0;
         object-fit: cover;
