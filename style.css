@@ -176,6 +176,17 @@
     margin-top: -1rem;
     margin-left: 2.5rem;
 }
+.middle-page .title h2{
+    margin-top: 4rem;
+    color: var(--third-color);
+    text-align: center;
+}
+.middle-page .title h1{
+    color: var(--secend-color);
+    letter-spacing: 3px;
+    font-size: 30px;
+    text-align: center;
+}
 .middle-page .kinds .left{
     display: flex;
     gap: 2rem;
