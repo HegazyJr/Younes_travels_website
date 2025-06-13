@@ -18,45 +18,40 @@
 }
 body{
     background-color: #F5F5F5;
+    overflow-x: hidden;
 }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid red; 
+    z-index: 999;
+    padding: 0 1rem;
+}
+
 .lending-page .background-imgs {
     position: relative;
     height: 100vh;
-}
-.lending-page .background-imgs img:nth-child(1) {
     width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    filter: brightness(35%);
+    overflow: hidden;
 }
 
-.lending-page .background-imgs img:nth-child(2) {
-    width: 80%;
-    display: none;
-    height: 100vh;
-    margin-left: 15.5rem;
+.lending-page .background-imgs img {
     position: absolute;
     top: 0;
+    overflow: hidden;
     left: 0;
-    z-index: 2; /* Use positive value */
-    filter: brightness(35%);
-
-}
-.lending-page .background-imgs img:nth-child(3) {
-    width: 80%;
+    width: 100vw;
+    filter: brightness(30%);
     height: 100vh;
-    margin-left: 16.9rem;
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    z-index: 1; /* Use positive value */
-    filter: brightness(10%);
-
+    object-fit: cover;
+    z-index: 1;
 }
+
+.lending-page .background-imgs img:nth-child(1) { z-index: 1; }
+.lending-page .background-imgs img:nth-child(2) { z-index: 2;
+display: none; }
+.lending-page .background-imgs img:nth-child(3) { z-index: 3;
+display: none; }
 .next-controller{
     position: absolute;
     top: 38rem;
@@ -68,6 +63,11 @@ body{
     left: 76rem;
     transition: .3s;
 
+}
+.upper-page{
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Break out of container */
+    position: relative;
 }
 .next-controller h1{
     padding: 0px 10px 5px 10px;
@@ -83,15 +83,25 @@ body{
     border-radius: 5px;
 }
 .text-box{
-    text-align: center;
-    margin-top: -38rem;
-    z-index: 9;
-    color: var(--main-color);
-    margin-left: 28rem;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
+    /* Center the text box within the container boundaries */
     position: absolute;
-    padding-bottom: 2rem;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect centering */
+    z-index: 9;
+    
+    /* Container-based sizing and constraints */
+    max-width: 600px;
+    width: 90%; /* Responsive width within container */
+    
+    /* Styling */
+    color: var(--main-color);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    
+    /* Remove the old margin-based positioning */
+    margin: 0;
 }
 .text-box .title{
     font-size: 2rem;
@@ -150,8 +160,8 @@ body{
 .middle-page .kinds{
     display: flex;
     margin-top: 2rem;
-    gap: 2rem;
 }
+
 .middle-page .kinds h1{
     font-size: 20px;
     color: var(--main-color);
@@ -161,7 +171,7 @@ body{
     padding: 5px 20px 5px 20px;
 }
 .middle-page .kinds .right img{
-    width: 43rem;
+    max-width: 600px;
     margin-left: -1rem;
     border-radius: 15px;
     height: 36rem;
@@ -170,8 +180,8 @@ body{
     font-size: 20px;
     color: var(--main-color);
     background-color: var(--secend-color);
-    margin-top: -3rem;
-    margin-left: 1rem;
+    margin-top: 33rem;
+    margin-left: -32rem;
     z-index: 4;
     position: absolute;
     padding: 5px 20px 5px 20px;
@@ -180,39 +190,40 @@ body{
     box-shadow: 4px 8px 20px gray ;
     /* border: 5px solid var(--third-color); */
 }
-
-.middle-page .kinds .left .up{
+.middle-page .kinds .left{
     display: flex;
 }
-.middle-page .kinds .left img{
-    width:17rem;
-    height: 15rem;
+.middle-page .kinds .left .up{
+    display: flex;
+    flex-direction: row;
+}
+.middle-page .kinds .left .up img{
+    max-width:250px;
+    height: 240px;
     border-radius: 20px;
 }
-.middle-page .kinds .left .up .label-one{
+.middle-page .kinds .left .up img:nth-child(1){
+    margin-right: 15px  ;
+}
+ .middle-page .kinds .left .up .label-one{
     margin-top: 12rem;
-    margin-left: 5rem;
+    margin-left: 1rem;
+    position: absolute;
 }
 .middle-page .kinds .left .up .label-two{
     margin-top: 12rem;
-    margin-left: 23rem;
-}
-.middle-page .kinds .left .up img{
-    margin-top: -rem;
-    margin-left: 2.5rem;
-}
-.middle-page .kinds .left .up img:nth-child(1){
-    margin-right: -1.5rem;
-}
+    margin-left: 18.5rem;
+    position: absolute;
+
+ }
 .middle-page .kinds .left .down h1{
-    margin-top: -3rem;
-    margin-left: 5rem;
+    margin-top: 16rem;
+    margin-left: -32.5rem;
+    position: absolute;
 }
 .middle-page .kinds .left .down img{
-    width: 35rem;
-    height: 20rem;
-    margin-top: -1rem;
-    margin-left: 2.5rem;
+    max-width: 600px;
+    height: 300px;
 }
 .middle-page .title h2{
     margin-top: 4rem;
@@ -223,28 +234,78 @@ body{
     color: var(--secend-color);
     letter-spacing: 3px;
     font-size: 30px;
-    text-align: center;
+    text-align: center;    justify-content: space-between;
+    align-items: center;
 }
 .middle-page .kinds .left{
     display: flex;
     gap: 2rem;
     flex-direction: column;
 }
+.middle-page .kinds {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.middle-page .kinds .left,
+.middle-page .kinds .right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.middle-page .kinds .left .up {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.middle-page .kinds img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.middle-page .kinds h1 {
+    position: relative;
+    background-color: var(--secend-color);
+    color: var(--main-color);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: -2rem;
+    z-index: 2;
+    display: inline-block;
+}
 header{
     display: flex;
-    height: 3rem;
-    position:absolute ;
-    z-index: 9;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 3rem;
+    position: absolute; /* was absolute before */
+    box-sizing: border-box;
+    z-index: 9;
     backdrop-filter: blur(8px);
     background-color: #24242434;
+
+}
+.nov-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;    
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid blue ;
 }
 header *{
     margin-top: 0.2rem;
 }
-.logo{
-    margin-left: 2rem;
-}
+/* .logo{
+
+} */
 .logo h1{
     color: transparent;
     letter-spacing: 4px;
@@ -262,7 +323,6 @@ header *{
         drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))
         drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
     margin: 0;
-    margin-right: 30rem;
 }
 .links{
     display: flex;
@@ -285,7 +345,6 @@ header *{
 .email{
     display:flex;
     color: #eeeeeea2;
-    margin-left: 4rem;
     cursor: pointer;
     padding: 5px 5px 5px 5px ;
         background: 
@@ -374,6 +433,45 @@ header *{
     letter-spacing: 3px;
     margin-left: -2rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Add this to your existing style.css file */
 
