@@ -38,7 +38,7 @@ if (header) {
     choose = 0
     window.onscroll = function () {
         if (window.scrollY <= 400 && choose == 0) {
-            header.style.backgroundColor = "#24242434";
+            header.style.backgroundColor = "transparent";
             document.getElementById('packages').style.backgroundColor = "#24242434";
             document.getElementById('blog').style.backgroundColor = "#24242434";
             header.style.position = "absolute";

@@ -287,8 +287,8 @@ header{
     position: absolute; /* was absolute before */
     box-sizing: border-box;
     z-index: 9;
-    backdrop-filter: blur(8px);
-    background-color: #24242434;
+    backdrop-filter: blur(0px);
+    background-color: transparent;
 
 }
 .nov-container{
