@@ -24,7 +24,7 @@ body{
     height: 100vh;
 }
 .lending-page .background-imgs img:nth-child(1) {
-    width: 84.4rem;
+    width: 100%;
     height: 100vh;
     position: absolute;
     top: 0;
@@ -35,6 +35,7 @@ body{
 
 .lending-page .background-imgs img:nth-child(2) {
     width: 80%;
+    display: none;
     height: 100vh;
     margin-left: 15.5rem;
     position: absolute;
@@ -49,6 +50,7 @@ body{
     height: 100vh;
     margin-left: 16.9rem;
     position: absolute;
+    display: none;
     top: 0;
     left: 0;
     z-index: 1; /* Use positive value */
