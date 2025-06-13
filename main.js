@@ -69,20 +69,30 @@ const blogLink = document.getElementById('blog-link');
 const packagesMenu = document.getElementById('packages');
 const blogMenu = document.getElementById('blog');
 
+let packagesTimeout, blogTimeout;
+
 function showMenu() {
+    clearTimeout(packagesTimeout);      // لو في مؤقت إخفاء شغال، نلغي
     packagesMenu.style.display = "flex";
 }
 
 function hideMenu() {
-    packagesMenu.style.display = "none";
+    packagesTimeout = setTimeout(() => {  // نأخر الإخفاء 2 ثانية
+        packagesMenu.style.display = "none";
+    }, 200);
 }
+
 function showblog() {
+    clearTimeout(blogTimeout);         // نلغي مؤقت الإخفاء لو شغال
     blogMenu.style.display = "flex";
 }
 
 function hideblog() {
-    blogMenu.style.display = "none";
+    blogTimeout = setTimeout(() => {    // نأخر الإخفاء 2 ثانية
+        blogMenu.style.display = "none";
+    }, 200);
 }
+
 // Show on hover
 packagesLink.onmouseover = showMenu;
 packagesMenu.onmouseover = showMenu;

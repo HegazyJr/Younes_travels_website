@@ -298,7 +298,7 @@ header{
     width: 100%;    
     max-width: 1200px;
     margin: 0 auto;
-    border: 1px solid blue ;
+    border: 1px none blue ;
 }
 header *{
     margin-top: 0.2rem;
@@ -323,11 +323,13 @@ header *{
         drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))
         drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
     margin: 0;
+    margin-left: 2rem;
 }
 .links{
     display: flex;
     gap: 1.5rem;
-    margin-top: 0.7rem;
+    margin-left: 22%;
+    margin-top: -0.3rem;
    
 
 }
@@ -346,6 +348,8 @@ header *{
     display:flex;
     color: #eeeeeea2;
     cursor: pointer;
+    height: 100%;
+    margin-top: -0.1rem;
     padding: 5px 5px 5px 5px ;
         background: 
     linear-gradient(135deg, 
@@ -377,20 +381,44 @@ header *{
 .blog{
     display: none;
     position: fixed;
-    margin-top: 3rem;
-    z-index: 9;
-    backdrop-filter: blur(2px);
-    height: 3rem;
-    background-color: #24242434;
+    top: 0;
+    left: 0;
     width: 100%;
-    gap: 4rem;
+    height: 3rem;
+    position: absolute; /* was absolute before */
+    box-sizing: border-box;
+    z-index: 999;
+    transition: 1s;
+    margin-top: 3rem;
+    backdrop-filter: blur(8px);
+    background-color: #24242434;
+}
+.blog .container{
+    width: 1200px;
+    border: 1px solid red;
+    z-index: 99;
+    display: flex;
+    border-style: none;
+    align-items: center;
+}
+.packages .container{
+    width: 1200px;
+    border: 1px solid red;
+    z-index: 99;
+    display: flex;
+    border-style: none;
+    align-items: center;
+}
+.blog .link{
+    margin-left: 2rem;
+    margin-right: 2rem; 
 }
 .blog .link:first-child{
-    margin-left: 28rem;
+    margin-left: 15%;
 
 }
 .blog .link{
-    margin-top: 0.7rem;
+    margin-top: 0.2rem;
     font-size: 1.2rem;
     font-weight: 500;
 }
@@ -407,20 +435,25 @@ header *{
 .packages{
     display: none;
     position: fixed;
-    margin-top: 3rem;
-    z-index: 9;
-    backdrop-filter: blur(2px);
-    height: 3rem;
-    background-color: #24242434;
+    top: 0;
+    left: 0;
     width: 100%;
-    gap: 4rem;
+    height: 3rem;
+    position: absolute; /* was absolute before */
+    box-sizing: border-box;
+    z-index: 999;
+    transition: 1s;
+    margin-top: 3rem;
+    backdrop-filter: blur(8px);
+    background-color: #24242434;
 }
 .packages .link:first-child{
-    margin-left: 47rem;
+    margin-left:30% ;
 
 }
 .packages .link{
-    margin-top: 0.7rem;
+    margin-right:8rem ;
+    margin-top: 0.2rem;
     font-size: 1.2rem;
     font-weight: 500;
 }
