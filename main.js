@@ -39,8 +39,8 @@ if (header) {
     window.onscroll = function () {
         if (window.scrollY <= 400 && choose == 0) {
             header.style.backgroundColor = "transparent";
-            document.getElementById('packages').style.backgroundColor = "#24242434";
-            document.getElementById('blog').style.backgroundColor = "#24242434";
+            document.getElementById('packages').style.backgroundColor = "transparent";
+            document.getElementById('blog').style.backgroundColor = "transparent";
             header.style.position = "absolute";
 
 
@@ -106,6 +106,12 @@ blogLink.onmouseout = hideblog;
 blogMenu.onmouseout = hideblog;
 document.getElementById('email').addEventListener("click",function () {
     window.location.href = "https://mail.google.com/mail/?view=cm&fs=1&to=younestours7@gmail.com.com&su=SUBJECT&body=MESSAGE"
+})
+document.getElementById('insta').addEventListener("click",function () {
+    window.location.href = "instagram.com"
+})
+document.getElementById('face').addEventListener("click",function () {
+    window.location.href = "facebook.com"
 })
 
 //  link by js
