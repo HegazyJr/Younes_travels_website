@@ -7,6 +7,7 @@
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -220,6 +221,7 @@ display: none; }
     margin-top: 16rem;
     margin-left: -32.5rem;
     position: absolute;
+
 }
 .middle-page .kinds .left .down img{
     max-width: 600px;
@@ -227,8 +229,9 @@ display: none; }
 }
 .middle-page .title{
     display: flex;
+    margin-top: 1rem;
     flex-direction:column ;
-    gap: 1rem;
+    gap: 0.5rem;
     justify-content: center;
     align-items: center;
 
@@ -236,6 +239,8 @@ display: none; }
 .middle-page .title h2{
     margin-top: 4rem;
     letter-spacing: 2px;
+    font-size: 2rem;
+
     text-transform: uppercase;
     color: var(--third-color);
     text-align: center;
@@ -245,7 +250,7 @@ display: none; }
 }
 .middle-page .title h1{
     color: var(--secend-color);
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;    justify-content: space-between;
     align-items: center;
 }
@@ -495,7 +500,6 @@ header *{
     left: 0;
     width: 100%;
     height: 3rem;
-    position: absolute; /* was absolute before */
     box-sizing: border-box;
     z-index: 999;
     transition: 1s;
@@ -549,7 +553,6 @@ header *{
     left: 0;
     width: 100%;
     height: 3rem;
-    position: absolute; /* was absolute before */
     box-sizing: border-box;
     z-index: 999;
     transition: 1s;
@@ -577,6 +580,109 @@ header *{
     margin-left: -2rem;
 }
 
+
+.product{
+    width: 350px;
+    height: 450px;
+    text-align: left;
+    overflow: hidden;
+    margin-bottom:2rem ;
+    border-radius: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.336);
+    box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.336);
+}
+.product img{
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    filter: brightness(80%);
+    transition: 0.5s;
+}
+.product .img{
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+}
+.product:hover  img{
+    filter: brightness(84%);
+    transform: scale(1.1);
+}
+.product h2{
+    color: var(--secend-color);
+    opacity: 80%;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+.product h1{
+    color: var(--secend-color);
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    font-size: 1.4rem;
+}
+.product h3{
+    color: var(--secend-color);
+    opacity: 70%;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+.product h4{
+    color: var(--secend-color);
+    opacity: 1000%;
+    font-size: 1.1rem;
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+}
+.product h4 span{
+    color: var(--secend-color);
+    opacity: 70%;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    margin-left: 0.4rem;
+}
+.products{
+    display: flex;
+    flex-direction: row;
+    column-gap:1rem;
+    text-align: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.under-m .title{
+     display: flex;
+    flex-direction:column ;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.under-m .line-1{
+    width: 600px;   
+    height: 1px;
+    background-color: var(--third-color);
+    opacity: 40%;
+    margin: auto;
+}
+.under-m .title h1{
+    margin-top: 4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: var(--third-color);
+    text-align: center;
+}
+.under-m .title .pharagraph{
+    width: 650px;
+    margin: auto;
+}
+.under-m .title .pharagraph h2{
+    color: var(--secend-color);
+    font-size: 16px;
+}
 
 
 
@@ -625,15 +731,21 @@ header *{
     }
     /* Reset container */
     .containar {
-        width: 100%;
-        overflow-x: hidden;
+        max-width: 768px;
+
     }   
     /* Landing page background images - mobile layout */
     .lending-page .background-imgs {
         height: 100vh;
         position: relative;
+        overflow: hidden;
     }
-
+    .middle-page{
+        overflow: hidden;
+    }
+    .under-m{
+        overflow: hidden;
+    }
     .lending-page .background-imgs img:nth-child(1) {
         width: 100%;
         height: 100vh;
@@ -670,19 +782,24 @@ header *{
     }
 
     /* Text box - mobile layout */
+    .upper-page{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
     .text-box {
         background-color: #201e4300;
         backdrop-filter: blur(0px);
         position: absolute;
-        top: 48rem;              /* Use top instead of bottom */
-        left: 1rem;
-        right: 1rem;
         z-index: 9;
-        margin-left: 2rem;
+        left: calc(103.2% - 50vw);
+        /* top: calc(50% - 50vh); */
         padding: 1.5rem;
         border-radius: 10px;
         text-align: center;
-
+        width: 100%;
+        align-items: center;
+        justify-content: center;
     }
 
     .text-box .title {
@@ -708,121 +825,244 @@ header *{
         display: inline-block;
     }
 
-    /* Middle page - mobile layout */
     .middle-page {
-        padding: 1rem;
+        padding: 0.5rem;
+    }
+
+    .middle-page .title h2 {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .middle-page .title .pharagraph {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .middle-page .title h1 {
+        font-size: 14px;
+        padding: 0 1rem;
+    }
+
+    .line {
+        width: 200px;
     }
 
     .middle-page .kinds {
-        display: flex;
         flex-direction: column;
-        margin-top: 1rem;
+        padding: 1rem;
         gap: 1.5rem;
+        margin-top: 1rem;
     }
 
-    /* Left section - mobile stacked layout */
+    .middle-page .kinds .left,
+    .middle-page .kinds .right {
+        min-width: 100%;
+        flex: none;
+    }
+
+    /* Left section mobile styles */
     .middle-page .kinds .left {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        order: 2; /* Put left section after right on mobile */
+        gap: 1rem;
     }
 
     .middle-page .kinds .left .up {
-        display: flex;
         flex-direction: column;
-        gap: 0.7rem;
-        align-items: center;
+        gap: 1rem;
+        position: relative;
     }
 
     .middle-page .kinds .left .up img {
-        width: 100%;
-        max-width: 21.5rem;
+        max-width: 100%;
         height: 180px;
-        margin: 0;
-        object-fit: cover;
-    }
-    .middle-page .kinds .left .up img:nth-child(1) {
-        width: 100%;
-        margin-left: -2rem;
-        max-width: 21.5rem;
-        height: 180px;
-        margin: 0;
-        object-fit: cover;
+        margin-right: 0;
     }
 
-
-    .middle-page .kinds .left .up .label-one,
-    .middle-page .kinds .left .up .label-two {
-        position: relative;
-        margin: -3.5rem 0 1rem 0;
+    .middle-page .kinds .left .up .label-one {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 120%);
+        margin: 0;
+        z-index: 5;
         font-size: 16px;
         padding: 8px 16px;
-        border-radius: 5px;
-        text-align: center;
-        width: fit-content;
-        align-self: center;
+        border-radius: 8px;
+    }
+
+    .middle-page .kinds .left .up .label-two {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 120%);
+        margin: 0;
+        z-index: 5;
+        font-size: 16px;
+        padding: 8px 16px;
+        border-radius: 8px;
+    }
+
+    /* Position labels on their respective images */
+    .middle-page .kinds .left .up img:nth-child(1) + .label-one {
+        top: 90px; /* Half of 180px height */
+    }
+
+    .middle-page .kinds .left .up img:nth-child(3) + .label-two {
+        top: calc(180px + 1rem + 90px); /* First image + gap + half of second image */
     }
 
     .middle-page .kinds .left .down {
-        text-align: center;
-        margin-top: 0.2rem;
+        position: relative;
     }
 
     .middle-page .kinds .left .down img {
-        width: 100%;
-        max-width:  21.5rem;
+        max-width: 100%;
         height: 200px;
-        margin: 0;
-        margin-top: -1rem;
-        object-fit: cover;
     }
 
     .middle-page .kinds .left .down h1 {
-        margin: -3rem 0 1rem 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 170%);
+        margin: 0;
+        z-index: 5;
         font-size: 16px;
         padding: 8px 16px;
-        border-radius: 5px;
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-        position: relative;
+        border-radius: 8px;
     }
 
-    /* Right section - mobile layout */
+    /* Right section mobile styles */
     .middle-page .kinds .right {
-        text-align: center;
-        margin-bottom: -0.4rem;
-        order: 1; /* Put right section first on mobile */
+        position: relative;
     }
 
     .middle-page .kinds .right img {
-        width: 100%;
-        max-width: 350px;
+        max-width: 100%;
         height: 250px;
-        margin: 0;
-        object-fit: cover;
-        border-radius: 15px;
+        margin-left: 0;
     }
 
-    .middle-page .kinds .right h1 { 
-        margin: -3rem auto 1rem auto;
+    .middle-page .kinds .right h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 190%);
+        margin: 0;
+        z-index: 5;
         font-size: 16px;
         padding: 8px 16px;
-        border-radius: 5px;
-        width: fit-content;
-        position: relative;
+        border-radius: 8px;
     }
 
-    /* General mobile improvements */
+    /* General mobile text styles */
     .middle-page .kinds h1 {
-        font-size: 16px;
-        z-index: 4;
-        position: relative;
-        background-color: var(--secend-color);
-        color: var(--main-color);
-        border-radius: 5px;
+        font-size: 16px !important;
+        white-space: nowrap;
     }
+    .containar {
+        overflow: hidden;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .under-m {
+        padding: 0 1rem;
+    }
+
+    /* Title section mobile styles */
+    .under-m .title h1 {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .under-m .line-1 {
+        width: 200px;
+    }
+
+    .under-m .title .pharagraph {
+        width: 100%;
+        max-width: 350px;
+        padding: 0 1rem;
+    }
+
+    .under-m .title .pharagraph h2 {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    /* Products grid mobile styles */
+    .products {
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    /* Product card mobile styles */
+    .product {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        min-height: 420px;
+        margin-bottom: 1.5rem;
+        border-radius: 12px;
+    }
+
+    .product .img {
+        height: 200px;
+    }
+
+    .product img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .product .text {
+        padding: 0.5rem 0;
+    }
+
+    .product h2 {
+        font-size: 0.9rem;
+        margin-top: 0.8rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .product h1 {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        line-height: 1.3;
+    }
+
+    .product h3 {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .product h4 {
+        font-size: 1rem;
+        margin-top: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .product h4 span {
+        font-size: 0.8rem;
+        margin-left: 0.3rem;
+    }
+
+    /* Hover effects on mobile */
+    .product:hover img {
+        transform: scale(1.05);
+    }
+
 }
 
 /* Extra small mobile devices */
@@ -843,6 +1083,8 @@ header *{
 
     .middle-page {
         padding: 0.5rem;
+        /* justify-content: center;
+        align-items: center; */
     }
 
     .middle-page .kinds {
@@ -858,8 +1100,124 @@ header *{
     .next-controller {
         right: 0.5rem;
     }
-}
 
+.middle-page .title h2 {
+        font-size: 1.3rem;
+    }
+
+    .middle-page .title .pharagraph {
+        width: 95%;
+    }
+
+    .middle-page .title h1 {
+        font-size: 13px;
+    }
+
+    .line {
+        width: 150px;
+    }
+
+    .middle-page .kinds {
+        padding: 0.8rem;
+    }
+
+    .middle-page .kinds .left .up img {
+        height: 150px;
+    }
+
+    .middle-page .kinds .left .down img {
+        height: 170px;
+    }
+
+    .middle-page .kinds .right img {
+        height: 200px;
+    }
+
+    .middle-page .kinds h1 {
+        font-size: 14px !important;
+        padding: 6px 12px !important;
+    }
+
+    /* Adjust label positions for smaller images */
+    .middle-page .kinds .left .up img:nth-child(1) + .label-one {
+        top: 75px; /* Half of 150px height */
+    }
+
+    .middle-page .kinds .left .up img:nth-child(3) + .label-two {
+        top: calc(150px + 1rem + 75px); /* First image + gap + half of second image */
+    }
+     .under-m {
+        padding: 0 0.5rem;
+    }
+
+    .under-m .title h1 {
+        font-size: 1.3rem;
+        margin-top: 4.5rem;
+    }
+
+    .under-m .line-1 {
+        width: 150px;
+    }
+
+    .under-m .title .pharagraph {
+        max-width: 300px;
+        padding: 0 0.5rem;
+    }
+
+    .under-m .title .pharagraph h2 {
+        font-size: 13px;
+    }
+
+    .products {
+        padding: 0 0.5rem;
+        row-gap: 1rem;
+    }
+
+    .product {
+        max-width: 100%;
+        min-height: 380px;
+        margin-bottom: 1rem;
+    }
+
+    .product .img {
+        height: 180px;
+    }
+
+    .product img {
+        height: 180px;
+    }
+
+    .product h2 {
+        font-size: 0.85rem;
+        margin-left: 0.8rem;
+        margin-right: 0.8rem;
+    }
+
+    .product h1 {
+        font-size: 1.1rem;
+        margin-left: 0.8rem;
+        margin-right: 0.8rem;
+        line-height: 1.2;
+    }
+
+    .product h3 {
+        font-size: 0.75rem;
+        margin-left: 0.8rem;
+        margin-right: 0.8rem;
+    }
+
+    .product h4 {
+        font-size: 0.95rem;
+        margin-top: 3.2rem;
+        margin-left: 0.8rem;
+        margin-right: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .product h4 span {
+        font-size: 0.75rem;
+    }
+}
 /* Landscape mobile orientation */
 @media screen and (max-width: 768px) and (orientation: landscape) {
     .lending-page .background-imgs {
@@ -885,11 +1243,43 @@ header *{
     .middle-page .kinds .left .up img {
         max-width: 45%;
     }
+      .products {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .product {
+        width: calc(50% - 0.5rem);
+        max-width: 300px;
+    }
 }
 /* Tablet Responsive Styles */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     header{
         display: none;
+    }
+     .products {
+        column-gap: 1.5rem;
+        row-gap: 2rem;
+    }
+
+    .product {
+        width: calc(50% - 0.75rem);
+        max-width: 350px;
+    }
+
+    .under-m .title h1 {
+        font-size: 1.8rem;
+    }
+
+    .under-m .line-1 {
+        width: 400px;
+    }
+
+    .under-m .title .pharagraph {
+        width: 500px;
     }
     /* Container adjustments */
     .containar {
