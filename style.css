@@ -14,7 +14,7 @@
     --main-color:#EEEEEE;
     --secend-color:#201E43;
     --third-color:#134B70;
-    --fourth-color:#508C9B;
+    --fourth-color:#193b68;
     --active-color:#EB5A3C;
 }
 body{
@@ -683,20 +683,261 @@ header *{
     color: var(--secend-color);
     font-size: 16px;
 }
+ .h_u_page {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
 
+        .h_u_page .title {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 2.5rem;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
 
+        .h_u_page .line-1 {
+            width: min(600px, 90vw);
+            height: 1px;
+            background-color: var(--third-color);
+            opacity: 40%;
+            margin: auto;
+        }
 
+        .h_u_page .title h1 {
+            margin-top: 4rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            color: var(--third-color);
+            text-align: center;
+        }
 
+        .h_u_page .title .pharagraph {
+            width: min(650px, 90vw);
+            margin: auto;
+        }
 
+        .h_u_page .title .pharagraph h2 {
+            color: var(--secend-color);
+            font-size: clamp(14px, 2.5vw, 16px);
+            line-height: 1.5;
+        }
 
+        .h_u_page .tours {
+            background-color: var(--main-color);
+            padding: 20px;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            width: min(850px, 95vw);
+            justify-items: center;
+        }
 
+        .h_u_page .tour {
+            position: relative;
+            box-shadow: 1px 0px 10px rgba(71, 71, 71, 0.521);
+            border-radius: 15px;
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden;
+        }
 
+        .h_u_page .tour .img {
+            width: 100%;
+            height: 270px;
+            overflow: hidden;
+            border-radius: 15px;
+            position: relative;
+        }
 
+        .h_u_page .tour img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            filter: brightness(60%);
+            transition: 0.5s ease;
+        }
 
+        .h_u_page .tour:hover img {
+            filter: brightness(84%);
+            transform: scale(1.1);
+        }
 
+        .h_u_page .tour:hover h2 span {
+            margin-left: 5px;
+            margin-right: -5px;
+        }
 
+        /* Fixed positioning for text overlay */
+        .h_u_page .tour .text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+                margin-top: 120px;
+            z-index: 2;
+            pointer-events: none;
+        }
 
+        .h_u_page .tour .text * {
+            font-weight: 700;
+            color: var(--main-color);
+            pointer-events: auto;
+        }
 
+        .h_u_page .tour .text h1 {
+            font-size: clamp(1.5rem, 5vw, 2rem);
+            margin-bottom: 20px;
+            text-transform: capitalize;
+        }
+
+        .h_u_page .tour .text .details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 350px;
+            gap: 10px;
+        }
+
+        .h_u_page .tour .text .details h2 {
+            font-size: clamp(12px, 2.5vw, 14px);
+        }
+
+        .h_u_page .tour h2,
+        .h_u_page .tour span {
+            transition: 0.5s ease;
+        }
+
+        .h_u_page .tour h2 {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+.w_us{
+   margin-top: 10%;
+   height: 550px;
+   margin-bottom: 5%;
+   border: 1px none red;
+   position: relative;
+   background:url(./IMG/Gallery_imgs/bg2_01-1.webp) no-repeat fixed;
+   z-index: -1;
+   border-radius: 15px;
+}
+.w_us::after{
+     content: '';
+     border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#00000021;
+    z-index: -1; /* Place it behind the content */
+}
+.w_us .background img{
+    width: 300px;
+    position: absolute;
+    z-index: 2;
+    height: 400px;
+}
+.w_us .background .img:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 55%;
+}
+.w_us .background .img:nth-child(2){
+    position: absolute;
+    bottom: 73%;
+    right: 30%;
+}
+.w_us .background .img:nth-child(1) img{
+    border-bottom-left-radius: 15px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+    opacity: 0.95;
+    /* filter: brightness(90%); */
+}
+.w_us .background .img:nth-child(2) img{
+    border-top-left-radius: 15px;
+    opacity: 0.95;
+    box-shadow: -1px -1px 10px rgba(0, 0, 0, 0.5);
+    border-top-right-radius: 15px;
+}
+.w_us{
+    .title{
+        display: flex;
+        flex-direction:column ;
+        gap: 0.5rem;
+        width: 600px;
+        margin-top: -2rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        justify-content: left;
+        text-align: left;
+        align-items: left;
+    }
+    .title h1{
+        margin-top: 4rem;
+        letter-spacing: 2px;
+        filter: brightness(130%);
+        color: var(--third-color);
+        text-transform: uppercase;
+    }
+    .title h2{
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    .why1,.why2,.why3{
+        display: flex;
+        gap: 1rem;
+        margin-left: 1rem;
+    }
+    .why1,.why2,.why3{
+        width: 500px;
+        filter: brightness(130%);
+        z-index: 4;
+        margin-bottom: 1rem;
+        .text{
+            h1{
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: var(--third-color);
+            }
+            h2{
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+        }
+        i{
+            font-size: 1.5rem;
+            padding: 10px 10px;
+            height: 45px;
+            opacity: 0.7;
+            background-color: var(--main-color);
+            border-radius: 10px;
+            color: var(--third-color);
+        }
+    }
+}
 
 
 
@@ -1083,7 +1324,42 @@ header *{
         transform: scale(1.05);
     }
 
-}
+     .h_u_page .tours {
+                grid-template-columns: 1fr;
+                padding: 15px;
+                gap: 1rem;
+            }
+            
+            .h_u_page .tour {
+                max-width: 100%;
+            }
+            
+            .h_u_page .tour .img {
+                height: 250px;
+            }
+            
+            .h_u_page .title {
+                margin-bottom: 1.5rem;
+            }
+            
+            .h_u_page .title h1 {
+                margin-top: 2rem;
+            }
+            .w_us{
+                margin-top: 50px;
+                height: 810px;
+                .background img{
+                    display: none;
+                }
+                .title{
+                    width: 300px;
+                }
+                .text{
+                    width: 240px;
+                }
+            }
+        }
+
 
 /* Extra small mobile devices */
 @media screen and (max-width: 480px) {
@@ -1237,6 +1513,22 @@ header *{
     .product h4 span {
         font-size: 0.75rem;
     }
+     .h_u_page {
+                padding: 10px;
+            }
+            
+            .h_u_page .tours {
+                padding: 10px;
+            }
+            
+            .h_u_page .tour .img {
+                height: 200px;
+            }
+            
+            .h_u_page .tour .text .details {
+                flex-direction: column;
+                gap: 5px;
+            }
 }
 /* Landscape mobile orientation */
 @media screen and (max-width: 768px) and (orientation: landscape) {
@@ -1547,3 +1839,12 @@ header *{
         height: 40.5rem;
     }
 }
+ @media (max-width: 320px) {
+            .h_u_page .tour .text h1 {
+                font-size: 1.2rem;
+            }
+            
+            .h_u_page .tour .text .details h2 {
+                font-size: 11px;
+            }
+        }
