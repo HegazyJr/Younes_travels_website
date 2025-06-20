@@ -23,7 +23,7 @@ function cycleImages() {
     imgTwo.src = current[0];   // img2 gets img1's source
     imgThree.src = current[1]; // img3 gets img2's source
     
-    console.log('Images cycled successfully');
+    // console.log('Images cycled successfully');
 }
 
 
@@ -41,6 +41,7 @@ if (header) {
             header.style.backgroundColor = "transparent";
             document.getElementById('packages').style.backgroundColor = "transparent";
             document.getElementById('blog').style.backgroundColor = "transparent";
+            document.getElementById('nav-n').style.backgroundColor = "transparent";
             header.style.position = "absolute";
 
 
@@ -49,6 +50,7 @@ if (header) {
             console.log(choose)
             document.getElementById('packages').style.backgroundColor = "#242424e3";
             document.getElementById('blog').style.backgroundColor = "#242424e3";
+            document.getElementById('nav-n').style.backgroundColor = "#201e43e7";
             header.style.backgroundColor = "#242424e3";
             header.style.position = "fixed";
             if (window.scrollY <= 10 ) {
@@ -155,3 +157,29 @@ document.getElementById('face').addEventListener("click",function () {
 //         element.classList.remove('show-feedback');
 //     }, 1000);
 // }
+
+function exit() {
+    document.getElementById('pop').style="width: 0%;overflow:hidden"
+    document.getElementById('container').style = "filter:blur(0px);"
+    setTimeout(() => {
+        document.getElementById('logo_menu').style = "display: none;";
+        document.getElementById('links_menu').style = "display: none;";
+        document.getElementById('btn_menu').style = "display: none;";
+    }, 500);
+}
+function open_pop() {
+    document.getElementById('pop').style="width:70%;overflow:show"
+    document.getElementById('container').style = "filter:blur(1px);"
+    setTimeout(() => {
+        document.getElementById('logo_menu').style = "display: block;";
+        document.getElementById('links_menu').style = "display: block;";
+        document.getElementById('btn_menu').style = "display: block;";
+    }, 1000);
+
+    document.querySelector('body').addEventListener('click',function () {
+        exit()
+    })
+}
+ window.addEventListener("scroll", function () {
+    exit()
+  });
