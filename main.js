@@ -5,7 +5,7 @@
 const imgOne = document.getElementById('img-one');
 const imgTwo = document.getElementById('img-two');
 const imgThree = document.getElementById('img-three');
-const nextBtn = document.getElementById('next'); // ✅ Correct variable name
+const nextBtn = document.getElementById('next'); 
 
 // Store original image sources
 // const originalSources = [
