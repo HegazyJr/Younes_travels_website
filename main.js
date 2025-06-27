@@ -115,6 +115,11 @@ document.getElementById('insta').addEventListener("click",function () {
 document.getElementById('face').addEventListener("click",function () {
     window.location.href = "facebook.com"
 })
+document.getElementById('tour').addEventListener("click",function () {
+    window.location.href = "./blogs/index.html"
+})
+
+
 
 //  link by js
 // // Method 1: Navigate to External Website

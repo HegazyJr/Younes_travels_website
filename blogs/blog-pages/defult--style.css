@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family: "Roboto Condensed", sans-serif;
+}
+body{
+    overflow-x: hidden;
+    background-color: var(--main-color);
+}
+
+header,.header-m{
+    z-index: 99;
+    
+
+}
+.header-m{
+    top: 0;
+}
+header{
+    .links{
+        margin-left: 31%;
+    }
+}
+.upper-blog{
+    .background{
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        filter: brightness(70%);
+        left: 0;
+        display: flex;
+        flex-wrap:wrap;
+        overflow: hidden;
+        flex-basis: calc(100% / 5);
+
+        img{
+            width: 100%;
+            height: 88vh;
+            box-shadow: 1px 1px 20px black;
+            object-fit: cover;
+            
+        }
+        img:nth-child(1){
+            z-index: 6;
+            filter: brightness(80%);
+        }
+    }
+    .text_box{
+        z-index: 9;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-10%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--main-color);
+        gap: 1rem;
+
+        h1{
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--main-color);
+            text-shadow: 1px 1px 10px black;
+        }
+        .line{
+            position: absolute;
+            z-index: 9;
+            margin-top: 2%;
+            width: 30%;
+            height: 2px;
+            border-radius: 2px;
+            opacity: 0.7;
+            background-color: var(--main-color);
+        }
+        p{
+            font-size: 1.2rem;
+            color: var(--main-color);
+        }
+    }
+}
+.content{
+    margin-top: 95vh;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10%;
+    .text-title{
+        h4{
+            margin-top: 1rem;
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+            opacity: 1;
+            text-transform: uppercase;
+            color: var(--secend-color);
+        }
+        .line{
+            width: 1200px;
+            height: 2px;
+            opacity: 0.6;
+            background-color: var(--secend-color);
+    }}
+    
+}
+.blog-content{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    .ads{
+        display: flex;
+        flex-direction: column;
+        column-gap: 10rem;
+        width: 320px;
+        position: relative;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: 0.5s ;
+        div{
+            width: 280px;
+            height: 600px;
+            background-color: rgb(255, 255, 255);
+
+        }
+    }
+    .b-content{
+        width: 70%;
+        font-size: 16px;
+        h2{
+            font-weight: 400;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            color: rgb(22, 22, 22);
+        }
+        .bold{
+            font-weight: 500;
+            margin-top: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+        .list{
+            margin-left: 2rem;
+            font-size: 18px;
+            margin-bottom: 1rem;
+            
+            ul{
+                list-style-type:"- ";
+            }
+        }
+        img{
+            width: 90%;
+            height: 90vh;
+            border-radius: 5px;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .upper-blog{
+        .text_box{
+            h1{
+                font-size: 3rem;
+            }
+            p{
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+    }
+    .content{
+        margin-top: 90vh;
+        
+        .line{
+           display: none;
+           width: 10px;
+        }
+        .text-title{
+            h4{
+                margin-left: -11rem;
+            }
+        }
+    }
+    .blog-content{
+        .ads{
+            display: none;
+        }
+        .b-content{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    
+}
