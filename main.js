@@ -118,6 +118,10 @@ document.getElementById('face').addEventListener("click",function () {
 document.getElementById('tour').addEventListener("click",function () {
     window.location.href = "./blogs/index.html"
 })
+document.getElementById('P_T').addEventListener("click",function () {
+    window.location.href = "./tours/index.html"
+    console.log("Tours page clicked");
+})
 
 
 

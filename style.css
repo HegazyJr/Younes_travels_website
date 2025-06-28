@@ -1419,6 +1419,7 @@ footer{
     }
     .header-m{
         display: flex;
+        height: 50px;
     }
     header{
         display: none;
