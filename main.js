@@ -5,7 +5,7 @@
 const imgOne = document.getElementById('img-one');
 const imgTwo = document.getElementById('img-two');
 const imgThree = document.getElementById('img-three');
-const nextBtn = document.getElementById('next'); 
+// const nextBtn = document.getElementById('next'); 
 
 // Store original image sources
 // const originalSources = [
@@ -40,7 +40,7 @@ if (header) {
         if (window.scrollY <= 400 && choose == 0) {
             header.style.backgroundColor = "transparent";
             document.getElementById('packages').style.backgroundColor = "transparent";
-            document.getElementById('blog').style.backgroundColor = "transparent";
+            // document.getElementById('blog').style.backgroundColor = "transparent";
             // document.getElementById('nav-n').style.backgroundColor = "transparent";
             header.style.position = "absolute";
 
@@ -49,7 +49,7 @@ if (header) {
             choose = 1 
             console.log(choose)
             document.getElementById('packages').style.backgroundColor = "#242424e3";
-            document.getElementById('blog').style.backgroundColor = "#242424e3";
+            // document.getElementById('blog').style.backgroundColor = "#242424e3";
             // document.getElementById('nav-n').style.backgroundColor = "#201e43e7";
             header.style.backgroundColor = "#242424e3";
             header.style.position = "fixed";
@@ -67,9 +67,9 @@ if (header) {
     };
 }
 const packagesLink = document.getElementById('packages-link');
-const blogLink = document.getElementById('blog-link');
+// const blogLink = document.getElementById('blog-link');
 const packagesMenu = document.getElementById('packages');
-const blogMenu = document.getElementById('blog');
+// const blogMenu = document.getElementById('blog');
 
 let packagesTimeout, blogTimeout;
 
@@ -84,28 +84,28 @@ function hideMenu() {
     }, 200);
 }
 
-function showblog() {
-    clearTimeout(blogTimeout);         // نلغي مؤقت الإخفاء لو شغال
-    blogMenu.style.display = "flex";
-}
+// function showblog() {
+//     clearTimeout(blogTimeout);         // نلغي مؤقت الإخفاء لو شغال
+//     blogMenu.style.display = "flex";
+// }
 
-function hideblog() {
-    blogTimeout = setTimeout(() => {    // نأخر الإخفاء 2 ثانية
-        blogMenu.style.display = "none";
-    }, 200);
-}
+// function hideblog() {
+//     blogTimeout = setTimeout(() => {    // نأخر الإخفاء 2 ثانية
+//         blogMenu.style.display = "none";
+//     }, 200);
+// }
 
 // Show on hover
 packagesLink.onmouseover = showMenu;
 packagesMenu.onmouseover = showMenu;
-blogLink.onmouseover = showblog;
-blogMenu.onmouseover = showblog;
+// blogLink.onmouseover = showblog;
+// blogMenu.onmouseover = showblog;
 
 // Hide when leaving both elements
 packagesLink.onmouseout = hideMenu;
 packagesMenu.onmouseout = hideMenu;
-blogLink.onmouseout = hideblog;
-blogMenu.onmouseout = hideblog;
+// blogLink.onmouseout = hideblog;
+// blogMenu.onmouseout = hideblog;
 document.getElementById('email').addEventListener("click",function () {
     window.location.href = "https://mail.google.com/mail/?view=cm&fs=1&to=younestours7@gmail.com.com&su=SUBJECT&body=MESSAGE"
 })
@@ -118,10 +118,10 @@ document.getElementById('face').addEventListener("click",function () {
 document.getElementById('tour').addEventListener("click",function () {
     window.location.href = "./blogs/index.html"
 })
-document.getElementById('P_T').addEventListener("click",function () {
-    window.location.href = "./tours/index.html"
-    console.log("Tours page clicked");
-})
+// document.getElementById('P_T').addEventListener("click",function () {
+//     window.location.href = "./tours/index.html"
+//     console.log("Tours page clicked");
+// })
 
 
 
