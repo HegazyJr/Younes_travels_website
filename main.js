@@ -116,12 +116,16 @@ document.getElementById('face').addEventListener("click",function () {
     window.location.href = "facebook.com"
 })
 document.getElementById('tour').addEventListener("click",function () {
-    window.location.href = "./blogs/index.html"
+    window.location.href = "./tours/index.html"
 })
-// document.getElementById('P_T').addEventListener("click",function () {
-//     window.location.href = "./tours/index.html"
-//     console.log("Tours page clicked");
-// })
+document.getElementById('P_T').addEventListener("click",function () {
+    window.location.href = "./tours/index.html"
+    console.log("Tours page clicked");
+})
+document.getElementById('products').addEventListener("click",function () {
+    window.location.href = "./tours/index.html"
+    console.log("Tours page clicked");
+})
 
 
 
