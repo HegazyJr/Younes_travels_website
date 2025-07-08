@@ -198,7 +198,7 @@ header{
 }
         #historical{
             .product:nth-child(1){
-                margin-left: 81rem;
+                margin-left: 37rem;
             }
             .product:last-child{
                 margin-right: 1rem;
@@ -331,7 +331,14 @@ header{
                 margin-left: 4vw;
                 height: 50px;
             }
-
+        #historical{
+            .product:nth-child(1){
+                margin-left: 81rem;
+            }
+            .product:last-child{
+                margin-right: 1rem;
+            }
+        }
             .upper {
                 height: 70vh;
                 width: 100vw;
