@@ -54,3 +54,8 @@ savaribtn.onclick = function() {
     document.getElementById('historical').style.display = 'none';
     document.getElementById('savari').style.display = 'flex';
 }
+
+document.getElementById('hala-island').addEventListener("click",function () {
+    window.location.href = "./booking/index.html"
+    console.log("Tours page clicked");
+})

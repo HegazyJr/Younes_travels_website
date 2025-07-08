@@ -215,6 +215,7 @@ header {
     .content {
         margin-top: 100vh;
         .text-title {
+            display: none;
             .line {
                 display: none;
             }
