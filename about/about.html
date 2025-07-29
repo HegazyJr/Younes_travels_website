@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Younes Tours</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body { background: #f8fbff; }
+    .about-hero {
+      min-height: 340px;
+      background: url('./../IMG/Gallery_imgs/Classical Tour Egypt.jpg') center center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 4rem 1rem 2.5rem 1rem;
+    }
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg,rgba(30,30,30,0.18) 0%,rgba(255,152,0,0.10) 100%), rgba(19,75,112,0.45);
+      z-index: 1;
+    }
+    .about-hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      max-width: 700px;
+      margin: auto;
+    }
+    .about-hero h1 {
+      font-size: 2.7rem;
+      font-weight: 900;
+      margin-bottom: 1.1rem;
+      letter-spacing: 1.5px;
+      text-shadow: 0 4px 32px rgba(0,0,0,0.25);
+      font-family: 'Raleway',sans-serif;
+    }
+    .about-hero .quote {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      color: #ffe0b2;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .about-hero .mission {
+      font-size: 1.1rem;
+      color: #e3f0ff;
+      margin-bottom: 0.7rem;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .profiles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      justify-content: center;
+      margin: 0 auto 2.5rem auto;
+      max-width: 900px;
+    }
+    .profile-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 16px #b6e0fe33;
+      padding: 2rem 1.5rem;
+      flex: 1 1 320px;
+      min-width: 280px;
+      max-width: 370px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s, transform 0.2s;
+      position: relative;
+    }
+    .profile-card:hover {
+      box-shadow: 0 8px 32px #134b7077;
+      transform: translateY(-6px) scale(1.03);
+    }
+    .profile-img {
+      width: 120px; height: 120px; border-radius: 50%; overflow: hidden; margin-bottom: 1.2rem; border: 4px solid #b6e0fe; background: #e3f0ff;
+    }
+    .profile-img img { width: 100%; height: 100%; object-fit: cover; }
+    .profile-name { font-size: 1.3rem; font-weight: 800; color: #134b70; margin-bottom: 0.3rem; }
+    .profile-role { font-size: 1.1rem; color: #ff9800; font-weight: 700; margin-bottom: 0.7rem; }
+    .profile-bio { color: #444; font-size: 1.05rem; text-align: center; margin-bottom: 1.1rem; }
+    .profile-icons { display: flex; gap: 1.1rem; justify-content: center; margin-bottom: 0.7rem; flex-wrap: wrap; }
+    .profile-icons span { display: flex; align-items: center; gap: 0.4rem; color: #134b70; font-size: 1.05rem; background: #f8fbff; border-radius: 8px; padding: 0.3rem 0.7rem; box-shadow: 0 1px 6px #b6e0fe22; }
+    .achievements {
+      margin: 0 auto 2.5rem auto; max-width: 900px; display: flex; gap: 1.2rem; flex-wrap: wrap; justify-content: center;
+    }
+    .badge {
+      background: #fff; border-radius: 12px; box-shadow: 0 2px 12px #b6e0fe22; padding: 1.1rem 1.5rem; display: flex; align-items: center; gap: 0.7rem; font-size: 1.08rem; color: #134b70; font-weight: 600; transition: box-shadow 0.18s, transform 0.18s; cursor: pointer; min-width: 160px; margin-bottom: 0.5rem;
+    }
+    .badge:hover { box-shadow: 0 4px 18px #ff980055; transform: scale(1.04); }
+    .badge img { height: 28px; width: 28px; border-radius: 6px; background: #e3f0ff; }
+    .why-choose {
+      background: linear-gradient(120deg, #e3f0ff 0%, #fff 100%);
+      padding: 2.5rem 1rem 2rem 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .why-title { text-align: center; color: #134b70; font-size: 2rem; font-weight: 800; margin-bottom: 1.5rem; }
+    .why-list { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
+    .why-card {
+      background: #fff; border-radius: 14px; box-shadow: 0 2px 12px #b6e0fe22; padding: 1.5rem 1.2rem; min-width: 220px; max-width: 300px; flex: 1 1 220px; display: flex; flex-direction: column; align-items: center; transition: box-shadow 0.18s, transform 0.18s;
+    }
+    .why-card:hover { box-shadow: 0 6px 24px #ff980055; transform: scale(1.04); }
+    .why-card i { font-size: 2rem; color: #ff9800; margin-bottom: 0.7rem; }
+    .why-card h3 { color: #134b70; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; text-align: center; }
+    .why-card p { color: #555; font-size: 1rem; text-align: center; }
+    .cta-section {
+      text-align: center; margin: 2.5rem auto 0 auto; padding: 2rem 1rem 1.5rem 1rem; background: linear-gradient(120deg, #ff9800 0%, #ffe0b2 100%); border-radius: 18px; max-width: 600px; box-shadow: 0 2px 16px #b6e0fe33;
+    }
+    .cta-section h2 { color: #134b70; font-size: 1.5rem; font-weight: 800; margin-bottom: 1.1rem; }
+    .cta-section a {
+      display: inline-block; background: #134b70; color: #fff; font-weight: 700; font-size: 1.1rem; padding: 0.9rem 2.2rem; border-radius: 8px; text-decoration: none; box-shadow: 0 2px 12px #b6e0fe33; transition: background 0.2s;
+    }
+    .cta-section a:hover { background: #ff9800; color: #fff; }
+    .wave-divider {
+      width: 100%; height: 60px; background: url('./../IMG/Gallery_imgs/bg2_01-1.webp') center center/cover no-repeat; margin-bottom: -2px; }
+    @media (max-width: 900px) { .profiles, .achievements, .why-list { flex-direction: column; gap: 1.2rem; } }
+    @media (max-width: 700px) { .about-hero h1 { font-size: 1.5rem; } .profile-card { min-width: 90vw; } .why-title { font-size: 1.2rem; } }
+    @media (max-width: 700px) {
+      .achievements {
+        flex-direction: column !important;
+      }
+      .achievements > div {
+        flex-direction: column !important;
+        gap: 1.2rem !important;
+      }
+      .badge {
+        max-width: 100% !important;
+        min-width: 0 !important;
+      }
+    }
+    @media (max-width: 700px) {
+      body { padding: 0; }
+      .about-hero { padding: 2rem 0.5rem 1.2rem 0.5rem; min-height: 180px; }
+      .about-hero h1 { font-size: 1.3rem; }
+      .about-hero .quote { font-size: 1rem; }
+      .about-hero .mission { font-size: 0.98rem; }
+      .profiles { flex-direction: column; gap: 1.2rem; max-width: 100vw; margin: 0 auto 1.2rem auto; }
+      .profile-card { min-width: 90vw; max-width: 98vw; padding: 1.2rem 0.5rem; }
+      .profile-img { width: 80px; height: 80px; margin-bottom: 0.7rem; }
+      .profile-name { font-size: 1.05rem; }
+      .profile-role { font-size: 0.98rem; }
+      .profile-bio { font-size: 0.95rem; margin-bottom: 0.7rem; }
+      .profile-icons span { font-size: 0.95rem; padding: 0.2rem 0.5rem; }
+      .achievements { flex-direction: column !important; max-width: 98vw; gap: 0.7rem !important; }
+      .achievements > div { flex-direction: column !important; gap: 0.7rem !important; }
+      .badge { max-width: 100% !important; min-width: 0 !important; font-size: 1rem; padding: 0.8rem 0.7rem; }
+      .why-choose { padding: 1.2rem 0.2rem 1.2rem 0.2rem; margin-bottom: 1.2rem; }
+      .why-title { font-size: 1.1rem; margin-bottom: 0.7rem; }
+      .why-list { gap: 0.7rem; }
+      .why-card { min-width: 90vw; max-width: 98vw; padding: 1rem 0.5rem; }
+      .why-card h3 { font-size: 1rem; }
+      .why-card p { font-size: 0.95rem; }
+      .cta-section { padding: 1.2rem 0.5rem 1rem 0.5rem; max-width: 98vw; margin: 1.2rem auto 0 auto; }
+      .cta-section h2 { font-size: 1.05rem; }
+      .cta-section a { font-size: 1rem; padding: 0.7rem 1.2rem; }
+      .wave-divider { height: 30px; }
+      footer .f-container { flex-direction: column; gap: 1.2rem; padding: 0.5rem; }
+      footer .logo img { width: 60px; }
+      footer .logo h2 { font-size: 1.1rem; }
+      footer .info h1 { font-size: 1rem; }
+      footer .info ul { padding-left: 0.5rem; }
+      footer .info ul li { font-size: 0.95rem; }
+      footer .copyright h3 { font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar من الصفحة الرئيسية -->
+  <header>
+            <div class="nov-container">
+                <div class="h_btn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="logo">
+                    <h1>Younes <span>Tours</span></h1>
+                    <i class="fa-solid fa-plane"></i>
+                </div>
+               <div class="menu">
+                    <div class="links">
+                        <div class="link"><a href="../index.html#home">Home</a></div>
+                        <div class="link" id="packages-link"><a href="../tours/index.html">Destinations</a></div>
+                        <div class="link" id="blog-link"><a href="../blogs/index.html">Blog</a></div>
+                        <!-- <div class="blog" id="blog">
+                            <div class="space"></div>
+                            <div class="container">
+                                <div class="link"> <a href="">savari</a></div>
+                                <div class="link"> <a href="">cairo</a></div>
+                                <div class="link"> <a href="">hurgada</a></div>
+                                <div class="link"> <a href="">luxor</a></div>
+                                <div class="link"> <a href="">histrocial tours</a></div>
+                                <div class="link"> <a href="">coastal tours</a></div>
+                            </div>
+                        </div> -->
+                        <div class="link"><a href="../index.html#w_us">About us</a></div>
+                        <div class="link"><a href="../gallery/gallery.html">Gallery</a></div>
+                        <div class="link"><a href="#home">who us</a></div>
+                    </div>
+                    <div class="o-links">
+                        <div class="email" id="email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="face" id="face">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div class="insta" id="insta">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+
+               </div>
+            </div>
+
+        </header>
+        <div class="header-m">
+                <div class="nav-container-m">
+                    <div class="logo">
+                        <h1>Younes <span>Tours</span></h1>
+                        <!-- <i class="fa-solid fa-plane"></i> -->
+                    </div>
+                     <div class="menu-style" onclick="open_pop()">
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div class=""></div>
+                    </div>
+            </div>
+        <div class="pop_up" id="pop">
+                <div class="exit" id="exit" onclick="exit()">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="logo_box-p" id="logo_menu">
+                    <img src="./IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview.png" alt="logo.img">
+                        <h1>Younes <span>Tours</span></h1>
+                </div>
+                <div class="links_box-p" id="links_menu">
+                   <div class="link"><a href="../index.html#home">Home</a></div>
+                    <div class="link" id="packages-link"><a href="../tours/index.html">Destinations</a></div>
+                    <!-- <div class="packages-m" id="packages-m">
+                        <div class="container">
+                            <div class="link"> <a href="#P_T"><span>-</span> Popular Tours</a></div>
+                            <div class="link"> <a href="#S_T"><span>-</span> Best Selling Tours</a></div>
+                        </div>
+                    </div> -->
+                    <div class="link" id="blog-link"><a href="../blogs/index.html">Blog</a></div>
+                    <!-- <div class="blog-m" id="blog-m">
+                            <div class="space"></div>
+                            <div class="container">
+                                <div class="link"> <a href=""><span>-</span> savari</a></div>
+                                <div class="link"> <a href=""><span>-</span> cairo</a></div>
+                                <div class="link"> <a href=""><span>-</span> hurgada</a></div>
+                                <div class="link"> <a href=""><span>-</span> luxor</a></div>
+                            </div>
+                        </div> -->
+                    <div class="link"><a href="../index.html#w_us">About us</a></div>
+                        <div class="link"><a href="../gallery/gallery.html">Gallery</a></div>
+                        <div class="link"><a href="#home">who us</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="packages" id="packages">
+            <div class="container">
+                <div class="link"> <a href="../index.html#P_T">Popular Tours</a></div>
+                 <div class="link"> <a href="../index.html#S_T">Best Selling Tours</a></div>
+            </div>
+        </div>
+  <!-- نهاية النافبار -->
+  <div class="about-hero" data-aos="fade-down" id="home">
+    <div class="about-hero-content">
+      <h1>About Us</h1>
+      <div class="quote">Experience... Trust... Unforgettable Adventure 🌍</div>
+      <div class="mission">Welcome to your go-to destination for tourism and adventure! We are a team that combines years of expertise, professionalism, and a genuine passion for delivering the best experiences to visitors from around the world.</div>
+    </div>
+  </div>
+  <div class="profiles" style="margin-top:20px ;">
+    <div class="profile-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="profile-img" style="cursor:pointer;" onclick="openLightbox('WhatsApp Image 2025-07-25 at 20.10.20_da0f653c.jpg')"><img src="WhatsApp Image 2025-07-25 at 20.10.20_da0f653c.jpg" alt="Younes Mohamed"></div>
+      <div class="profile-name">Younes Mohamed</div>
+      <div class="profile-role">Founder & Tour Leader</div>
+      <div class="profile-icons">
+        <span><i class="fa-solid fa-language"></i> German, Russian, English</span>
+        <span><i class="fa-solid fa-briefcase"></i> 30+ yrs</span>
+        <span><i class="fa-solid fa-graduation-cap"></i> Al-Alsun</span>
+      </div>
+      <div class="profile-bio">30+ years in Egypt’s tourism industry. Graduate of the Faculty of Al-Alsun. Fluent in German, Russian, and English. Specializes in personal guided tours with cultural depth and local insight.</div>
+    </div>
+    <!-- Lightbox -->
+    <div id="lightbox-profile" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(19,75,112,0.85);align-items:center;justify-content:center;">
+      <span onclick="closeLightbox()" style="position:absolute;top:20px;right:30px;font-size:2.5rem;color:#fff;cursor:pointer;font-weight:bold;z-index:2;">&times;</span>
+      <img id="lightbox-img" src="" alt="Profile" style="max-width:90vw;max-height:80vh;border-radius:18px;box-shadow:0 8px 32px #134b7077;background:#fff;">
+    </div>
+    <script>
+      function openLightbox(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox-profile').style.display = 'flex';
+      }
+      function closeLightbox() {
+        document.getElementById('lightbox-profile').style.display = 'none';
+      }
+    </script>
+    <div class="profile-card" data-aos="fade-up" data-aos-delay="250">
+      <div class="profile-img" style="cursor:pointer;" onclick="openLightbox('WhatsApp Image 2025-07-25 at 20.10.42_497be7e6.jpg')"><img src="WhatsApp Image 2025-07-25 at 20.10.42_497be7e6.jpg" alt="Ahmed ElKady"></div>
+      <div class="profile-name">Ahmed ElKady</div>
+      <div class="profile-role">Diving Expert</div>
+      <div class="profile-icons">
+        <span><i class="fa-solid fa-water"></i> 15 yrs diving</span>
+        <span><i class="fa-solid fa-certificate"></i> PADI Certified</span>
+        <span><i class="fa-solid fa-person-swimming"></i> Red Sea</span>
+      </div>
+      <div class="profile-bio">15+ years of diving experience in the Red Sea. Holds certifications up to the pre-specialty level from PADI. Offers guided underwater adventures that are safe, thrilling, and visually stunning.</div>
+    </div>
+  </div>
+  <div class="achievements" data-aos="fade-up" data-aos-delay="350" style="display:flex;flex-direction:column;align-items:center;max-width:900px;margin:2.5rem auto 2.5rem auto;">
+    <div style="display:flex;gap:2rem;width:100%;justify-content:center;">
+      <div class="badge" style="width:100%;max-width:320px;"> <i class="fa-solid fa-medal" style="font-size:2rem;color:#134b70;"></i> <b>Red Sea Exploration</b></div>
+      <div class="badge" style="width:100%;max-width:320px;"> <i class="fa-solid fa-user-shield" style="font-size:2rem;color:#134b70;"></i> <b>Create Your Own Private Trip</b></div>
+      <div class="badge" style="width:100%;max-width:320px;"> <i class="fa-solid fa-users" style="font-size:2rem;color:#134b70;"></i> <b>Professional Teams & Organized Groups</b></div>
+    </div>
+    <div style="display:flex;gap:2rem;width:100%;justify-content:center;margin-top:1.2rem;">
+      <div style="flex:1"></div>
+      <div class="badge" style="width:100%;max-width:320px;"> <i class="fa-solid fa-briefcase" style="font-size:2rem;color:#134b70;"></i> <b>30+ Years of Experience</b></div>
+      <div class="badge" style="width:100%;max-width:320px;"> <i class="fa-solid fa-thumbs-up" style="font-size:2rem;color:#134b70;"></i> <b>Trusted by 2000+ Customers</b></div>
+      <div style="flex:1"></div>
+    </div>
+  </div>
+  <div class="why-choose">
+    <div class="why-title">Why Choose Us?</div>
+    <div class="why-list">
+      <div class="why-card" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-compass"></i><h3>25+ years of excellence in tour guiding</h3><p>Our tours aren’t just site visits—they’re immersive experiences filled with culture, history, and enjoyment.</p></div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="200"><i class="fa-solid fa-water"></i><h3>Professional diving with PADI certification (5 levels)</h3><p>Whether you're a beginner or an expert, we offer safe, exciting underwater adventures led by a certified pro.</p></div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="300"><i class="fa-solid fa-language"></i><h3>We speak your language!</h3><p>English, German, and Russian fluency means easy communication with travelers from across the globe.</p></div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="400"><i class="fa-solid fa-map-location-dot"></i><h3>Deep local knowledge</h3><p>We take you beyond the guidebooks—into the real heart of each destination.</p></div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="500"><i class="fa-solid fa-life-ring"></i><h3>Safety and organization first</h3><p>Every detail is planned for your comfort, security, and peace of mind.</p></div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="600"><i class="fa-solid fa-star"></i><h3>Trusted by happy travelers</h3><p>Consistently high ratings and positive reviews prove our commitment to unforgettable experiences.</p></div>
+    </div>
+  </div>
+  <!-- نهاية قسم الميزات -->
+  <div class="cta-section" data-aos="fade-up" data-aos-delay="500">
+    <h2>Ready to Explore Egypt with Us?</h2>
+    <a href="tours/index.html">View Our Trips</a>
+  </div>
+  <div class="wave-divider"></div>
+  <footer id="footer" style="*{color: #fff;}">
+    <div class="f-container">
+      <div class="logo">
+        <img src="../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (1).png" alt="">
+        <div class="text">
+          <h2>Younes </h2>
+          <h2>tours</h2>
+        </div>
+      </div>
+      <div class="inforamtion">
+        <div class="info">
+          <div class="i_info">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3> Rua Manuel Rodrigues Abreu, 26, 3800-693 Aveiro, Portugal</h3>
+          </div>
+          <div class="i_info">
+            <i class="fa-solid fa-phone"></i>
+            <h3> +20 110 007 7315</h3>
+          </div>
+          <div class="i_info">
+            <i class="fa-solid fa-envelope"></i>
+            <h3> younestours7@gmail.com</h3>
+          </div>
+        </div>
+        <div class="info">
+          <h1>pages</h1>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tours/index.html">Trips</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+        </div>
+        <div class="info">
+          <h1>Categories</h1>
+          <ul>
+            <li><a href="tours/index.html">Egypt tours</a></li>
+            <li><a href="tours/index.html">Egypt tours packages</a></li>
+            <li><a href="tours/index.html">coastal tours</a></li>
+          </ul>
+        </div>
+        <div class="info">
+          <h1>follow us</h1>
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-share"></i></a></li>
+            <li><a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+          </ul>
+          <div class="copyright">
+            <h3> Copyright  2022 Younes Tours. All Rights Reserved.</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./main.js"></script>
+  <script>AOS.init({ duration: 900, once: true });</script>
+</body>
+</html> 
