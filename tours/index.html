@@ -6,28 +6,36 @@
     <link rel="stylesheet" href="./../style.css">
     <link rel="stylesheet" href="./style.css">
     <title>Tour|Younes Tours</title>
+    <!-- مكتبة AOS للحركات والتأثيرات -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- مكتبة Font Awesome للأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- أيقونة الموقع -->
     <link rel="icon" href="./../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (2).png">
 
 </head>
 <body>
+    <!-- ===== HEADER SECTION ===== -->
     <header>
             <div class="nov-container">
+                <!-- زر القائمة للهاتف المحمول -->
                 <div class="h_btn">
                     <div></div>
                     <div></div>
                     <div></div>
                 </div>
+                <!-- شعار الموقع -->
                 <div class="logo">
                     <h1>Younes <span>Tours</span></h1>
                     <i class="fa-solid fa-plane"></i>
                 </div>
+               <!-- قائمة التنقل الرئيسية -->
                <div class="menu">
                     <div class="links">
                         <div class="link"><a href="./../index.html#home">Home</a></div>
                         <div class="link" id="packages-link"><a href="./../tours/index.html">Destinations</a></div>
                         <div class="link" id="blog-link"><a href="./../blogs/index.html">Blog</a></div>
+                        <!-- قائمة فرعية للجولات (معلقة حالياً) -->
                         <!-- <div class="blog" id="blog">
                             <div class="space"></div>
                             <div class="container">
@@ -43,6 +51,7 @@
                         <div class="link"><a href="">Gallery</a></div>
                         <div class="link"><a href="./../index.html#footer">Contact</a></div>
                     </div>
+                    <!-- أيقونات التواصل الاجتماعي -->
                     <div class="o-links">
                         <div class="email" id="email">
                             <i class="fa-solid fa-envelope"></i>
@@ -59,11 +68,12 @@
             </div>
 
         </header>
+        
+        <!-- ===== HEADER MOBILE ===== -->
         <div class="header-m">
                 <div class="nav-container-m">
                     <div class="logo">
                         <h1>Younes <span>Tours</span></h1>
-                        <!-- <i class="fa-solid fa-plane"></i> -->
                     </div>
                      <div class="menu-style" onclick="open_pop()">
                         <div class=""></div>
@@ -71,6 +81,7 @@
                         <div class=""></div>
                     </div>
             </div>
+        <!-- القائمة المنبثقة للهاتف المحمول -->
         <div class="pop_up" id="pop">
                 <div class="exit" id="exit" onclick="exit()">
                     <div></div>
@@ -83,6 +94,7 @@
                 <div class="links_box-p" id="links_menu">
                    <div class="link"><a href="./../index.html#home">Home</a></div>
                     <div class="link" id="packages-link"><a href="./index.html">Destinations</a></div>
+                    <!-- قائمة فرعية للجولات (معلقة حالياً) -->
                     <!-- <div class="packages-m" id="packages-m">
                         <div class="container">
                             <div class="link"> <a href="./../index.html#P_T"><span>-</span> Popular Tours</a></div>
@@ -90,6 +102,7 @@
                         </div> -->
                     <!-- </div> -->
                     <div class="link" id="blog-link"><a href="./../blogs/index.html">Blog</a></div>
+                    <!-- قائمة فرعية للمدونة (معلقة حالياً) -->
                     <!-- <div class="blog-m" id="blog-m">
                             <div class="space"></div>
                             <div class="container">
@@ -99,9 +112,9 @@
                                 <div class="link"> <a href=""><span>-</span> luxor</a></div>
                             </div>
                         </div> -->
-                    <div class="link"><a href="./../../index.html#w_us">About us</a></div>
+                    <div class="link"><a href="./../index.html#w_us">About us</a></div>
                         <div class="link"><a href="">Gallery</a></div>
-                        <div class="link"><a href="./../../index.html#w_us">Contact</a></div>
+                        <div class="link"><a href="./../index.html#footer">Contact</a></div>
                 </div>
             </div>
         </div>
@@ -217,139 +230,133 @@
                     </div>
         </div>
         <div class="labels">
-            <h1 id="coas_h1">Coastal Tours</h1>
+            <h1 id="coas_h1">Public Coastal Tours</h1>
         </div>
-        <div class="products" id="coastal">
-                <div class="labels">
-                    <h1 id="pub_h1">Public Coastal Tours</h1>
+        <div class="products" id="public-coastal">
+            <div class="product" id="hala-island">
+                <div class="img">
+                    <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
                 </div>
-                <div class="public">    
-                     <div class="product" id="hala-island">
-                        <div class="img">
-                            <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h2>Day Trip</h2>
-                            <h1>Explore Hala Hala Island <br> <span>Snorkeling, Beach Time, and Relaxing Cruise</span></h1>
-                            <h3>8 hours • Lunch included • 25-35 people</h3>
-                            <h4>Start From 35$<span>per person</span></h4>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="img">
-                            <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h2>Day Trip</h2>
-                            <h1>Relax at Orange Bay <br>
-                            <span>Water Sports, Soft Sands, and Peaceful Scenery</span></h1>
-                            <h3>8 hours • Lunch included • 25-35 people</h3>
-                            <h4>Start From 35$<span>per person</span></h4>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="img">
-                            <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h2>Day Trip</h2>
-                            <h1>Discover Paradise Island <br>
-                            <span>Full-Day Cruise with Snorkeling and Chill Time</span></h1>
-                            <h3>8 hours • Lunch included • 25-35 people</h3>
-                            <h4>Start From 35$<span>per person</span></h4>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="img">
-                            <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h2>Day Trip</h2>
-                            <h1>Dolphin House Adventure<br>
-                            <span>Breakfast, Lunch, Snorkeling and Swim with Dolphins</span></h1>
-                            <h3>8 hours • Breakfast & Lunch included • 25-35 people</h3>
-                            <h4>Start From 55$<span>per person</span></h4>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="img">
-                            <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h2>Day Trip</h2>
-                            <h1>Royal Scuba Submarine Tour<br>
-                            <span>Explore Reefs with Lunch and Underwater Views</span></h1>
-                            <h3>2 hours • Lunch included • 30-50 people</h3>
-                            <h4>Start From 25$<span>per person</span></h4>
-                        </div>
-                    </div>
+                <div class="text">
+                    <h2>Day Trip</h2>
+                    <h1>Explore Hala Hala Island <br> <span>Snorkeling, Beach Time, and Relaxing Cruise</span></h1>
+                    <h3>8 hours • Lunch included • 25-35 people</h3>
+                    <h4>Start From 35$<span>per person</span></h4>
                 </div>
-                <br>
-                    <div class="labels">
-                        <h1 id="pri_h1">Private Coastal Tours</h1>
-                    </div>
-                <div class="private">
-                     <div class="product">
-                        <div class="img">
-                            <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h2>Day Trip</h2>
-                            <h1>Explore Hala Hala Island <br> <span>Snorkeling, Beach Time, and Relaxing Cruise</span></h1>
-                            <h3>8 hours • Lunch included • 25-35 people</h3>
-                            <h4>Start From 35$<span>per person</span></h4>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="img">
-                            <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h2>Day Trip</h2>
-                            <h1>Relax at Orange Bay <br>
-                            <span>Water Sports, Soft Sands, and Peaceful Scenery</span></h1>
-                            <h3>8 hours • Lunch included • 25-35 people</h3>
-                            <h4>Start From 35$<span>per person</span></h4>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="img">
-                            <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h2>Day Trip</h2>
-                            <h1>Discover Paradise Island <br>
-                            <span>Full-Day Cruise with Snorkeling and Chill Time</span></h1>
-                            <h3>8 hours • Lunch included • 25-35 people</h3>
-                            <h4>Start From 35$<span>per person</span></h4>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="img">
-                            <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h2>Day Trip</h2>
-                            <h1>Dolphin House Adventure<br>
-                            <span>Breakfast, Lunch, Snorkeling and Swim with Dolphins</span></h1>
-                            <h3>8 hours • Breakfast & Lunch included • 25-35 people</h3>
-                            <h4>Start From 55$<span>per person</span></h4>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="img">
-                            <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h2>Day Trip</h2>
-                            <h1>Royal Scuba Submarine Tour<br>
-                            <span>Explore Reefs with Lunch and Underwater Views</span></h1>
-                            <h3>2 hours • Lunch included • 30-50 people</h3>
-                            <h4>Start From 25$<span>per person</span></h4>
-                        </div>
-                    </div>
+            </div>
+            <div class="product">
+                <div class="img">
+                    <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
                 </div>
-                 
+                <div class="text">
+                    <h2>Day Trip</h2>
+                    <h1>Relax at Orange Bay <br>
+                    <span>Water Sports, Soft Sands, and Peaceful Scenery</span></h1>
+                    <h3>8 hours • Lunch included • 25-35 people</h3>
+                    <h4>Start From 35$<span>per person</span></h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="img">
+                    <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h2>Day Trip</h2>
+                    <h1>Discover Paradise Island <br>
+                    <span>Full-Day Cruise with Snorkeling and Chill Time</span></h1>
+                    <h3>8 hours • Lunch included • 25-35 people</h3>
+                    <h4>Start From 35$<span>per person</span></h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="img">
+                    <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h2>Day Trip</h2>
+                    <h1>Dolphin House Adventure<br>
+                    <span>Breakfast, Lunch, Snorkeling and Swim with Dolphins</span></h1>
+                    <h3>8 hours • Breakfast & Lunch included • 25-35 people</h3>
+                    <h4>Start From 55$<span>per person</span></h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="img">
+                    <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h2>Day Trip</h2>
+                    <h1>Royal Scuba Submarine Tour<br>
+                    <span>Explore Reefs with Lunch and Underwater Views</span></h1>
+                    <h3>2 hours • Lunch included • 30-50 people</h3>
+                    <h4>Start From 25$<span>per person</span></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="labels">
+            <h1 id="pri_h1">Private Coastal Tours</h1>
+        </div>
+        <div class="products" id="private-coastal">
+            <div class="product">
+                <div class="img">
+                    <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h2>Day Trip</h2>
+                    <h1>Explore Hala Hala Island <br> <span>Snorkeling, Beach Time, and Relaxing Cruise</span></h1>
+                    <h3>8 hours • Lunch included • 25-35 people</h3>
+                    <h4>Start From 35$<span>per person</span></h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="img">
+                    <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h2>Day Trip</h2>
+                    <h1>Relax at Orange Bay <br>
+                    <span>Water Sports, Soft Sands, and Peaceful Scenery</span></h1>
+                    <h3>8 hours • Lunch included • 25-35 people</h3>
+                    <h4>Start From 35$<span>per person</span></h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="img">
+                    <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h2>Day Trip</h2>
+                    <h1>Discover Paradise Island <br>
+                    <span>Full-Day Cruise with Snorkeling and Chill Time</span></h1>
+                    <h3>8 hours • Lunch included • 25-35 people</h3>
+                    <h4>Start From 35$<span>per person</span></h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="img">
+                    <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h2>Day Trip</h2>
+                    <h1>Dolphin House Adventure<br>
+                    <span>Breakfast, Lunch, Snorkeling and Swim with Dolphins</span></h1>
+                    <h3>8 hours • Breakfast & Lunch included • 25-35 people</h3>
+                    <h4>Start From 55$<span>per person</span></h4>
+                </div>
+            </div>
+            <div class="product">
+                <div class="img">
+                    <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h2>Day Trip</h2>
+                    <h1>Royal Scuba Submarine Tour<br>
+                    <span>Explore Reefs with Lunch and Underwater Views</span></h1>
+                    <h3>2 hours • Lunch included • 30-50 people</h3>
+                    <h4>Start From 25$<span>per person</span></h4>
+                </div>
+            </div>
         </div>
 
         <div class="labels">

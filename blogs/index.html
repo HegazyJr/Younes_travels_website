@@ -4,33 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Egypt through our travel blog! Explore Cairo attractions, Egyptian cuisine, and travel guides. Get insider tips and stories from Younes Tours.">
+    <meta name="keywords" content="Egypt travel blog, Cairo attractions, Egyptian food, travel guides, Egypt tourism, Cairo tours">
+    <meta name="author" content="Younes Tours">
     <link rel="stylesheet" href="./../style.css">
     <link rel="stylesheet" href="./style.css">
-    <title>Blog | Younes travels</title>
+    <title>Travel Blog - Stories & Guides from Egypt | Younes Tours</title>
+    <!-- مكتبة AOS للحركات والتأثيرات -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- مكتبة Font Awesome للأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <!-- أيقونة الموقع -->
     <link rel="icon" href="./../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (2).png">
 </head>
 
 <body>
     <div class="container">
+        <!-- ===== HEADER SECTION ===== -->
         <header>
             <div class="nov-container">
+                <!-- زر القائمة للهاتف المحمول -->
                 <div class="h_btn">
                     <div></div>
                     <div></div>
                     <div></div>
                 </div>
+                <!-- شعار الموقع -->
                 <div class="logo">
                     <h1>Younes <span>Tours</span></h1>
                     <i class="fa-solid fa-plane"></i>
                 </div>
+                <!-- قائمة التنقل الرئيسية -->
                 <div class="menu">
                     <div class="links">
                         <div class="link"><a href="./../index.html#home">Home</a></div>
                         <div class="link" id="packages-link"><a href="./../tours/index.html">Destinations</a></div>
                         <div class="link" id="blog-link"><a href="./index.html">Blog</a></div>
+                        <!-- قائمة فرعية للمدونة (معلقة حالياً) -->
                         <!-- <div class="blog" id="blog">
                             <div class="space"></div>
                             <div class="container">
@@ -44,8 +55,9 @@
                         </div> -->
                         <div class="link"><a href="./../index.html#w_us">About us</a></div>
                         <div class="link"><a href="">Gallery</a></div>
-                        <div class="link"><a href="./../about/about.html">who us</a></div>
+                        <div class="link"><a href="./../index.html#footer">Contact</a></div>
                     </div>
+                    <!-- أيقونات التواصل الاجتماعي -->
                     <div class="o-links">
                         <div class="email" id="email">
                             <i class="fa-solid fa-envelope"></i>
@@ -62,11 +74,12 @@
             </div>
 
         </header>
+        
+        <!-- ===== HEADER MOBILE ===== -->
         <div class="header-m">
             <div class="nav-container-m">
                 <div class="logo">
                     <h1>Younes <span>Tours</span></h1>
-                    <!-- <i class="fa-solid fa-plane"></i> -->
                 </div>
                 <div class="menu-style" onclick="open_pop()">
                     <div class=""></div>
@@ -74,6 +87,7 @@
                     <div class=""></div>
                 </div>
             </div>
+            <!-- القائمة المنبثقة للهاتف المحمول -->
             <div class="pop_up" id="pop">
                 <div class="exit" id="exit" onclick="exit()">
                     <div></div>
@@ -86,6 +100,7 @@
                 <div class="links_box-p" id="links_menu">
                     <div class="link"><a href="./../index.html#home">Home</a></div>
                     <div class="link" id="packages-link"><a href="./../tours/index.html">Destinations</a></div>
+                    <!-- قائمة فرعية للجولات (معلقة حالياً) -->
                     <!-- <div class="packages-m" id="packages-m"> -->
                         <!-- <div class="container">
                             <div class="link"> <a href="./../index.html#P_T"><span>-</span> Popular Tours</a></div>
@@ -93,6 +108,7 @@
                         </div>
                     </div> -->
                     <div class="link" id="blog-link"><a href="./index.html">Blog</a></div>
+                    <!-- قائمة فرعية للمدونة (معلقة حالياً) -->
                     <!-- <div class="blog-m" id="blog-m">
                             <div class="space"></div>
                             <div class="container">
@@ -104,7 +120,7 @@
                         </div> -->
                     <div class="link"><a href="./../index.html#w_us">About us</a></div>
                     <div class="link"><a href="">Gallery</a></div>
-                    <div class="link"><a href="./../about/about.html">Who us</a></div>
+                    <div class="link"><a href="./../index.html#footer">Contact</a></div>
                 </div>
             </div>
         </div>
@@ -137,18 +153,19 @@
         </div>
 
         <div class="upper-blog">
-            <div class="background">
+            <div class="background blog-hero-bg">
                 <img src="./../IMG/WhatsApp Image 2025-04-24 at 22.03.12_21be970a.jpg" alt="">
                 <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
                 <img src="./../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.10_a4a64dd1.jpg" alt="">
                 <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
                 <img src="./../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_92895cff.jpg" alt="">
                 <img src="./../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg">
+                <div class="blog-hero-overlay"></div>
             </div>
-            <div class="text_box">
-                <h1>Blog</h1>
-                <!-- <div class="line"></div> -->
-                <p>Read our blog and learn more about our tours and destinations</p>
+            <div class="text_box blog-hero-text">
+                <h1><i class="fa-solid fa-plane"></i> Blog</h1>
+                <div class="blog-hero-line"></div>
+                <p>Stories, inspiration, and guides from Egypt and beyond.<br>Discover hidden gems, travel tips, and breathtaking destinations curated for every explorer.</p>
             </div>
         </div>
         <div class="content">
@@ -157,187 +174,66 @@
                 <div class="line"></div>
             </div>
             <div class="blogs-blog">
-                <div class="blog-blog" id="cairo">
-                    <div class="img">
-                        <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
+                <a href="./blog-pages/index--cairo.html" class="blog-card-link">
+                    <div class="blog-card-classic">
+                        <div class="blog-card-classic-image">
+                            <img src="./../IMG/Gallery_imgs/Classical Tour Egypt.jpg" alt="Cairo Egypt Travel">
+                        </div>
+                        <div class="blog-card-classic-content">
+                            <div class="blog-card-classic-tags">
+                                <span>Egypt</span>
+                                <span>Cairo</span>
+                                <span>Guide</span>
+                                <span>Attractions</span>
+                            </div>
+                            <h2 class="blog-card-classic-title">Explore Cairo: 10 Top Attractions</h2>
+                            <div class="blog-card-classic-line"></div>
+                            <p class="blog-card-classic-desc">Uncover the best of Cairo! Visit the Pyramids of Giza, the Egyptian Museum, vibrant markets, and more. Your essential guide to Egypt’s capital—history, culture, and adventure in one place.</p>
+                            <span class="blog-card-classic-btn">READ MORE &raquo;</span>
+                        </div>
                     </div>
-                    <div class="text">
-                        <h2>Day Trip</h2>
-                        <h1>Vegas: Grand Canyon, Hoover Dam, Skywalk Option, & Two Meals</h1>
-                        <h3>10 hours • Skip the line • Pickup available</h3>
-                        <h4>From 192$<span> per person</span></h4>
+                </a>
+                <a href="./blog-pages/index--egyptian-food.html" class="blog-card-link">
+                    <div class="blog-card-classic">
+                        <div class="blog-card-classic-image">
+                            <img src="./../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg" alt="Egyptian Food Blog">
+                        </div>
+                        <div class="blog-card-classic-content">
+                            <div class="blog-card-classic-tags">
+                                <span>Egypt</span>
+                                <span>Food</span>
+                                <span>Cairo</span>
+                                <span>Cuisine</span>
+                            </div>
+                            <h2 class="blog-card-classic-title">Top 20 Egyptian Foods to Try in Cairo</h2>
+                            <div class="blog-card-classic-line"></div>
+                            <p class="blog-card-classic-desc">Discover the authentic flavors of Egypt! From koshari to mumbar, explore 20 must-try Egyptian dishes in Cairo. Your complete guide to Egyptian cuisine—taste, tradition, and local favorites.</p>
+                            <span class="blog-card-classic-btn">READ MORE &raquo;</span>
+                        </div>
                     </div>
-                </div>
-                
+                </a>
+                <a href="./blog-pages/index--luxor-attractions.html" class="blog-card-link">
+                    <div class="blog-card-classic">
+                        <div class="blog-card-classic-image">
+                            <img src="./../phote 3/8d.jpg" alt="Ramesseum Temple - Luxor Attractions">
+                        </div>
+                        <div class="blog-card-classic-content">
+                            <div class="blog-card-classic-tags">
+                                <span>Egypt</span>
+                                <span>Luxor</span>
+                                <span>Ancient</span>
+                                <span>Temples</span>
+                            </div>
+                            <h2 class="blog-card-classic-title">Top 7 Must-Visit Attractions in Luxor, Egypt</h2>
+                            <div class="blog-card-classic-line"></div>
+                            <p class="blog-card-classic-desc">Explore the ancient wonders of Luxor! From the magnificent Karnak Temple to the mysterious Valley of the Kings, discover Egypt's most iconic monuments and archaeological treasures.</p>
+                            <span class="blog-card-classic-btn">READ MORE &raquo;</span>
+                        </div>
+                    </div>
+                </a>
+
             </div>
-            <div class="blogs-blog">
-                <div class="blog-blog" id="cairo">
-                    <div class="img">
-                        <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <h2>Day Trip</h2>
-                        <h1>Vegas: Grand Canyon, Hoover Dam, Skywalk Option, & Two Meals</h1>
-                        <h3>10 hours • Skip the line • Pickup available</h3>
-                        <h4>From 192$<span> per person</span></h4>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="blogs-blog">
-                <div class="blog-blog" id="cairo">
-                    <div class="img">
-                        <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <h2>Day Trip</h2>
-                        <h1>Vegas: Grand Canyon, Hoover Dam, Skywalk Option, & Two Meals</h1>
-                        <h3>10 hours • Skip the line • Pickup available</h3>
-                        <h4>From 192$<span> per person</span></h4>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="blogs-blog">
-                <div class="blog-blog" id="cairo">
-                    <div class="img">
-                        <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <h2>Day Trip</h2>
-                        <h1>Vegas: Grand Canyon, Hoover Dam, Skywalk Option, & Two Meals</h1>
-                        <h3>10 hours • Skip the line • Pickup available</h3>
-                        <h4>From 192$<span> per person</span></h4>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="blogs-blog">
-                <div class="blog-blog" id="cairo">
-                    <div class="img">
-                        <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <h2>Day Trip</h2>
-                        <h1>Vegas: Grand Canyon, Hoover Dam, Skywalk Option, & Two Meals</h1>
-                        <h3>10 hours • Skip the line • Pickup available</h3>
-                        <h4>From 192$<span> per person</span></h4>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="blogs-blog">
-                <div class="blog-blog" id="cairo">
-                    <div class="img">
-                        <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <h2>Day Trip</h2>
-                        <h1>Vegas: Grand Canyon, Hoover Dam, Skywalk Option, & Two Meals</h1>
-                        <h3>10 hours • Skip the line • Pickup available</h3>
-                        <h4>From 192$<span> per person</span></h4>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="blogs-blog">
-                <div class="blog-blog" id="cairo">
-                    <div class="img">
-                        <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <h2>Day Trip</h2>
-                        <h1>Vegas: Grand Canyon, Hoover Dam, Skywalk Option, & Two Meals</h1>
-                        <h3>10 hours • Skip the line • Pickup available</h3>
-                        <h4>From 192$<span> per person</span></h4>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="blogs-blog">
-                <div class="blog-blog" id="cairo">
-                    <div class="img">
-                        <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <h2>Day Trip</h2>
-                        <h1>Vegas: Grand Canyon, Hoover Dam, Skywalk Option, & Two Meals</h1>
-                        <h3>10 hours • Skip the line • Pickup available</h3>
-                        <h4>From 192$<span> per person</span></h4>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="blogs-blog">
-                <div class="blog-blog" id="cairo">
-                    <div class="img">
-                        <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <h2>Day Trip</h2>
-                        <h1>Vegas: Grand Canyon, Hoover Dam, Skywalk Option, & Two Meals</h1>
-                        <h3>10 hours • Skip the line • Pickup available</h3>
-                        <h4>From 192$<span> per person</span></h4>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="blogs-blog">
-                <div class="blog-blog" id="cairo">
-                    <div class="img">
-                        <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <h2>Day Trip</h2>
-                        <h1>Vegas: Grand Canyon, Hoover Dam, Skywalk Option, & Two Meals</h1>
-                        <h3>10 hours • Skip the line • Pickup available</h3>
-                        <h4>From 192$<span> per person</span></h4>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="blogs-blog">
-                <div class="blog-blog" id="cairo">
-                    <div class="img">
-                        <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <h2>Day Trip</h2>
-                        <h1>Vegas: Grand Canyon, Hoover Dam, Skywalk Option, & Two Meals</h1>
-                        <h3>10 hours • Skip the line • Pickup available</h3>
-                        <h4>From 192$<span> per person</span></h4>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="blogs-blog">
-                <div class="blog-blog" id="cairo">
-                    <div class="img">
-                        <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <h2>Day Trip</h2>
-                        <h1>Vegas: Grand Canyon, Hoover Dam, Skywalk Option, & Two Meals</h1>
-                        <h3>10 hours • Skip the line • Pickup available</h3>
-                        <h4>From 192$<span> per person</span></h4>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="blogs-blog">
-                <div class="blog-blog" id="cairo">
-                    <div class="img">
-                        <img src="./../IMG/Gallery_imgs/What to do in Dahab, Egypt - TayaraMuse.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <h2>Day Trip</h2>
-                        <h1>Vegas: Grand Canyon, Hoover Dam, Skywalk Option, & Two Meals</h1>
-                        <h3>10 hours • Skip the line • Pickup available</h3>
-                        <h4>From 192$<span> per person</span></h4>
-                    </div>
-                </div>
-                
-            </div>
+
         </div>
     </div>
     </div>

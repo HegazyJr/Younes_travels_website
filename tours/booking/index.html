@@ -1,332 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../../style.css">
-    <link rel="stylesheet" href="./style.css">
-    <title>Hala Hala Island|Younes Tours</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (2).png">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Trip | Younes Tours</title>
+  <!-- ملفات CSS الرئيسية -->
+  <link rel="stylesheet" href="./../../style.css">
+  <link rel="stylesheet" href="./style.css">
+  <!-- مكتبة Font Awesome للأيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+  <!-- ===== STYLES FOR BOOKING PAGE ===== -->
+  <style>
+    /* تنسيق عام للصفحة */
+    body { 
+      background: #f8fbff; 
+      font-family: 'Raleway', sans-serif; 
+    }
+    
+    /* الحاوية الرئيسية للنموذج */
+    .booking-container { 
+      max-width: 500px; 
+      margin: 40px auto; 
+      background: #fff; 
+      border-radius: 18px; 
+      box-shadow: 0 2px 24px #b6e0fe55; 
+      padding: 2.5rem 1.5rem; 
+    }
+    
+    /* عنوان الصفحة */
+    h1 { 
+      color: #134b70; 
+      text-align: center; 
+      margin-bottom: 1.2rem; 
+      font-size: 2rem; 
+    }
+    
+    /* أقسام النموذج */
+    .form-section { 
+      background: #f8fbff; 
+      border-radius: 12px; 
+      box-shadow: 0 1px 8px #b6e0fe33; 
+      padding: 1.2rem 1rem 1.2rem 1rem; 
+      margin-bottom: 1.2rem; 
+    }
+    
+    /* عناوين الأقسام */
+    .form-section-title { 
+      font-size: 1.15rem; 
+      font-weight: 800; 
+      color: #134b70; 
+      margin-bottom: 0.7rem; 
+      letter-spacing: 0.5px; 
+    }
+    
+    /* تسميات الحقول */
+    label { 
+      font-weight: 700; 
+      color: #1a2341; 
+      margin-bottom: 0.3rem; 
+      display: block; 
+    }
+    
+    /* حقول الإدخال */
+    input, select, textarea { 
+      width: 100%; 
+      padding: 0.7rem 1rem; 
+      border-radius: 8px; 
+      border: 1.5px solid #b6e0fe; 
+      font-size: 1rem; 
+      background: #fff; 
+      margin-bottom: 0.2rem; 
+    }
+    
+    /* مربعات الاختيار */
+    input[type="checkbox"] { 
+      width: auto; 
+      margin-right: 0.7rem; 
+    }
+    
+    /* الصفوف المتعددة */
+    .row { 
+      display: flex; 
+      gap: 0.7rem; 
+    }
+    .row > * { 
+      flex: 1; 
+    }
+    
+    /* حقول الهاتف */
+    .phone-fields { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 0.5rem; 
+      margin-bottom: 0.5rem; 
+    }
+    .phone-fields label { 
+      font-weight: 500; 
+      color: #134b70; 
+      margin-bottom: 0; 
+      display: flex; 
+      align-items: center; 
+    }
+    .phone-fields .wa-hint { 
+      font-size: 0.95em; 
+      color: #25d366; 
+      margin-left: 0.5em; 
+      display: flex; 
+      align-items: center; 
+    }
+    
+    /* الملاحظات */
+    .note { 
+      font-size: 0.97em; 
+      color: #888; 
+      margin-bottom: 0.2rem; 
+      margin-top: -0.7rem; 
+    }
+    
+    /* زر الإرسال */
+    .submit-btn { 
+      background: #ff9800; 
+      color: #fff; 
+      border: none; 
+      border-radius: 8px; 
+      padding: 1rem 0; 
+      font-size: 1.15rem; 
+      font-weight: 800; 
+      cursor: pointer; 
+      margin-top: 0.7rem; 
+      transition: background 0.18s; 
+      width: 100%; 
+    }
+    .submit-btn:hover { 
+      background: #134b70; 
+    }
+    
+    /* رسالة التأكيد */
+    .confirmation { 
+      background: #e0f7fa; 
+      color: #134b70; 
+      border-radius: 8px; 
+      padding: 1.1rem 1.2rem; 
+      margin-top: 1.5rem; 
+      text-align: center; 
+      font-weight: 700; 
+      font-size: 1.1rem; 
+    }
+    
+    /* التصميم المتجاوب للهاتف المحمول */
+    @media (max-width: 600px) {
+      .booking-container { 
+        padding: 1rem 0.3rem; 
+      }
+      .submit-btn { 
+        position: fixed; 
+        left: 0; 
+        right: 0; 
+        bottom: 0; 
+        border-radius: 0; 
+        z-index: 100; 
+        margin: 0; 
+      }
+      form { 
+        padding-bottom: 4.5rem; 
+      }
+    }
+  </style>
 </head>
-<body id="body">
-    <div class="container">
-        <header>
-            <div class="nov-container">
-                <div class="h_btn">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="logo">
-                    <h1>Younes <span>Tours</span></h1>
-                    <i class="fa-solid fa-plane"></i>
-                </div>
-               <div class="menu">
-                    <div class="links">
-                        <div class="link"><a href="./../../index.html#home">Home</a></div>
-                        <div class="link" id="packages-link"><a href="./../index.html">Destinations</a></div>
-                        <div class="link" id="blog-link"><a href="./../../blogs/index.html">Blog</a></div>
-                        <!-- <div class="blog" id="blog">
-                            <div class="space"></div>
-                            <div class="container">
-                                <div class="link"> <a href="">savari</a></div>
-                                <div class="link"> <a href="">cairo</a></div>
-                                <div class="link"> <a href="">hurgada</a></div>
-                                <div class="link"> <a href="">luxor</a></div>
-                                <div class="link"> <a href="">histrocial tours</a></div>
-                                <div class="link"> <a href="">coastal tours</a></div>
-                            </div>
-                        </div> -->
-                        <div class="link"><a href="./../../index.html#w_us">About us</a></div>
-                        <div class="link"><a href="">Gallery</a></div>
-                        <div class="link"><a href="./../../index.html#footer">Contact</a></div>
-                    </div>
-                    <div class="o-links">
-                        <div class="email" id="email">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <div class="face" id="face">
-                            <i class="fa-brands fa-facebook"></i>
-                        </div>
-                        <div class="insta" id="insta">
-                            <i class="fa-brands fa-instagram"></i>
-                        </div>
-                    </div>
-
-               </div>
-            </div>
-
-        </header>
-        <div class="header-m">
-                <div class="nav-container-m">
-                    <div class="logo">
-                        <h1>Younes <span>Tours</span></h1>
-                        <!-- <i class="fa-solid fa-plane"></i> -->
-                    </div>
-                     <div class="menu-style" onclick="open_pop()">
-                        <div class=""></div>
-                        <div class=""></div>
-                        <div class=""></div>
-                    </div>
-            </div>
-        <div class="pop_up" id="pop">
-                <div class="exit" id="exit" onclick="exit()">
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="logo_box-p" id="logo_menu">
-                    <img src="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview.png" alt="logo.img">
-                        <h1>Younes <span>Tours</span></h1>
-                </div>
-                <div class="links_box-p" id="links_menu">
-                   <div class="link"><a href="../../index.html#home">Home</a></div>
-                    <div class="link" id="packages-link"><a href="../index.html">Destinations</a></div>
-                    <!-- <div class="packages-m" id="packages-m">
-                        <div class="container">
-                            <div class="link"> <a href="#P_T"><span>-</span> Popular Tours</a></div>
-                            <div class="link"> <a href="#S_T"><span>-</span> Best Selling Tours</a></div>
-                        </div>
-                    </div> -->
-                    <div class="link" id="blog-link"><a href="../../blogs/index.html">Blog</a></div>
-                    <!-- <div class="blog-m" id="blog-m">
-                            <div class="space"></div>
-                            <div class="container">
-                                <div class="link"> <a href=""><span>-</span> savari</a></div>
-                                <div class="link"> <a href=""><span>-</span> cairo</a></div>
-                                <div class="link"> <a href=""><span>-</span> hurgada</a></div>
-                                <div class="link"> <a href=""><span>-</span> luxor</a></div>
-                            </div> -->
-                    <div class="link"><a href="../../index.html#w_us">About us</a></div>
-                        <div class="link"><a href="">Gallery</a></div>
-                        <div class="link"><a href="../../index.html#w_us">Contact</a></div>
-                </div>
-            </div>
-        </div>
-        <div class="packages" id="packages">
-            <div class="container">
-                <div class="link"> <a href="#P_T">Popular Tours</a></div>
-                 <div class="link"> <a href="#S_T">Best Selling Tours</a></div>
-            </div>
-        </div>
-        <div class="contact">
-            <div class="desktop">
-                <div class="whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </div>
-            </div>
-            <div class="mobile">
-                <div class="whatsapp-m">
-                    <i class="fa-brands fa-whatsapp" ></i>
-                </div>
-                <div class="email-m">
-                    <i class="fa-solid fa-envelope"></i>
-                </div>
-                <div class="face-m">
-                    <i class="fa-brands fa-facebook"></i>
-                </div>
-                <div class="insta-m">
-                    <i class="fa-brands fa-instagram"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="top-page">
-            
-            <div class="text_title">
-                <h1><span>hala hala island:</span>Discover the beauty of hala hala island</h1>
-            </div>
-            <div class="box">
-                <div class="type">
-                    <h1>top rated</h1>
-                </div>
-                <div class="rating">
-                    <div class="star-rating">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star" id="not_checked"></span>
-                    </div>
-                    <div class="rating">
-                        <h2>4.9</h2>
-                    </div>
-                    </div>
-                    <div class="review_count">
-                        <h2>100 reviews</h2>
-                    </div>
-                    <div class="point"></div>
-                    <div class="place">
-                        <h2>Activity provider: Egypt Hala Hala Island</h2>
-                    </div>
-            </div>
-            <div class="images">
-                <div class="imgs_box">
-                    <div class="img_box">
-                        <img src="./../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg" alt="">
-                    </div>
-                    <div class="img_box">
-                        <img src="./../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg" alt="">
-                    </div>
-                    <div class="img_box">
-                        <img src="./../../IMG/Gallery_imgs/Classical Tour Egypt.jpg" alt="">
-                        <img src="./../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="about">
-                <h4>Enjoy a memorable visit to the USS Midway Museum when you're in San Diego. Skip the line when visiting the longest serving Aircraft Carrier in the American fleet.</h4>
-            </div>
-            <div class="price-box">
-                <div class="price">
-                    <h2>From</h2>
-                    <h2>35$</h2>
-                    <h2>per person</h2>
-                </div>
-                <div class="btn-check">
-                    <button>Check Availability</button>
-                </div>
-                <div class="pay_later">
-                    <i class="fa-solid fa-credit-card"></i>
-                    <h3><span>Reserve now & pay later</span>
-                     to book your spot and pay nothing today</h3>
-                </div>
-            </div>
-            <div class="about-ticket">
-                <h1>About This Ticket</h1>
-                <div class="items">
-                    <div class="item">
-                        <i class="fa-solid fa-calendar-check"></i>
-                        <h3><span>Free cancellation</span><br>Cancel up to 24 hours in advance for a full refund</h3>
-                    </div>
-                    <div class="item">
-                        <i class="fa-solid fa-credit-card"></i>
-                        <h3><span>Reserve now & pay later</span><br>
-    Keep your travel plans flexible — book your spot and pay nothing today.</h3>
-                    </div>
-                    <div class="item">
-                        <i class="fa-solid fa-fast-forward"></i>
-                        <h3><span>Skip the ticket line</span><br></h3>
-                    </div>
-                    <div class="item">
-                        <i class="fa-solid fa-headphones"></i>
-                        <h3><span>Audio guide included</span><br>Spanish, English, Chinese, French, German, Japanese</h3>
-                    </div>
-                    <div class="item">
-                        <i class="fa-solid fa-wheelchair"></i>
-                        <h3><span>Wheelchair accessible</span><br></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="top-review">
-                <h1>Highlighted reviews from other travelers</h1>
-                <div class="reviews">
-                    <div class="review">
-                        <div class="img">
-                            <img src="./../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h1>Kareem Hegazy</h1>
-                            <div class="details">
-                                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aliquid fuga ex eos deleniti, est eligendi aperiam magnam molestias aliquam ullam saepe tenetur, nulla non ipsum repellat impedit velit amet.</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="review">
-                        <div class="img">
-                            <img src="./../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <h1>Kareem Hegazy</h1>
-                            <div class="details">
-                                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aliquid fuga ex eos deleniti, est eligendi aperiam magnam molestias aliquam ullam saepe tenetur, nulla non ipsum repellat impedit velit amet.</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="more">
-                    <a>more reviews</a>
-                </div>
-            </div>
-            <div class="cost">
-                <h2>Select participants and date</h2>
-                <div class="cost-box">
-                    
-                    <div class="members">
-                        <h5>number of adults</h5>
-                        <select name="participants" id="participants">
-                            <option value="" disabled selected hidden>adults</option>
-                            <option value="">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="10+">10~15</option>
-                            <option value="15+">15~20</option>
-                            <option value="20+">20~30</option>
-                        </select>
-                    </div>
-                    <div class="members">
-                        <h5>number of youngs (5~15)</h5>
-                        <select name="participants" id="youngs">
-                            <option value="" disabled selected hidden>children (5~15)</option>
-                            <option value="">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="10+">10~15</option>
-                            <option value="15+">15~20</option>
-                            <option value="20+">20~30</option>
-                        </select>
-                    </div>
-                    
-                    <div class="date-select">
-                        <h5>select date</h5>
-                        <input type="date" id="dateInput" name="date" placeholder="1" required>
-                    </div>
-                    <div class="btn-check">
-                        <button id="check-availability">Check Availability</button>
-                    </div>
-                </div>
-                <div class="result" id="result">
-                    <h1><span>hala hala island:</span>Discover the beauty of hala hala island</h1>
-                    <div class="details">
-                        <div class="time"><i class="fas fa-clock"></i><h3>8 hours</h3></div>  
-                        <div class="language"><i class="fas fa-language"></i><h3>English</h3></div>
-                        <div class="location"><i class="fas fa-map-marker-alt"></i><a><h3>Hala Hala Island</h3></a></div>
-                    </div>
-                    <div class="line"></div>
-                    <div class="time-selected">
-                        <h1>your trip starting time is </h1>
-                        <h2 id="time">10 a.m</h2>
-                    </div>
-                    <div class="line"></div>
-                    <div class="bottom">
-                        <div class="price-members">
-                            <h2>35$</h3>
-                            <h3 id="members"><span id="adult-count">1 </span>adults & <span id="young-count">1 </span>children</h3>
-                            <h6>All taxes and fees included</h6>
-                        </div>
-                        <div class="btn"><button>Book Now</button></div>
-                    </div>
-                </div>
-            </div>
-    </div>  
-    <script src="./main.js"></script>
-    <script src="./../../main.js"></script>
+<body>
+  <!-- ===== BOOKING FORM CONTAINER ===== -->
+  <div class="booking-container">
+    <h1>Book Your Trip</h1>
+    
+    <!-- ===== MAIN BOOKING FORM ===== -->
+    <form id="bookingForm">
+      
+      <!-- ===== GUEST INFORMATION SECTION ===== -->
+      <div class="form-section">
+        <div class="form-section-title">👥 Guest Information</div>
+        <label for="adults">Number of Adults (11+ years)</label>
+        <input type="number" id="adults" name="adults" min="1" max="20" placeholder="Adults" value="1" required>
+        <div class="phone-fields" id="phoneFields"></div>
+        <label for="children">Number of Children (under 11)</label>
+        <input type="number" id="children" name="children" min="0" max="20" placeholder="Children">
+      </div>
+      
+      <!-- ===== HOTEL INFORMATION SECTION ===== -->
+      <div class="form-section">
+        <div class="form-section-title">🏨 Hotel Information</div>
+        <label for="hotel">Hotel Name</label>
+        <input type="text" id="hotel" name="hotel" placeholder="Enter hotel name" required autocomplete="off">
+        <label for="room">Hotel Room Number</label>
+        <input type="text" id="room" name="room" placeholder="e.g. 222" required autocomplete="off">
+      </div>
+      
+      <!-- ===== TRIP SELECTION SECTION ===== -->
+      <div class="form-section">
+        <div class="form-section-title">🧭 Trip Selection</div>
+        <label for="trip">Trip Name / Destination</label>
+        <select id="trip" name="trip" required>
+          <option value="" disabled selected hidden>Select your trip</option>
+          <option>Giftun Island</option>
+          <option>Paradise Island</option>
+          <option>Orange Bay</option>
+          <option>Dolphin House</option>
+          <option>Desert Safari</option>
+          <option>Luxor Day Trip</option>
+        </select>
+      </div>
+      
+      <!-- ===== DATE & TIME SECTION ===== -->
+      <div class="form-section">
+        <div class="form-section-title">📆 Date & Time</div>
+        <label for="tripDate">Trip Date</label>
+        <input type="date" id="tripDate" name="tripDate" required>
+        <label for="tripTime">Trip Time</label>
+        <select id="tripTime" name="tripTime" required>
+          <option value="" disabled selected hidden>Select time</option>
+          <option>08:00 AM</option>
+          <option>09:30 AM</option>
+          <option>10:00 AM</option>
+          <option>11:00 AM</option>
+          <option>01:00 PM</option>
+          <option>02:30 PM</option>
+          <option>04:30 PM</option>
+        </select>
+      </div>
+      
+      <!-- ===== PICKUP LOCATION SECTION ===== -->
+      <div class="form-section">
+        <div class="form-section-title">📍 Pickup Location (Outside Hurghada)</div>
+        <label for="pickup">Pickup Location</label>
+        <select id="pickup" name="pickup" required>
+          <option value="" disabled selected hidden>Select pickup area</option>
+          <option>El Gouna</option>
+          <option>Sahl Hasheesh</option>
+          <option>Makadi Bay</option>
+          <option>Soma Bay</option>
+          <option>Safaga</option>
+          <option>Desert pickup</option>
+        </select>
+        <div class="note">Transfer from these areas is included in the price.</div>
+      </div>
+      <!-- Translator Language -->
+      <div class="form-section">
+        <div class="form-section-title">🌍 Translator Language</div>
+        <label for="translatorLang">Preferred Language for Translator</label>
+        <input type="text" id="translatorLang" name="translatorLang" placeholder="Write language needed (optional)">
+        <div class="note">German, Russian, and English are included in the price.</div>
+      </div>
+      <!-- Additional Info -->
+      <div class="form-section">
+        <div class="form-section-title">📝 Additional Info</div>
+        <label for="specialRequests">Special Requests</label>
+        <textarea id="specialRequests" name="specialRequests" rows="2" placeholder="Any special requests? (optional)"></textarea>
+        <label><input type="checkbox" name="terms" required> I agree to the terms and cancellation policy</label>
+      </div>
+      <button type="submit" class="submit-btn">Book Now</button>
+      <div id="confirmation" class="confirmation" style="display:none;">Your booking has been submitted successfully. We will contact you shortly via WhatsApp.</div>
+    </form>
+  </div>
+  <script>
+    // Dynamic phone fields for adults
+    function renderPhoneFields() {
+      const adults = parseInt(document.getElementById('adults').value) || 1;
+      const phoneFields = document.getElementById('phoneFields');
+      phoneFields.innerHTML = '';
+      for (let i = 1; i <= adults; i++) {
+        const label = document.createElement('label');
+        label.innerHTML = `Adult ${i} WhatsApp Number <span class='wa-hint'><i class='fab fa-whatsapp'></i> WhatsApp preferred</span>`;
+        const input = document.createElement('input');
+        input.type = 'tel';
+        input.name = `phone${i}`;
+        input.placeholder = `+20 110 000 000${i}`;
+        input.required = true;
+        phoneFields.appendChild(label);
+        phoneFields.appendChild(input);
+      }
+    }
+    document.getElementById('adults').addEventListener('input', renderPhoneFields);
+    renderPhoneFields();
+    // Confirmation message
+    document.getElementById('bookingForm').onsubmit = function(e) {
+      e.preventDefault();
+      document.getElementById('confirmation').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(function(){ document.getElementById('confirmation').style.display = 'none'; }, 7000);
+      this.reset();
+      renderPhoneFields();
+    };
+  </script>
 </body>
 </html>

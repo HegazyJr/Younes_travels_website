@@ -4,28 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Gallery | Younes Tours</title>
+    <!-- ملف CSS الرئيسي -->
     <link rel="stylesheet" href="style.css">
+    <!-- مكتبة Font Awesome للأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- ===== STYLES FOR GALLERY PAGE ===== -->
     <style>
-        body { background: #fff; margin: 0; }
-        .gallery-header { text-align: center; margin: 2.5rem 0 1.5rem 0; }
-        .gallery-header h1 { color: #1a2341; font-size: 2.3rem; font-weight: 900; letter-spacing: 2px; }
-        .gallery-header p { color: #7d8597; font-size: 1.1rem; margin-top: 0.7rem; }
-        .gallery-filters { display: flex; flex-wrap: wrap; gap: 0.7rem; justify-content: center; margin-bottom: 2.2rem; }
-        .gallery-filter-btn { background: #f8fbff; color: #134b70; border: 1.5px solid #b6e0fe; border-radius: 8px; padding: 0.5rem 1.3rem; font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: background 0.18s, color 0.18s, border 0.18s; }
-        .gallery-filter-btn.active, .gallery-filter-btn:hover { background: #ff9800; color: #fff; border: 1.5px solid #ff9800; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; max-width: 1100px; margin: auto; padding: 0 2vw 2vw 2vw; }
-        .gallery-card { aspect-ratio: 1/1; background: #fff; border-radius: 14px; box-shadow: 0 2px 12px #b6e0fe33; overflow: hidden; transition: box-shadow 0.18s, transform 0.18s; cursor: pointer; position: relative; display: flex; align-items: stretch; }
-        .gallery-card img, .gallery-card video { width: 100%; height: 100%; object-fit: cover; transition: transform 0.22s, filter 0.18s; display: block; }
-        .gallery-card:hover img, .gallery-card:hover video { transform: scale(1.07); filter: brightness(0.93) drop-shadow(0 0 16px #ff980055); }
-        .lightbox { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100vw; height: 100vh; background: rgba(19,75,112,0.85); align-items: center; justify-content: center; }
-        .lightbox.active { display: flex; }
-        .lightbox-content { max-width: 90vw; max-height: 80vh; border-radius: 18px; overflow: hidden; background: #fff; box-shadow: 0 8px 32px #134b7077; position: relative; display: flex; flex-direction: column; align-items: center; }
-        .lightbox-content img, .lightbox-content video { max-width: 90vw; max-height: 70vh; border-radius: 18px 18px 0 0; background: #b6e0fe22; }
-        .lightbox-caption { color: #134b70; font-size: 1.1rem; font-weight: 600; padding: 0.7rem 1.2rem 1.2rem 1.2rem; background: #f8fbff; width: 100%; text-align: center; border-radius: 0 0 18px 18px; }
-        .lightbox-close { position: absolute; top: 10px; right: 18px; font-size: 2rem; color: #134b70; background: #fff; border-radius: 50%; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 2px 8px #b6e0fe33; z-index: 2; border: none; }
-        @media (max-width: 700px) { .gallery-header h1 { font-size: 1.3rem; } .gallery-grid { grid-template-columns: 1fr 1fr; gap: 10px; } .gallery-card { border-radius: 8px; } }
-        @media (max-width: 500px) { .gallery-grid { grid-template-columns: 1fr; } }
+        /* تنسيق عام للصفحة */
+        body { 
+            background: #fff; 
+            margin: 0; 
+        }
+        
+        /* رأس المعرض */
+        .gallery-header { 
+            text-align: center; 
+            margin: 2.5rem 0 1.5rem 0; 
+        }
+        .gallery-header h1 { 
+            color: #1a2341; 
+            font-size: 2.3rem; 
+            font-weight: 900; 
+            letter-spacing: 2px; 
+        }
+        .gallery-header p { 
+            color: #7d8597; 
+            font-size: 1.1rem; 
+            margin-top: 0.7rem; 
+        }
+        
+        /* أزرار التصفية */
+        .gallery-filters { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 0.7rem; 
+            justify-content: center; 
+            margin-bottom: 2.2rem; 
+        }
+        .gallery-filter-btn { 
+            background: #f8fbff; 
+            color: #134b70; 
+            border: 1.5px solid #b6e0fe; 
+            border-radius: 8px; 
+            padding: 0.5rem 1.3rem; 
+            font-size: 1.05rem; 
+            font-weight: 700; 
+            cursor: pointer; 
+            transition: background 0.18s, color 0.18s, border 0.18s; 
+        }
+        .gallery-filter-btn.active, .gallery-filter-btn:hover { 
+            background: #ff9800; 
+            color: #fff; 
+            border: 1.5px solid #ff9800; 
+        }
+        
+        /* شبكة المعرض */
+        .gallery-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+            gap: 18px; 
+            max-width: 1100px; 
+            margin: auto; 
+            padding: 0 2vw 2vw 2vw; 
+        }
+        
+        /* بطاقات الصور */
+        .gallery-card { 
+            aspect-ratio: 1/1; 
+            background: #fff; 
+            border-radius: 14px; 
+            box-shadow: 0 2px 12px #b6e0fe33; 
+            overflow: hidden; 
+            transition: box-shadow 0.18s, transform 0.18s; 
+            cursor: pointer; 
+            position: relative; 
+            display: flex; 
+            align-items: stretch; 
+        }
+        .gallery-card img, .gallery-card video { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transition: transform 0.22s, filter 0.18s; 
+            display: block; 
+        }
+        .gallery-card:hover img, .gallery-card:hover video { 
+            transform: scale(1.07); 
+            filter: brightness(0.93) drop-shadow(0 0 16px #ff980055); 
+        }
+        
+        /* نافذة العرض المكبرة */
+        .lightbox { 
+            display: none; 
+            position: fixed; 
+            z-index: 9999; 
+            left: 0; 
+            top: 0; 
+            width: 100vw; 
+            height: 100vh; 
+            background: rgba(19,75,112,0.85); 
+            align-items: center; 
+            justify-content: center; 
+        }
+        .lightbox.active { 
+            display: flex; 
+        }
+        .lightbox-content { 
+            max-width: 90vw; 
+            max-height: 80vh; 
+            border-radius: 18px; 
+            overflow: hidden; 
+            background: #fff; 
+            box-shadow: 0 8px 32px #134b7077; 
+            position: relative; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+        }
+        .lightbox-content img, .lightbox-content video { 
+            max-width: 90vw; 
+            max-height: 70vh; 
+            border-radius: 18px 18px 0 0; 
+            background: #b6e0fe22; 
+        }
+        .lightbox-caption { 
+            color: #134b70; 
+            font-size: 1.1rem; 
+            font-weight: 600; 
+            padding: 0.7rem 1.2rem 1.2rem 1.2rem; 
+            background: #f8fbff; 
+            width: 100%; 
+            text-align: center; 
+            border-radius: 0 0 18px 18px; 
+        }
+        .lightbox-close { 
+            position: absolute; 
+            top: 10px; 
+            right: 18px; 
+            font-size: 2rem; 
+            color: #134b70; 
+            background: #fff; 
+            border-radius: 50%; 
+            width: 38px; 
+            height: 38px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            cursor: pointer; 
+            box-shadow: 0 2px 8px #b6e0fe33; 
+            z-index: 2; 
+            border: none; 
+        }
+        
+        /* التصميم المتجاوب */
+        @media (max-width: 700px) { 
+            .gallery-header h1 { 
+                font-size: 1.3rem; 
+            } 
+            .gallery-grid { 
+                grid-template-columns: 1fr 1fr; 
+                gap: 10px; 
+            } 
+            .gallery-card { 
+                border-radius: 8px; 
+            } 
+        }
+        @media (max-width: 500px) { 
+            .gallery-grid { 
+                grid-template-columns: 1fr; 
+            } 
+        }
+        
+        /* تنسيق القائمة النشطة */
         .active-nav {
           background: #ff9800;
           color: #fff !important;
@@ -45,8 +196,8 @@
     </style>
 </head>
 <body>
-    <!-- Navbar من الصفحة الرئيسية -->
-           <header>
+    <!-- ===== HEADER SECTION ===== -->
+    <header>
             <div class="nov-container">
                 <div class="h_btn">
                     <div></div>
@@ -166,17 +317,24 @@
                 </div>
             </div>
         </div>
-    <!-- HERO SECTION -->
+    
+    <!-- ===== HERO SECTION ===== -->
     <div class="gallery-hero" style="position:relative;min-height:320px;display:flex;align-items:center;justify-content:center;margin-bottom:2.5rem;">
-        <div style="position:absolute;inset:0;z-index:1;background:url('./../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg') center center/cover no-repeat;filter:blur(3px) brightness(0.7);"></div>
+        <!-- خلفية متحركة -->
+        <div style="position:absolute;inset:0;z-index:1;background:url('IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg') center center/cover no-repeat;filter:blur(3px) brightness(0.7);"></div>
+        <!-- طبقة التدرج -->
         <div style="position:absolute;inset:0;z-index:2;background:linear-gradient(120deg,rgba(30,30,30,0.18) 0%,rgba(255,152,0,0.10) 100%);"></div>
+        <!-- المحتوى الرئيسي -->
         <div style="position:relative;z-index:3;text-align:center;width:100%;max-width:700px;padding:3.5rem 1.5rem 3.5rem 1.5rem;">
             <h1 style="color:#fff;font-size:2.7rem;font-weight:900;letter-spacing:1.5px;margin-bottom:1.1rem;text-shadow:0 4px 32px rgba(0,0,0,0.25);font-family:'Raleway',sans-serif;">Discover the Journey in Pictures</h1>
             <div style="color:#fff;font-size:1.25rem;line-height:1.7;margin-bottom:2.2rem;text-shadow:0 2px 8px rgba(0,0,0,0.18);font-family:'Raleway',sans-serif;">Step into our world of adventure and memories. Explore breathtaking destinations, happy moments, and the spirit of travel through our curated gallery.</div>
             <a href="tours/index.html" style="display:inline-block;background:#ff9800;color:#fff;font-weight:700;font-size:1.1rem;padding:0.9rem 2.2rem;border-radius:8px;text-decoration:none;box-shadow:0 2px 12px #b6e0fe33;transition:background 0.2s;">Explore Destinations</a>
         </div>
     </div>
+    
+    <!-- ===== GALLERY GRID ===== -->
     <div class="gallery-grid" id="gallery-grid">
+      <!-- بطاقات الصور -->
       <div class="gallery-card"><img src="photes/WhatsApp Image 2025-07-23 at 20.25.02_e42e89a0.jpg" alt="gallery image"></div>
       <div class="gallery-card"><img src="photes/WhatsApp Image 2025-07-23 at 20.25.02_cfa8bbf2.jpg" alt="gallery image"></div>
       <div class="gallery-card"><img src="photes/WhatsApp Image 2025-07-23 at 20.25.02_fa1843a8.jpg" alt="gallery image"></div>
@@ -328,65 +486,67 @@
             <button class="lightbox-close" id="lightbox-close"><i class="fa-solid fa-xmark"></i></button>
         </div>
     </div>
-    <footer id="footer">
-    <div class="f-container">
-        <div class="logo">
-            <img src="./../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (1).png" alt="">
-           <div class="text">
-                <h2>Younes </h2>
-                <h2>tours</h2>
-           </div>
-        </div>
-        <div class="inforamtion">
-            <div class="info">
-                <div class="i_info">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <h3> Rua Manuel Rodrigues Abreu, 26, 3800-693 Aveiro, Portugal</h3>
+            <footer id="footer">
+                <div class="f-container">
+                    <div class="logo">
+                        <img src="./IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (1).png" alt="">
+                       <div class="text">
+                            <h2>Younes </h2>
+                            <h2>tours</h2>
+                       </div>
+                    </div>
+                    <div class="inforamtion">
+                        <div class="info">
+                            <div class="i_info">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <h3> Rua Manuel Rodrigues Abreu, 26, 3800-693 Aveiro, Portugal</h3>
+                            </div>
+                            <div class="i_info">
+                                <i class="fa-solid fa-phone"></i>
+                                <h3> +20 110 007 7315</h3>
+                                <!-- <h3> +351 234 567 890</h3> -->
+                            </div>
+                            <div class="i_info">
+                                <i class="fa-solid fa-envelope"></i>
+                                <h3> younestours7@gmail.com</h3>
+                        </div>
+                        </div>
+                        <div class="info">
+                            <h1>pages</h1>
+                            <ul>
+                                <li>Home</li>
+                                <li>Services</li>
+                                <li>Gallery</li>
+                                <li>Reviews</li>
+                                <li>About</li>
+                                <li>Contact</li>
+                            </ul>
+                        </div>
+                        <div class="info">
+                            <h1>Categories</h1>
+                            <ul>
+                                <li>Egypt tours</li>
+                                <li>Egypt tours packages</li>
+                                <li>coastal tours</li>
+                            </ul>
+                        </div>
+                        <div class="info">
+                            <h1>follow us</h1>
+                            <ul>
+                                <li><i class="fa-solid fa-share"></i></li>
+                                <li><i><i class="fa-brands fa-facebook"></i></i></li>
+                                <li><i><i class="fa-brands fa-instagram"></i></i></li>
+                                <li><i><i class="fa-brands fa-twitter"></i></i></li>
+
+                            </ul>
+                            <div class="copyright">
+                                <h3> Copyright  2022 Younes Tours. All Rights Reserved.</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="i_info">
-                    <i class="fa-solid fa-phone"></i>
-                    <h3> +20 110 007 7315</h3>
-                </div>
-                <div class="i_info">
-                    <i class="fa-solid fa-envelope"></i>
-                    <h3> younestours7@gmail.com</h3>
-            </div>
-            </div>
-            <div class="info">
-                <h1>pages</h1>
-                <ul style="a{color: var(--main-color) !important;}">
-                    <li><a href="./../index.html">Home</a></li>
-                    <li><a href="./../index.html#services">Services</a></li>
-                    <li><a href="./../index.htmlgallery.html">Gallery</a></li>
-                    <li><a href="./../index.html#reviews">Reviews</a></li>
-                    <li><a href="./../index.html#w_us">About</a></li>
-                    <li><a href="./../index.html#footer">Contact</a></li>
-                </ul>
-            </div>
-            <div class="info">
-                <h1>Categories</h1>
-                <ul>
-                    <li><a href="./../tours/index.html">Egypt tours</a></li>
-                    <li><a href="./../tours/index.html">Egypt tours packages</a></li>
-                    <li><a href="./../tours/index.html">coastal tours</a></li>
-                </ul>
-            </div>
-            <div class="info">
-                <h1>follow us</h1>
-                <ul>
-                    <li><a href="#"><i class="fa-solid fa-share"></i></a></li>
-                    <li><a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-                </ul>
-                <div class="copyright">
-                    <h3> Copyright  2022 Younes Tours. All Rights Reserved.</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<script src="./main.js"></script>
+            </footer>
+    <script src="./main.js"></script>
     <script>
 // كود Lightbox لعرض الصورة عند الضغط عليها بحجم أكبر
 const galleryGrid = document.getElementById('gallery-grid');

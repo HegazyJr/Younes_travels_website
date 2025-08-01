@@ -5,28 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Home | Younes travels</title>
+    <!-- مكتبة AOS للحركات والتأثيرات -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- مكتبة Font Awesome للأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- أيقونة الموقع -->
     <link rel="icon" href="./IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (2).png">
 </head>
 <body id="body">
     <div class="container">
+        <!-- ===== HEADER SECTION ===== -->
         <header>
             <div class="nov-container">
+                <!-- زر القائمة للهاتف المحمول -->
                 <div class="h_btn">
                     <div></div>
                     <div></div>
                     <div></div>
                 </div>
+                <!-- شعار الموقع -->
                 <div class="logo">
                     <h1>Younes <span>Tours</span></h1>
                     <i class="fa-solid fa-plane"></i>
                 </div>
+               <!-- قائمة التنقل الرئيسية -->
                <div class="menu">
                     <div class="links">
                         <div class="link"><a href="#home">Home</a></div>
                         <div class="link" id="packages-link"><a href="./tours/index.html">Destinations</a></div>
                         <div class="link" id="blog-link"><a href="./blogs/index.html">Blog</a></div>
+                        <!-- قائمة فرعية للجولات (معلقة حالياً) -->
                         <!-- <div class="blog" id="blog">
                             <div class="space"></div>
                             <div class="container">
@@ -38,10 +46,11 @@
                                 <div class="link"> <a href="">coastal tours</a></div>
                             </div>
                         </div> -->
-                        <div class="link"><a href="#w_us">About us</a></div>
-                        <div class="link"><a href="./gallery/gallery.html">Gallery</a></div>
-                        <div class="link"><a href="./about/about.html">Who us</a></div>
+                        <div class="link"><a href="about.html">About us</a></div>
+                        <div class="link"><a href="gallery.html">Photos</a></div>
+                        <div class="link"><a href="tours/booking/index.html">Contact</a></div>
                     </div>
+                    <!-- أيقونات التواصل الاجتماعي -->
                     <div class="o-links">
                         <div class="email" id="email">
                             <i class="fa-solid fa-envelope"></i>
@@ -58,11 +67,12 @@
             </div>
 
         </header>
+        
+        <!-- ===== HEADER MOBILE ===== -->
         <div class="header-m">
                 <div class="nav-container-m">
                     <div class="logo">
                         <h1>Younes <span>Tours</span></h1>
-                        <!-- <i class="fa-solid fa-plane"></i> -->
                     </div>
                      <div class="menu-style" onclick="open_pop()">
                         <div class=""></div>
@@ -70,6 +80,7 @@
                         <div class=""></div>
                     </div>
             </div>
+        <!-- القائمة المنبثقة للهاتف المحمول -->
         <div class="pop_up" id="pop">
                 <div class="exit" id="exit" onclick="exit()">
                     <div></div>
@@ -82,42 +93,33 @@
                 <div class="links_box-p" id="links_menu">
                    <div class="link"><a href="#home">Home</a></div>
                     <div class="link" id="packages-link"><a href="./tours/index.html">Destinations</a></div>
-                    <!-- <div class="packages-m" id="packages-m">
-                        <div class="container">
-                            <div class="link"> <a href="#P_T"><span>-</span> Popular Tours</a></div>
-                            <div class="link"> <a href="#S_T"><span>-</span> Best Selling Tours</a></div>
-                        </div>
-                    </div> -->
                     <div class="link" id="blog-link"><a href="./blogs/index.html">Blog</a></div>
-                    <!-- <div class="blog-m" id="blog-m">
-                            <div class="space"></div>
-                            <div class="container">
-                                <div class="link"> <a href=""><span>-</span> savari</a></div>
-                                <div class="link"> <a href=""><span>-</span> cairo</a></div>
-                                <div class="link"> <a href=""><span>-</span> hurgada</a></div>
-                                <div class="link"> <a href=""><span>-</span> luxor</a></div>
-                            </div>
-                        </div> -->
                     <div class="link"><a href="#w_us">About us</a></div>
                         <div class="link"><a href="">Gallery</a></div>
-                        <div class="link"><a href="./about/about.html">who us</a></div>
+                        <div class="link"><a href="tours/booking/index.html">Contact</a></div>
                 </div>
             </div>
         </div>
+        
+        <!-- قائمة الجولات الفرعية -->
         <div class="packages" id="packages">
             <div class="container">
                 <div class="link"> <a href="#P_T">Popular Tours</a></div>
                  <div class="link"> <a href="#S_T">Best Selling Tours</a></div>
-            </div>  
+            </div>
         </div>
-        <div class="contact" id="contact">
+        
+        <!-- ===== CONTACT FLOATING BUTTONS ===== -->
+        <div class="contact">
+            <!-- أزرار التواصل للكمبيوتر -->
             <div class="desktop">
-                <div class="whatsapp">
+                <div class="whatsapp" id="whatsapp-desktop">
                     <i class="fa-brands fa-whatsapp"></i>
                 </div>
             </div>
+            <!-- أزرار التواصل للهاتف المحمول -->
             <div class="mobile">
-                <div class="whatsapp-m">
+                <div class="whatsapp-m" id="whatsapp-mobile">
                     <i class="fa-brands fa-whatsapp" ></i>
                 </div>
                 <div class="email-m">
@@ -131,17 +133,18 @@
                 </div>
             </div>
         </div>
-        
+    
+        <!-- ===== MAIN CONTENT ===== -->
         <div class="lending-page">
+            <!-- ===== HERO SECTION ===== -->
             <div class="upper-page" id="home">
+                <!-- خلفية الصور المتحركة -->
                 <div class="background-imgs">
                     <img src="./IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg" alt="" id="img-one">
                     <img src="./IMG/Gallery_imgs/pexels-eslames1-32398174.jpg" alt="" id="img-two"> 
                     <img src="./IMG/Gallery_imgs/pexels-michael-d-beckwith-2150568551-31209023.jpg" alt="" id="img-three">
                 </div>
-                <!-- <div class="next-controller" id="next">
-                    <h1>></h1 id="next">
-                </div> -->
+                <!-- مربع النص الرئيسي -->
                 <div class="text-box">
                     <div class="title">
                         <h1>Upcoming</h1>
@@ -156,36 +159,38 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- ===== HURGHADA TOURS SECTION ===== -->
             <div class="middle-page" id="P_T" data-aos="fade-up">
                <div class="title">
                     <h2>Hurghada  TOURS</h2>
                     <div class="line"></div>
-                    <div class="pharagraph"> <h1>Welcome to the Red Sea — Egypt’s top spot for tours and nature escapes.
+                    <div class="pharagraph"> <h1>Welcome to the Red Sea — Egypt's top spot for tours and nature escapes.
     From coral reefs to desert trails, discover pure adventure and beauty.
     Your journey to unforgettable memories starts here</h1>  </div>
                </div>
-                <div class="kinds" onclick=" window.location.href = './tours/index.html' ">
+                <!-- أنواع الجولات في الغردقة -->
+                <div class="kinds">
 
                     <div class="left">
-                        <div class="up">
+                        <div class="up" onclick="goToSafariSection()" style="cursor: pointer;">
                             <img src="./IMG/WhatsApp Image 2025-04-24 at 22.03.13_f5757c10.jpg" alt="">
                             <h1 class="label-one">savari tours</h1>
-                            <img src="./IMG/WhatsApp Image 2025-04-24 at 22.03.13_f5757c10.jpg" alt="">
-                            <h1 class="label-two">savari tours</h1>
                         </div>
-                        <!-- onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'})" -->
-                        <div class="down" >
+                        <div class="down" onclick="goToCoastalSection()" style="cursor: pointer;">
                             <img src="./IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.09_a6a77b6e.jpg" alt="">
                             <h1>coastal tours</h1>
                         </div>
                     </div>
-                    <div class="right">
+                    <div class="right" onclick="goToHistoricalSection()" style="cursor: pointer;">
                         <img src="./IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.17_2f268dbd.jpg" alt="">
                         <h1>histrocial tours</h1>
                     </div>
 
                 </div>
             </div>
+            
+            <!-- ===== BEST SELLING TOURS SECTION ===== -->
             <div class="under-m" id="S_T">
                 <div class="title">
                     <h1>best selling tours</h1>
@@ -197,6 +202,7 @@ From vibrant coral reefs to golden desert dunes, our top-selling tours deliver t
 Carefully crafted and professionally organized — these experiences are why our guests keep coming back.</h2>
                     </div>    
                 </div>
+                <!-- عرض الجولات الأكثر مبيعاً -->
                 <div class="products" id="products">
                     <div class="product">   
                         <div class="img">
@@ -266,6 +272,8 @@ Carefully crafted and professionally organized — these experiences are why our
                     </div>
                 </div>
             </div>
+            
+            <!-- ===== EGYPTIAN HERITAGE TRIPS SECTION ===== -->
             <div class="h_u_page" id="H_T" data-aos="fade-up">
                 <div class="title">
                     <h1>Egyptian Heritage Trips</h1>
@@ -273,7 +281,7 @@ Carefully crafted and professionally organized — these experiences are why our
                     <div class="pharagraph">
                         <h2>Discover the soul of ancient Egypt through iconic landmarks like the Pyramids of Giza, Karnak Temple, and Philae Island.
 From the vibrant energy of Cairo to the timeless charm of the Nile in Luxor and Aswan — every moment is steeped in history.
-Enjoy expertly guided tours, premium service, and unforgettable cultural experiences in Egypt’s most legendary cities.</h2>
+Enjoy expertly guided tours, premium service, and unforgettable cultural experiences in Egypt's most legendary cities.</h2>
                     </div>
                 </div>
                 <div class="city-posters-row">
@@ -298,7 +306,7 @@ Enjoy expertly guided tours, premium service, and unforgettable cultural experie
                         <div class="city-content">
                             <div class="city-icon"><i class="fa-solid fa-monument"></i></div>
                             <h2 class="city-name">Luxor</h2>
-                            <p class="city-desc">The world’s greatest open-air museum. Explore Karnak, Valley of the Kings, and the timeless Nile.</p>
+                            <p class="city-desc">The world's greatest open-air museum. Explore Karnak, Valley of the Kings, and the timeless Nile.</p>
                             <div class="city-info">
                                 <span><i class="fa-regular fa-clock"></i> 2 days</span>
                                 <span><i class="fa-solid fa-box"></i> 5 packages</span>
@@ -313,7 +321,7 @@ Enjoy expertly guided tours, premium service, and unforgettable cultural experie
                         <div class="city-content">
                             <div class="city-icon"><i class="fa-solid fa-water"></i></div>
                             <h2 class="city-name">Aswan</h2>
-                            <p class="city-desc">Nubian culture, Philae Temple, and the beauty of the Nile’s southern reaches. A tranquil, historic escape.</p>
+                            <p class="city-desc">Nubian culture, Philae Temple, and the beauty of the Nile's southern reaches. A tranquil, historic escape.</p>
                             <div class="city-info">
                                 <span><i class="fa-regular fa-clock"></i> 2 days</span>
                                 <span><i class="fa-solid fa-box"></i> 4 packages</span>
@@ -339,13 +347,16 @@ Enjoy expertly guided tours, premium service, and unforgettable cultural experie
                     </div>
                 </div>
             </div>
+            
+            <!-- ===== WHY CHOOSE US SECTION ===== -->
             <section class="why-pro" id="w_us">
                 <div class="whypro-bg">
+                    <div class="whypro-bg-gradient"></div>
+                    <div class="whypro-bg-pattern"></div>
                     <svg class="whypro-bg-wave-top" viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                       <path d="M0,60 C360,140 1080,0 1440,60 L1440,90 L0,90 Z" fill="#b6e0fe" fill-opacity="0.45"/>
                       <path d="M0,80 C400,160 1040,20 1440,80 L1440,90 L0,90 Z" fill="#4fc3f7" fill-opacity="0.22"/>
                     </svg>
-                    <div class="whypro-bg-gradient"></div>
                     <svg class="whypro-bg-wave-bottom" viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                       <path d="M0,60 C360,140 1080,0 1440,60 L1440,90 L0,90 Z" fill="#b6e0fe" fill-opacity="0.45"/>
                       <path d="M0,80 C400,160 1040,20 1440,80 L1440,90 L0,90 Z" fill="#4fc3f7" fill-opacity="0.22"/>
@@ -369,7 +380,7 @@ Enjoy expertly guided tours, premium service, and unforgettable cultural experie
                         <div class="whypro-feature-card">
                             <div class="whypro-feature-icon whypro-gradient2"><i class="fa-solid fa-sack-dollar"></i></div>
                             <h2 class="whypro-feature-title">Top Quality at Competitive Prices</h2>
-                            <p class="whypro-feature-desc">Enjoy premium services, high-end facilities, and seamless experiences — all without overpaying. It’s the best value in the market.</p>
+                            <p class="whypro-feature-desc">Enjoy premium services, high-end facilities, and seamless experiences — all without overpaying. It's the best value in the market.</p>
                         </div>
                         <div class="whypro-feature-card">
                             <div class="whypro-feature-icon whypro-gradient3"><i class="fa-solid fa-route"></i></div>
@@ -379,19 +390,23 @@ Enjoy expertly guided tours, premium service, and unforgettable cultural experie
                     </div>
                 </div>
             </section>
+            
+            <!-- ===== REVIEWS SECTION ===== -->
             <div class="r_page" data-aos="fade-up">
                 <div class="title">
                     <h1>Reviews</h1>
                 </div>
+                <!-- عرض التقييمات -->
                 <div class="reviews">
                     <div class="review">
                         <div class="img">
                             <img src="./IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="">
                         </div>
                         <div class="text">
-                            <h1>Kareem Hegazy</h1>
+                            <h1>Sarah Johnson</h1>
+                            <span class="country">🇺🇸 USA</span>
                             <div class="details">
-                                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aliquid fuga ex eos deleniti, est eligendi aperiam magnam molestias aliquam ullam saepe tenetur, nulla non ipsum repellat impedit velit amet.</h2>
+                                <h2>"Great experience with Younes Tours. The Red Sea was beautiful and the staff was friendly. We enjoyed the snorkeling trip and the desert tour. Good value for money and everything was well organized."</h2>
                             </div>
                         </div>
                     </div>
@@ -400,9 +415,10 @@ Enjoy expertly guided tours, premium service, and unforgettable cultural experie
                             <img src="./IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="">
                         </div>
                         <div class="text">
-                            <h1>Kareem Hegazy</h1>
+                            <h1>Emma Thompson</h1>
+                            <span class="country">🇬🇧 UK</span>
                             <div class="details">
-                                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aliquid fuga ex eos deleniti, est eligendi aperiam magnam molestias aliquam ullam saepe tenetur, nulla non ipsum repellat impedit velit amet.</h2>
+                                <h2>"Nice trip to Hurghada. The hotel was clean and the tours were interesting. The guide was helpful and spoke good English. The coral reefs were amazing to see. Would recommend for families."</h2>
                             </div>
                         </div>
                     </div>
@@ -411,9 +427,10 @@ Enjoy expertly guided tours, premium service, and unforgettable cultural experie
                             <img src="./IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="">
                         </div>
                         <div class="text">
-                            <h1>Kareem Hegazy</h1>
+                            <h1>Michael Schmidt</h1>
+                            <span class="country">🇩🇪 Germany</span>
                             <div class="details">
-                                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aliquid fuga ex eos deleniti, est eligendi aperiam magnam molestias aliquam ullam saepe tenetur, nulla non ipsum repellat impedit velit amet.</h2>
+                                <h2>"Good service from Younes Tours. The desert safari was fun and the camel ride was a nice experience. The food was tasty and the staff was polite. The weather was perfect for swimming."</h2>
                             </div>
                         </div>
                     </div>
@@ -422,9 +439,10 @@ Enjoy expertly guided tours, premium service, and unforgettable cultural experie
                             <img src="./IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="">
                         </div>
                         <div class="text">
-                            <h1>Kareem Hegazy</h1>
+                            <h1>Sophie Dubois</h1>
+                            <span class="country">🇫🇷 France</span>
                             <div class="details">
-                                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aliquid fuga ex eos deleniti, est eligendi aperiam magnam molestias aliquam ullam saepe tenetur, nulla non ipsum repellat impedit velit amet.</h2>
+                                <h2>"We had a nice time in Hurghada. The boat trip was relaxing and we saw some fish while snorkeling. The hotel was comfortable and the breakfast was good. The tour guide was knowledgeable about the area."</h2>
                             </div>
                         </div>
                     </div>
@@ -433,9 +451,10 @@ Enjoy expertly guided tours, premium service, and unforgettable cultural experie
                             <img src="./IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="">
                         </div>
                         <div class="text">
-                            <h1>Kareem Hegazy</h1>
+                            <h1>Marco Rossi</h1>
+                            <span class="country">🇮🇹 Italy</span>
                             <div class="details">
-                                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aliquid fuga ex eos deleniti, est eligendi aperiam magnam molestias aliquam ullam saepe tenetur, nulla non ipsum repellat impedit velit amet.</h2>
+                                <h2>"Pleasant experience with this tour company. The quad biking in the desert was exciting and the sunset was beautiful. The staff was professional and the prices were reasonable. Good for a short holiday."</h2>
                             </div>
                         </div>
                     </div>
@@ -444,16 +463,67 @@ Enjoy expertly guided tours, premium service, and unforgettable cultural experie
                             <img src="./IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="">
                         </div>
                         <div class="text">
-                            <h1>Kareem Hegazy</h1>
+                            <h1>Anna Kowalski</h1>
+                            <span class="country">🇵🇱 Poland</span>
                             <div class="details">
-                                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aliquid fuga ex eos deleniti, est eligendi aperiam magnam molestias aliquam ullam saepe tenetur, nulla non ipsum repellat impedit velit amet.</h2>
+                                <h2>"Nice place to visit. The sea was warm and clear, perfect for swimming. The tours were well planned and the guides were friendly. The hotel had good facilities and the food was decent."</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="img">
+                            <img src="./IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h1>Carlos Rodriguez</h1>
+                            <span class="country">🇪🇸 Spain</span>
+                            <div class="details">
+                                <h2>"Good value for money. The diving trip was nice and we saw colorful fish. The desert tour was interesting and the guide explained everything well. The hotel was clean and the staff was helpful."</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="img">
+                            <img src="./IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h1>Lisa Anderson</h1>
+                            <span class="country">🇨🇦 Canada</span>
+                            <div class="details">
+                                <h2>"We enjoyed our stay in Hurghada. The snorkeling was fun and the water was clear. The tour company was reliable and everything was on time. The hotel was nice and the beach was clean."</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="img">
+                            <img src="./IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h1>Yuki Tanaka</h1>
+                            <span class="country">🇯🇵 Japan</span>
+                            <div class="details">
+                                <h2>"Nice holiday destination. The Red Sea is beautiful and the weather was good. The tours were organized and the guides were polite. The hotel had good service and the food was okay."</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="img">
+                            <img src="./IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h1>Alex Petrov</h1>
+                            <span class="country">🇷🇺 Russia</span>
+                            <div class="details">
+                                <h2>"Good experience overall. The desert safari was fun and the camel ride was interesting. The staff was friendly and the tours were well arranged. The hotel was comfortable and the location was convenient."</h2>
                             </div>
                         </div>
                     </div>
                 </div>
                 <h3>this reviews from spotify</h3>
             </div>
-            <footer id="footer">
+            
+            <!-- ===== FOOTER SECTION ===== -->
+             <footer id="footer">
                 <div class="f-container">
                     <div class="logo">
                         <img src="./IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (1).png" alt="">
@@ -515,11 +585,13 @@ Enjoy expertly guided tours, premium service, and unforgettable cultural experie
             </footer>
         </div>
     </div>
-    <script src="./main.js">
-    </script>
+    
+    <!-- ===== SCRIPTS ===== -->
+    <script src="./main.js"></script>
+    <!-- مكتبة AOS للحركات -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-      </script>
+    </script>
 </body>
 </html>
