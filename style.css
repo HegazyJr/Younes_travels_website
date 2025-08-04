@@ -1287,6 +1287,7 @@ header * {
     right: 5%;
     pointer-events: auto;
     i {
+        padding: 0;
         font-size: 1.7rem;
         color: var(--main-color);
     }
@@ -1330,6 +1331,7 @@ header * {
         flex-direction: column;
         gap: 0.5rem;
         display: none;
+        right: 10%;
         pointer-events: auto;
         div:nth-child(1) {
             i {
@@ -1381,23 +1383,28 @@ header * {
         }
         div {
             border: 1px solid var(--main-color);
+            display: flex;
             border-radius: 100px;
             cursor: pointer;
             align-items: center;
             justify-content: center;
-            padding: 5px 7px;
+            /* padding: 2px 2px; */
             background-color: #075e54;
-            min-width: 44px;
-            min-height: 44px;
-            display: flex;
+            min-width: 35px;
+            min-height: 35px;
             user-select: none;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             i {
-                transform: translate(1.5%, 2%);
                 font-size: 1.2rem;
+                margin-right: -0.2rem;
+                margin-left: 1rem;
+                /* margin-left: 1rem; */
                 pointer-events: none;
+                &:nth-child(1){
+                    transform: translateX(-10px);
+                }
             }
         }
     }
@@ -1681,6 +1688,9 @@ footer {
     .menu-style {
         display: flex;
         z-index: 10000;
+    }
+    body{
+        overflow-x: hidden;
     }
     .header-m {
         display: flex;
@@ -1978,7 +1988,7 @@ footer {
     }
     
     .product:nth-child(1) {
-        margin-left: 0; /* Remove the large left margin */
+        margin-left: 95rem; /* Remove the large left margin */
     }
     
     .product .img {
@@ -2071,11 +2081,11 @@ footer {
     }
     
     .h_u_page .tour .text h1 {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     
     .h_u_page .tour .text p {
-        font-size: 0.8rem;
+        font-size: 0.5rem;
     }
     .h_u_page .tour .details {
         max-width: 20%;
@@ -2111,25 +2121,22 @@ footer {
                 min-width: 320px;
                 max-width: 350px;
                 height: 260px;
-                .text {
-                    padding: 0 1rem;
-                    h1 {
-                        font-size: 1.2rem;
-                        margin-top: 0;
-                        margin-left: 0;
-                        margin-bottom: 0.8rem;
+                .img img{
+                    width: 60px;
+                    margin-top: 2rem;
+                    height: 60px;
+                }
+                .text{
+                    h1{
+                        font-size: 1.1rem;
                     }
-                    .details {
-                        width: 100%;
-                        h2 {
-                            font-size: 0.9rem;
-                            line-height: 1.5;
-                        }
-                    }
+                    .details h2 {
+                        font-size: 0.7rem;
+                    }       
                 }
             }
             .review:first-child {
-                margin-left: 0;
+                margin-left: 210rem;
             }
             .review:last-child {
                 margin-right: 1rem;
@@ -2139,10 +2146,12 @@ footer {
     footer {
         min-height: 300px;
         padding: 2rem 0;
-        
+
         .f-container {
             padding: 0 1rem;
-            
+            display: flex;
+            flex-direction: column;
+
             .logo {
                 img {
                     width: 100px;
@@ -2157,6 +2166,11 @@ footer {
             .inforamtion {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
+                /* width: 90%; */
+                overflow-x: scroll;
+                text-align: left;
+                justify-items: start;
+                padding-top: 3rem;
                 
                 .info {
                     text-align: center;
@@ -2208,7 +2222,9 @@ footer {
     .text-box .title h1 {
         font-size: 3rem;
     }
-    
+    .body{
+        overflow-x: hidden;
+    }
     /* تنسيق لجميع كلمات العنوان الرئيسي في الشاشات الأصغر - شفاف زجاجي */
     .text-box .title h1 {
         background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.3) 75%, rgba(255, 255, 255, 0.8) 100%);
@@ -3202,17 +3218,24 @@ footer {
         max-width: 320px;
         height: 240px;
     }
-    
+
     .city-content {
         padding: 0.7rem 0.3rem 0.7rem 0.3rem;
         font-size: 0.93rem;
     }
     
     .city-info {
-        font-size: 0.85rem;
+        font-size: 0.6rem;
         padding: 0.12rem 0.4rem;
     }
-    
+    .city-name{
+        font-size: 1.1rem;
+        margin-bottom: 0.2rem;
+    }
+    .city-desc{
+        font-size: 0.8rem;
+        /* line-height: 1.4; */
+    }
     .why-pro {
         padding: 2rem 0;
         margin: 2rem 0;
