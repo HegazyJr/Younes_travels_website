@@ -85,7 +85,9 @@ body {
     left: 76rem;
     transition: .3s;
 }
-
+.lending-page{
+    overflow-x: visible;
+}
 /* ===== HERO SECTION - MAIN CONTENT ===== */
 .upper-page {
     width: 100vw;

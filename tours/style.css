@@ -9,6 +9,7 @@ header{
 }
 .header-m{
     top: 0;
+    margin-left: 3.5%;
 }
 .upper{
     background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(./../IMG/Gallery_imgs/WhatsApp\ Image\ 2025-04-24\ at\ 22.03.17_2f268dbd.jpg);
@@ -400,6 +401,9 @@ header{
 
 /* Responsive adjustments for scroll buttons */
 @media (max-width: 768px) {
+    .pop_up{
+        top:-850%
+    }
     .scroll-btn {
         width: 35px;
         height: 35px;
@@ -526,7 +530,6 @@ header{
     .header-m {
         display: block;
     }
-    
     #historical .product:nth-child(1) {
         margin-left: 0;
     }
