@@ -25,72 +25,41 @@ setInterval(() => {
     cycleImages();
 }, 10000);
 
-// ===== HEADER SCROLL EFFECT =====
-// الحصول على عنصر الهيدر
 const header = document.querySelector("header");
 console.log(header)
-
 if (header) {
-    // إضافة تأثير انتقالي للهيدر
     header.style.transition = "all 0.3s ease";
     choose = 0
-    
-    // مراقبة التمرير لتغيير مظهر الهيدر
     window.onscroll = function () {
         if (window.scrollY <= 400 && choose == 0) {
-            // جعل الهيدر شفاف عند التمرير لأعلى
             header.style.backgroundColor = "transparent";
-            document.getElementById('packages').style.backgroundColor = "transparent";
+            // document.getElementById('packages').style.backgroundColor = "transparent";
+            // document.getElementById('blog').style.backgroundColor = "transparent";
+            // document.getElementById('nav-n').style.backgroundColor = "transparent";
             header.style.position = "absolute";
+
+
         } else {
             choose = 1 
             console.log(choose)
-            // جعل الهيدر معتم عند التمرير لأسفل
-            document.getElementById('packages').style.backgroundColor = "#242424e3";
+            // document.getElementById('packages').style.backgroundColor = "#242424e3";
+            // document.getElementById('blog').style.backgroundColor = "#242424e3";
+            // document.getElementById('nav-n').style.backgroundColor = "#201e43e7";
             header.style.backgroundColor = "#242424e3";
             header.style.position = "fixed";
-            
             if (window.scrollY <= 10 ) {
                 choose = 0
                 console.log(choose)
-            } else {
+
+            }else{
                 choose = 1
                 console.log(choose)
+
             }
         }
+
     };
 }
-
-// ===== DROPDOWN MENU FUNCTIONALITY =====
-// الحصول على عناصر القائمة المنسدلة
-const packagesLink = document.getElementById('packages-link');
-const packagesMenu = document.getElementById('packages');
-
-let packagesTimeout;
-
-/**
- * دالة إظهار القائمة المنسدلة
- */
-function showMenu() {
-    clearTimeout(packagesTimeout);      // إلغاء مؤقت الإخفاء إذا كان شغال
-    packagesMenu.style.display = "flex";
-}
-
-/**
- * دالة إخفاء القائمة المنسدلة
- */
-function hideMenu() {
-    packagesTimeout = setTimeout(() => {  // تأخير الإخفاء 2 ثانية
-        packagesMenu.style.display = "none";
-    }, 200);
-}
-
-// إضافة أحداث الماوس للقائمة المنسدلة
-packagesLink.onmouseover = showMenu;
-packagesMenu.onmouseover = showMenu;
-packagesLink.onmouseout = hideMenu;
-packagesMenu.onmouseout = hideMenu;
-
 // ===== SOCIAL MEDIA LINKS =====
 // رابط البريد الإلكتروني
 document.getElementById('email').addEventListener("click", function () {
@@ -199,22 +168,6 @@ document.getElementById('tour').addEventListener("click", function () {
     window.location.href = "./tours/index.html"
 })
 
-// رابط قسم الجولات الشائعة
-document.getElementById('P_T').addEventListener("click", function () {
-    window.location.href = "./tours/index.html"
-    console.log("Tours page clicked");
-})
-
-// رابط قسم الجولات الأكثر مبيعاً
-document.getElementById('products').addEventListener("click", function () {
-    window.location.href = "./tours/index.html"
-    console.log("Tours page clicked");
-})
-
-// ===== MOBILE MENU FUNCTIONALITY =====
-/**
- * دالة إغلاق القائمة المنبثقة للهاتف المحمول
- */
 function exit() {
     document.getElementById('pop').style="width: 0%;overflow:hidden"
     document.getElementById('container').style = "filter:blur(0px);"

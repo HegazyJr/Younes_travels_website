@@ -1595,6 +1595,7 @@ footer {
     height: 65vh;
     margin-top: 10%;
     object-fit: cover;
+    overflow-x: hidden;
     z-index: 1;
     justify-content: center;
     color: var(--main-color);
@@ -1606,6 +1607,7 @@ footer {
         border: 1px none blue;
         .logo {
             margin-top: 4%;
+            
             img {
                 width: 150px;
                 height: 150px;
@@ -2121,8 +2123,8 @@ footer {
             padding: 1.5rem 0.5rem;
             .review {
                 min-width: 320px;
-                max-width: 350px;
-                height: 260px;
+                max-width: 300px;
+                height: 230px;
                 .img img{
                     width: 60px;
                     margin-top: 2rem;
@@ -2138,7 +2140,7 @@ footer {
                 }
             }
             .review:first-child {
-                margin-left: 210rem;
+                margin-left: 195rem;
             }
             .review:last-child {
                 margin-right: 1rem;

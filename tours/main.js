@@ -266,7 +266,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 100);
         }
     });
-
+document.getElementById('hala-island').addEventListener("click", function () {
+    window.location.href = "./tour/index.html"
+})
     // ===== SCROLL NAVIGATION =====
     function createScrollButtons() {
         // Remove any existing scroll containers first
