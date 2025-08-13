@@ -1000,8 +1000,49 @@ body{
         padding: 12px 20px;
     }
     .details{
-        flex-direction: column;
+        flex-direction: column !important;
         gap: 50px;
+        .detail:nth-child(1){
+            /* width: 390px !important; */
+            /* height: 370px;/ */
+            /* overflow-x: hidden; */
+            .info{
+                width: 390px;
+                ul{
+                    padding-left: 20px;
+                    li{
+                        margin-top: 5px;
+                        font-size: 14px;
+                        /* font-weight: 600; */
+                    }
+                }
+            }
+        }
+        .detail:nth-child(3){
+            margin-top: 20px;
+            .content{
+                flex-direction: column;
+                .info{
+                    width: 390px;
+                    ul{
+                        padding-left: 20px;
+                        li{
+                            font-size: 14px;
+                            margin-top: 5px;
+                            
+                        }
+                    }
+                }
+                ul{
+                    padding-top: 10px;
+                    padding-left: 30px;
+                }
+            }
+            .line{
+                width: 380px;
+            
+            }
+        }
         .detail{
             margin-top: 20px;
             .content{
