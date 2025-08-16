@@ -93,56 +93,236 @@ body{
         /* -webkit-text-stroke: 0.5px black ; */
     }
 
+    /* ===== ORIGINAL IMAGE LAYOUT STYLING ===== */
+    /* Main container for the 3-column image layout */
     .imgs_box{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        width: 100%;
-        height: 30rem;
-        margin-bottom: 2rem;
-        overflow: hidden;
-        .img_box:nth-child(3){
-            width: 40%;
-             img{
-                height: 14.5rem;
-             }
+        display: flex;                    /* Flexbox layout for horizontal arrangement */
+        align-items: center;              /* Center items vertically */
+        justify-content: center;          /* Center items horizontally */
+        gap: 10px;                        /* Space between image boxes */
+        width: 100%;                      /* Full width container */
+        height: 30rem;                    /* Fixed height for consistent layout */
+        margin-bottom: 2rem;              /* Bottom margin for spacing */
+        overflow: hidden;                 /* Hide any overflow content */
+    }
+
+    /* Third image box - contains two small images stacked vertically */
+    .img_box:nth-child(3){
+        width: 40%;                       /* 40% of container width */
+        display: flex;                    /* Flexbox for vertical stacking */
+        flex-direction: column;           /* Stack images vertically */
+        gap: 10px;                        /* Space between the two small images */
+    }
+
+    /* Styling for the two small images in the third box */
+    .img_box:nth-child(3) img{
+        height: 14.5rem;                  /* Fixed height for each small image */
+        width: 100%;                      /* Full width of container */
+        object-fit: cover;                /* Maintain aspect ratio while filling container */
+        border-radius: 5px;               /* Rounded corners */
+        box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow effect */
+        cursor: pointer;                  /* Pointer cursor for clickable images */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transitions */
+    }
+
+    /* Hover effect for small images */
+    .img_box:nth-child(3) img:hover{
+        transform: scale(1.05);           /* Slight scale up on hover */
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+    }
+
+    /* First image box - large main image */
+    .img_box:nth-child(1){
+        width: 80%;                       /* 80% of container width */
+        height: 100%;                     /* Full height of container */
+        position: relative;               /* Relative positioning for child elements */
+        overflow: hidden;                 /* Hide overflow content */
+        border-radius: 5px;               /* Rounded corners */
+        display: flex;                    /* Flexbox for centering */
+        justify-content: center;          /* Center horizontally */
+        align-items: center;              /* Center vertically */
+        cursor: pointer;                  /* Pointer cursor for clickable image */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transitions */
+    }
+
+    /* Hover effect for large image container */
+    .img_box:nth-child(1):hover{
+        transform: scale(1.02);           /* Slight scale up on hover */
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+    }
+
+    /* Styling for the large main image */
+    .img_box:nth-child(1) img{
+        height: 97.5%;                    /* Slightly less than full height for padding */
+        width: 100%;                      /* Full width of container */
+        object-fit: cover;                /* Maintain aspect ratio while filling container */
+        border-radius: 5px;               /* Rounded corners */
+        box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow effect */
+        transition: transform 0.3s ease;  /* Smooth transition for image */
+    }
+
+    /* Second image box - medium side image */
+    .img_box:nth-child(2){
+        width: 40%;                       /* 40% of container width */
+        height: 100%;                     /* Full height of container */
+        position: relative;               /* Relative positioning for child elements */
+        overflow: hidden;                 /* Hide overflow content */
+        border-radius: 5px;               /* Rounded corners */
+        display: flex;                    /* Flexbox for centering */
+        justify-content: center;          /* Center horizontally */
+        align-items: center;              /* Center vertically */
+        cursor: pointer;                  /* Pointer cursor for clickable image */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transitions */
+    }
+
+    /* Hover effect for medium image container */
+    .img_box:nth-child(2):hover{
+        transform: scale(1.02);           /* Slight scale up on hover */
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+    }
+
+    /* Styling for the medium side image */
+    .img_box:nth-child(2) img{
+        height: 97.5%;                    /* Slightly less than full height for padding */
+        width: 100%;                      /* Full width of container */
+        object-fit: cover;                /* Maintain aspect ratio while filling container */
+        border-radius: 5px;               /* Rounded corners */
+        box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow effect */
+        transition: transform 0.3s ease;  /* Smooth transition for image */
+    }
+
+    /* ===== LIGHTBOX MODAL STYLING ===== */
+    /* Fullscreen overlay for the lightbox modal */
+    .lightbox {
+        display: none;                    /* Hidden by default */
+        position: fixed;                  /* Fixed position to cover entire screen */
+        z-index: 9999;                    /* High z-index to appear above all content */
+        left: 0;                          /* Start from left edge */
+        top: 0;                           /* Start from top edge */
+        width: 100vw;                     /* Full viewport width */
+        height: 100vh;                    /* Full viewport height */
+        background: rgba(19,75,112,0.85); /* Semi-transparent blue background */
+        align-items: center;              /* Center content vertically */
+        justify-content: center;          /* Center content horizontally */
+        backdrop-filter: blur(5px);       /* Blur effect for background */
+        animation: fadeIn 0.3s ease;      /* Smooth fade-in animation */
+    }
+
+    /* Show lightbox when active class is added */
+    .lightbox.active {
+        display: flex;                    /* Display as flex container when active */
+    }
+
+    /* Fade-in animation for modal background */
+    @keyframes fadeIn {
+        from { opacity: 0; }              /* Start fully transparent */
+        to { opacity: 1; }                /* End fully opaque */
+    }
+
+    /* Main content container for the lightbox */
+    .lightbox-content {
+        max-width: 90vw;                  /* Maximum 90% of viewport width */
+        max-height: 80vh;                 /* Maximum 80% of viewport height */
+        border-radius: 18px;              /* Rounded corners */
+        overflow: hidden;                 /* Hide any overflow content */
+        background: #fff;                 /* White background */
+        box-shadow: 0 8px 32px #134b7077; /* Subtle shadow with brand color */
+        position: relative;               /* Relative positioning for absolute children */
+        display: flex;                    /* Flexbox layout */
+        flex-direction: column;           /* Stack children vertically */
+        align-items: center;              /* Center children horizontally */
+        animation: slideIn 0.4s ease;     /* Slide-in animation */
+    }
+
+    /* Slide-in animation for modal content */
+    @keyframes slideIn {
+        from { 
+            opacity: 0;                   /* Start transparent */
+            transform: scale(0.8);        /* Start smaller */
         }
-        .img_box:nth-child(1){
-            width: 80%;
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-            border-radius: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            img{
-                height: 97.5%;
-            }
-        }
-        .img_box:nth-child(2){
-            width: 40%;
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-            border-radius: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            img{
-                height: 97.5%;
-            }
-        }
-        img{
-            width: 100%;
-            /* height: 40rem; */
-            /* height: 200px; */
-            object-fit: cover;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        to { 
+            opacity: 1;                   /* End opaque */
+            transform: scale(1);          /* End full size */
         }
     }
+
+    /* Styling for the main image in lightbox */
+    .lightbox-content img {
+        width: 800px;                     /* Fixed width for consistent sizing */
+        height: 600px;                    /* Fixed height for consistent sizing */
+        border-radius: 18px;              /* Rounded corners matching container */
+        background: #b6e0fe22;            /* Light blue background for loading */
+        object-fit: cover;                /* Maintain aspect ratio while filling container */
+        transition: opacity 0.2s ease;    /* Smooth opacity transition for image changes */
+    }
+
+    /* Navigation arrows for browsing through images */
+    .lightbox-nav {
+        position: absolute;               /* Absolute positioning within modal */
+        top: 50%;                         /* Center vertically */
+        transform: translateY(-50%);      /* Perfect vertical centering */
+        background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+        border: none;                     /* No border */
+        width: 50px;                      /* Fixed width */
+        height: 50px;                     /* Fixed height */
+        border-radius: 50%;               /* Circular shape */
+        cursor: pointer;                  /* Pointer cursor for clickable buttons */
+        display: flex;                    /* Flexbox for centering icon */
+        align-items: center;              /* Center icon vertically */
+        justify-content: center;          /* Center icon horizontally */
+        font-size: 1.2rem;                /* Icon size */
+        color: var(--secend-color);       /* Brand color for icons */
+        transition: all 0.3s ease;        /* Smooth transitions for all properties */
+        z-index: 10;                      /* High z-index to appear above image */
+        backdrop-filter: blur(10px);      /* Blur effect for modern glass look */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Subtle shadow */
+    }
+
+    /* Hover effect for navigation buttons */
+    .lightbox-nav:hover {
+        background: rgba(255, 255, 255, 1); /* Solid white background on hover */
+        transform: translateY(-50%) scale(1.1); /* Scale up slightly */
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3); /* Enhanced shadow on hover */
+    }
+
+    /* Position previous button on the left */
+    .lightbox-nav.prev-btn {
+        left: 20px;                       /* 20px from left edge */
+    }
+
+    /* Position next button on the right */
+    .lightbox-nav.next-btn {
+        right: 20px;                      /* 20px from right edge */
+    }
+
+    /* Close button for the modal */
+    .lightbox-close {
+        position: absolute;               /* Absolute positioning within modal */
+        top: 10px;                        /* 10px from top edge */
+        right: 18px;                      /* 18px from right edge */
+        font-size: 2rem;                  /* Large icon size */
+        color: #134b70;                   /* Brand color */
+        background: #fff;                 /* White background */
+        border-radius: 50%;               /* Circular shape */
+        width: 38px;                      /* Fixed width */
+        height: 38px;                     /* Fixed height */
+        display: flex;                    /* Flexbox for centering icon */
+        align-items: center;              /* Center icon vertically */
+        justify-content: center;          /* Center icon horizontally */
+        cursor: pointer;                  /* Pointer cursor for clickable button */
+        box-shadow: 0 2px 8px #b6e0fe33; /* Subtle shadow with brand color */
+        z-index: 2;                       /* High z-index to appear above content */
+        border: none;                     /* No border */
+        transition: all 0.3s ease;        /* Smooth transitions for all properties */
+    }
+
+    /* Hover effect for close button */
+    .lightbox-close:hover {
+        background: #f0f0f0;              /* Light gray background on hover */
+        transform: scale(1.1);            /* Scale up slightly */
+    }
+
+    /* ===== END LIGHTBOX MODAL STYLING ===== */
     
     
  .modal {
@@ -456,90 +636,344 @@ body{
             font-weight: 800;
         }
     }
+    /* ===== ENHANCED REVIEWS STYLING ===== */
     .reviews {
-        margin-top: 10%;
+        margin-top: 8%;
         display: flex;
         color: var(--secend-color);
         flex-direction: column;
-        gap: 40px;
-        /* border-left: 5px solid var(--secend-color); */
-        padding-left: 20px;
-        #semi{
-            background-clip: text;
-            background: linear-gradient(to right, #201E43 50%, #ddd 50%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            }
-        #not{
-            color: rgb(214, 214, 214);
+        gap: 30px;
+        padding: 0 20px;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Reviews Title Section */
+    .rtitle {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .rtitle h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--secend-color);
+        margin-bottom: 0.5rem;
+        letter-spacing: 1px;
+    }
+
+    .rtitle p {
+        font-size: 1.1rem;
+        color: #666;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    /* Overall Rating Summary */
+    .overall-rating {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 20px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border: 1px solid rgba(32, 30, 67, 0.1);
+    }
+
+    .rating-summary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .rating-number {
+        text-align: center;
+    }
+
+    .rating-number h2 {
+        font-size: 3.5rem;
+        font-weight: 900;
+        color: var(--secend-color);
+        margin: 0;
+        line-height: 1;
+    }
+
+    .rating-number span {
+        font-size: 1.5rem;
+        color: var(--third-color);
+        font-weight: 600;
+    }
+
+    .rating-stars {
+        display: flex;
+        gap: 5px;
+    }
+
+    .rating-stars i {
+        font-size: 1.8rem;
+        color: #ffd700;
+        filter: drop-shadow(0 2px 4px rgba(255, 215, 0, 0.3));
+    }
+
+    .rating-stars #semi {
+        background: linear-gradient(to right, #ffd700 50%, #ddd 50%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .rating-text {
+        text-align: center;
+    }
+
+    .rating-text h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--secend-color);
+        margin: 0 0 0.5rem 0;
+    }
+
+    .rating-text p {
+        font-size: 1rem;
+        color: #666;
+        margin: 0;
+    }
+
+
+
+
+
+    /* Review Cards Container */
+    .review-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Individual Review Card */
+    .review-card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        border: 1px solid rgba(32, 30, 67, 0.08);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .review-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(135deg, var(--secend-color), var(--third-color));
+        border-radius: 0 2px 2px 0;
+    }
+
+    .review-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    /* Review Header */
+    .review-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        gap: 1rem;
+    }
+
+    .reviewer-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex: 1;
+    }
+
+    .reviewer-avatar {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, var(--secend-color), var(--third-color));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2rem;
+        box-shadow: 0 4px 15px rgba(32, 30, 67, 0.3);
+    }
+
+    .reviewer-details h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--secend-color);
+        margin: 0 0 0.2rem 0;
+    }
+
+    .reviewer-location {
+        font-size: 0.9rem;
+        color: #666;
+        font-weight: 500;
+    }
+
+    .review-rating {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.5rem;
+    }
+
+    .stars {
+        display: flex;
+        gap: 3px;
+    }
+
+    .stars i {
+        font-size: 1rem;
+        color: #ffd700;
+        filter: drop-shadow(0 1px 2px rgba(255, 215, 0, 0.3));
+    }
+
+    .stars #semi {
+        background: linear-gradient(to right, #ffd700 50%, #ddd 50%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .stars #not {
+        color: #ddd;
+    }
+
+    .rating-score {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--secend-color);
+        background: rgba(32, 30, 67, 0.1);
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+    }
+
+    /* Review Content */
+    .review-content {
+        margin-bottom: 1rem;
+    }
+
+    .review-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #444;
+        margin: 0;
+        font-style: italic;
+    }
+
+    /* Review Date */
+    .review-date {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        color: #888;
+    }
+
+    .review-date i {
+        font-size: 0.8rem;
+    }
+
+    /* Hidden Reviews */
+    .hidden-review {
+        display: none;
+        animation: slideDown 0.5s ease;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
         }
-        .over{
-            padding: 30px 5px ;
-            border-bottom:2px solid var(--secend-color);
-            h2{
-                font-size: 2rem;
-                color: var(--secend-color);
-                font-weight: 700;
-                span{
-                    font-size: 1.4rem;
-                    color: var(--third-color);
-                }
-            }
-            h4{
-                font-size: 1.5rem;
-                color: var(--secend-color);
-                i{
-                    
-                    font-size: 1.2rem;
-                }
-            }
-        }
-        .review {
-            position: relative;
-            width: 700px;
-            /* background-color: #ffffff; */
-            /* height: 200px; */
-            overflow: hidden;
-            /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
-            display: flex;
-            flex-direction: column;
-            color: var(--secend-color);
-            align-items: center;    
-            opacity: 100%;
-            justify-content: center;
-            /* box-shadow: 0.5px 0.5px 10px rgba(0, 0, 0, 0.2); */
-            padding-left: 30px;
-            font-weight: 500;
-            transition: 0.3s ease-in-out;
-            .line{
-                width: 700px;
-                margin-top: 30px;
-                opacity: 0.3;
-                height: 2px;
-                margin-bottom: 0;
-                margin-left: 20px;
-                background-color: var(--secend-color);
-            }
-            #semi{
-                background: linear-gradient(to right, #201E43 50%, #ddd 50%);
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-            #not{
-                color: rgb(214, 214, 214);
-            }
-            h5{
-                font-size: 12px;
-            }
-            p{
-                font-size: 0.9rem;
-                line-height: 1.5;
-                color: var(--secend-color);
-                text-align:start;
-            }
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
+
+    /* Load More Button */
+    .load-more-container {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .load-more-btn {
+        background: linear-gradient(135deg, var(--secend-color), var(--third-color));
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        box-shadow: 0 8px 25px rgba(32, 30, 67, 0.3);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .load-more-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.5s;
+    }
+
+    .load-more-btn:hover::before {
+        left: 100%;
+    }
+
+    .load-more-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(32, 30, 67, 0.4);
+    }
+
+    .load-more-btn:active {
+        transform: translateY(-1px);
+    }
+
+    .load-more-btn i {
+        transition: transform 0.3s ease;
+    }
+
+    .load-more-btn:hover i {
+        transform: translateY(2px);
+    }
+
+    .load-more-btn.loading {
+        pointer-events: none;
+        opacity: 0.7;
+    }
+
+    .load-more-btn.loading i {
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    /* ===== END ENHANCED REVIEWS STYLING ===== */
 }
 
 .cost{
@@ -917,22 +1351,70 @@ body{
         flex-wrap: wrap;
     }
     
-    .top-page .imgs_box {
+    /* ===== MOBILE IMAGE LAYOUT STYLING ===== */
+    .imgs_box {
         flex-direction: column;
         height: auto;
         gap: 3px;
     }
     
-    .top-page .imgs_box .img_box:nth-child(1),
-    .top-page .imgs_box .img_box:nth-child(2),
-    .top-page .imgs_box .img_box:nth-child(3) {
+    .imgs_box .img_box:nth-child(1),
+    .imgs_box .img_box:nth-child(2),
+    .imgs_box .img_box:nth-child(3) {
         width: 100%;
         height: 200px;
     }
     
-    .top-page .imgs_box .img_box img {
+    .imgs_box .img_box:nth-child(3) {
+        flex-direction: row;
+        gap: 3px;
+    }
+    
+    .imgs_box .img_box:nth-child(3) img {
+        height: 100%;
+        width: 50%;
+    }
+    
+    .imgs_box .img_box img {
         height: 100%;
     }
+
+    /* ===== MOBILE LIGHTBOX STYLING ===== */
+    .lightbox-content {
+        max-width: 95vw;
+        max-height: 85vh;
+        border-radius: 12px;
+    }
+
+    .lightbox-content img {
+        width: 95vw;
+        height: 70vh;
+        border-radius: 12px;
+        object-fit: contain;
+    }
+
+    .lightbox-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .lightbox-nav.prev-btn {
+        left: 10px;
+    }
+
+    .lightbox-nav.next-btn {
+        right: 10px;
+    }
+
+    .lightbox-close {
+        top: 8px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+        font-size: 1.5rem;
+    }
+    /* ===== END MOBILE LIGHTBOX STYLING ===== */
     .price-box{
         display: none;
     }
@@ -1082,23 +1564,294 @@ body{
             }
         }
     }
-    .reviews{
-        padding-left: 15px !important;
-        margin-top: 20% !important;
-        .review{
-            width: 90vw !important;
-            padding-right: 10px;
-            h1{
-                font-size: 24px;
-            }
-            p{
-                font-size: 13px !important;
-            }
-        }
+    /* ===== MOBILE REVIEWS STYLING ===== */
+    .reviews {
+        padding: 0 15px !important;
+        margin-top: 15% !important;
     }
+
+    .rtitle h1 {
+        font-size: 2rem;
+    }
+
+    .rtitle p {
+        font-size: 1rem;
+    }
+
+    .overall-rating {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .rating-summary {
+        gap: 1.5rem;
+    }
+
+    .rating-number h2 {
+        font-size: 3rem;
+    }
+
+    .rating-stars i {
+        font-size: 1.5rem;
+    }
+
+    .rating-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .review-card {
+        padding: 1.2rem;
+    }
+
+    .reviewer-avatar {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .reviewer-details h3 {
+        font-size: 1.1rem;
+    }
+
+    .review-content p {
+        font-size: 0.95rem;
+    }
+
+    .rating-score {
+        font-size: 1rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+    .review-date {
+        font-size: 0.8rem;
+    }
+
+    .load-more-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .load-more-btn i {
+        font-size: 0.9rem;
+    }
+
+    /* ===== MOBILE TRAVELER PHOTOS STYLING ===== */
+    .traveler-photos-section {
+        margin: 2rem 0;
+        padding: 1.5rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-title p {
+        font-size: 1rem;
+    }
+
+    .traveler-photos-gallery {
+        flex-direction: column;
+        max-width: 100%;
+        gap: 1rem;
+    }
+
+    .main-photo-container {
+        height: 300px;
+    }
+
+    .thumbnail-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        gap: 0.3rem;
+        padding: 0.3rem;
+    }
+
+    .photo-info {
+        padding: 1rem 0.8rem 0.8rem 0.8rem;
+    }
+
+    .traveler-name {
+        font-size: 1rem;
+    }
+
+    .photo-date {
+        font-size: 0.8rem;
+    }
+
+    .more-photos-overlay span {
+        font-size: 1rem;
+    }
+
+
+    /* ===== END MOBILE REVIEWS STYLING ===== */
     
 /* Mobile */
 @media screen and (max-width: 480px) {
+    /* ===== SMALL MOBILE IMAGE LAYOUT STYLING ===== */
+    .imgs_box {
+        gap: 2px;
+    }
+    
+    .imgs_box .img_box:nth-child(1),
+    .imgs_box .img_box:nth-child(2),
+    .imgs_box .img_box:nth-child(3) {
+        height: 150px;
+    }
+
+    /* ===== SMALL MOBILE LIGHTBOX STYLING ===== */
+    .lightbox-content {
+        max-width: 98vw;
+        max-height: 90vh;
+        border-radius: 8px;
+    }
+
+    .lightbox-content img {
+        width: 98vw;
+        height: 75vh;
+        border-radius: 8px;
+        object-fit: contain;
+    }
+
+    .lightbox-nav {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .lightbox-nav.prev-btn {
+        left: 8px;
+    }
+
+    .lightbox-nav.next-btn {
+        right: 8px;
+    }
+
+    .lightbox-close {
+        top: 5px;
+        right: 8px;
+        width: 28px;
+        height: 28px;
+        font-size: 1.2rem;
+    }
+    /* ===== END SMALL MOBILE LIGHTBOX STYLING ===== */
+
+    /* ===== SMALL MOBILE REVIEWS STYLING ===== */
+    .reviews {
+        padding: 0 10px !important;
+        margin-top: 12% !important;
+    }
+
+    .rtitle h1 {
+        font-size: 1.8rem;
+    }
+
+    .rtitle p {
+        font-size: 0.9rem;
+    }
+
+    .overall-rating {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .rating-summary {
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .rating-number h2 {
+        font-size: 2.5rem;
+    }
+
+    .rating-stars i {
+        font-size: 1.3rem;
+    }
+
+    .rating-text h3 {
+        font-size: 1.1rem;
+    }
+
+    .review-card {
+        padding: 1rem;
+    }
+
+    .review-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .reviewer-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .reviewer-details h3 {
+        font-size: 1rem;
+    }
+
+    .review-content p {
+        font-size: 0.9rem;
+    }
+
+    .rating-score {
+        font-size: 0.9rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .review-date {
+        font-size: 0.75rem;
+    }
+
+    .load-more-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .load-more-btn i {
+        font-size: 0.8rem;
+    }
+
+    /* ===== SMALL MOBILE TRAVELER PHOTOS STYLING ===== */
+    .traveler-photos-section {
+        margin: 1.5rem 0;
+        padding: 1rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.6rem;
+    }
+
+    .section-title p {
+        font-size: 0.9rem;
+    }
+
+    .main-photo-container {
+        height: 250px;
+    }
+
+    .thumbnail-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.2rem;
+        padding: 0.2rem;
+    }
+
+    .photo-info {
+        padding: 0.8rem 0.6rem 0.6rem 0.6rem;
+    }
+
+    .traveler-name {
+        font-size: 0.9rem;
+    }
+
+    .photo-date {
+        font-size: 0.75rem;
+    }
+
+
+    /* ===== END SMALL MOBILE REVIEWS STYLING ===== */
+
     .cost {
         padding-bottom: 3rem;
     }
