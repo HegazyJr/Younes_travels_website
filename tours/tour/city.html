@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../style.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Hurghada City Exploration Tour | Younes Tours</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (2).png">
+</head>
+<body id="body">
+    <div class="container">
+        <!-- Header & Navigation -->
+        <header>
+            <div class="nov-container">
+                <div class="h_btn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="logo">
+                    <h1>Younes <span>Tours</span></h1>
+                    <i class="fa-solid fa-plane"></i>
+                </div>
+                <div class="menu">
+                    <div class="links">
+                        <div class="link"><a href="../../index.html">Home</a></div>
+                        <div class="link" id="packages-link"><a href="../index.html">Destinations</a></div>
+                        <div class="link" id="blog-link"><a href="../../blogs/index.html">Blog</a></div>
+                        <div class="link"><a href="../../about.html">About us</a></div>
+                        <div class="link"><a href="../../gallery.html">Photos</a></div>
+                        <div class="link"><a href="../booking/index.html">Book Now</a></div>
+                    </div>
+                    <div class="o-links">
+                        <div class="email" id="email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="face" id="face">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div class="insta" id="insta">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Header -->
+        <div class="header-m">
+            <div class="nav-container-m">
+                <div class="logo">
+                    <h1>Younes <span>Tours</span></h1>
+                </div>
+                <div class="menu-style" onclick="open_pop()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="pop_up" id="pop">
+                <div class="exit" id="exit" onclick="exit()">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="logo_box-p" id="logo_menu">
+                    <img src="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview.png" alt="logo.img">
+                    <h1>Younes <span>Tours</span></h1>
+                </div>
+                <div class="links_box-p" id="links_menu">
+                    <div class="link"><a href="../../index.html">Home</a></div>
+                    <div class="link"><a href="../index.html">Destinations</a></div>
+                    <div class="link"><a href="../../blogs/index.html">Blog</a></div>
+                    <div class="link"><a href="../../about.html">About us</a></div>
+                    <div class="link"><a href="../../gallery.html">Photos</a></div>
+                    <div class="link"><a href="../booking/index.html">Book Now</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Floating Icons -->
+        <div class="contact">
+            <div class="desktop">
+                <div class="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+            <div class="mobile">
+                <div class="whatsapp-m">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="email-m">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="face-m">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div class="insta-m">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Section -->
+        <div class="top-page">
+            <div class="text_title">
+                <h1><span>Hurghada City Tour:</span> A Complete Cultural Journey</h1> <!-- ai change -->
+            </div>
+            <div class="box" style="width: 1200px;">
+                <div class="type">
+                    <h1>top rated</h1>
+                </div>
+                <div class="rating">
+                    <div class="star-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star" id="not_checked"></span>
+                    </div>
+                    <div class="rating">
+                        <h2>4.8</h2>
+                    </div>
+                </div>
+                <div class="review_count">
+                    <h2>85 reviews</h2>
+                </div>
+                <div class="point"></div>
+                <div class="place">
+                    <h2>Activity provider: Egypt Hurghada City Exploration</h2> <!-- change to tour name -->
+                </div>
+            </div>
+
+            <!-- Image Gallery -->
+            <div class="images">
+                <div class="imgs_box">
+                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg', 'Hurghada Old Market - Traditional Bazaar')">
+                        <img src="./../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg" alt="Hurghada Old Market">
+                    </div>
+                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg', 'Grand Marina Mosque - Sea View')">
+                        <img src="./../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg" alt="Grand Marina Mosque">
+                    </div>
+                    <div class="img_box">
+                        <img src="./../../IMG/Gallery_imgs/Classical Tour Egypt.jpg" alt="Traditional Perfume Factory" onclick="openLightbox('image', './../../IMG/Gallery_imgs/Classical Tour Egypt.jpg', 'Perfume Factory Workshop')">
+                        <img src="./../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="Hurghada Marina Yachts" onclick="openLightbox('image', './../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg', 'Modern Hurghada Marina')">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lightbox Modal -->
+            <div id="lightbox" class="lightbox">
+                <div class="lightbox-content">
+                    <button class="lightbox-close" onclick="closeLightbox()">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                    <button class="lightbox-nav prev-btn" onclick="changeLightboxImage(-1)">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="lightbox-nav next-btn" onclick="changeLightboxImage(1)">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                    <img id="lightbox-image" src="" alt="">
+                </div>
+            </div>
+
+            <!-- 25-Word Intro -->
+            <div class="about">
+                <h4>Discover the magical heritage and modern charm of Hurghada — comprehensive tour through traditional markets, mosques, modern marina with authentic local cuisine tasting experience.</h4> <!-- change to intro -->
+            </div>
+
+            <!-- Price Box -->
+            <div class="price-box">
+                <div class="price">
+                    <h2>From</h2>
+                    <h2>40$</h2>
+                    <h2>per person</h2>
+                </div>
+                <div class="btn-check">
+                    <button>Check Availability</button>
+                </div>
+                <div class="pay_later">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <h3><span>Reserve now & pay later</span> to book your spot and pay nothing today</h3>
+                </div>
+            </div>
+
+            <!-- About This Ticket -->
+            <div class="about-ticket">
+                <h1>About This Ticket</h1>
+                <div class="items">
+                    <div class="item">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <h3><span>Free cancellation</span><br>Cancel up to 24 hours in advance</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <h3><span>Reserve now & pay later</span><br>Flexible booking with no upfront cost</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-clock"></i>
+                        <h3><span>Duration</span><br>4 hours (flexible timing)</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-headphones"></i>
+                        <h3><span>Languages</span><br>English, German, Russian</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-car"></i>
+                        <h3><span>Transport</span><br>Air-conditioned vehicle included</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cost Calculator -->
+            <div class="cost">
+                <h2>Select participants and date</h2>
+                <div class="cost-box">
+                    <div class="members">
+                        <h5>number of adults</h5>
+                        <select name="participants" id="participants">
+                            <option value="" disabled selected hidden>adults</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="10+">10~15</option>
+                            <option value="15+">15~20</option>
+                            <option value="20+">20~30</option>
+                        </select>
+                    </div>
+                    <div class="members">
+                        <h5>number of youngs (5~15)</h5>
+                        <select name="participants" id="youngs">
+                            <option value="" disabled selected hidden>children (5~15)</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="10+">10~15</option>
+                            <option value="15+">15~20</option>
+                            <option value="20+">20~30</option>
+                        </select>
+                    </div>
+                    <div class="date-select">
+                        <h5>select date</h5>
+                        <input type="date" id="dateInput" name="date" required>
+                    </div>
+                    <div class="btn-check">
+                        <button id="check-availability">Check Availability</button>
+                    </div>
+                </div>
+                <div class="result" id="result">
+                    <h1><span>Hurghada City Tour:</span> A Complete Cultural Journey</h1>
+                    <div class="details">
+                        <div class="time"><i class="fas fa-clock"></i><h3>4 hours</h3></div>
+                        <div class="language"><i class="fas fa-language"></i><h3>English, German, Russian</h3></div>
+                        <div class="location"><i class="fas fa-map-marker-alt"></i><a><h3>Hurghada City Center & Marina</h3></a></div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="time-selected">
+                        <h1>Your trip starting time is</h1>
+                        <h2 id="time">10 a.m</h2>
+                    </div>
+                    <div class="line"></div>
+                    <div class="bottom">
+                        <div class="price-members">
+                            <h2>40$</h2>
+                            <h3 id="members"><span id="adult-count">1</span> adult & <span id="young-count">1</span> child</h3>
+                            <h6>All taxes and fees included</h6>
+                        </div>
+                        <div class="btn"><button>Book Now</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Details Section -->
+            <div class="details">
+                <!-- Highlights -->
+                <div class="detail">
+                    <div class="content"> <!-- change to highlight -->
+                        <div class="dtitle">Highlights</div>
+                        <div class="info">
+                            <ul>
+                                <li>Traditional heritage bazaar tour (Old Hurghada) and famous spice markets</li>
+                                <li>Visit to the oldest Coptic church in Hurghada (over 100 years old)</li>
+                                <li>Exploration of the Grand Marina Mosque - Hurghada's most famous mosque</li>
+                                <li>Traditional fishing port discovery and local fish market experience</li>
+                                <li>Modern Hurghada Marina tour with upscale cafes and restaurants</li>
+                                <li>Traditional perfume factory visit and natural oils workshop</li>
+                                <li>Shopping time in modern commercial centers and duty-free stores</li>
+                                <li>Egyptian tea and local sweets tasting in authentic popular atmosphere</li>
+                                <li>Optional traditional Egyptian lunch experience</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- Destinations -->
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Destinations</div>
+                        <div class="info">
+                            <ul>
+                                <li>El Dahar (Old Town) <span>></span> Coptic Church <span>></span> Marina Mosque <span>></span> Fishing Port <span>></span> Marina</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- Description -->
+                <div class="detail done">
+                    <div class="content"> <!-- change to description -->
+                        <div class="dtitle">Description</div>
+                        <div class="info">
+                            <ul class="info-list">
+                                <li>Embark on an amazing exploratory journey that takes you through the history and present of Hurghada city — from the ancient heritage neighborhoods to the modern marina overlooking the Red Sea.</li>
+                                <li>This tour is specially designed for culture, heritage, and shopping enthusiasts and is available at any time of day from 7:00 AM to 10:00 PM to suit your schedule.</li>
+                                <li>Your cultural journey begins with departure from your hotel in a comfortable air-conditioned vehicle with a specialized tour guide fluent in German, Russian, and English, expert in Hurghada's rich history.</li>
+                                <li>Your first stop will be in the famous heritage district "El Dahar" — the beating heart of Hurghada pulsing with authentic popular life.</li>
+                                <li>You'll stroll through the traditional popular market filled with fragrant spices, authentic Egyptian seasonings, and traditional handmade products.</li>
+                                <li>You'll visit the oldest Coptic church in the city, dating back over a century, where you'll learn about the history of Christianity in the region and traditional religious rituals.</li>
+                                <li>Afterward, you'll move to visit the Grand Marina Mosque — a modern architectural masterpiece reflecting contemporary Islamic character with enchanting sea views.</li>
+                                <li>You'll explore the traditional fishing port and popular fish market, watching fishermen sell their fresh daily catch of famous Red Sea fish.</li>
+                                <li>At modern Hurghada Marina, you'll stroll along the upscale promenade among luxury yachts and elegant cafes.</li>
+                                <li>Visit the traditional perfume factory to learn how perfumes and natural oils are made, with opportunity to purchase at factory prices.</li>
+                                <li>Conclude with free shopping time in modern centers and duty-free stores.</li>
+                                <li>An optional traditional Egyptian lunch can be arranged for a complete authentic experience.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- Included -->
+                <div class="detail">
+                    <div class="content"> <!-- change to include -->
+                        <div class="dtitle">Included</div>
+                        <div class="info">
+                            <ul>
+                                <li>Round-trip transportation from all Hurghada hotels in air-conditioned vehicle</li>
+                                <li>Free transportation from El Gouna, Sahel Hashish, Makadi Bay, and Soma Bay</li>
+                                <li>Specialized tour guide speaking German, Russian, and English</li>
+                                <li>Heritage traditional market visit (El Dahar) with detailed explanation</li>
+                                <li>Entrance to the oldest Coptic church in Hurghada</li>
+                                <li>Visit to Grand Marina Mosque with sea view</li>
+                                <li>Traditional fishing port and fish market tour</li>
+                                <li>Modern Hurghada Marina and promenade exploration</li>
+                                <li>Perfume factory visit with traditional manufacturing explanation</li>
+                                <li>Egyptian tea and local sweets tasting</li>
+                                <li>Shopping time in modern commercial centers</li>
+                                <li>Comprehensive tour insurance</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- Not Included -->
+                <div class="detail">
+                    <div class="content"> <!-- change to not include -->
+                        <div class="dtitle">Not Included</div>
+                        <div class="info">
+                            <ul>
+                                <li>Transportation from Safaga and Marsa Alam (additional fees apply)</li>
+                                <li>Personal purchases from markets and stores</li>
+                                <li>Optional traditional Egyptian lunch (can be arranged for additional fee)</li>
+                                <li>Grand Aquarium entrance (optional)</li>
+                                <li>Professional photography services</li>
+                                <li>Tips for tour guide and driver</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- What to Bring -->
+                <div class="detail">
+                    <div class="content"> <!-- change to bring -->
+                        <div class="dtitle">What to Bring</div>
+                        <div class="info">
+                            <ul>
+                                <li>Camera or phone for photography at heritage and modern sites</li>
+                                <li>Comfortable, modest clothing for entering religious places</li>
+                                <li>Cash for shopping and personal purchases (Egyptian pounds preferred)</li>
+                                <li>Small bag for market purchases</li>
+                                <li>Sunglasses and hat for sun protection</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- What Not to Bring -->
+                <div class="detail">
+                    <div class="content"> <!-- change to not bring -->
+                        <div class="dtitle">What Not to Bring</div>
+                        <div class="info">
+                            <ul>
+                                <li>Large amounts of money or expensive jewelry</li>
+                                <li>Large and heavy bags during shopping</li>
+                                <li>Outside food and beverages</li>
+                                <li>Inappropriate clothing for religious sites</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- Pro Tips -->
+                <div class="detail">
+                    <div class="content"> <!-- change to tips -->
+                        <div class="dtitle">Pro Tips</div>
+                        <div class="info">
+                            <ul>
+                                <li>Be ready to depart at the scheduled time (flexible timing from 7:00 AM to 10:00 PM)</li>
+                                <li>Respect local traditions and customs in religious places</li>
+                                <li>Negotiate politely when shopping in popular markets — part of the experience</li>
+                                <li>Taste local foods in markets for authentic flavors</li>
+                                <li>Ask your guide about the best shopping places and appropriate prices</li>
+                                <li>Keep purchase receipts for warranty and returns if needed</li>
+                                <li>Enjoy interacting with locals — a rich cultural experience</li>
+                                <li>Take photos in markets after asking vendors' permission</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+
+            <!-- Reviews Section -->
+            <div class="reviews">
+                <div class="rtitle">
+                    <h1>Customer Reviews</h1>
+                    <p>What our travelers say about this cultural journey</p>
+                </div>
+                <div class="overall-rating">
+                    <div class="rating-summary">
+                        <div class="rating-number">
+                            <h2>4.7</h2>
+                            <span>/5</span>
+                        </div>
+                        <div class="rating-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="rating-text">
+                            <h3>Excellent</h3>
+                            <p>Based on 85+ reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-cards" id="review-cards">
+                    <!-- Dynamically loaded via JS -->
+                </div>
+                <div class="load-more-container">
+                    <button class="load-more-btn" id="load-more-btn" onclick="loadMoreReviews()">
+                        <span class="btn-text">More Reviews</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="f-container">
+                <div class="logo">
+                    <img src="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (1).png" alt="">
+                    <div class="text">
+                        <h2>Younes </h2>
+                        <h2>tours</h2>
+                    </div>
+                </div>
+                <div class="inforamtion">
+                    <div class="info">
+                        <div class="i_info">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h3> Rua Manuel Rodrigues Abreu, 26, 3800-693 Aveiro, Portugal</h3>
+                        </div>
+                        <div class="i_info">
+                            <i class="fa-solid fa-phone"></i>
+                            <h3> +351 234 567 890</h3>
+                        </div>
+                        <div class="i_info">
+                            <i class="fa-solid fa-envelope"></i>
+                            <h3> 2RzLb@example.com</h3>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h1>pages</h1>
+                        <ul>
+                            <li>Home</li>
+                            <li>Services</li>
+                            <li>Gallery</li>
+                            <li>Reviews</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h1>Categories</h1>
+                        <ul>
+                            <li>Egypt tours</li>
+                            <li>Egypt tours packages</li>
+                            <li>cultural tours</li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h1>follow us</h1>
+                        <ul>
+                            <li><i class="fa-solid fa-share"></i></li>
+                            <li><i class="fa-brands fa-facebook"></i></li>
+                            <li><i class="fa-brands fa-instagram"></i></li>
+                            <li><i class="fa-brands fa-twitter"></i></li>
+                        </ul>
+                        <div class="copyright">
+                            <h3>Copyright © 2025 Younes Tours. All Rights Reserved.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script>
+            const header = document.querySelector("header");
+            if (header) {
+                header.style.transition = "all 0.3s ease";
+                let choose = 0;
+                window.onscroll = function () {
+                    if (window.scrollY <= 400 && choose == 0) {
+                        header.style.backgroundColor = "#242424e3";
+                        header.style.position = "absolute";
+                    } else {
+                        choose = 1;
+                        header.style.backgroundColor = "#242424e3";
+                        header.style.position = "fixed";
+                        if (window.scrollY <= 10) choose = 0;
+                    }
+                };
+            }
+
+            function exit() {
+                document.getElementById('pop').style = "width: 0%; overflow:hidden";
+                document.getElementById('container').style = "filter:blur(0px);";
+                setTimeout(() => {
+                    document.getElementById('logo_menu').style = "display: none;";
+                    document.getElementById('links_menu').style = "display: none;";
+                }, 300);
+            }
+
+            function open_pop() {
+                document.getElementById('pop').style = "width:70%; overflow:show";
+                document.getElementById('container').style = "filter:blur(1px);";
+                setTimeout(() => {
+                    document.getElementById('logo_menu').style = "display: block;";
+                    document.getElementById('links_menu').style = "display: block;";
+                });
+
+                document.querySelector('body').addEventListener('click', function (e) {
+                    if (!e.target.closest('.pop_up') && !e.target.classList.contains('menu-style')) {
+                        exit();
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", function () { exit(); });
+        </script>
+        <script src="./main.js"></script>
+        <script src="./../../main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../style.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Sea Scope Submarine Tour|Younes Tours</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w/+U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (2).png">
+</head>
+<body id="body">
+    <div class="container">
+        <header>
+            <div class="nov-container">
+                <div class="h_btn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="logo">
+                    <h1>Younes <span>Tours</span></h1>
+                    <i class="fa-solid fa-plane"></i>
+                </div>
+               <div class="menu">
+                    <div class="links">
+                         <div class="link"><a href="../../index.html">Home</a></div>
+                        <div class="link" id="packages-link"><a href="../index.html">Destinations</a></div>
+                        <div class="link" id="blog-link"><a href="../../blogs/index.html">Blog</a></div>
+                        <div class="link"><a href="../../about.html">About us</a></div>
+                        <div class="link"><a href="../../gallery.html">Photos</a></div>
+                        <div class="link"><a href="../booking/index.html">Book Now</a></div>
+                    </div>
+                    <div class="o-links">
+                        <div class="email" id="email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="face" id="face">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div class="insta" id="insta">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </header>
+
+        <div class="header-m">
+            <div class="nav-container-m">
+                <div class="logo">
+                    <h1>Younes <span>Tours</span></h1>
+                </div>
+                <div class="menu-style" onclick="open_pop()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="pop_up" id="pop">
+                <div class="exit" id="exit" onclick="exit()">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="logo_box-p" id="logo_menu">
+                    <img src="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview.png" alt="logo.img">
+                    <h1>Younes <span>Tours</span></h1>
+                </div>
+                <div class="links_box-p" id="links_menu">
+                    <div class="link"><a href="../../index.html">Home</a></div>
+                    <div class="link" id="packages-link"><a href="../index.html">Destinations</a></div>
+                    <div class="link" id="blog-link"><a href="../../blogs/index.html">Blog</a></div>
+                    <div class="link"><a href="../../about.html">About us</a></div>
+                    <div class="link"><a href="../../gallery.html">Photos</a></div>
+                    <div class="link"><a href="../booking/index.html">Book Now</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <div class="desktop">
+                <div class="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+            <div class="mobile">
+                <div class="whatsapp-m">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="email-m">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="face-m">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div class="insta-m">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-page">
+            <div class="text_title">
+                 <h1><span>Sea Scope Submarine Tour:</span> Discover Red Sea wonders from the panoramic underwater viewing chamber</h1>
+            </div>
+            <div class="box">
+                <div class="type">
+                    <h1>family favorite</h1>
+                </div>
+                <div class="rating">
+                    <div class="star-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="rating">
+                        <h2>4.7</h2>
+                    </div>
+                </div>
+                <div class="review_count">
+                    <h2>142 reviews</h2>
+                </div>
+                <div class="point"></div>
+                <div class="place">
+                    <h2>Activity provider: Sea Scope Hurghada</h2>
+                </div>
+            </div>
+
+            <!-- ===== IMAGE LAYOUT WITH MODAL ===== -->
+            <div class="images">
+                <div class="imgs_box">
+                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/sea-scope-submarine.jpg', 'Sea Scope Submarine – Panoramic Underwater Viewing')">
+                        <img src="./../../IMG/Gallery_imgs/sea-scope-submarine.jpg" alt="Sea Scope Submarine – Panoramic Underwater Viewing">
+                    </div>
+                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/underwater-view.jpg', 'Colorful Coral Reefs & Tropical Fish')">
+                        <img src="./../../IMG/Gallery_imgs/underwater-view.jpg" alt="Colorful Coral Reefs & Tropical Fish">
+                    </div>
+                    <div class="img_box">
+                        <img src="./../../IMG/Gallery_imgs/snorkeling-red-sea.jpg" alt="30-minute Snorkeling Session" onclick="openLightbox('image', './../../IMG/Gallery_imgs/snorkeling-red-sea.jpg', '30-minute Snorkeling at Coral Reefs')">
+                        <img src="./../../IMG/Gallery_imgs/family-on-submarine.jpg" alt="Family Enjoying the Tour" onclick="openLightbox('image', './../../IMG/Gallery_imgs/family-on-submarine.jpg', 'Family-Friendly Experience')">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== LIGHTBOX MODAL ===== -->
+            <div class="images">
+                <div class="imgs_box">
+                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg', 'Umungar Island - Crystal Clear Waters')">
+                        <img src="./../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg" alt="Umungar Island - Crystal Clear Waters">
+                    </div>
+                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg', 'Umungar Island - Snorkeling Adventure')">
+                        <img src="./../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg" alt="Umungar Island - Snorkeling Adventure">
+                    </div>
+                    <div class="img_box">
+                        <img src="./../../IMG/Gallery_imgs/Classical Tour Egypt.jpg" alt="Umungar Island - Fish Feeding" onclick="openLightbox('image', './../../IMG/Gallery_imgs/Classical Tour Egypt.jpg', 'Umungar Island - Fish Feeding')">
+                        <img src="./../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="Umungar Island - Natural Beach" onclick="openLightbox('image', './../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg', 'Umungar Island - Natural Beach')">
+                    </div>
+                </div>
+            </div>
+
+            <div class="about">
+                <h4>Experience an amazing underwater adventure with the Sea Scope submarine boat. Discover Red Sea wonders and coral reefs from the panoramic underwater viewing chamber.</h4>
+            </div>
+
+            <div class="price-box">
+                <div class="price">
+                    <h2>From</h2>
+                    <h2>65$</h2>
+                    <h2>per person</h2>
+                </div>
+                <div class="btn-check">
+                    <button>Check Availability</button>
+                </div>
+                <div class="pay_later">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <h3><span>Reserve now & pay later</span>
+                     to book your spot and pay nothing today</h3>
+                </div>
+            </div>
+
+            <div class="about-ticket">
+                <h1>About This Ticket</h1>
+                <div class="items">
+                    <div class="item">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <h3><span>Free cancellation</span><br>Cancel up to 24 hours in advance for a full refund</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <h3><span>Reserve now & pay later</span><br>
+    Keep your travel plans flexible — book your spot and pay nothing today.</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-water"></i>
+                        <h3><span>30-minute snorkeling</span><br>With complimentary mask, fins, and life jacket</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-binoculars"></i>
+                        <h3><span>Panoramic viewing</span><br>Crystal-clear views of coral reefs & tropical fish</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-car"></i>
+                        <h3><span>Free hotel transfer</span><br>Pickup from Hurghada, El Gouna, Makadi, Sahl Hasheesh, Safaga</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cost">
+                <h2>Select participants and date</h2>
+                <div class="cost-box">
+                    <div class="members">
+                        <h5>number of adults</h5>
+                        <select name="participants" id="participants">
+                            <option value="" disabled selected hidden>adults</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+                    </div>
+                    <div class="members">
+                        <h5>number of youngs (5~15)</h5>
+                        <select name="participants" id="youngs">
+                            <option value="" disabled selected hidden>children (5~15)</option>
+                            <option value="">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <div class="date-select">
+                        <h5>select date</h5>
+                        <input type="date" id="dateInput" name="date" required>
+                    </div>
+                    <div class="btn-check">
+                        <button id="check-availability">Check Availability</button>
+                    </div>
+                </div>
+                <div class="result" id="result">
+                    <h1><span>Sea Scope Submarine Tour:</span> Discover Red Sea wonders from the panoramic underwater viewing chamber</h1>
+                    <div class="details">
+                        <div class="time"><i class="fas fa-clock"></i><h3>2 hours</h3></div>  
+                        <div class="language"><i class="fas fa-language"></i><h3>English</h3></div>
+                        <div class="location"><i class="fas fa-map-marker-alt"></i><a><h3>Sea Scope Marina, Hurghada</h3></a></div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="time-selected">
+                        <h1>your trip starting time is </h1>
+                        <h2 id="time">2:30 p.m</h2>
+                    </div>
+                    <div class="line"></div>
+                    <div class="bottom">
+                        <div class="price-members">
+                            <h2>65$</h2>
+                            <h3 id="members"><span id="adult-count">2</span> adults & <span id="young-count">2</span> children</h3>
+                            <h6>All taxes and fees included</h6>
+                        </div>
+                        <div class="btn"><button>Book Now</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Highlight</div>
+                        <div class="info">
+                            <ul>
+                                <li>Exciting Sea Scope submarine boat tour with panoramic underwater viewing chamber for crystal-clear views.</li>
+                                <li>30-minute snorkeling session at vibrant coral reefs with complimentary equipment (mask, fins, life jacket).</li>
+                                <li>Spectacular coral reefs and rare tropical fish like angelfish, butterflyfish, and parrotfish.</li>
+                                <li>2-hour journey through crystal-clear Red Sea waters with expert marine life guides.</li>
+                                <li>Photography opportunities through large panoramic windows — perfect for memories.</li>
+                                <li>Safe, family-friendly experience ideal for children, elderly guests, and pregnant women.</li>
+                                <li>Complimentary cold refreshments served throughout the trip.</li>
+                                <li>Detailed explanations from expert guides about marine ecosystems and fish species.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Destinations</div>
+                        <div class="info">
+                            <ul>
+                                <li>Hurghada <span>></span> Sea Scope Marina <span>></span> Coral Reef Site <span>></span> Snorkeling Zone</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail done">
+                    <div class="content">
+                        <div class="dtitle">Description</div>
+                        <div class="info">
+                            <ul class="info-list">
+                                <li>Embark on an unforgettable Red Sea adventure with Hurghada's famous Sea Scope submarine boat tour.</li>
+                                <li>Your journey begins with complimentary hotel transfers from anywhere in Hurghada to the marina, where the state-of-the-art Sea Scope vessel awaits.</li>
+                                <li>The submarine features a unique panoramic viewing chamber with large glass windows, offering crystal-clear views of the magical underwater world.</li>
+                                <li>After 15 minutes of sailing, you’ll descend to the lower chamber to observe the rich marine ecosystem.</li>
+                                <li>Enjoy a 30-minute snorkeling session at pristine coral reefs — equipment provided.</li>
+                                <li>Return to the submarine to continue observing colorful coral formations and rare tropical fish through panoramic windows.</li>
+                                <li>Expert marine guides provide detailed explanations about fish species and ecosystems while you enjoy cold refreshments.</li>
+                                <li>This experience is perfect for families, seniors, and anyone seeking a safe, air-conditioned environment to explore the Red Sea.</li>
+                                <li>Return to the marina filled with unforgettable memories of the enchanting underwater world.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Included</div>
+                        <div class="info">
+                            <ul>
+                                <li>2-hour Sea Scope submarine boat tour</li>
+                                <li>30-minute snorkeling session with complimentary equipment (mask, fins, life jacket)</li>
+                                <li>Free hotel transfers (Hurghada & surrounding areas)</li>
+                                <li>Professional marine life guide</li>
+                                <li>Detailed marine ecosystem explanations</li>
+                                <li>Panoramic viewing chamber access for photography</li>
+                                <li>Complimentary cold beverages throughout the tour</li>
+                                <li>Comprehensive insurance coverage</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Not Included</div>
+                        <div class="info">
+                            <ul>
+                                <li>Professional photography services</li>
+                                <li>Light snacks</li>
+                                <li>Souvenir gifts</li>
+                                <li>Staff gratuities (tips)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">What to Bring</div>
+                        <div class="info">
+                            <ul>
+                                <li>Camera or mobile phone for photography</li>
+                                <li>Comfortable weather-appropriate clothing</li>
+                                <li>Sunglasses and hat</li>
+                                <li>Sunscreen</li>
+                                <li>Small bag for personal items</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">What Not to Bring</div>
+                        <div class="info">
+                            <ul>
+                                <li>Large plastic bags</li>
+                                <li>Sharp or dangerous items</li>
+                                <li>Pets</li>
+                                <li>Alcoholic beverages</li>
+                                <li>Outside food</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Pro Tips</div>
+                        <div class="info">
+                            <ul>
+                                <li>Be ready between 2:00 PM and 4:00 PM for pickup.</li>
+                                <li>Book your seat in advance, especially during peak seasons.</li>
+                                <li>Follow the guide’s instructions for best viewing and safety.</li>
+                                <li>Don’t touch windows with wet hands to keep visibility clear.</li>
+                                <li>Keep valuables secure.</li>
+                                <li>Tour is suitable for pregnant women and children of all ages.</li>
+                                <li>In case of bad weather, the trip may be postponed.</li>
+                                <li>Book several days in advance to guarantee availability.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+
+            <!-- ===== REVIEWS SECTION ===== -->
+            <div class="reviews">
+                <div class="rtitle">
+                    <h1>Customer Reviews</h1>
+                    <p>What our travelers say about this underwater adventure</p>
+                </div>
+
+                <div class="overall-rating">
+                    <div class="rating-summary">
+                        <div class="rating-number">
+                            <h2>4.7</h2>
+                            <span>/5</span>
+                        </div>
+                        <div class="rating-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="rating-text">
+                            <h3>Excellent</h3>
+                            <p>Based on 142+ reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-cards" id="review-cards">
+                    <!-- Dynamic reviews loaded via JavaScript -->
+                </div>
+
+                <div class="load-more-container">
+                    <button class="load-more-btn" id="load-more-btn" onclick="loadMoreReviews()">
+                        <span class="btn-text">Read More Reviews</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- ===== END REVIEWS ===== -->
+
+        </div>  
+        
+        <footer>
+            <div class="f-container">
+                <div class="logo">
+                    <img src="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (1).png" alt="">
+                    <div class="text">
+                        <h2>Younes </h2>
+                        <h2>tours</h2>
+                    </div>
+                </div>
+                <div class="inforamtion">
+                    <div class="info">
+                        <div class="i_info">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h3> Rua Manuel Rodrigues Abreu, 26, 3800-693 Aveiro, Portugal</h3>
+                        </div>
+                        <div class="i_info">
+                            <i class="fa-solid fa-phone"></i>
+                            <h3> +351 234 567 890</h3>
+                        </div>
+                        <div class="i_info">
+                            <i class="fa-solid fa-envelope"></i>
+                            <h3> 2RzLb@example.com</h3>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h1>pages</h1>
+                        <ul>
+                            <li>Home</li>
+                            <li>Services</li>
+                            <li>Gallery</li>
+                            <li>Reviews</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h1>Categories</h1>
+                        <ul>
+                            <li>Egypt tours</li>
+                            <li>Egypt tours packages</li>
+                            <li>coastal tours</li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h1>follow us</h1>
+                        <ul>
+                            <li><i class="fa-solid fa-share"></i></li>
+                            <li><i class="fa-brands fa-facebook"></i></li>
+                            <li><i class="fa-brands fa-instagram"></i></li>
+                            <li><i class="fa-brands fa-twitter"></i></li>
+                        </ul>
+                        <div class="copyright">
+                            <h3> Copyright 2022 Younes Tours. All Rights Reserved.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <script>
+        const header = document.querySelector("header");
+        if (header) {
+            header.style.transition = "all 0.3s ease";
+            let choose = 0;
+            window.onscroll = function () {
+                if (window.scrollY <= 400 && choose == 0) {
+                    header.style.backgroundColor = "#242424e3";
+                    header.style.position = "absolute";
+                } else {
+                    choose = 1;
+                    header.style.backgroundColor = "#242424e3";
+                    header.style.position = "fixed";
+                    if (window.scrollY <= 10) choose = 0;
+                }
+            };
+        }
+
+        function exit() {
+            document.getElementById('pop').style = "width: 0%; overflow:hidden";
+            document.getElementById('container').style = "filter:blur(0px);";
+            setTimeout(() => {
+                document.getElementById('logo_menu').style = "display: none;";
+                document.getElementById('links_menu').style = "display: none;";
+                document.getElementById('btn_menu').style = "display: none;";
+            }, 300);
+        }
+
+        function open_pop() {
+            document.getElementById('pop').style = "width:70%; overflow:show";
+            document.getElementById('container').style = "filter:blur(1px);";
+            setTimeout(() => {
+                document.getElementById('logo_menu').style = "display: block;";
+                document.getElementById('links_menu').style = "display: block;";
+                document.getElementById('btn_menu').style = "display: block;";
+            });
+
+            document.querySelector('body').addEventListener('click', function(e) {
+                if (!e.target.closest('.pop_up, .menu-style')) exit();
+            });
+        }
+
+        window.addEventListener("scroll", function () {
+            exit();
+        });
+    </script>
+    <script src="./main.js"></script>
+    <script src="./../../main.js"></script>
+</body>
+</html>

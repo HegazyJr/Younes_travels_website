@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../style.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Sunset Safari with Dinner | Younes Tours</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (2).png">
+</head>
+<body id="body">
+    <div class="container">
+        <!-- Header & Navigation -->
+        <header>
+            <div class="nov-container">
+                <div class="h_btn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="logo">
+                    <h1>Younes <span>Tours</span></h1>
+                    <i class="fa-solid fa-plane"></i>
+                </div>
+                <div class="menu">
+                    <div class="links">
+                        <div class="link"><a href="../../index.html">Home</a></div>
+                        <div class="link" id="packages-link"><a href="../index.html">Destinations</a></div>
+                        <div class="link" id="blog-link"><a href="../../blogs/index.html">Blog</a></div>
+                        <div class="link"><a href="../../about.html">About us</a></div>
+                        <div class="link"><a href="../../gallery.html">Photos</a></div>
+                        <div class="link"><a href="../booking/index.html">Book Now</a></div>
+                    </div>
+                    <div class="o-links">
+                        <div class="email" id="email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="face" id="face">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div class="insta" id="insta">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Header -->
+        <div class="header-m">
+            <div class="nav-container-m">
+                <div class="logo">
+                    <h1>Younes <span>Tours</span></h1>
+                </div>
+                <div class="menu-style" onclick="open_pop()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="pop_up" id="pop">
+                <div class="exit" id="exit" onclick="exit()">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="logo_box-p" id="logo_menu">
+                    <img src="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview.png" alt="logo.img">
+                    <h1>Younes <span>Tours</span></h1>
+                </div>
+                <div class="links_box-p" id="links_menu">
+                    <div class="link"><a href="../../index.html">Home</a></div>
+                    <div class="link"><a href="../index.html">Destinations</a></div>
+                    <div class="link"><a href="../../blogs/index.html">Blog</a></div>
+                    <div class="link"><a href="../../about.html">About us</a></div>
+                    <div class="link"><a href="../../gallery.html">Photos</a></div>
+                    <div class="link"><a href="../booking/index.html">Book Now</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Floating Icons -->
+        <div class="contact">
+            <div class="desktop">
+                <div class="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+            <div class="mobile">
+                <div class="whatsapp-m">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="email-m">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="face-m">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div class="insta-m">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Section -->
+        <div class="top-page">
+            <div class="text_title">
+                <h1><span>Sunset Safari with Dinner:</span> Romantic Evening Adventure</h1> <!-- ai change -->
+            </div>
+            <div class="box">
+                <div class="type">
+                    <h1>romantic</h1>
+                </div>
+                <div class="rating">
+                    <div class="star-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <div class="rating">
+                        <h2>4.9</h2>
+                    </div>
+                </div>
+                <div class="review_count">
+                    <h2>120 reviews</h2>
+                </div>
+                <div class="point"></div>
+                <div class="place">
+                    <h2>Activity provider: Egypt Sunset Safari</h2> <!-- change to tour name -->
+                </div>
+            </div>
+
+            <!-- Image Gallery -->
+            <div class="images">
+                <div class="imgs_box">
+                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg', 'Sunset over Desert Dunes')">
+                        <img src="./../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg" alt="Sunset over Desert Dunes">
+                    </div>
+                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg', 'Quad Biking in the Desert')">
+                        <img src="./../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg" alt="Quad Biking in the Desert">
+                    </div>
+                    <div class="img_box">
+                        <img src="./../../IMG/Gallery_imgs/Classical Tour Egypt.jpg" alt="Bedouin Village Dinner" onclick="openLightbox('image', './../../IMG/Gallery_imgs/Classical Tour Egypt.jpg', 'Luxurious BBQ Dinner under Stars')">
+                        <img src="./../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="Camel Riding at Sunset" onclick="openLightbox('image', './../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg', 'Camel Riding at Sunset')">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lightbox Modal -->
+            <div id="lightbox" class="lightbox">
+                <div class="lightbox-content">
+                    <button class="lightbox-close" onclick="closeLightbox()">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                    <button class="lightbox-nav prev-btn" onclick="changeLightboxImage(-1)">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="lightbox-nav next-btn" onclick="changeLightboxImage(1)">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                    <img id="lightbox-image" src="" alt="">
+                </div>
+            </div>
+
+            <!-- 25-Word Intro -->
+            <div class="about">
+                <h4>Experience magical golden sunset from sand dunes — evening quad and camel adventure with luxurious BBQ dinner under stars in romantic desert atmosphere.</h4> <!-- change to intro -->
+            </div>
+
+            <!-- Price Box -->
+            <div class="price-box">
+                <div class="price">
+                    <h2>From</h2>
+                    <h2>50$</h2>
+                    <h2>per person</h2>
+                </div>
+                <div class="btn-check">
+                    <button>Check Availability</button>
+                </div>
+                <div class="pay_later">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <h3><span>Reserve now & pay later</span> to book your spot and pay nothing today</h3>
+                </div>
+            </div>
+
+            <!-- About This Ticket -->
+            <div class="about-ticket">
+                <h1>About This Ticket</h1>
+                <div class="items">
+                    <div class="item">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <h3><span>Free cancellation</span><br>Cancel up to 24 hours in advance</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <h3><span>Reserve now & pay later</span><br>Secure your spot, pay later</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-clock"></i>
+                        <h3><span>Duration</span><br>5 hours (2:00 PM – Evening)</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-fire"></i>
+                        <h3><span>Dinner</span><br>Luxurious BBQ under stars</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-wheelchair"></i>
+                        <h3><span>Accessibility</span><br>Guided support available</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cost Calculator -->
+            <div class="cost">
+                <h2>Select participants and date</h2>
+                <div class="cost-box">
+                    <div class="members">
+                        <h5>number of adults</h5>
+                        <select name="participants" id="participants">
+                            <option value="" disabled selected hidden>adults</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="10+">10~15</option>
+                            <option value="15+">15~20</option>
+                            <option value="20+">20~30</option>
+                        </select>
+                    </div>
+                    <div class="members">
+                        <h5>number of youngs (5~15)</h5>
+                        <select name="participants" id="youngs">
+                            <option value="" disabled selected hidden>children (5~15)</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="10+">10~15</option>
+                            <option value="15+">15~20</option>
+                            <option value="20+">20~30</option>
+                        </select>
+                    </div>
+                    <div class="date-select">
+                        <h5>select date</h5>
+                        <input type="date" id="dateInput" name="date" required>
+                    </div>
+                    <div class="btn-check">
+                        <button id="check-availability">Check Availability</button>
+                    </div>
+                </div>
+                <div class="result" id="result">
+                    <h1><span>Sunset Safari with Dinner:</span> Romantic Evening Adventure</h1>
+                    <div class="details">
+                        <div class="time"><i class="fas fa-clock"></i><h3>5 hours</h3></div>
+                        <div class="language"><i class="fas fa-language"></i><h3>English, German, Russian</h3></div>
+                        <div class="location"><i class="fas fa-map-marker-alt"></i><a><h3>Eastern Desert, Hurghada</h3></a></div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="time-selected">
+                        <h1>Your trip starting time is</h1>
+                        <h2 id="time">2:00 p.m</h2>
+                    </div>
+                    <div class="line"></div>
+                    <div class="bottom">
+                        <div class="price-members">
+                            <h2>50$</h2>
+                            <h3 id="members"><span id="adult-count">1</span> adult & <span id="young-count">1</span> child</h3>
+                            <h6>All taxes and fees included</h6>
+                        </div>
+                        <div class="btn"><button>Book Now</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Details Section -->
+            <div class="details">
+                <!-- Highlights -->
+                <div class="detail">
+                    <div class="content"> <!-- change to highlight -->
+                        <div class="dtitle">Highlights</div>
+                        <div class="info">
+                            <ul>
+                                <li>Spectacular sunset viewing from highest golden sand dunes</li>
+                                <li>Thrilling quad biking through desert for complete adventure</li>
+                                <li>Authentic Bedouin village visit exploring traditional lifestyle</li>
+                                <li>Traditional camel riding with authentic Bedouin tea and dates</li>
+                                <li>Luxurious BBQ dinner in desert under magnificent starlit sky</li>
+                                <li>Hotel transfers included (Hurghada, El Gouna, Sahl Hasheesh, Makadi Bay)</li>
+                                <li>Short folklore show with traditional Bedouin music</li>
+                                <li>Optional horse riding available (additional cost)</li>
+                                <li>Extended camel safari option (additional cost)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- Destinations -->
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Destinations</div>
+                        <div class="info">
+                            <ul>
+                                <li>Hurghada <span>></span> Desert Safari Station <span>></span> Sand Dunes <span>></span> Bedouin Village</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- Description -->
+                <div class="detail done">
+                    <div class="content"> <!-- change to description -->
+                        <div class="dtitle">Description</div>
+                        <div class="info">
+                            <ul class="info-list">
+                                <li>Embark on an enchanting romantic journey watching sunset from the most beautiful locations in Egypt's Eastern Desert — perfect experience for couples and friends extending from afternoon until evening.</li>
+                                <li>This tour is carefully designed to combine excitement, romance, and Bedouin culture in stunning evening atmosphere.</li>
+                                <li>Your evening journey begins with hotel pickup from Hurghada, El Gouna, Sahl Hasheesh, or Makadi Bay in perfect afternoon ambiance (Safaga pickup available with additional cost).</li>
+                                <li>From our safari station, enjoy complete quad biking adventure across golden sand dunes and desert valleys toward the traditional Bedouin village.</li>
+                                <li>Throughout your journey, refreshing cold drinks and natural water keep you energized and revitalized.</li>
+                                <li>Experience authentic cultural immersion in the Bedouin village where you explore traditional lifestyle and interact with local residents.</li>
+                                <li>Enjoy camel riding around the village and savor authentic Bedouin tea with dates and local sweets in peaceful, comfortable evening atmosphere.</li>
+                                <li>The tour's most memorable moments come when you take your quad to the highest sand dunes for spectacular sunset viewing — a breathtaking natural spectacle providing perfect backdrop for romantic memorable photos.</li>
+                                <li>After sunset, indulge in luxurious BBQ dinner in the heart of the desert under starlit sky with gentle Bedouin music.</li>
+                                <li>Optional experiences: horse riding adventure or extended camel safari (additional cost).</li>
+                                <li>At tour's conclusion, watch a short folklore show reflecting authentic Bedouin heritage, or simply relax and enjoy absolute evening desert tranquility.</li>
+                                <li>For extra excitement, additional quad tours under starlight are available at modest cost — perfect for couples seeking romantic adventure.</li>
+                                <li>Return to your hotel in the evening filled with unforgettable romantic memories and stunning desert sunset photographs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- Included -->
+                <div class="detail">
+                    <div class="content"> <!-- change to include -->
+                        <div class="dtitle">Included</div>
+                        <div class="info">
+                            <ul>
+                                <li>Hotel transfers (Hurghada, El Gouna, Sahl Hasheesh, Makadi Bay)</li>
+                                <li>Complete quad biking adventure with full safety equipment</li>
+                                <li>Sunset viewing from highest sand dunes</li>
+                                <li>Bedouin village visit and traditional lifestyle exploration</li>
+                                <li>Camel riding around village and Bedouin tea with dates</li>
+                                <li>Luxurious BBQ dinner in desert under stars</li>
+                                <li>Short folklore show with traditional Bedouin music</li>
+                                <li>Cold drinks and natural water throughout tour</li>
+                                <li>Comprehensive travel insurance and specialized sunset guides</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- Not Included -->
+                <div class="detail">
+                    <div class="content"> <!-- change to not include -->
+                        <div class="dtitle">Not Included</div>
+                        <div class="info">
+                            <ul>
+                                <li>Safaga pickup (additional cost)</li>
+                                <li>Alcoholic beverages or special drinks</li>
+                                <li>Extra quad tours under starlight (available on request)</li>
+                                <li>Professional sunset photography services</li>
+                                <li>Souvenirs or personal purchases from Bedouin village</li>
+                                <li>Tips for guides and drivers</li>
+                                <li>Optional horse riding (additional cost)</li>
+                                <li>Extended camel safari (additional cost)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- What to Bring -->
+                <div class="detail">
+                    <div class="content"> <!-- change to bring -->
+                        <div class="dtitle">What to Bring</div>
+                        <div class="info">
+                            <ul>
+                                <li>Comfortable clothes with light jacket for slightly cool evening</li>
+                                <li>Closed sports shoes suitable for sand and dunes</li>
+                                <li>Camera with sunset settings or phone with good night lighting</li>
+                                <li>Small bag for personal items with sand protection</li>
+                                <li>Cash for optional purchases and Bedouin gifts</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- What Not to Bring -->
+                <div class="detail">
+                    <div class="content"> <!-- change to not bring -->
+                        <div class="dtitle">What Not to Bring</div>
+                        <div class="info">
+                            <ul>
+                                <li>Outside food (BBQ dinner included and luxurious)</li>
+                                <li>Large bags or heavy luggage during quad riding</li>
+                                <li>Alcoholic beverages (not permitted on desert tours)</li>
+                                <li>Very light-colored or impractical desert clothing</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- Pro Tips -->
+                <div class="detail">
+                    <div class="content"> <!-- change to tips -->
+                        <div class="dtitle">Pro Tips</div>
+                        <div class="info">
+                            <ul>
+                                <li>Be ready on time for departure (exactly 2:00 PM)</li>
+                                <li>Bring camera ready for most beautiful sunset moments — perfect natural lighting</li>
+                                <li>Enjoy evening tranquility and relax during sunset viewing — unique meditative moment</li>
+                                <li>Drink sufficient water before and during tour to avoid dehydration</li>
+                                <li>Keep light jacket as desert cools slightly with sunset</li>
+                                <li>Interact with Bedouins and enjoy their heritage stories around dinner fire</li>
+                                <li>Use sunscreen even at sunset time as sun remains strong</li>
+                                <li>Enjoy silence and tranquility during sunset — exceptional spiritual experience</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+
+            <!-- Reviews Section -->
+            <div class="reviews">
+                <div class="rtitle">
+                    <h1>Customer Reviews</h1>
+                    <p>What travelers say about this romantic desert experience</p>
+                </div>
+                <div class="overall-rating">
+                    <div class="rating-summary">
+                        <div class="rating-number">
+                            <h2>4.9</h2>
+                            <span>/5</span>
+                        </div>
+                        <div class="rating-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="rating-text">
+                            <h3>Exceptional</h3>
+                            <p>Based on 120+ reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-cards" id="review-cards">
+                    <!-- Dynamically loaded via JS -->
+                </div>
+                <div class="load-more-container">
+                    <button class="load-more-btn" id="load-more-btn" onclick="loadMoreReviews()">
+                        <span class="btn-text">More Reviews</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="f-container">
+                <div class="logo">
+                    <img src="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (1).png" alt="">
+                    <div class="text">
+                        <h2>Younes </h2>
+                        <h2>tours</h2>
+                    </div>
+                </div>
+                <div class="inforamtion">
+                    <div class="info">
+                        <div class="i_info">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h3> Rua Manuel Rodrigues Abreu, 26, 3800-693 Aveiro, Portugal</h3>
+                        </div>
+                        <div class="i_info">
+                            <i class="fa-solid fa-phone"></i>
+                            <h3> +351 234 567 890</h3>
+                        </div>
+                        <div class="i_info">
+                            <i class="fa-solid fa-envelope"></i>
+                            <h3> 2RzLb@example.com</h3>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h1>pages</h1>
+                        <ul>
+                            <li>Home</li>
+                            <li>Services</li>
+                            <li>Gallery</li>
+                            <li>Reviews</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h1>Categories</h1>
+                        <ul>
+                            <li>Egypt tours</li>
+                            <li>desert safaris</li>
+                            <li>romantic experiences</li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h1>follow us</h1>
+                        <ul>
+                            <li><i class="fa-solid fa-share"></i></li>
+                            <li><i class="fa-brands fa-facebook"></i></li>
+                            <li><i class="fa-brands fa-instagram"></i></li>
+                            <li><i class="fa-brands fa-twitter"></i></li>
+                        </ul>
+                        <div class="copyright">
+                            <h3>Copyright © 2025 Younes Tours. All Rights Reserved.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script>
+            const header = document.querySelector("header");
+            if (header) {
+                header.style.transition = "all 0.3s ease";
+                let choose = 0;
+                window.onscroll = function () {
+                    if (window.scrollY <= 400 && choose == 0) {
+                        header.style.backgroundColor = "#242424e3";
+                        header.style.position = "absolute";
+                    } else {
+                        choose = 1;
+                        header.style.backgroundColor = "#242424e3";
+                        header.style.position = "fixed";
+                        if (window.scrollY <= 10) choose = 0;
+                    }
+                };
+            }
+
+            function exit() {
+                document.getElementById('pop').style = "width: 0%; overflow:hidden";
+                document.getElementById('container').style = "filter:blur(0px);";
+                setTimeout(() => {
+                    document.getElementById('logo_menu').style = "display: none;";
+                    document.getElementById('links_menu').style = "display: none;";
+                }, 300);
+            }
+
+            function open_pop() {
+                document.getElementById('pop').style = "width:70%; overflow:show";
+                document.getElementById('container').style = "filter:blur(1px);";
+                setTimeout(() => {
+                    document.getElementById('logo_menu').style = "display: block;";
+                    document.getElementById('links_menu').style = "display: block;";
+                });
+
+                document.querySelector('body').addEventListener('click', function (e) {
+                    if (!e.target.closest('.pop_up') && !e.target.classList.contains('menu-style')) {
+                        exit();
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", function () { exit(); });
+        </script>
+        <script src="./main.js"></script>
+        <script src="./../../main.js"></script>
+    </body>
+</html>

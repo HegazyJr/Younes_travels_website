@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../style.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Complete Desert Adventure Tour|Younes Tours</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (2).png">
+
+</head>
+<body id="body">
+    <div class="container">
+        <header>
+            <div class="nov-container">
+                <div class="h_btn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="logo">
+                    <h1>Younes <span>Tours</span></h1>
+                    <i class="fa-solid fa-plane"></i>
+                </div>
+               <div class="menu">
+                    <div class="links">
+                         <div class="link"><a href="../../index.html">Home</a></div>
+                        <div class="link" id="packages-link"><a href="../index.html">Destinations</a></div>
+                        <div class="link" id="blog-link"><a href="../../blogs/index.html">Blog</a></div>
+                        <div class="link"><a href="../../about.html">About us</a></div>
+                        <div class="link"><a href="../../gallery.html">Photos</a></div>
+                        <div class="link"><a href="../booking/index.html">Book Now</a></div>
+                    </div>
+                    <div class="o-links">
+                        <div class="email" id="email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="face" id="face">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div class="insta" id="insta">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+
+               </div>
+            </div>
+
+        </header>
+        <div class="header-m">
+                <div class="nav-container-m">
+                    <div class="logo">
+                        <h1>Younes <span>Tours</span></h1>
+                        <!-- <i class="fa-solid fa-plane"></i> -->
+                    </div>
+                     <div class="menu-style" onclick="open_pop()">
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div class=""></div>
+                    </div>
+            </div>
+        <div class="pop_up" id="pop">
+                <div class="exit" id="exit" onclick="exit()">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="logo_box-p" id="logo_menu">
+                    <img src="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview.png" alt="logo.img">
+                        <h1>Younes <span>Tours</span></h1>
+                </div>
+                <div class="links_box-p" id="links_menu">
+                    <div class="link"><a href="../../index.html">Home</a></div>
+                        <div class="link" id="packages-link"><a href="../index.html">Destinations</a></div>
+                        <div class="link" id="blog-link"><a href="../../blogs/index.html">Blog</a></div>
+                        <div class="link"><a href="../../about.html">About us</a></div>
+                        <div class="link"><a href="../../gallery.html">Photos</a></div>
+                        <div class="link"><a href="../booking/index.html">Book Now</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="packages" id="packages">
+            <div class="container">
+                <div class="link"> <a href="#P_T">Popular Tours</a></div>
+                 <div class="link"> <a href="#S_T">Best Selling Tours</a></div>
+            </div>
+        </div> -->
+        <div class="contact">
+            <div class="desktop">
+                <div class="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+            <div class="mobile">
+                <div class="whatsapp-m">
+                    <i class="fa-brands fa-whatsapp" ></i>
+                </div>
+                <div class="email-m">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="face-m">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div class="insta-m">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-page">
+            
+            <div class="text_title">
+                 <h1><span>Complete Desert Adventure:</span> Experience the ultimate desert adventure with multi-vehicle experience</h1>
+            </div>
+            <div class="box">
+                <div class="type">
+                    <h1>top rated</h1>
+                </div>
+                <div class="rating">
+                    <div class="star-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star" id="not_checked"></span>
+                    </div>
+                    <div class="rating">
+                        <h2>4.9</h2>
+                    </div>
+                    </div>
+                    <div class="review_count">
+                        <h2>100 reviews</h2>
+                    </div>
+                    <div class="point"></div>
+                    <div class="place">
+                        <h2>Activity provider: Complete Desert Adventure Tour</h2>
+                    </div>
+            </div>
+            <!-- ===== ORIGINAL IMAGE LAYOUT WITH MODAL ===== -->
+            <!-- This section displays images in the original 3-column layout -->
+            <div class="images">
+                <div class="imgs_box">
+                    <!-- Large main image (80% width) -->
+                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg', 'Desert Adventure - Jeep Safari')">
+                        <img src="./../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg" alt="Desert Adventure - Jeep Safari">
+                    </div>
+                    
+                    <!-- Medium side image (40% width) -->
+                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg', 'Desert Adventure - Quad Biking')">
+                        <img src="./../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg" alt="Desert Adventure - Quad Biking">
+                    </div>
+                    
+                    <!-- Two small images container (40% width, stacked vertically) -->
+                    <div class="img_box">
+                        <!-- First small image -->
+                        <img src="./../../IMG/Gallery_imgs/Classical Tour Egypt.jpg" alt="Desert Adventure - Bedouin Village" onclick="openLightbox('image', './../../IMG/Gallery_imgs/Classical Tour Egypt.jpg', 'Desert Adventure - Bedouin Village')">
+                        <!-- Second small image -->
+                        <img src="./../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="Desert Adventure - Sunset View" onclick="openLightbox('image', './../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg', 'Desert Adventure - Sunset View')">
+                    </div>
+                </div>
+            </div>
+            <!-- ===== END IMAGE LAYOUT ===== -->
+
+            <!-- ===== LIGHTBOX MODAL ===== -->
+            <!-- Fullscreen modal for displaying images in larger size -->
+            <div id="lightbox" class="lightbox">
+                <div class="lightbox-content">
+                    <!-- Close button for the modal -->
+                    <button class="lightbox-close" onclick="closeLightbox()">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                    
+                    <!-- Navigation arrows for browsing through images -->
+                    <button class="lightbox-nav prev-btn" onclick="changeLightboxImage(-1)">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="lightbox-nav next-btn" onclick="changeLightboxImage(1)">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                    
+                    <!-- Main image display area -->
+                    <img id="lightbox-image" src="" alt="">
+                </div>
+            </div>
+            <!-- ===== END LIGHTBOX MODAL ===== -->
+            <div class="about">
+                <h4>Experience the ultimate desert adventure - complete tour with jeep, quad biking, and buggy rides including traditional Bedouin lunch, dinner, and full oriental show.</h4>
+            </div>
+            <div class="price-box">
+                <div class="price">
+                    <h2>From</h2>
+                    <h2>75$</h2>
+                    <h2>per person</h2>
+                </div>
+                <div class="btn-check">
+                    <button>Check Availability</button>
+                </div>
+                <div class="pay_later">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <h3><span>Reserve now & pay later</span>
+                     to book your spot and pay nothing today</h3>
+                </div>
+            </div>
+            <div class="about-ticket">
+                <h1>About This Ticket</h1>
+                <div class="items">
+                    <div class="item">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <h3><span>Free cancellation</span><br>Cancel up to 24 hours in advance for a full refund</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <h3><span>Reserve now & pay later</span><br>
+    Keep your travel plans flexible — book your spot and pay nothing today.</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-fast-forward"></i>
+                        <h3><span>Skip the ticket line</span><br></h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-headphones"></i>
+                        <h3><span>Multilingual guides</span><br>Spanish, English, Chinese, French, German, Japanese</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-shield-alt"></i>
+                        <h3><span>Comprehensive travel insurance</span><br></h3>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="top-review">
+                <h1>Highlighted reviews from other travelers</h1>
+                <div class="reviews">
+                    <div class="review">
+                        <div class="img">
+                            <img src="./../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h1>Kareem Hegazy</h1>
+                            <div class="details">
+                                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aliquid fuga ex eos deleniti, est eligendi aperiam magnam molestias aliquam ullam saepe tenetur, nulla non ipsum repellat impedit velit amet.</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="img">
+                            <img src="./../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h1>Kareem Hegazy</h1>
+                            <div class="details">
+                                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aliquid fuga ex eos deleniti, est eligendi aperiam magnam molestias aliquam ullam saepe tenetur, nulla non ipsum repellat impedit velit amet.</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="more">
+                    <a>more reviews</a>
+                </div>
+            </div> -->
+            <div class="cost">
+                <h2>Select participants and date</h2>
+                <div class="cost-box">
+                    
+                    <div class="members">
+                        <h5>number of adults</h5>
+                        <select name="participants" id="participants">
+                            <option value="" disabled selected hidden>adults</option>
+                            <option value="">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="10+">10~15</option>
+                            <option value="15+">15~20</option>
+                            <option value="20+">20~30</option>
+                        </select>
+                    </div>
+                    <div class="members">
+                        <h5>number of youngs (5~15)</h5>
+                        <select name="participants" id="youngs">
+                            <option value="" disabled selected hidden>children (5~15)</option>
+                            <option value="">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="10+">10~15</option>
+                            <option value="15+">15~20</option>
+                            <option value="20+">20~30</option>
+                        </select>
+                    </div>
+                    
+                    <div class="date-select">
+                        <h5>select date</h5>
+                        <input type="date" id="dateInput" name="date" placeholder="1" required>
+                    </div>
+                    <div class="btn-check">
+                        <button id="check-availability">Check Availability</button>
+                    </div>
+                </div>
+                <div class="result" id="result">
+                    <h1><span>Complete Desert Adventure:</span> Experience the ultimate desert adventure with multi-vehicle experience</h1>
+                    <div class="details">
+                        <div class="time"><i class="fas fa-clock"></i><h3>8 hours</h3></div>  
+                        <div class="language"><i class="fas fa-language"></i><h3>English</h3></div>
+                        <div class="location"><i class="fas fa-map-marker-alt"></i><a><h3>Eastern Desert</h3></a></div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="time-selected">
+                        <h1>your trip starting time is </h1>
+                        <h2 id="time">11 a.m</h2>
+                    </div>
+                    <div class="line"></div>
+                    <div class="bottom">
+                        <div class="price-members">
+                            <h2>75$</h3>
+                            <h3 id="members"><span id="adult-count">1 </span>adults & <span id="young-count">1 </span>children</h3>
+                            <h6>All taxes and fees included</h6>
+                        </div>
+                        <div class="btn"><button>Book Now</button></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="details">
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Highlight</div>
+                        <div class="info">
+                            <ul>
+                                <li>Comprehensive 4x4 jeep safari covering 80km through mountains and valleys</li>
+                                <li>Extended quad biking experience for 1.5 hours across diverse terrains</li>
+                                <li>Thrilling buggy car adventure for 30 minutes of pure adrenaline</li>
+                                <li>Full lunch and dinner meals in Bedouin village and desert camp</li>
+                                <li>Traditional camel riding and Bedouin tea experience with handicraft exploration</li>
+                                <li>Hotel transfers included (Hurghada, El Gouna, Sahel Hashish, Makadi Bay)</li>
+                                <li>Stunning sunset viewing with complete oriental show (belly dance, tanoura, fire show)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Destinations</div>
+                        <div class="info">
+                            <ul>
+                                <li>Hurghada <span>></span> Eastern Desert <span>></span> Bedouin Village <span>></span> Desert Camp</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail done" >
+                    <div class="content">
+                        <div class="dtitle">description</div>
+                        <div class="info">
+                            <ul class="info-list">
+                                <li>Embark on the greatest desert adventure ever - the Complete Adventure Tour that combines all types of desert vehicles in one action-packed day filled with excitement and Bedouin culture from 11:00 AM to 7:00 PM.</li>
+                                <li>This tour is designed for ultimate adventure seekers and comprehensive desert experience enthusiasts.</li>
+                                <li>Your exceptional journey begins with hotel pickup from Hurghada, El Gouna, Sahel Hashish, or Makadi Bay at 11:00 AM - with Safaga pickup available for additional fees.</li>
+                                <li>From the safari station, you'll enjoy an epic 4×4 jeep ride covering 80 kilometers through desert mountains, deep valleys, and rugged trails to the deepest points of the Eastern Desert.</li>
+                                <li>During the mountain journey, you'll enjoy cold beverages and natural water to maintain your energy throughout the long day.</li>
+                                <li>You'll have a deep cultural experience in the remote Bedouin village where you explore authentic traditional life and learn traditional Bedouin handicrafts from local residents.</li>
+                                <li>Enjoy a complete traditional Bedouin lunch, extended camel riding (additional fees apply), and authentic tea with folk heritage stories.</li>
+                                <li>After lunch comes the most powerful adventures - one and a half hours of quad biking across all terrain types from massive sand dunes to rocky valleys.</li>
+                                <li>Followed by the thrilling buggy experience (dune buggy) for half an hour of pure adrenaline and crazy maneuvers.</li>
+                                <li>In the evening, you'll move to the highest sand dune for spectacular sunset viewing, then enjoy a luxury barbecue dinner in the desert under the stars with the complete oriental show.</li>
+                                <li>For more excitement, additional night tours with all vehicles are available for extra fees - perfect for extreme adventure lovers.</li>
+                                <li>You'll return to your hotel in the evening filled with unforgettable adventure memories and comprehensive desert experience.</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Included</div>
+                        <div class="info">
+                            <ul>
+                                <li>Hotel transfers to and from (Hurghada, El Gouna, Sahel Hashish, Makadi Bay)</li>
+                                <li>Comprehensive 4x4 jeep safari (80 kilometers) through mountains and valleys</li>
+                                <li>Extended quad biking (1.5 hours) with all equipment</li>
+                                <li>Thrilling buggy experience (30 minutes) with professional driver</li>
+                                <li>Complete lunch and dinner meals in Bedouin village and desert</li>
+                                <li>Traditional handicraft exploration in Bedouin village</li>
+                                <li>Authentic Bedouin tea with dates and local sweets</li>
+                                <li>Sunset viewing from highest sand dunes</li>
+                                <li>Complete oriental show (belly dance, tanoura, fire show)</li>
+                                <li>All cold beverages and natural water throughout the trip</li>
+                                <li>Comprehensive travel insurance and multilingual guides</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Not Included</div>
+                        <div class="info">
+                            <ul>
+                                <li>Safaga hotel transfers (additional fees apply for long journey)</li>
+                                <li>Alcoholic beverages or special drinks</li>
+                                <li>Additional night tours (extra fees depending on vehicle type)</li>
+                                <li>Professional photography services for all activities</li>
+                                <li>Souvenirs or personal purchases from Bedouin markets</li>
+                                <li>Tips (gratuities) for the complete team of guides and drivers</li>
+                                <li>Camel and horse riding (additional fees apply)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">What to Bring</div>
+                        <div class="info">
+                            <ul>
+                                <li>Comfortable, layered clothing to adapt to temperature changes</li>
+                                <li>Strong, comfortable sports shoes for all activities and different vehicles</li>
+                                <li>Camera with large memory and extra battery for the long journey documentation</li>
+                                <li>Medium-sized, tightly sealed bag to protect items from sand</li>
+                                <li>Sufficient cash for purchases, photography, and additional activities</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">What Not to Bring</div>
+                        <div class="info">
+                            <ul>
+                                <li>Outside food (two complete meals included)</li>
+                                <li>Large bags or heavy luggage for the long journey</li>
+                                <li>Alcoholic beverages (long trip requires full concentration)</li>
+                                <li>Unnecessary valuables to avoid damage or loss</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Pro Tips</div>
+                        <div class="info">
+                            <ul>
+                                <li>Be prepared for a full day of adventures (11:00 AM - 7:00 PM)</li>
+                                <li>Have a nutritious, light breakfast before the long journey</li>
+                                <li>Listen carefully to safety instructions for each vehicle - safety first</li>
+                                <li>Enjoy every moment and take advantage of all available activities</li>
+                                <li>Maintain energy levels by drinking fluids regularly throughout the day</li>
+                                <li>Interact with local Bedouins and listen to their stories and rich heritage</li>
+                                <li>Take appropriate breaks between different activities to avoid fatigue</li>
+                                <li>Enjoy the diversity of landscapes - from mountains to dunes to villages</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+
+
+            <!-- <div class="description">
+                <div class="stitle"><h1>description</h1></div>
+                <div class="summarize">
+                    <p>Experience the vibrant beauty of the Red Sea with our Hula Hula Island group day trip,<br> expertly designed for visitors who seek a straightforward and enjoyable marine adventure. <br>Pickup begins between 8:00–9:00 AM from hotels across Hurghada, <br><div class="line"></div> <br> Makadi Bay, Sahl Hasheesh, and El Gouna (Safaga may incur a small extra fee). <br> From the marina, your shared boat cruise sets off across calm turquoise waters to reach Hula Hula Island. <br>
+
+Two guided snorkeling sessions await—each around 45 minutes—where professional equipment and safety guidance allow you to explore colorful reefs populated by tropical fish.<br> <div class="line"></div> <br> A short boating interval (~30 minutes) separates the two sites, letting you catch your breath before diving again.<br>
+Upon reaching the island, enjoy up to two hours on soft white sands—perfect for swimming, <br> photography, or simply taking in the serene marine atmosphere. <br> <div class="line"></div> <br> Before landing, a delicious lunch with refreshing soft drinks is served onboard—no frills, just satisfying, genuine food designed to refuel you for the rest of the day.<br>
+After lunch, add some fun with included water sports, <br> <div class="line"></div> <br> such as Banana Boat or Sofa Boat rides—ideal for laughter and shared group energy. <br> The boat returns to shore by late afternoon, followed by hotel drop-off adding comfort to your seamlessly organized day. Expect around eight hours total of relaxation,<br> <div class="line"></div> <br>beach beauty, and ocean discovery—no hidden charges or surprises, just a clean, well‑managed tourism experience.</p>
+                </div>
+            </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- ===== ENHANCED REVIEWS SECTION ===== -->
+            <div class="reviews">
+                <div class="rtitle">
+                    <h1>Customer Reviews</h1>
+                    <p>What our travelers say about this experience</p>
+                </div>
+
+                <!-- Overall Rating Summary -->
+                <div class="overall-rating">
+                    <div class="rating-summary">
+                        <div class="rating-number">
+                            <h2>4.5</h2>
+                            <span>/5</span>
+                        </div>
+                        <div class="rating-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star" id="semi"></i>
+                        </div>
+                        <div class="rating-text">
+                            <h3>Excellent</h3>
+                            <p>Based on 100+ reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- ===== DYNAMIC REVIEWS SECTION ===== -->
+                <!-- 
+                    🚀 نظام ديناميكي لإضافة التقييمات:
+                    
+                    💬 لإضافة تقييم جديد:
+                    1. أضف بيانات التقييم في reviewsData array في main.js
+                    2. النظام سينشئ التقييم تلقائياً مع الصور
+                    
+                    📸 لإضافة صور للتقييم:
+                    1. أضف روابط الصور في photos array داخل التقييم
+                    2. النظام سينشئ thumbnails و slideshow تلقائياً
+                    
+                    ⚡ الميزات:
+                    - إضافة تقييمات غير محدودة
+                    - صور متعددة لكل تقييم
+                    - نظام "المزيد" تلقائي
+                    - slideshow احترافي لكل تقييم
+                -->
+                <div class="review-cards" id="review-cards">
+                    <!-- التقييمات ستُنشأ ديناميكياً من JavaScript -->
+                </div>
+
+
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button class="load-more-btn" id="load-more-btn" onclick="loadMoreReviews()">
+                        <span class="btn-text">المزيد من التقييمات</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- ===== END ENHANCED REVIEWS SECTION ===== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>  
+     <footer>
+                <div class="f-container">
+                    <div class="logo">
+                        <img src="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (1).png" alt="">
+                       <div class="text">
+                            <h2>Younes </h2>
+                            <h2>tours</h2>
+                       </div>
+                    </div>
+                    <div class="inforamtion">
+                        <div class="info">
+                            <div class="i_info">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <h3> Rua Manuel Rodrigues Abreu, 26, 3800-693 Aveiro, Portugal</h3>
+                            </div>
+                            <div class="i_info">
+                                <i class="fa-solid fa-phone"></i>
+                                <h3> +351 234 567 890</h3>
+                            </div>
+                            <div class="i_info">
+                                <i class="fa-solid fa-envelope"></i>
+                                <h3> 2RzLb@example.com</h3>
+                        </div>
+                        </div>
+                        <div class="info">
+                            <h1>pages</h1>
+                            <ul>
+                                <li>Home</li>
+                                <li>Services</li>
+                                <li>Gallery</li>
+                                <li>Reviews</li>
+                                <li>About</li>
+                                <li>Contact</li>
+                            </ul>
+                        </div>
+                        <div class="info">
+                            <h1>Categories</h1>
+                            <ul>
+                                <li>Egypt tours</li>
+                                <li>Egypt tours packages</li>
+                                <li>coastal tours</li>
+                            </ul>
+                        </div>
+                        <div class="info">
+                            <h1>follow us</h1>
+                            <ul>
+                                <li><i class="fa-solid fa-share"></i></li>
+                                <li><i><i class="fa-brands fa-facebook"></i></i></li>
+                                <li><i><i class="fa-brands fa-instagram"></i></i></li>
+                                <li><i><i class="fa-brands fa-twitter"></i></i></li>
+
+                            </ul>
+                            <div class="copyright">
+                                <h3> Copyright  2022 Younes Tours. All Rights Reserved.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+    <script>
+        const header = document.querySelector("header");
+console.log(header)
+if (header) {
+    header.style.transition = "all 0.3s ease";
+    choose = 0
+    window.onscroll = function () {
+        if (window.scrollY <= 400 && choose == 0) {
+            header.style.backgroundColor = "#242424e3";
+            // document.getElementById('packages').style.backgroundColor = "transparent";
+            // document.getElementById('blog').style.backgroundColor = "transparent";
+            // document.getElementById('nav-n').style.backgroundColor = "transparent";
+            header.style.position = "absolute";
+
+
+        } else {
+            choose = 1 
+            console.log(choose)
+            // document.getElementById('packages').style.backgroundColor = "#242424e3";
+            // document.getElementById('blog').style.backgroundColor = "#242424e3";
+            // document.getElementById('nav-n').style.backgroundColor = "#201e43e7";
+            header.style.backgroundColor = "#242424e3";
+            header.style.position = "fixed";
+            if (window.scrollY <= 10 ) {
+                choose = 0
+                console.log(choose)
+
+            }else{
+                choose = 1
+                console.log(choose)
+
+            }
+        }
+
+    };
+}function exit() {
+    document.getElementById('pop').style="width: 0%;overflow:hidden"
+    document.getElementById('container').style = "filter:blur(0px);"
+    setTimeout(() => {
+        document.getElementById('logo_menu').style = "display: none;";
+        document.getElementById('links_menu').style = "display: none;";
+        document.getElementById('btn_menu').style = "display: none;";
+    }, 300);
+}
+
+/**
+ * دالة فتح القائمة المنبثقة للهاتف المحمول
+ */
+function open_pop() {
+    document.getElementById('pop').style="width:70%;overflow:show"
+    document.getElementById('container').style = "filter:blur(1px);"
+    setTimeout(() => {
+        document.getElementById('logo_menu').style = "display: block;";
+        document.getElementById('links_menu').style = "display: block;";
+        document.getElementById('btn_menu').style = "display: block;";
+    });
+
+    // إغلاق القائمة عند النقر في أي مكان
+    document.querySelector('body').addEventListener('click',function () {
+        exit()
+    })
+}
+
+// إغلاق القائمة المنبثقة عند التمرير
+window.addEventListener("scroll", function () {
+    exit()
+});
+document.getElementById('tour').addEventListener("click", function () {
+    window.location.href = "./tours/index.html"
+})
+    </script>
+    <script src="./main.js"></script>
+    <script src="./../../main.js"></script>
+</body>
+</html>

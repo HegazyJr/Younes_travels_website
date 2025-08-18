@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../style.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>El Gouna Day Trip - Venice of the Middle East|Younes Tours</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (2).png">
+
+</head>
+<body id="body">
+    <div class="container">
+        <header>
+            <div class="nov-container">
+                <div class="h_btn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="logo">
+                    <h1>Younes <span>Tours</span></h1>
+                    <i class="fa-solid fa-plane"></i>
+                </div>
+               <div class="menu">
+                    <div class="links">
+                         <div class="link"><a href="../../index.html">Home</a></div>
+                        <div class="link" id="packages-link"><a href="../index.html">Destinations</a></div>
+                        <div class="link" id="blog-link"><a href="../../blogs/index.html">Blog</a></div>
+                        <div class="link"><a href="../../about.html">About us</a></div>
+                        <div class="link"><a href="../../gallery.html">Photos</a></div>
+                        <div class="link"><a href="../booking/index.html">Book Now</a></div>
+                    </div>
+                    <div class="o-links">
+                        <div class="email" id="email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="face" id="face">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div class="insta" id="insta">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+
+               </div>
+            </div>
+
+        </header>
+        <div class="header-m">
+                <div class="nav-container-m">
+                    <div class="logo">
+                        <h1>Younes <span>Tours</span></h1>
+                        <!-- <i class="fa-solid fa-plane"></i> -->
+                    </div>
+                     <div class="menu-style" onclick="open_pop()">
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div class=""></div>
+                    </div>
+            </div>
+        <div class="pop_up" id="pop">
+                <div class="exit" id="exit" onclick="exit()">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="logo_box-p" id="logo_menu">
+                    <img src="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview.png" alt="logo.img">
+                        <h1>Younes <span>Tours</span></h1>
+                </div>
+                <div class="links_box-p" id="links_menu">
+                    <div class="link"><a href="../../index.html">Home</a></div>
+                        <div class="link" id="packages-link"><a href="../index.html">Destinations</a></div>
+                        <div class="link" id="blog-link"><a href="../../blogs/index.html">Blog</a></div>
+                        <div class="link"><a href="../../about.html">About us</a></div>
+                        <div class="link"><a href="../../gallery.html">Photos</a></div>
+                        <div class="link"><a href="../booking/index.html">Book Now</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="desktop">
+                <div class="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+            <div class="mobile">
+                <div class="whatsapp-m">
+                    <i class="fa-brands fa-whatsapp" ></i>
+                </div>
+                <div class="email-m">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="face-m">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div class="insta-m">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-page">
+            
+            <div class="text_title">
+                 <h1><span>El Gouna Day Trip:</span>Venice of the Middle East</h1>
+            </div>
+            <div class="box">
+                <div class="type">
+                    <h1>top rated</h1>
+                </div>
+                <div class="rating">
+                    <div class="star-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star" id="not_checked"></span>
+                    </div>
+                    <div class="rating">
+                        <h2>4.9</h2>
+                    </div>
+                    </div>
+                    <div class="review_count">
+                        <h2>100 reviews</h2>
+                    </div>
+                    <div class="point"></div>
+                    <div class="place">
+                        <h2>Activity provider: Egypt Red Sea Resort Tours</h2>
+                    </div>
+            </div>
+            <!-- ===== ORIGINAL IMAGE LAYOUT WITH MODAL ===== -->
+            <!-- This section displays images in the original 3-column layout -->
+            <div class="images">
+                <div class="imgs_box">
+                    <!-- Large main image (80% width) -->
+                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg', 'El Gouna - Abu Tig Marina')">
+                        <img src="./../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg" alt="El Gouna - Abu Tig Marina">
+                    </div>
+                    
+                    <!-- Medium side image (40% width) -->
+                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg', 'El Gouna - Colorful Waterways')">
+                        <img src="./../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg" alt="El Gouna - Colorful Waterways">
+                    </div>
+                    
+                    <!-- Two small images container (40% width, stacked vertically) -->
+                    <div class="img_box">
+                        <!-- First small image -->
+                        <img src="./../../IMG/Gallery_imgs/Classical Tour Egypt.jpg" alt="El Gouna - Downtown Shopping" onclick="openLightbox('image', './../../IMG/Gallery_imgs/Classical Tour Egypt.jpg', 'El Gouna - Downtown Shopping')">
+                        <!-- Second small image -->
+                        <img src="./../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="El Gouna - Lagoon Views" onclick="openLightbox('image', './../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg', 'El Gouna - Lagoon Views')">
+                    </div>
+                </div>
+            </div>
+            <!-- ===== END IMAGE LAYOUT ===== -->
+
+            <!-- ===== LIGHTBOX MODAL ===== -->
+            <!-- Fullscreen modal for displaying images in larger size -->
+            <div id="lightbox" class="lightbox">
+                <div class="lightbox-content">
+                    <!-- Close button for the modal -->
+                    <button class="lightbox-close" onclick="closeLightbox()">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                    
+                    <!-- Navigation arrows for browsing through images -->
+                    <button class="lightbox-nav prev-btn" onclick="changeLightboxImage(-1)">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="lightbox-nav next-btn" onclick="changeLightboxImage(1)">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                    
+                    <!-- Main image display area -->
+                    <img id="lightbox-image" src="" alt="">
+                </div>
+            </div>
+            <!-- ===== END LIGHTBOX MODAL ===== -->
+            <div class="about">
+                <h4>Experience the magic of El Gouna - a stunning resort town featuring pristine lagoons, luxury marinas, golden beaches, and vibrant colorful architecture along Egypt's magnificent Red Sea coast.</h4>
+            </div>
+            <div class="price-box">
+                <div class="price">
+                    <h2>From</h2>
+                    <h2>25$</h2>
+                    <h2>per person</h2>
+                </div>
+                <div class="btn-check">
+                    <button>Check Availability</button>
+                </div>
+                <div class="pay_later">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <h3><span>Reserve now & pay later</span>
+                     to book your spot and pay nothing today</h3>
+                </div>
+            </div>
+            <div class="about-ticket">
+                <h1>About This Ticket</h1>
+                <div class="items">
+                    <div class="item">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <h3><span>Free cancellation</span><br>Cancel up to 24 hours in advance for a full refund</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <h3><span>Reserve now & pay later</span><br>
+    Keep your travel plans flexible — book your spot and pay nothing today.</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-fast-forward"></i>
+                        <h3><span>Skip the ticket line</span><br></h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-headphones"></i>
+                        <h3><span>Professional multilingual guide</span><br>Expert local guide for the complete experience</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-bus"></i>
+                        <h3><span>Air-conditioned transport</span><br>Comfortable round-trip hotel transfers included</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="cost">
+                <h2>Select participants and date</h2>
+                <div class="cost-box">
+                    
+                    <div class="members">
+                        <h5>number of adults</h5>
+                        <select name="participants" id="participants">
+                            <option value="" disabled selected hidden>adults</option>
+                            <option value="">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="10+">10~15</option>
+                            <option value="15+">15~20</option>
+                            <option value="20+">20~30</option>
+                        </select>
+                    </div>
+                    <div class="members">
+                        <h5>number of youngs (5~15)</h5>
+                        <select name="participants" id="youngs">
+                            <option value="" disabled selected hidden>children (5~15)</option>
+                            <option value="">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="10+">10~15</option>
+                            <option value="15+">15~20</option>
+                            <option value="20+">20~30</option>
+                        </select>
+                    </div>
+                    
+                    <div class="date-select">
+                        <h5>select date</h5>
+                        <input type="date" id="dateInput" name="date" placeholder="1" required>
+                    </div>
+                    <div class="btn-check">
+                        <button id="check-availability">Check Availability</button>
+                    </div>
+                </div>
+                <div class="result" id="result">
+                    <h1><span>El Gouna Day Trip:</span>Venice of the Middle East</h1>
+                    <div class="details">
+                        <div class="time"><i class="fas fa-clock"></i><h3>4 hours</h3></div>  
+                        <div class="language"><i class="fas fa-language"></i><h3>Multilingual</h3></div>
+                        <div class="location"><i class="fas fa-map-marker-alt"></i><a><h3>El Gouna Resort</h3></a></div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="time-selected">
+                        <h1>Choose your preferred time </h1>
+                        <h2 id="time">Morning/Midday/Afternoon</h2>
+                    </div>
+                    <div class="line"></div>
+                    <div class="bottom">
+                        <div class="price-members">
+                            <h2>25$</h3>
+                            <h3 id="members"><span id="adult-count">1 </span>adults & <span id="young-count">1 </span>children</h3>
+                            <h6>All taxes and fees included</h6>
+                        </div>
+                        <div class="btn"><button>Book Now</button></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="details">
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Highlight</div>
+                        <div class="info">
+                            <ul>
+                                <li>Explore the famous Abu Tig Marina with world-class restaurants and cafes</li>
+                                <li>Visit El Gouna Downtown - the vibrant commercial heart of the resort</li>
+                                <li>Discover the enchanting waterways and colorful bridges (Venice of the Middle East)</li>
+                                <li>Optional speed boat tour through the scenic lagoons (additional cost)</li>
+                                <li>Shopping experience in local markets and traditional bazaars</li>
+                                <li>Duty-free shopping in Hurghada</li>
+                                <li>Photography tour of colorful residential areas and unique architectural villas</li>
+                                <li>Comfortable round-trip transportation from Hurghada (22km north of Hurghada)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Destinations</div>
+                        <div class="info">
+                            <ul>
+                                <li>Hurghada <span>></span> El Gouna Resort Town <span>></span> Abu Tig Marina</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail done" >
+                    <div class="content">
+                        <div class="dtitle">Description</div>
+                        <div class="info">
+                            <ul class="info-list">
+                                <li>El Gouna is an exclusive resort town located on Egypt's Red Sea coast near Hurghada,</li>
+                                <li>originally developed by Orascom Hotels and Development in 1990.</li>
+                                <li>The resort is situated 22km north of Hurghada International Airport and 470km from Cairo.</li>
+                                <li>Your adventure begins with a comfortable 30-minute air-conditioned coach journey from your Hurghada hotel to this extraordinary resort destination.</li>
+                                <li>El Gouna transformed from desert wilderness into an unparalleled resort town, where its founder discovered the most beautiful spot along the Red Sea coastline.</li>
+                                <li>Abu Tig Marina: The beating heart of El Gouna, featuring international restaurants, elegant cafes, and upscale boutiques.</li>
+                                <li>Enjoy waterfront promenades and capture stunning photos with luxury yachts as your backdrop.</li>
+                                <li>El Gouna Downtown: The bustling commercial center offering local markets, authentic restaurants, and traditional coffeehouses.</li>
+                                <li>Experience authentic local culture while shopping for unique souvenirs and handicrafts.</li>
+                                <li>Lagoons and Waterways: El Gouna's distinctive network of lagoons and colorful bridges connecting different areas of the town</li>
+                                <li>earned it the nickname "Venice of the Middle East" - a truly magical experience.</li>
+                                <li>Water Activities: Enjoy optional thrilling speedboat excursions through the scenic lagoons for a unique perspective of the resort,</li>
+                                <li>plus opportunities to book boat trips to nearby islands and coral reefs.</li>
+                                <li>Duty-Free Shopping: Take advantage of excellent duty-free shopping opportunities in Hurghada, featuring international perfumes, jewelry, accessories, and luxury souvenirs at tax-free prices.</li>
+                                <li>Pristine Beaches: El Gouna boasts several private resort beaches with day-pass access available, where you can enjoy crystal-clear turquoise waters and soft sandy shores.</li>
+                                <li>Your memorable day concludes with an evening return to Hurghada, carrying unforgettable memories of this unique Red Sea resort paradise.</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Included</div>
+                        <div class="info">
+                            <ul>
+                                <li>Round-trip hotel transfers (Hurghada, Sahl Hasheesh, Makadi Bay)</li>
+                                <li>Comfortable air-conditioned transportation</li>
+                                <li>Professional multilingual tour guide</li>
+                                <li>Abu Tig Marina guided tour</li>
+                                <li>El Gouna Downtown exploration</li>
+                                <li>Free time for shopping and independent exploration</li>
+                                <li>Lagoons and bridges sightseeing tour</li>
+                                <li>Duty-free shopping visit in Hurghada</li>
+                                <li>Travel insurance coverage</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Not Included</div>
+                        <div class="info">
+                            <ul>
+                                <li>Meals and beverages (available for purchase)</li>
+                                <li>Private beach entrance fees</li>
+                                <li>Optional water activities (speedboat tours, jet skiing, etc.)</li>
+                                <li>Personal shopping and souvenirs</li>
+                                <li>Transfers from El Safiya (additional charges apply)</li>
+                                <li>Tips and gratuities</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">What to Bring</div>
+                        <div class="info">
+                            <ul>
+                                <li>Comfortable walking clothes and shoes</li>
+                                <li>Swimwear and towel (for beach visits)</li>
+                                <li>Sunscreen, sunglasses, and hat</li>
+                                <li>Camera or smartphone for photography</li>
+                                <li>Cash for shopping and refreshments</li>
+                                <li>Valid passport or ID for duty-free shopping</li>
+                                <li>Small daypack for essentials</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">What Not to Bring</div>
+                        <div class="info">
+                            <ul>
+                                <li>Valuable jewelry or large amounts of cash</li>
+                                <li>Heavy or bulky luggage</li>
+                                <li>Outside food (numerous restaurants available in El Gouna)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Pro Tips</div>
+                        <div class="info">
+                            <ul>
+                                <li>Start early to maximize your full-day experience</li>
+                                <li>Bring cash for shopping and beverage purchases</li>
+                                <li>Abu Tig Marina restaurants are pricier than Downtown options</li>
+                                <li>Respect private resort regulations when visiting beaches</li>
+                                <li>Practice polite bargaining in local markets</li>
+                                <li>Take advantage of duty-free shopping in Hurghada for luxury items</li>
+                                <li>Keep emergency contacts and hotel information with you</li>
+                                <li>Try authentic Egyptian coffee and tea at traditional cafes</li>
+                                <li>Capture plenty of photos at the colorful bridges and waterways</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+
+            <!-- ===== TOUR TIMES SECTION ===== -->
+            <div class="tour-times">
+                <div class="times-title">
+                    <h1>Available Tour Times</h1>
+                    <p>Choose from flexible 4-hour tour options</p>
+                </div>
+                <div class="time-options">
+                    <div class="time-option">
+                        <div class="time-header">
+                            <i class="fa-solid fa-sun"></i>
+                            <h3>Morning Tour</h3>
+                        </div>
+                        <div class="time-details">
+                            <p><strong>7:00 AM:</strong> Hotel pickup</p>
+                            <p><strong>11:00 AM:</strong> Return to hotel</p>
+                        </div>
+                    </div>
+                    <div class="time-option">
+                        <div class="time-header">
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <h3>Midday Tour</h3>
+                        </div>
+                        <div class="time-details">
+                            <p><strong>9:00 AM:</strong> Hotel pickup</p>
+                            <p><strong>1:00 PM:</strong> Return to hotel</p>
+                        </div>
+                    </div>
+                    <div class="time-option">
+                        <div class="time-header">
+                            <i class="fa-solid fa-sun-plant-wilt"></i>
+                            <h3>Afternoon Tour</h3>
+                        </div>
+                        <div class="time-details">
+                            <p><strong>1:00 PM:</strong> Hotel pickup</p>
+                            <p><strong>5:00 PM:</strong> Return to hotel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ===== END TOUR TIMES SECTION ===== -->
+
+            <!-- ===== ENHANCED REVIEWS SECTION ===== -->
+            <div class="reviews">
+                <div class="rtitle">
+                    <h1>Customer Reviews</h1>
+                    <p>What our travelers say about this resort experience</p>
+                </div>
+
+                <!-- Overall Rating Summary -->
+                <div class="overall-rating">
+                    <div class="rating-summary">
+                        <div class="rating-number">
+                            <h2>4.7</h2>
+                            <span>/5</span>
+                        </div>
+                        <div class="rating-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star" id="semi"></i>
+                        </div>
+                        <div class="rating-text">
+                            <h3>Excellent</h3>
+                            <p>Based on 120+ reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-cards" id="review-cards">
+                    <!-- التقييمات ستُنشأ ديناميكياً من JavaScript -->
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button class="load-more-btn" id="load-more-btn" onclick="loadMoreReviews()">
+                        <span class="btn-text">المزيد من التقييمات</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- ===== END ENHANCED REVIEWS SECTION ===== -->
+
+    </div>  
+     <footer>
+                <div class="f-container">
+                    <div class="logo">
+                        <img src="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (1).png" alt="">
+                       <div class="text">
+                            <h2>Younes </h2>
+                            <h2>tours</h2>
+                       </div>
+                    </div>
+                    <div class="inforamtion">
+                        <div class="info">
+                            <div class="i_info">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <h3> Rua Manuel Rodrigues Abreu, 26, 3800-693 Aveiro, Portugal</h3>
+                            </div>
+                            <div class="i_info">
+                                <i class="fa-solid fa-phone"></i>
+                                <h3> +351 234 567 890</h3>
+                            </div>
+                            <div class="i_info">
+                                <i class="fa-solid fa-envelope"></i>
+                                <h3> 2RzLb@example.com</h3>
+                        </div>
+                        </div>
+                        <div class="info">
+                            <h1>pages</h1>
+                            <ul>
+                                <li>Home</li>
+                                <li>Services</li>
+                                <li>Gallery</li>
+                                <li>Reviews</li>
+                                <li>About</li>
+                                <li>Contact</li>
+                            </ul>
+                        </div>
+                        <div class="info">
+                            <h1>Categories</h1>
+                            <ul>
+                                <li>Egypt tours</li>
+                                <li>Egypt tours packages</li>
+                                <li>Resort tours</li>
+                            </ul>
+                        </div>
+                        <div class="info">
+                            <h1>follow us</h1>
+                            <ul>
+                                <li><i class="fa-solid fa-share"></i></li>
+                                <li><i><i class="fa-brands fa-facebook"></i></i></li>
+                                <li><i><i class="fa-brands fa-instagram"></i></i></li>
+                                <li><i><i class="fa-brands fa-twitter"></i></i></li>
+
+                            </ul>
+                            <div class="copyright">
+                                <h3> Copyright  2022 Younes Tours. All Rights Reserved.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+    <!-- ===== CUSTOM CSS FOR TOUR TIMES ===== -->
+    <style>
+        .tour-times {
+            margin: 40px 0;
+            padding: 30px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .times-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .times-title h1 {
+            color: #2c3e50;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .times-title p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+
+        .time-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .time-option {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .time-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .time-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+
+        .time-header i {
+            font-size: 1.8rem;
+            margin-right: 12px;
+            color: #3498db;
+        }
+
+        .time-header h3 {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin: 0;
+        }
+
+        .time-details p {
+            margin: 8px 0;
+            color: #34495e;
+            font-size: 1.1rem;
+        }
+
+        .time-details strong {
+            color: #2980b9;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .time-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .times-title h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+
+    <script>
+        const header = document.querySelector("header");
+console.log(header)
+if (header) {
+    header.style.transition = "all 0.3s ease";
+    choose = 0
+    window.onscroll = function () {
+        if (window.scrollY <= 400 && choose == 0) {
+            header.style.backgroundColor = "#242424e3";
+            header.style.position = "absolute";
+
+
+        } else {
+            choose = 1 
+            console.log(choose)
+            header.style.backgroundColor = "#242424e3";
+            header.style.position = "fixed";
+            if (window.scrollY <= 10 ) {
+                choose = 0
+                console.log(choose)
+
+            }else{
+                choose = 1
+                console.log(choose)
+
+            }
+        }
+
+    };
+}function exit() {
+    document.getElementById('pop').style="width: 0%;overflow:hidden"
+    document.getElementById('container').style = "filter:blur(0px);"
+    setTimeout(() => {
+        document.getElementById('logo_menu').style = "display: none;";
+        document.getElementById('links_menu').style = "display: none;";
+        document.getElementById('btn_menu').style = "display: none;";
+    }, 300);
+}
+
+/**
+ * دالة فتح القائمة المنبثقة للهاتف المحمول
+ */
+function open_pop() {
+    document.getElementById('pop').style="width:70%;overflow:show"
+    document.getElementById('container').style = "filter:blur(1px);"
+    setTimeout(() => {
+        document.getElementById('logo_menu').style = "display: block;";
+        document.getElementById('links_menu').style = "display: block;";
+        document.getElementById('btn_menu').style = "display: block;";
+    });
+
+    // إغلاق القائمة عند النقر في أي مكان
+    document.querySelector('body').addEventListener('click',function () {
+        exit()
+    })
+}
+
+// إغلاق القائمة المنبثقة عند التمرير
+window.addEventListener("scroll", function () {
+    exit()
+});
+document.getElementById('tour').addEventListener("click", function () {
+    window.location.href = "./tours/index.html"
+})
+    </script>
+    <script src="./main.js"></script>
+    <script src="./../../main.js"></script>
+</body>
+</html>

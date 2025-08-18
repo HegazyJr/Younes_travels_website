@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../style.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Sunrise Safari Adventure|Younes Tours</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w/+U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (2).png">
+</head>
+<body id="body">
+    <div class="container">
+        <header>
+            <div class="nov-container">
+                <div class="h_btn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="logo">
+                    <h1>Younes <span>Tours</span></h1>
+                    <i class="fa-solid fa-plane"></i>
+                </div>
+               <div class="menu">
+                    <div class="links">
+                         <div class="link"><a href="../../index.html">Home</a></div>
+                        <div class="link" id="packages-link"><a href="../index.html">Destinations</a></div>
+                        <div class="link" id="blog-link"><a href="../../blogs/index.html">Blog</a></div>
+                        <div class="link"><a href="../../about.html">About us</a></div>
+                        <div class="link"><a href="../../gallery.html">Photos</a></div>
+                        <div class="link"><a href="../booking/index.html">Book Now</a></div>
+                    </div>
+                    <div class="o-links">
+                        <div class="email" id="email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="face" id="face">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div class="insta" id="insta">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </header>
+
+        <div class="header-m">
+            <div class="nav-container-m">
+                <div class="logo">
+                    <h1>Younes <span>Tours</span></h1>
+                </div>
+                <div class="menu-style" onclick="open_pop()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="pop_up" id="pop">
+                <div class="exit" id="exit" onclick="exit()">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="logo_box-p" id="logo_menu">
+                    <img src="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview.png" alt="logo.img">
+                    <h1>Younes <span>Tours</span></h1>
+                </div>
+                <div class="links_box-p" id="links_menu">
+                    <div class="link"><a href="../../index.html">Home</a></div>
+                    <div class="link" id="packages-link"><a href="../index.html">Destinations</a></div>
+                    <div class="link" id="blog-link"><a href="../../blogs/index.html">Blog</a></div>
+                    <div class="link"><a href="../../about.html">About us</a></div>
+                    <div class="link"><a href="../../gallery.html">Photos</a></div>
+                    <div class="link"><a href="../booking/index.html">Book Now</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <div class="desktop">
+                <div class="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+            <div class="mobile">
+                <div class="whatsapp-m">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="email-m">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="face-m">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div class="insta-m">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-page">
+            <div class="text_title">
+                 <h1><span>Sunrise Safari Adventure:</span> Golden sunrise, jeep ride, quad biking & authentic Bedouin breakfast</h1>
+            </div>
+            <div class="box">
+                <div class="type">
+                    <h1>spiritual escape</h1>
+                </div>
+                <div class="rating">
+                    <div class="star-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <div class="rating">
+                        <h2>5.0</h2>
+                    </div>
+                </div>
+                <div class="review_count">
+                    <h2>89 reviews</h2>
+                </div>
+                <div class="point"></div>
+                <div class="place">
+                    <h2>Activity provider: Egypt Sunrise Safari</h2>
+                </div>
+            </div>
+
+            <!-- ===== IMAGE LAYOUT WITH MODAL ===== -->
+            <div class="images">
+                <div class="imgs_box">
+                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg', 'Umungar Island - Crystal Clear Waters')">
+                        <img src="./../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg" alt="Umungar Island - Crystal Clear Waters">
+                    </div>
+                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg', 'Umungar Island - Snorkeling Adventure')">
+                        <img src="./../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg" alt="Umungar Island - Snorkeling Adventure">
+                    </div>
+                    <div class="img_box">
+                        <img src="./../../IMG/Gallery_imgs/Classical Tour Egypt.jpg" alt="Umungar Island - Fish Feeding" onclick="openLightbox('image', './../../IMG/Gallery_imgs/Classical Tour Egypt.jpg', 'Umungar Island - Fish Feeding')">
+                        <img src="./../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="Umungar Island - Natural Beach" onclick="openLightbox('image', './../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg', 'Umungar Island - Natural Beach')">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== LIGHTBOX MODAL ===== -->
+            <div id="lightbox" class="lightbox">
+                <div class="lightbox-content">
+                    <button class="lightbox-close" onclick="closeLightbox()">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                    <button class="lightbox-nav prev-btn" onclick="changeLightboxImage(-1)">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="lightbox-nav next-btn" onclick="changeLightboxImage(1)">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                    <img id="lightbox-image" src="" alt="">
+                </div>
+            </div>
+
+            <div class="about">
+                <h4>Discover magical golden sunrise from mountain peaks — early morning jeep and quad adventure with authentic Bedouin breakfast in Egypt's Eastern Desert wilderness.</h4>
+            </div>
+
+            <div class="price-box">
+                <div class="price">
+                    <h2>From</h2>
+                    <h2>75$</h2>
+                    <h2>per person</h2>
+                </div>
+                <div class="btn-check">
+                    <button>Check Availability</button>
+                </div>
+                <div class="pay_later">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <h3><span>Reserve now & pay later</span>
+                     to book your spot and pay nothing today</h3>
+                </div>
+            </div>
+
+            <div class="about-ticket">
+                <h1>About This Ticket</h1>
+                <div class="items">
+                    <div class="item">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <h3><span>Free cancellation</span><br>Cancel up to 24 hours in advance for a full refund</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <h3><span>Reserve now & pay later</span><br>
+    Keep your travel plans flexible — book your spot and pay nothing today.</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-sun"></i>
+                        <h3><span>Sunrise viewing</span><br>From highest desert mountain peaks</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-car"></i>
+                        <h3><span>Hotel transfer included</span><br>Pickup from Hurghada, El Gouna, Sahl Hasheesh, Makadi</h3>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-mug-hot"></i>
+                        <h3><span>Bedouin breakfast</span><br>Healthy, traditional meal in desert atmosphere</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cost">
+                <h2>Select participants and date</h2>
+                <div class="cost-box">
+                    <div class="members">
+                        <h5>number of adults</h5>
+                        <select name="participants" id="participants">
+                            <option value="" disabled selected hidden>adults</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                    <div class="members">
+                        <h5>number of youngs (5~15)</h5>
+                        <select name="participants" id="youngs">
+                            <option value="" disabled selected hidden>children (5~15)</option>
+                            <option value="">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="date-select">
+                        <h5>select date</h5>
+                        <input type="date" id="dateInput" name="date" required>
+                    </div>
+                    <div class="btn-check">
+                        <button id="check-availability">Check Availability</button>
+                    </div>
+                </div>
+                <div class="result" id="result">
+                    <h1><span>Sunrise Safari Adventure:</span> Golden sunrise, jeep ride, quad biking & authentic Bedouin breakfast</h1>
+                    <div class="details">
+                        <div class="time"><i class="fas fa-clock"></i><h3>4 hours</h3></div>  
+                        <div class="language"><i class="fas fa-language"></i><h3>English</h3></div>
+                        <div class="location"><i class="fas fa-map-marker-alt"></i><a><h3>Eastern Desert, Hurghada</h3></a></div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="time-selected">
+                        <h1>your trip starting time is </h1>
+                        <h2 id="time">5:30 a.m</h2>
+                    </div>
+                    <div class="line"></div>
+                    <div class="bottom">
+                        <div class="price-members">
+                            <h2>75$</h2>
+                            <h3 id="members"><span id="adult-count">1</span> adult & <span id="young-count">1</span> child</h3>
+                            <h6>All taxes and fees included</h6>
+                        </div>
+                        <div class="btn"><button>Book Now</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Highlight</div>
+                        <div class="info">
+                            <ul>
+                                <li>Spectacular sunrise viewing from the highest desert mountain peaks — a spiritual moment in golden light.</li>
+                                <li>Thrilling 4x4 jeep safari through rugged valleys and mountain highlands of the Eastern Desert.</li>
+                                <li>Adrenaline-filled quad biking adventure across golden sand dunes.</li>
+                                <li>Traditional camel riding with authentic Bedouin tea, dates, and local sweets.</li>
+                                <li>Healthy light Bedouin breakfast in the peaceful morning desert atmosphere.</li>
+                                <li>Hotel transfers included from Hurghada, El Gouna, Sahl Hasheesh, and Makadi Bay.</li>
+                                <li>Professional guides ensuring safety and best scenic viewpoints.</li>
+                                <li>Optional horse riding available (additional cost).</li>
+                                <li>Extended camel safari option for deeper desert exploration (extra cost).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Destinations</div>
+                        <div class="info">
+                            <ul>
+                                <li>Hurghada <span>></span> Desert Valley <span>></span> Sunrise Peak <span>></span> Sand Dunes <span>></span> Bedouin Village</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail done">
+                    <div class="content">
+                        <div class="dtitle">Description</div>
+                        <div class="info">
+                            <ul class="info-list">
+                                <li>Embark on a spiritual and breathtaking experience — watch the sunrise from the highest peaks of Egypt’s Eastern Desert, one of the most beautiful natural experiences in Hurghada.</li>
+                                <li>This tour is specially designed for nature lovers and morning adventure enthusiasts, running from early dawn to mid-morning.</li>
+                                <li>Your journey begins with hotel pickup from Hurghada, El Gouna, Sahl Hasheesh, or Makadi Bay in the refreshing dawn atmosphere (Safaga pickup available at extra cost).</li>
+                                <li>From the safari station, enjoy an exciting 4x4 jeep ride through desert valleys and mountain highlands toward the prime sunrise viewing point.</li>
+                                <li>Warm beverages and natural water are provided to energize your morning.</li>
+                                <li>Experience a unique spiritual moment as the golden sun rises over the endless desert, painting the sky in breathtaking colors.</li>
+                                <li>After sunrise, enjoy an adrenaline-filled quad biking session across golden sand dunes.</li>
+                                <li>Visit an authentic Bedouin village for rest, camel riding, tea, dates, and local delicacies.</li>
+                                <li>Conclude with a healthy light Bedouin breakfast in the serene morning ambiance.</li>
+                                <li>Optional upgrades: horse riding or extended camel safari (extra cost). Return to your hotel refreshed, filled with positive energy for the rest of your day.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Included</div>
+                        <div class="info">
+                            <ul>
+                                <li>Hotel transfers (Hurghada, El Gouna, Sahl Hasheesh, Makadi Bay)</li>
+                                <li>4x4 jeep safari through desert valleys and mountains</li>
+                                <li>Sunrise viewing from highest mountain peaks</li>
+                                <li>Quad biking across sand dunes with safety gear</li>
+                                <li>Bedouin village visit & traditional camel riding</li>
+                                <li>Authentic Bedouin tea with dates and sweets</li>
+                                <li>Healthy light Bedouin breakfast</li>
+                                <li>Hot beverages and natural water throughout</li>
+                                <li>Comprehensive travel insurance</li>
+                                <li>Professional sunrise guides</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Not Included</div>
+                        <div class="info">
+                            <ul>
+                                <li>Safaga pickup (additional cost)</li>
+                                <li>Additional or special beverages</li>
+                                <li>Extra quad tours (available upon request)</li>
+                                <li>Professional sunrise photography services</li>
+                                <li>Souvenirs or personal purchases</li>
+                                <li>Tips for guides and drivers</li>
+                                <li>Optional horse riding (additional cost)</li>
+                                <li>Extended camel safari (additional cost)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">What to Bring</div>
+                        <div class="info">
+                            <ul>
+                                <li>Warm clothes for cool dawn, light clothes for sunrise</li>
+                                <li>Closed sports shoes suitable for sand and rocks</li>
+                                <li>Camera or phone with sufficient storage</li>
+                                <li>Small sealed bag for sand protection</li>
+                                <li>Cash for optional purchases and photography</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">What Not to Bring</div>
+                        <div class="info">
+                            <ul>
+                                <li>Heavy food (breakfast included)</li>
+                                <li>Large bags or heavy luggage</li>
+                                <li>Alcoholic beverages or stimulants</li>
+                                <li>Very light-colored or inappropriate clothing</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="detail">
+                    <div class="content">
+                        <div class="dtitle">Pro Tips</div>
+                        <div class="info">
+                            <ul>
+                                <li>Wake up early — ensure good sleep the night before.</li>
+                                <li>Have a light snack before departure; avoid overeating.</li>
+                                <li>Bring a warm jacket — remove layers as the sun rises.</li>
+                                <li>Enjoy the dawn silence — a rare meditative experience.</li>
+                                <li>Keep your camera ready — sunrise moment is fleeting!</li>
+                                <li>Drink fluids moderately — long journey ahead.</li>
+                                <li>Ask guides for best photo angles and viewing spots.</li>
+                                <li>Take time to contemplate — this is a rare chance for peace.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+
+            <!-- ===== REVIEWS SECTION ===== -->
+            <div class="reviews">
+                <div class="rtitle">
+                    <h1>Customer Reviews</h1>
+                    <p>What our travelers say about this sunrise experience</p>
+                </div>
+
+                <div class="overall-rating">
+                    <div class="rating-summary">
+                        <div class="rating-number">
+                            <h2>5.0</h2>
+                            <span>/5</span>
+                        </div>
+                        <div class="rating-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="rating-text">
+                            <h3>Excellent</h3>
+                            <p>Based on 89+ reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-cards" id="review-cards">
+                    <!-- Dynamic reviews loaded via JavaScript -->
+                </div>
+
+                <div class="load-more-container">
+                    <button class="load-more-btn" id="load-more-btn" onclick="loadMoreReviews()">
+                        <span class="btn-text">Read More Reviews</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- ===== END REVIEWS ===== -->
+
+        </div>  
+        
+        <footer>
+            <div class="f-container">
+                <div class="logo">
+                    <img src="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (1).png" alt="">
+                    <div class="text">
+                        <h2>Younes </h2>
+                        <h2>tours</h2>
+                    </div>
+                </div>
+                <div class="inforamtion">
+                    <div class="info">
+                        <div class="i_info">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h3> Rua Manuel Rodrigues Abreu, 26, 3800-693 Aveiro, Portugal</h3>
+                        </div>
+                        <div class="i_info">
+                            <i class="fa-solid fa-phone"></i>
+                            <h3> +351 234 567 890</h3>
+                        </div>
+                        <div class="i_info">
+                            <i class="fa-solid fa-envelope"></i>
+                            <h3> 2RzLb@example.com</h3>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h1>pages</h1>
+                        <ul>
+                            <li>Home</li>
+                            <li>Services</li>
+                            <li>Gallery</li>
+                            <li>Reviews</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h1>Categories</h1>
+                        <ul>
+                            <li>Egypt tours</li>
+                            <li>Egypt tours packages</li>
+                            <li>desert safaris</li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h1>follow us</h1>
+                        <ul>
+                            <li><i class="fa-solid fa-share"></i></li>
+                            <li><i class="fa-brands fa-facebook"></i></li>
+                            <li><i class="fa-brands fa-instagram"></i></li>
+                            <li><i class="fa-brands fa-twitter"></i></li>
+                        </ul>
+                        <div class="copyright">
+                            <h3> Copyright 2022 Younes Tours. All Rights Reserved.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <script>
+        const header = document.querySelector("header");
+        if (header) {
+            header.style.transition = "all 0.3s ease";
+            let choose = 0;
+            window.onscroll = function () {
+                if (window.scrollY <= 400 && choose == 0) {
+                    header.style.backgroundColor = "#242424e3";
+                    header.style.position = "absolute";
+                } else {
+                    choose = 1;
+                    header.style.backgroundColor = "#242424e3";
+                    header.style.position = "fixed";
+                    if (window.scrollY <= 10) choose = 0;
+                }
+            };
+        }
+
+        function exit() {
+            document.getElementById('pop').style = "width: 0%; overflow:hidden";
+            document.getElementById('container').style = "filter:blur(0px);";
+            setTimeout(() => {
+                document.getElementById('logo_menu').style = "display: none;";
+                document.getElementById('links_menu').style = "display: none;";
+                document.getElementById('btn_menu').style = "display: none;";
+            }, 300);
+        }
+
+        function open_pop() {
+            document.getElementById('pop').style = "width:70%; overflow:show";
+            document.getElementById('container').style = "filter:blur(1px);";
+            setTimeout(() => {
+                document.getElementById('logo_menu').style = "display: block;";
+                document.getElementById('links_menu').style = "display: block;";
+                document.getElementById('btn_menu').style = "display: block;";
+            });
+
+            document.querySelector('body').addEventListener('click', function(e) {
+                if (!e.target.closest('.pop_up, .menu-style')) exit();
+            });
+        }
+
+        window.addEventListener("scroll", function () {
+            exit();
+        });
+    </script>
+    <script src="./main.js"></script>
+    <script src="./../../main.js"></script>
+</body>
+</html>
