@@ -369,50 +369,50 @@ document.getElementById('youngs').addEventListener('change', function() {
 });
 
 // Event listener for availability check button
-document.getElementById("check-availability").addEventListener("click", function () {
-    // Get selected values from form elements
-    const adultSelect = document.getElementById("participants");
-    const youngSelect = document.getElementById("youngs");
-    const dateInput = document.getElementById("dateInput");
+// document.getElementById("check-availability").addEventListener("click", function () {
+//     // Get selected values from form elements
+//     const adultSelect = document.getElementById("participants");
+//     const youngSelect = document.getElementById("youngs");
+//     const dateInput = document.getElementById("dateInput");
 
-    let adults = adultSelect.value;
-    let youngs = youngSelect.value;
-    const date = dateInput.value;
+//     let adults = adultSelect.value;
+//     let youngs = youngSelect.value;
+//     const date = dateInput.value;
 
-    // Helper function to parse participant values (handles "10+" format)
-    const parseValue = (val) => {
-        if (val.includes("+")) {
-            return parseInt(val) || 0;
-        }
-        return parseInt(val) || 0;
-    };
+//     // Helper function to parse participant values (handles "10+" format)
+//     const parseValue = (val) => {
+//         if (val.includes("+")) {
+//             return parseInt(val) || 0;
+//         }
+//         return parseInt(val) || 0;
+//     };
 
-    // Parse participant counts
-    adults = parseValue(adults);
-    youngs = parseValue(youngs);
+//     // Parse participant counts
+//     adults = parseValue(adults);
+//     youngs = parseValue(youngs);
 
-    // Calculate total price
-    const adultPrice = 35; // Price per adult
-    const youngPrice = 0;  // Price per child (free)
-    const total = (adults * adultPrice) + (youngs * youngPrice);
+//     // Calculate total price
+//     var adultPrice = 45;
+//     const youngPrice = adultPrice /2;  // Price per child (free)
+//     const total = (adults * adultPrice) + (youngs * youngPrice);
 
-    // Update participant count display
-    document.getElementById("adult-count").textContent = adults + " ";
-    document.getElementById("young-count").textContent = youngs + " ";
+//     // Update participant count display
+//     document.getElementById("adult-count").textContent = adults + " ";
+//     document.getElementById("young-count").textContent = youngs + " ";
 
-    // Update price display
-    const priceElement = document.querySelector(".price-members h2");
-    priceElement.textContent = `$${total}`;
+//     // Update price display
+//     const priceElement = document.querySelector(".price-members h2");
+//     priceElement.textContent = `$${total}`;
 
-    // Validate date selection and show results
-    if (!date) {
-        // Show error message if no date selected
-        document.getElementById("check-availability").innerText = "Please Try Again";
-        return;
-    } else {
-        // Show success and display booking details
-        document.getElementById("check-availability").innerText = "Availability";
-        document.getElementById("time").innerText = `${date}`;
-        document.getElementById('result').style.display = 'block';
-    }
-});
+//     // Validate date selection and show results
+//     if (!date) {
+//         // Show error message if no date selected
+//         document.getElementById("check-availability").innerText = "Please Try Again";
+//         return;
+//     } else {
+//         // Show success and display booking details
+//         document.getElementById("check-availability").innerText = "Availability";
+//         document.getElementById("time").innerText = `${date}`;
+//         document.getElementById('result').style.display = 'block';
+//     }
+// });
