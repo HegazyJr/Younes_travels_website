@@ -367,7 +367,89 @@ document.getElementById('youngs').addEventListener('change', function() {
         document.getElementById('youngs').style.color = 'var(--main-color)';
     }
 });
+function openWhatsApp() {
+    const phoneNumber = "+201100077315";
+    const message = "مرحباً! أريد الاستفسار عن الجولات السياحية";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+}
 
+// إضافة وظيفة لأيقونة الواتساب للكمبيوتر
+const whatsappDesktop = document.getElementById('whatsapp-desktop');
+if (whatsappDesktop) {
+    whatsappDesktop.addEventListener("click", function () {
+        console.log("WhatsApp Desktop clicked");
+        openWhatsApp();
+    });
+}
+
+// إضافة وظيفة لأيقونة الواتساب للهاتف المحمول
+const whatsappMobile = document.getElementById('whatsapp-mobile');
+if (whatsappMobile) {
+    whatsappMobile.addEventListener("click", function () {
+        console.log("WhatsApp Mobile clicked");
+        openWhatsApp();
+    });
+}
+
+// إضافة وظيفة بديلة في حالة عدم العثور على العناصر
+function initializeWhatsAppButtons() {
+    // محاولة إضافية للعثور على أزرار الواتساب
+    const whatsappButtons = document.querySelectorAll('.whatsapp, .whatsapp-m');
+    whatsappButtons.forEach(button => {
+        if (!button.hasAttribute('data-whatsapp-initialized')) {
+            button.setAttribute('data-whatsapp-initialized', 'true');
+            button.addEventListener("click", function () {
+                console.log("WhatsApp button clicked");
+                openWhatsApp();
+            });
+        }
+    });
+}
+
+// تشغيل عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', initializeWhatsAppButtons);
+
+// تشغيل إضافي بعد تحميل الصفحة بالكامل
+window.addEventListener('load', function() {
+    setTimeout(initializeWhatsAppButtons, 100);
+});
+
+// تشغيل دوري للتأكد من وجود الأزرار
+setInterval(function() {
+    const whatsappDesktop = document.getElementById('whatsapp-desktop');
+    const whatsappMobile = document.getElementById('whatsapp-mobile');
+    
+    if (whatsappDesktop && !whatsappDesktop.hasAttribute('data-whatsapp-initialized')) {
+        whatsappDesktop.setAttribute('data-whatsapp-initialized', 'true');
+        whatsappDesktop.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log("WhatsApp Desktop clicked");
+            openWhatsApp();
+        });
+    }
+    
+    if (whatsappMobile && !whatsappMobile.hasAttribute('data-whatsapp-initialized')) {
+        whatsappMobile.setAttribute('data-whatsapp-initialized', 'true');
+        whatsappMobile.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log("WhatsApp Mobile clicked");
+            openWhatsApp();
+        });
+    }
+}, 1000);
+
+// إضافة معالج إضافي للتأكد من عمل الزر
+document.addEventListener('click', function(e) {
+    if (e.target.closest('.whatsapp') || e.target.closest('.whatsapp-m')) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log("WhatsApp button clicked via event delegation");
+        openWhatsApp();
+    }
+});
 // Event listener for availability check button
 // document.getElementById("check-availability").addEventListener("click", function () {
 //     // Get selected values from form elements
