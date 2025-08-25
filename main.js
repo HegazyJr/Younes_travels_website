@@ -6,6 +6,19 @@ const imgOne = document.getElementById('img-one');
 const imgTwo = document.getElementById('img-two');
 const imgThree = document.getElementById('img-three');
 
+document.addEventListener("DOMContentLoaded", function() {
+  // جلب كل الصور في الصفحة
+  const images = document.querySelectorAll("img");
+
+  images.forEach(img => {
+    // لو ماكانش already lazy
+    if (!img.hasAttribute("loading")) {
+      img.setAttribute("loading", "lazy");
+    }
+  });
+});
+
+
 /**
  * دالة تبديل الصور في الخلفية
  * تقوم بتبديل مواقع الصور كل 10 ثواني لإنشاء تأثير متحرك
