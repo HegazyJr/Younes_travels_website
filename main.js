@@ -6,17 +6,17 @@ const imgOne = document.getElementById('img-one');
 const imgTwo = document.getElementById('img-two');
 const imgThree = document.getElementById('img-three');
 
-document.addEventListener("DOMContentLoaded", function() {
-  // جلب كل الصور في الصفحة
-  const images = document.querySelectorAll("img");
+// document.addEventListener("DOMContentLoaded", function() {
+//   // جلب كل الصور في الصفحة
+//   const images = document.querySelectorAll("img");
 
-  images.forEach(img => {
-    // لو ماكانش already lazy
-    if (!img.hasAttribute("loading")) {
-      img.setAttribute("loading", "lazy");
-    }
-  });
-});
+//   images.forEach(img => {
+//     // لو ماكانش already lazy
+//     if (!img.hasAttribute("loading")) {
+//       img.setAttribute("loading", "lazy");
+//     }
+//   });
+// });
 
 
 /**
