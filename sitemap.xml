@@ -1,18 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- الصفحة الرئيسية -->
   <url>
     <loc>https://hegazyjr.github.io/Younes_travels_website/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
   </url>
+
+  <!-- About page -->
   <url>
     <loc>https://hegazyjr.github.io/Younes_travels_website/about.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
+
+  <!-- Gallery page -->
   <url>
     <loc>https://hegazyjr.github.io/Younes_travels_website/gallery.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
+
+  <!-- Tours page -->
   <url>
     <loc>https://hegazyjr.github.io/Younes_travels_website/tours/</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
   </url>
+
+  <!-- Blogs page -->
   <url>
     <loc>https://hegazyjr.github.io/Younes_travels_website/blogs/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
   </url>
+
 </urlset>
