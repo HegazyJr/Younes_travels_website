@@ -213,7 +213,7 @@
             </div>
 
             <!-- Cost Calculator -->
-            <div class="cost">
+            <!-- <div class="cost">
                 <h2>Select participants and date</h2>
                 <h5 style="font-weight: 500;font-size: 15px;">*Children under 8 are Free</h5>
                 <div class="cost-box">
@@ -288,7 +288,7 @@
                         <div class="btn"><button>Book Now</button></div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Details Section -->
             <div class="details">
@@ -447,41 +447,7 @@
             </div>
 
             <!-- Reviews Section -->
-            <div class="reviews">
-                <div class="rtitle">
-                    <h1>Customer Reviews</h1>
-                    <p>What travelers say about this romantic desert experience</p>
-                </div>
-                <div class="overall-rating">
-                    <div class="rating-summary">
-                        <div class="rating-number">
-                            <h2>4.9</h2>
-                            <span>/5</span>
-                        </div>
-                        <div class="rating-stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <div class="rating-text">
-                            <h3>Exceptional</h3>
-                            <p>Based on 120+ reviews</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="review-cards" id="review-cards">
-                    <!-- Dynamically loaded via JS -->
-                </div>
-                <div class="load-more-container">
-                    <button class="load-more-btn" id="load-more-btn" onclick="loadMoreReviews()">
-                        <span class="btn-text">More Reviews</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+           
 
         <!-- Footer -->
         <footer>
@@ -553,7 +519,8 @@
                     if (window.scrollY <= 400 && choose == 0) {
                         header.style.backgroundColor = "#242424e3";
                         header.style.position = "absolute";
-                    } else {
+                    }
+                    else {
                         choose = 1;
                         header.style.backgroundColor = "#242424e3";
                         header.style.position = "fixed";
@@ -629,63 +596,16 @@
                     // Show error message if no date selected
                     document.getElementById("check-availability").innerText = "Please Try Again";
                     return;
-                } else {
+                }
+                else {
                     // Show success and display booking details
                     document.getElementById("check-availability").innerText = "Availability";
                     document.getElementById("time").innerText = `${date}`;
                     document.getElementById('result').style.display = 'block';
                 }
-            });  
-            document.getElementById("check-availability").addEventListener("click", function () {
-    // Get selected values from form elements
-    const adultSelect = document.getElementById("participants");
-    const youngSelect = document.getElementById("youngs");
-    const dateInput = document.getElementById("dateInput");
-
-    let adults = adultSelect.value;
-    let youngs = youngSelect.value;
-    const date = dateInput.value;
-
-    // Helper function to parse participant values (handles "10+" format)
-    const parseValue = (val) => {
-        if (val.includes("+")) {
-            return parseInt(val) || 0;
-        }
-        return parseInt(val) || 0;
-    };
-
-    // Parse participant counts
-    adults = parseValue(adults);
-    youngs = parseValue(youngs);
-
-    // Calculate total price
-    var adultPrice = 40
-    const youngPrice = adultPrice /2;  // Price per child (free)
-    const total = (adults * adultPrice) + (youngs * youngPrice);
-
-    // Update participant count display
-    document.getElementById("adult-count").textContent = adults + " ";
-    document.getElementById("young-count").textContent = youngs + " ";
-
-    // Update price display
-    const priceElement = document.querySelector(".price-members h2");
-    priceElement.textContent = `$${total}`;
-
-    // Validate date selection and show results
-    if (!date) {
-        // Show error message if no date selected
-        document.getElementById("check-availability").innerText = "Please Try Again";
-        return;
-    } else {
-        // Show success and display booking details
-        document.getElementById("check-availability").innerText = "Availability";
-        document.getElementById("time").innerText = `${date}`;
-        document.getElementById('result').style.display = 'block';
-    }
-}); 
+            });
         </script>
-        <script src="./main.js">
-        </script>
+        <script src="./main.js"></script>
         <script src="./../../main.js"></script>
     </body>
 </html>

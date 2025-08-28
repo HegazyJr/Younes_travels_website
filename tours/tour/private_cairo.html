@@ -55,9 +55,9 @@
                         <!-- <i class="fa-solid fa-plane"></i> -->
                     </div>
                      <div class="menu-style" onclick="open_pop()">
-                        <div class=""></div>
-                        <div class=""></div>
-                        <div class=""></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
             </div>
         <div class="pop_up" id="pop">
@@ -188,17 +188,17 @@
             </div>
             <div class="price-box">
                 <div class="price">
-                    <h2>From</h2>
-                    <h2>180$</h2>
-                    <h2>per person</h2>
+                    <h2>Price</h2>
+                    <h2>Upon</h2>
+                    <h2>Booking</h2>
                 </div>
                 <div class="btn-check">
                     <button>Check Availability</button>
                 </div>
                 <div class="pay_later">
                     <i class="fa-solid fa-credit-card"></i>
-                    <h3><span>Reserve now & pay later</span>
-                     to book your spot and pay nothing today</h3>
+                    <h3><span></span>Prices change frequently, please contact us via WhatsApp or email to get the best available price at your desired date
+                     </h3>
                 </div>
             </div>
             <div class="about-ticket">
@@ -229,8 +229,8 @@
             </div>
             <!-- <div class="top-review">
                 <h1>Highlighted reviews from other travelers</h1>
-                <div class="reviews">
-                    <div class="review">
+                <div >
+                    <div>
                         <div class="img">
                             <img src="./../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="">
                         </div>
@@ -241,7 +241,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="review">
+                    <div>
                         <div class="img">
                             <img src="./../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="">
                         </div>
@@ -257,7 +257,7 @@
                     <a>more reviews</a>
                 </div>
             </div> -->
-            <div class="cost">
+            <!-- <div class="cost">
                 <h2>Select participants and date</h2>
                 <h5 style="font-weight: 500;font-size: 15px;">*Children under 8 are Free</h5>
                 <div class="cost-box">
@@ -332,7 +332,7 @@
                         <div class="btn"><button>Book Now</button></div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
 
             <div class="details">
@@ -479,102 +479,9 @@ After lunch, add some fun with included water sports, <br> <div class="line"></d
             </div> -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
             <!-- ===== ENHANCED REVIEWS SECTION ===== -->
-            <div class="reviews">
-                <div class="rtitle">
-                    <h1>Customer Reviews</h1>
-                    <p>What our travelers say about this experience</p>
-                </div>
-
-                <!-- Overall Rating Summary -->
-                <div class="overall-rating">
-                    <div class="rating-summary">
-                        <div class="rating-number">
-                            <h2>4.5</h2>
-                            <span>/5</span>
-                        </div>
-                        <div class="rating-stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star" id="semi"></i>
-                        </div>
-                        <div class="rating-text">
-                            <h3>Excellent</h3>
-                            <p>Based on 100+ reviews</p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <!-- ===== DYNAMIC REVIEWS SECTION ===== -->
-                <!-- 
-                    🚀 نظام ديناميكي لإضافة التقييمات:
-                    
-                    💬 لإضافة تقييم جديد:
-                    1. أضف بيانات التقييم في reviewsData array في main.js
-                    2. النظام سينشئ التقييم تلقائياً مع الصور
-                    
-                    📸 لإضافة صور للتقييم:
-                    1. أضف روابط الصور في photos array داخل التقييم
-                    2. النظام سينشئ thumbnails و slideshow تلقائياً
-                    
-                    ⚡ الميزات:
-                    - إضافة تقييمات غير محدودة
-                    - صور متعددة لكل تقييم
-                    - نظام "المزيد" تلقائي
-                    - slideshow احترافي لكل تقييم
-                -->
-                <div class="review-cards" id="review-cards">
-                    <!-- التقييمات ستُنشأ ديناميكياً من JavaScript -->
-                </div>
-
-
-                </div>
-
-                <!-- Load More Button -->
-                <div class="load-more-container">
-                    <button class="load-more-btn" id="load-more-btn" onclick="loadMoreReviews()">
-                        <span class="btn-text">المزيد من التقييمات</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                </div>
-            </div>
+            
             <!-- ===== END ENHANCED REVIEWS SECTION ===== -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -705,9 +612,6 @@ function open_pop() {
 window.addEventListener("scroll", function () {
     exit()
 });
-document.getElementById('tour').addEventListener("click", function () {
-    window.location.href = "./tours/index.html"
-})
 document.getElementById("check-availability").addEventListener("click", function () {
     // Get selected values from form elements
     const adultSelect = document.getElementById("participants");

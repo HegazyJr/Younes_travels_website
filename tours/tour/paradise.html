@@ -168,7 +168,7 @@
             <div class="price-box">
                 <div class="price">
                     <h2>From</h2>
-                    <h2>45$</h2>
+                    <h2>40€</h2>
                     <h2>per person</h2>
                 </div>
                 <div class="btn-check">
@@ -208,82 +208,7 @@
                 </div>
             </div>
 
-            <div class="cost">
-                <h2>Select participants and date</h2>
-                <h5 style="font-weight: 500;font-size: 15px;">*Children under 8 are Free</h5>
-                <div class="cost-box">
-                    
-                    <div class="members">
-                        <h5>number of adults</h5>
-                        <select name="participants" id="participants">
-                            <option value="" disabled selected hidden>adults</option>
-                            <option value="">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="10+">10~15</option>
-                            <option value="15+">15~20</option>
-                            <option value="20+">20~30</option>
-                        </select>
-                    </div>
-                    <div class="members">
-                        <h5>number of youngs (5~15)</h5>
-                        <select name="participants" id="youngs">
-                            <option value="" disabled selected hidden>children (8~13)</option>
-                            <option value="">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="10+">10~15</option>
-                            <option value="15+">15~20</option>
-                            <option value="20+">20~30</option>
-                        </select>
-                    </div>
-                    <div class="date-select">
-                        <h5>select date</h5>
-                        <input type="date" id="dateInput" name="date" required>
-                    </div>
-                    <div class="btn-check">
-                        <button id="check-availability">Check Availability</button>
-                    </div>
-                </div>
-                <div class="result" id="result">
-                    <h1><span>Paradise Island:</span> Discover the beauty of turquoise waters, sugar-white sands, and vibrant coral reefs</h1>
-                    <div class="details">
-                        <div class="time"><i class="fas fa-clock"></i><h3>8 hours</h3></div>  
-                        <div class="language"><i class="fas fa-language"></i><h3>English</h3></div>
-                        <div class="location"><i class="fas fa-map-marker-alt"></i><a><h3>Paradise Island, Red Sea</h3></a></div>
-                    </div>
-                    <div class="line"></div>
-                    <div class="time-selected">
-                        <h1>your trip starting time is </h1>
-                        <h2 id="time">8:30 a.m</h2>
-                    </div>
-                    <div class="line"></div>
-                    <div class="bottom">
-                        <div class="price-members">
-                            <h2>45$</h2>
-                            <h3 id="members"><span id="adult-count">1</span> adult & <span id="young-count">1</span> child</h3>
-                            <h6>All taxes and fees included</h6>
-                        </div>
-                        <div class="btn"><button>Book Now</button></div>
-                    </div>
-                </div>
-            </div>
+            
 
             <div class="details">
                 <div class="detail">
@@ -307,7 +232,14 @@
                         <div class="dtitle">Destinations</div>
                         <div class="info">
                             <ul>
-                                <li>Hurghada <span>></span> Coral Reef Site 1 <span>></span> Coral Reef Site 2 <span>></span> Paradise Island</li>
+                                          <li><strong>09:30 AM</strong> – Departure from the marina.</li>
+                            <li>Sail for about <strong>1 hour</strong> → <strong>10:30 AM</strong>.</li>
+                            <li>First snorkeling stop: <strong>45 minutes</strong> → <strong>11:15 AM</strong>.</li>
+                            <li>Short cruise of <strong>30 minutes</strong> → <strong>11:45 AM</strong>.</li>
+                            <li>Second snorkeling stop: <strong>45 minutes</strong> → <strong>12:30 PM</strong>.</li>
+                            <li>Onboard lunch: <strong>1 hour</strong> → <strong>01:30 PM</strong>.</l>i>
+                            <li>Island time: <strong>2 hours</strong> → <strong>03:30 PM</strong>.</li>
+                            <li>Return sail: about <strong>50 minutes</strong> → <strong>04:20 PM</strong>.</li
                             </ul>
                         </div>
                     </div>
@@ -408,43 +340,7 @@
             </div>
 
             <!-- ===== REVIEWS SECTION ===== -->
-            <div class="reviews">
-                <div class="rtitle">
-                    <h1>Customer Reviews</h1>
-                    <p>What our travelers say about this experience</p>
-                </div>
-
-                <div class="overall-rating">
-                    <div class="rating-summary">
-                        <div class="rating-number">
-                            <h2>4.8</h2>
-                            <span>/5</span>
-                        </div>
-                        <div class="rating-stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke"></i>
-                        </div>
-                        <div class="rating-text">
-                            <h3>Excellent</h3>
-                            <p>Based on 120+ reviews</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="review-cards" id="review-cards">
-                    <!-- Dynamic reviews loaded via JavaScript -->
-                </div>
-
-                <div class="load-more-container">
-                    <button class="load-more-btn" id="load-more-btn" onclick="loadMoreReviews()">
-                        <span class="btn-text">Load More Reviews</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                </div>
-            </div>
+            
             <!-- ===== END REVIEWS ===== -->
 
         </div>  
