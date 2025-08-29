@@ -266,9 +266,72 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 100);
         }
     });
-document.getElementById('hala-island').addEventListener("click", function () {
-    window.location.href = "./tour/index.html"
-})
+// ...existing code...
+
+// Manual click listeners for each product
+document.getElementById('hala-island')?.addEventListener("click", function () {
+    window.location.href = "./tour/hola.html";
+});
+document.getElementById('orange')?.addEventListener("click", function () {
+    window.location.href = "./tour/Orange.html";
+});
+document.getElementById('paradise')?.addEventListener("click", function () {
+    window.location.href = "./tour/paradise.html";
+});
+document.getElementById('dolphin')?.addEventListener("click", function () {
+    window.location.href = "./tour/dolphin.html";
+});
+document.getElementById('sharm')?.addEventListener("click", function () {
+    window.location.href = "./tour/elnaga.html";
+});
+document.getElementById('p_hola')?.addEventListener("click", function () {
+    window.location.href = "./tour/private_hola.html";
+});
+document.getElementById('p_dolphin')?.addEventListener("click", function () {
+    window.location.href = "./tour/private_dolphin.html";
+});
+document.getElementById('giftun')?.addEventListener("click", function () {
+    window.location.href = "./tour/Private_Giftun.html";
+});
+document.getElementById('abu-menkara')?.addEventListener("click", function () {
+    window.location.href = "./tour/Umungar.html";
+});
+document.getElementById('sharm-el-naga')?.addEventListener("click", function () {
+    window.location.href = "./tour/elnaga.html";
+});
+document.getElementById('fishing')?.addEventListener("click", function () {
+    window.location.href = "./tour/fishing.html";
+});
+document.getElementById('el-gouna')?.addEventListener("click", function () {
+    window.location.href = "./tour/guona.html";
+});
+document.getElementById('hurghada')?.addEventListener("click", function () {
+    window.location.href = "./tour/city.html";
+});
+document.getElementById('luxor')?.addEventListener("click", function () {
+    window.location.href = "./tour/Luxor.html";
+});
+document.getElementById('private-luxor')?.addEventListener("click", function () {
+    window.location.href = "./tour/private_luxor.html";
+});
+document.getElementById('cairo')?.addEventListener("click", function () {
+    window.location.href = "./tour/cairo.html";
+});
+document.getElementById('private-cairo')?.addEventListener("click", function () {
+    window.location.href = "./tour/private_cairo.html";
+});
+document.getElementById('safari')?.addEventListener("click", function () {
+    window.location.href = "./tour/savari.html";
+});
+document.getElementById('desert')?.addEventListener("click", function () {
+    window.location.href = "./tour/super_savari.html";
+});
+document.getElementById('morning')?.addEventListener("click", function () {
+    window.location.href = "./tour/morning.html";
+});
+
+// ...existing code...
+
     // ===== SCROLL NAVIGATION =====
     function createScrollButtons() {
         // Remove any existing scroll containers first
