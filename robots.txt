@@ -1,3 +1,3 @@
-Sitemap: https://hegazyjr.github.io/Younes_travels_website/sitemap.xml
 User-agent: *
 Allow: /
+Sitemap: https://hegazyjr.github.io/Younes_travels_website/sitemap.xml
