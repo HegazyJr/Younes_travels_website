@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Manual click listeners for each product
 document.getElementById('hala-island')?.addEventListener("click", function () {
-    window.location.href = "./tour/hola.html";
+    window.location.href = "./tour/index.html";
 });
 document.getElementById('orange')?.addEventListener("click", function () {
     window.location.href = "./tour/Orange.html";
@@ -281,11 +281,14 @@ document.getElementById('paradise')?.addEventListener("click", function () {
 document.getElementById('dolphin')?.addEventListener("click", function () {
     window.location.href = "./tour/dolphin.html";
 });
-document.getElementById('sharm')?.addEventListener("click", function () {
-    window.location.href = "./tour/elnaga.html";
+document.getElementById('scope')?.addEventListener("click", function () {
+    window.location.href = "./tour/private_sea_scope.html";
 });
 document.getElementById('p_hola')?.addEventListener("click", function () {
     window.location.href = "./tour/private_hola.html";
+});
+document.getElementById('p_magawish')?.addEventListener("click", function () {
+    window.location.href = "./tour/magawish.html";
 });
 document.getElementById('p_dolphin')?.addEventListener("click", function () {
     window.location.href = "./tour/private_dolphin.html";
@@ -329,7 +332,18 @@ document.getElementById('desert')?.addEventListener("click", function () {
 document.getElementById('morning')?.addEventListener("click", function () {
     window.location.href = "./tour/morning.html";
 });
-
+document.getElementById('r-hurghada')?.addEventListener("click", function () {
+    window.location.href = "./tour/city.html";
+});
+document.getElementById('r-guona')?.addEventListener("click", function () {
+    window.location.href = "./tour/guona.html";
+});
+document.getElementById('r-dolphin')?.addEventListener("click", function () {
+    window.location.href = "./tour/private_dolphin.html";
+});
+document.getElementById('r-sharm')?.addEventListener("click", function () {
+    window.location.href = "./tour/elnaga.html";
+});
 // ...existing code...
 
     // ===== SCROLL NAVIGATION =====
