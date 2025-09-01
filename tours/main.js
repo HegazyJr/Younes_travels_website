@@ -329,6 +329,9 @@ document.getElementById('private-cairo')?.addEventListener("click", function () 
 document.getElementById('safari')?.addEventListener("click", function () {
     window.location.href = "./tour/savari.html";
 });
+document.getElementById('savari_2')?.addEventListener("click", function () {
+    window.location.href = "./tour/savari_three.html";
+});
 document.getElementById('desert')?.addEventListener("click", function () {
     window.location.href = "./tour/super_savari.html";
 });
