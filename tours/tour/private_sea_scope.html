@@ -79,12 +79,12 @@
 
         <div class="contact">
             <div class="desktop">
-                <div class="whatsapp">
+                <div class="whatsapp" id="whatsapp">
                     <i class="fa-brands fa-whatsapp"></i>
                 </div>
             </div>
             <div class="mobile">
-                <div class="whatsapp-m">
+                <div class="whatsapp-m" id="whatsapp">
                     <i class="fa-brands fa-whatsapp"></i>
                 </div>
                 <div class="email-m">
@@ -113,14 +113,16 @@
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star checked"></span>
+                        
+            
                     </div>
                     <div class="rating">
-                        <h2>4.7</h2>
+                        <h2>5.0</h2>
                     </div>
                 </div>
                 <div class="review_count">
-                    <h2>142 reviews</h2>
+                    <h2>7 reviews</h2>
                 </div>
                 <div class="point"></div>
                 <div class="place">
@@ -132,15 +134,15 @@
             <!-- ===== LIGHTBOX MODAL ===== -->
             <div class="images">
                 <div class="imgs_box">
-                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg', 'Umungar Island - Crystal Clear Waters')">
-                        <img src="./../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg" alt="Umungar Island - Crystal Clear Waters">
+                    <div class="img_box" onclick="openLightbox('image', './../../New_Imgs/IMG_2362.webp', 'Umungar Island - Crystal Clear Waters')">
+                        <img src="./../../New_Imgs/IMG_2362.webp" alt="Umungar Island - Crystal Clear Waters" id="img_one">
                     </div>
-                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg', 'Umungar Island - Snorkeling Adventure')">
-                        <img src="./../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg" alt="Umungar Island - Snorkeling Adventure">
+                    <div class="img_box" onclick="openLightbox('image', './../../New_Imgs/PHOTO-2024-05-26-12-12-05.jpg', 'Umungar Island - Snorkeling Adventure')">
+                        <img src="./../../New_Imgs/PHOTO-2024-05-26-12-12-05.jpg" alt="Umungar Island - Snorkeling Adventure" id="img_two">
                     </div>
                     <div class="img_box">
-                        <img src="./../../IMG/Gallery_imgs/Classical Tour Egypt.jpg" alt="Umungar Island - Fish Feeding" onclick="openLightbox('image', './../../IMG/Gallery_imgs/Classical Tour Egypt.jpg', 'Umungar Island - Fish Feeding')">
-                        <img src="./../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="Umungar Island - Natural Beach" onclick="openLightbox('image', './../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg', 'Umungar Island - Natural Beach')">
+                        <img src="./../../New_Imgs/FmXfHzFVRMHwm0s0VrRy7xVRn60Rb96C4Ntxs4tQ.jpg" alt="Umungar Island - Fish Feeding" onclick="openLightbox('image', './../../New_Imgs/FmXfHzFVRMHwm0s0VrRy7xVRn60Rb96C4Ntxs4tQ.jpg', 'Umungar Island - Fish Feeding')" id="img_three">
+                        <img src="./../../New_Imgs/Semi-Submarine-Tour-2000x-1334.jpg" alt="Umungar Island - Natural Beach" onclick="openLightbox('image', './../../New_Imgs/Semi-Submarine-Tour-2000x-1334.jpg', 'Umungar Island - Natural Beach')" id="img_four">
                     </div>
                 </div>
             </div>
@@ -156,7 +158,7 @@
                     <h2>per person</h2>
                 </div>
                 <div class="btn-check">
-                    <button>Check Availability</button>
+                    <button id="check">Check Availability</button>
                 </div>
                 <div class="pay_later">
                     <i class="fa-solid fa-credit-card"></i>
@@ -292,18 +294,10 @@
                     <div class="content">
                         <div class="dtitle">Destinations</div>
                         <div class="info">
+
+
+
                             <ul>
-                                <li>Hurghada <span>></span> Sea Scope Marina <span>></span> Coral Reef Site <span>></span> Snorkeling Zone</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="line"></div>
-                </div>
-                <div class="detail done">
-                    <div class="content">
-                        <div class="dtitle">Description</div>
-                        <div class="info">
-                            <ul class="info-list">
                                 <li>Embark on an unforgettable Red Sea adventure with Hurghada's famous Sea Scope submarine boat tour.</li>
                                 <li>Your journey begins with complimentary hotel transfers from anywhere in Hurghada to the marina, where the state-of-the-art Sea Scope vessel awaits.</li>
                                 <li>The submarine features a unique panoramic viewing chamber with large glass windows, offering crystal-clear views of the magical underwater world.</li>
@@ -417,15 +411,16 @@
                     <div class="info">
                         <div class="i_info">
                             <i class="fa-solid fa-location-dot"></i>
-                            <h3> Rua Manuel Rodrigues Abreu, 26, 3800-693 Aveiro, Portugal</h3>
+                            <h3>Shery St., Al Hadaba, Hurghada, Red Sea Governorate, Egypt  
+Coordinates: 27.220442, 33.833466 </h3>
                         </div>
                         <div class="i_info">
                             <i class="fa-solid fa-phone"></i>
-                            <h3> +351 234 567 890</h3>
+                            <h3> +201100077315</h3>
                         </div>
                         <div class="i_info">
                             <i class="fa-solid fa-envelope"></i>
-                            <h3> 2RzLb@example.com</h3>
+                            <h3> younesyours@gmail.com</h3>
                         </div>
                     </div>
                     <div class="info">

@@ -81,12 +81,12 @@
 
         <div class="contact">
             <div class="desktop">
-                <div class="whatsapp">
+                <div class="whatsapp" id="whatsapp">
                     <i class="fa-brands fa-whatsapp"></i>
                 </div>
             </div>
             <div class="mobile">
-                <div class="whatsapp-m">
+                <div class="whatsapp-m " id="whatsapp">
                     <i class="fa-brands fa-whatsapp"></i>
                 </div>
                 <div class="email-m">
@@ -115,14 +115,14 @@
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span> <!-- Removed one star -->
                     </div>
                     <div class="rating">
-                        <h2>5.0</h2>
+                        <h2>4.0</h2>
                     </div>
                 </div>
                 <div class="review_count">
-                    <h2>94 reviews</h2>
+                    <h2>4 reviews</h2>
                 </div>
                 <div class="point"></div>
                 <div class="place">
@@ -134,21 +134,21 @@
              <div class="images">
                 <div class="imgs_box">
                     <!-- Large main image (80% width) -->
-                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg', 'Desert Adventure - Jeep Safari')">
-                        <img src="./../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg" alt="Desert Adventure - Jeep Safari">
+                    <div class="img_box" onclick="openLightbox('image', './../../savari/pexels-paulo-veloso-724211738-27894855.jpg', 'Desert Adventure - Jeep Safari')">
+                        <img src="./../../savari/pexels-paulo-veloso-724211738-27894855.jpg" alt="Desert Adventure - Jeep Safari" id="img_one">
                     </div>
                     
                     <!-- Medium side image (40% width) -->
-                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg', 'Desert Adventure - Quad Biking')">
-                        <img src="./../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg" alt="Desert Adventure - Quad Biking">
+                    <div class="img_box" onclick="openLightbox('image', './../../savari/WhatsApp Image 2025-08-20 at 2.00.31 AM (1).jpeg', 'Desert Adventure - Quad Biking')">
+                        <img src="./../../savari/WhatsApp Image 2025-08-20 at 2.00.31 AM (1).jpeg" alt="Desert Adventure - Quad Biking" id="img_two">
                     </div>
                     
                     <!-- Two small images container (40% width, stacked vertically) -->
                     <div class="img_box">
                         <!-- First small image -->
-                        <img src="./../../IMG/Gallery_imgs/Classical Tour Egypt.jpg" alt="Desert Adventure - Bedouin Village" onclick="openLightbox('image', './../../IMG/Gallery_imgs/Classical Tour Egypt.jpg', 'Desert Adventure - Bedouin Village')">
+                        <img src="./../../savari/9c.jpg" alt="Desert Adventure - Bedouin Village" onclick="openLightbox('image', './../../savari/9c.jpg', 'Desert Adventure - Bedouin Village')" id="img_three">
                         <!-- Second small image -->
-                        <img src="./../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="Desert Adventure - Sunset View" onclick="openLightbox('image', './../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg', 'Desert Adventure - Sunset View')">
+                        <img src="./../../savari/146-3.jpg" alt="Desert Adventure - Sunset View" onclick="openLightbox('image', './../../savari/146-3.jpg', 'Desert Adventure - Sunset View')" id="img_four">
                     </div>
                 </div>
             </div>
@@ -175,16 +175,16 @@
 
             <div class="price-box">
                 <div class="price">
-                    <h2>price</h2>
-                    <h2>upon</h2>
-                    <h2>booking</h2>
+                    <h2>from</h2>
+                    <h2>€25</h2>
+                    <h2>per person</h2>
                 </div>
                 <div class="btn-check">
-                    <button>Check Availability</button>
+                    <button id="check">Check Availability</button>
                 </div>
                 <div class="pay_later">
                     <i class="fa-solid fa-credit-card"></i>
-                    <h3><span></span>"Base price: €45 per person. Quad Bike upgrade: +€5."</h3>
+                    <h3><span></span>"Reserve now & pay later to book your spot and pay nothing today"</h3>
                 </div>
             </div>
 
@@ -307,6 +307,7 @@
                                 <li>Optional upgrades: horse riding or extended camel tour (extra cost).</li>
                                 <li>No dinner or show — a pure daytime cultural desert experience.</li>
                                 <li>Professional guides and full insurance for safety and comfort.</li>
+                                <li>Quad Bike upgrade available for an additional €5 per person.</li>
                             </ul>
                         </div>
                     </div>
@@ -479,15 +480,15 @@
                     <div class="info">
                         <div class="i_info">
                             <i class="fa-solid fa-location-dot"></i>
-                            <h3> Rua Manuel Rodrigues Abreu, 26, 3800-693 Aveiro, Portugal</h3>
+                            <h3> Shery St., Al Hadaba, Hurghada, Red Sea Governorate, Egypt</h3>
                         </div>
                         <div class="i_info">
                             <i class="fa-solid fa-phone"></i>
-                            <h3> +351 234 567 890</h3>
+                            <h3> +201100077315</h3>
                         </div>
                         <div class="i_info">
                             <i class="fa-solid fa-envelope"></i>
-                            <h3> 2RzLb@example.com</h3>
+                            <h3> younestours7@gmail.com</h3>
                         </div>
                     </div>
                     <div class="info">

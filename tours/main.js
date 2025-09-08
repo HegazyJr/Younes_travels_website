@@ -267,7 +267,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 // ...existing code...
-
+function openWhatsApp() {
+    const phoneNumber = "+201100077315";
+    const message = "مرحباً! أريد الاستفسار عن الجولات السياحية";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+}
+document.getElementById('whatsapp')?.addEventListener("click", function () {
+    const phoneNumber = "+201100077315";
+    const message = "مرحباً! أريد الاستفسار عن الجولات السياحية";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+});
 // Manual click listeners for each product
 document.getElementById('hala-island')?.addEventListener("click", function () {
     window.location.href = "./tour/index.html";
@@ -327,10 +338,13 @@ document.getElementById('private-cairo')?.addEventListener("click", function () 
     window.location.href = "./tour/private_cairo.html";
 });
 document.getElementById('safari')?.addEventListener("click", function () {
-    window.location.href = "./tour/savari.html";
+    window.location.href = "./tour/super_savari.html";
 });
-document.getElementById('savari_2')?.addEventListener("click", function () {
+document.getElementById('s-two')?.addEventListener("click", function () {
     window.location.href = "./tour/savari_three.html";
+});
+document.getElementById('check')?.addEventListener("click", function () {
+    window.location.href = "./../booking/index.html";
 });
 document.getElementById('desert')?.addEventListener("click", function () {
     window.location.href = "./tour/super_savari.html";
@@ -345,7 +359,7 @@ document.getElementById('r-guona')?.addEventListener("click", function () {
     window.location.href = "./tour/guona.html";
 });
 document.getElementById('r-dolphin')?.addEventListener("click", function () {
-    window.location.href = "./tour/private_dolphin.html";
+    window.location.href = "./tour/dolphin.html";
 });
 document.getElementById('r-sharm')?.addEventListener("click", function () {
     window.location.href = "./tour/elnaga.html";

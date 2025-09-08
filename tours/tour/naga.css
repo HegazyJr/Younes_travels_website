@@ -1,0 +1,7 @@
+footer{
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    bottom: 0;
+}

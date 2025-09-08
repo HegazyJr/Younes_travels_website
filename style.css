@@ -797,8 +797,8 @@ header * {
 .under-m .title h1 {
     margin-top: 4rem;
     letter-spacing: 2px;
-    text-transform: uppercase;
     font-size: 2rem;
+    text-transform: uppercase;
     color: var(--third-color);
     text-align: center;
 }
@@ -1593,20 +1593,23 @@ header * {
 
 
 footer {
+    position: absolute; /* Adjusted to ensure proper placement */
+    z-index: 10; /* Increased to ensure visibility over other elements */
+    overflow-x: visible; /* Ensures footer is not clipped */
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./IMG/Gallery_imgs/Classical\ Tour\ Egypt.jpg);
     /* background-color: #201e433d; */
     background-size: cover;
-    position: absolute;
-    left: 0;
-    background-attachment: fixed;
     width: 100vw;
+    left:0;
     height: 65vh;
     margin-top: 10%;
     object-fit: cover;
+    
     overflow-x: hidden;
     z-index: 1;
     justify-content: center;
     color: var(--main-color);
+    margin-left: 0; /* Reset margin to align the footer properly */
     .f-container {
         width: 100%;
         text-align: left;
@@ -2376,14 +2379,421 @@ footer {
         height: 180px;
         border-radius: 15px 15px 0 0;
     }
-    .h_u_page .tour .text .details {
-        flex-direction: column;
-        gap: 0.3rem;
-        margin-bottom: 1rem;
+    .h_u_page .tour .text {
+        height: 220px;
+        padding: 1rem;
+    }
+    .h_u_page .tour .text h1 {
+        font-size: 1rem;
+    }
+    .h_u_page .tour .text p {
+        font-size: 0.5rem;
+    }
+    .h_u_page .tour .details {
+        flex-direction: row;
+    }
+    .h_u_page .title {
+        margin-bottom: 1.5rem;
+    }
+    .h_u_page .title h1 {
+        margin-top: 2rem;
+    }
+    .w_us {
+        background-attachment: fixed;
+        margin-top: 50px;
+        height: 1000px;
+        .background img {
+            display: none;
+        }
+        .title {
+            width: 90%;
+        }
+        .text {
+            width: 60vw;
+        }
+    }
+    .r_page {
+        .reviews {
+            width: 95%;
+            margin: 0 auto;
+            gap: 1.5rem;
+            padding: 1.5rem 0.5rem;
+            .review {
+                min-width: 320px;
+                max-width: 300px;
+                height: 230px;
+                .img img{
+                    width: 60px;
+                    margin-top: 2rem;
+                    height: 60px;
+                }
+                .text{
+                    h1{
+                        font-size: 1.1rem;
+                    }
+                    .details h2 {
+                        font-size: 0.7rem;
+                    }       
+                }
+            }
+            .review:first-child {
+                margin-left: 195rem;
+            }
+            .review:last-child {
+                margin-right: 1rem;
+            }
+        }
+    }
+    footer {
+        min-height: 300px;
+        padding: 2rem 0;
+
+        .f-container {
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+
+            .logo {
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+                
+                .text h2 {
+                    font-size: 1.5rem;
+                }
+            }
+            
+            .inforamtion {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                /* width: 90%; */
+                overflow-x: scroll;
+                text-align: left;
+                justify-items: start;
+                padding-top: 3rem;
+                
+                .info {
+                    text-align: center;
+                    
+                    h1 {
+                        font-size: 1.1rem;
+                    }
+                    
+                    .i_info {
+                        justify-content: center;
+                        
+                        h3 {
+                            font-size: 13px;
+                        }
+                    }
+                    
+                    ul li {
+                        font-size: 13px;
+                    }
+                }
+                
+                .info:nth-child(4) {
+                    ul {
+                        justify-content: center;
+                        
+                        li i {
+                            font-size: 1.3rem;
+                        }
+                    }
+                    
+                    .copyright h3 {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Extra small mobile devices */
+
+@media screen and (max-width: 480px) {
+    .text-box {
+        margin-left: -1rem;
+        right: 0.5rem;
+        padding: 1rem;
+    }
+    .text-box .title h1 {
+        font-size: 3rem;
+    }
+    .body{
+        overflow-x: hidden;
+    }
+    /* تنسيق لجميع كلمات العنوان الرئيسي في الشاشات الأصغر - شفاف زجاجي */
+    .text-box .title h1 {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.3) 75%, rgba(255, 255, 255, 0.8) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+    }
+    .text-box p {
+        font-size: 13px;
+    }
+    .middle-page {
+        padding: 0.5rem;
+        /* justify-content: center;
+        align-items: center; */
+    }
+    .middle-page .kinds {
+        gap: 1rem;
+    }
+    .middle-page .kinds .left .up img,
+    .middle-page .kinds .left .down img,
+    .middle-page .kinds .right img {
+        border-radius: 10px;
+    }
+    .next-controller {
+        right: 0.5rem;
+    }
+    .middle-page .title h2 {
+        font-size: 1.3rem;
+    }
+    .middle-page .title .pharagraph {
+        width: 95%;
+    }
+    .middle-page .title h1 {
+        font-size: 13px;
+    }
+    .line {
+        width: 150px;
+    }
+    .middle-page .kinds {
+        padding: 0.8rem;
+    }
+    .middle-page .kinds .left .up img {
+        height: 150px;
+    }
+    .middle-page .kinds .left .down img {
+        height: 170px;
+    }
+    .middle-page .kinds .right img {
+        height: 200px;
+    }
+    .middle-page .kinds h1 {
+        font-size: 14px !important;
+        padding: 6px 12px !important;
+    }
+    /* Adjust label positions for smaller images */
+    .middle-page .kinds .left .up img:nth-child(1)+.label-one {
+        top: 75px;
+        /* Half of 150px height */
+    }
+    .middle-page .kinds .left .up img:nth-child(3)+.label-two {
+        top: calc(150px + 1rem + 75px);
+        /* First image + gap + half of second image */
+    }
+    .under-m {
+        padding: 0 0.5rem;
+    }
+    .under-m .title h1 {
+        font-size: 1.3rem;
+        margin-top: 4.5rem;
+    }
+    .under-m .line-1 {
+        width: 150px;
+    }
+    .under-m .title .pharagraph {
+        max-width: 300px;
+        padding: 0 0.5rem;
+    }
+    .under-m .title .pharagraph h2 {
+        font-size: 13px;
+    }
+    .products {
+        width: 100%;
+        padding: 0.5rem;
+        gap: 1rem;
     }
     
-    .h_u_page .tour .text .details .detail-item {
-        font-size: 0.75rem;
+    .product {
+        width: 100%;
+        max-width: 320px;
+        min-height: 400px;
+        margin: 0 auto 1rem auto;
+    }
+    
+    .product .img {
+        height: 160px;
+    }
+    
+    .product img {
+        height: 160px;
+    }
+    
+    .product h2 {
+        font-size: 0.8rem !important;
+        margin: 0 0 0.3rem 0;
+    }
+    
+    .product h1 {
+        font-size: 0.95rem !important;
+        margin: 0 0 0.3rem 0;
+        line-height: 1.2;
+    }
+    
+    .product h3 {
+        font-size: 0.75rem !important;
+        margin: 0 0 0.3rem 0;
+        line-height: 1.1;
+    }
+    
+    .product h4 {
+        font-size: 0.9rem !important;
+    }
+    
+    .product h4 span {
+        font-size: 0.7rem !important;
+    }
+    .h_u_page {
+        padding: 10px;
+    }
+    .h_u_page .tours {
+        padding: 1rem;
+        gap: 1rem;
+        width: min(1000px, 95vw);
+        grid-template-columns: 1fr;
+    }
+    .h_u_page .tour .img {
+        height: 180px;
+        border-radius: 15px 15px 0 0;
+    }
+    .h_u_page .tour .text {
+        height: 220px;
+        padding: 1rem;
+    }
+    .h_u_page .tour .text h1 {
+        font-size: 1rem;
+    }
+    .h_u_page .tour .text p {
+        font-size: 0.5rem;
+    }
+    .h_u_page .tour .details {
+        flex-direction: row;
+    }
+    .h_u_page .title {
+        margin-bottom: 1.5rem;
+    }
+    .h_u_page .title h1 {
+        margin-top: 2rem;
+    }
+    .w_us {
+        background-attachment: fixed;
+        margin-top: 50px;
+        height: 1000px;
+        .background img {
+            display: none;
+        }
+        .title {
+            width: 90%;
+        }
+        .text {
+            width: 60vw;
+        }
+    }
+    .r_page {
+        .reviews {
+            width: 95%;
+            margin: 0 auto;
+            gap: 1.5rem;
+            padding: 1.5rem 0.5rem;
+            .review {
+                min-width: 320px;
+                max-width: 300px;
+                height: 230px;
+                .img img{
+                    width: 60px;
+                    margin-top: 2rem;
+                    height: 60px;
+                }
+                .text{
+                    h1{
+                        font-size: 1.1rem;
+                    }
+                    .details h2 {
+                        font-size: 0.7rem;
+                    }       
+                }
+            }
+            .review:first-child {
+                margin-left: 195rem;
+            }
+            .review:last-child {
+                margin-right: 1rem;
+            }
+        }
+    }
+    footer {
+        min-height: 300px;
+        padding: 2rem 0;
+
+        .f-container {
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+
+            .logo {
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+                
+                .text h2 {
+                    font-size: 1.5rem;
+                }
+            }
+            
+            .inforamtion {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                /* width: 90%; */
+                overflow-x: scroll;
+                text-align: left;
+                justify-items: start;
+                padding-top: 3rem;
+                
+                .info {
+                    text-align: center;
+                    
+                    h1 {
+                        font-size: 1.1rem;
+                    }
+                    
+                    .i_info {
+                        justify-content: center;
+                        
+                        h3 {
+                            font-size: 13px;
+                        }
+                    }
+                    
+                    ul li {
+                        font-size: 13px;
+                    }
+                }
+                
+                .info:nth-child(4) {
+                    ul {
+                        justify-content: center;
+                        
+                        li i {
+                            font-size: 1.3rem;
+                        }
+                    }
+                    
+                    .copyright h3 {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -2938,7 +3348,7 @@ footer {
 .city-btn:hover {
   background: linear-gradient(90deg, #b6e0fe 40%, #4fc3f7 100%);
   color: #fff;
-  box-shadow: 0 4px 16px #4fc3f755;
+  box-shadow: 0 4px 16px #b6e0fe55;
 }
 
 .city-info {

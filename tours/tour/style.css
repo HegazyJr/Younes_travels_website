@@ -1,6 +1,7 @@
 .container{
     max-width: 1200px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow: visible;
 }
 header{
     background-color: #242424e3;
@@ -87,6 +88,10 @@ body{
         /* border: 1px solid goldenrod; */
 
     }
+    .star-rating span:not(.checked) {
+        color: gray; /* Gray for inactive stars */
+    }
+
     #not_checked{
         /* border: 1px solid black; */
         color: gray;
@@ -1980,5 +1985,57 @@ body{
         width: 100%;
         margin-right: 0;
         padding: 12px 20px;
+    }
+}
+.star-rating .half-checked {
+    background: linear-gradient(90deg, rgb(230, 174, 34) 50%, gray 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}/* Trip Switcher Buttons */
+.trip-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+    padding: 0 20px;
+}
+
+.trip-btn {
+    padding: 12px 24px;
+    border: 2px solid #007bff;
+    background: transparent;
+    color: #007bff;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.trip-btn:hover {
+    background: #007bff;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.trip-btn.active {
+    background: #007bff;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .trip-switcher {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .trip-btn {
+        width: 80%;
+        text-align: center;
     }
 }

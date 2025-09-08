@@ -1,0 +1,22 @@
+/* body{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    max-height: 800vh;
+}
+*{
+        box-sizing: border-box;
+    }
+
+*/ footer {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  bottom: 0;
+}
+.container{
+    /* overflow: hidden; */
+    overflow: visible !important;
+    position: relative;
+}

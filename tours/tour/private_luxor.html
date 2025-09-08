@@ -79,12 +79,12 @@
 
         <div class="contact">
             <div class="desktop">
-                <div class="whatsapp">
+                <div class="whatsapp" id="whatsapp">
                     <i class="fa-brands fa-whatsapp"></i>
                 </div>
             </div>
             <div class="mobile">
-                <div class="whatsapp-m">
+                <div class="whatsapp-m" id="whatsapp">
                     <i class="fa-brands fa-whatsapp"></i>
                 </div>
                 <div class="email-m">
@@ -113,14 +113,14 @@
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span> <!-- خامسة غير ملونة -->
                     </div>
                     <div class="rating">
-                        <h2>5.0</h2>
+                        <h2>4.2</h2 >
                     </div>
                 </div>
                 <div class="review_count">
-                    <h2>47 reviews</h2>
+                    <h2>5 reviews</h2>
                 </div>
                 <div class="point"></div>
                 <div class="place">
@@ -131,15 +131,16 @@
             <!-- ===== IMAGE LAYOUT WITH MODAL ===== -->
             <div class="images">
                 <div class="imgs_box">
-                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/karnak-temple.jpg', 'Karnak Temple Complex - Largest Religious Site in World')">
-                        <img src="./../../IMG/Gallery_imgs/karnak-temple.jpg" alt="Karnak Temple Complex - Largest Religious Site in World">
+                    <div class="img_box" onclick="openLightbox('image', './../../New_Imgs/large_Templo_funerario_de_Hatshepsut.webp', 'Hatshepsut Funerary Temple')">
+                        <img src="./../../New_Imgs/large_Templo_funerario_de_Hatshepsut.webp" alt="Hatshepsut Funerary Temple" id="img_one">
                     </div>
-                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/valley-kings.jpg', 'Valley of the Kings - Pharaohs Burial Site')">
-                        <img src="./../../IMG/Gallery_imgs/valley-kings.jpg" alt="Valley of the Kings - Pharaohs Burial Site">
+                    <div class="img_box" onclick="openLightbox('image', './../../New_Imgs/whatsapp-image-2019-8-at-948.jpg', 'Luxor Scenic View')">
+                        <img src="./../../New_Imgs/whatsapp-image-2019-8-at-948.jpg" alt="Luxor Scenic View" id="img_two">
                     </div>
                     <div class="img_box">
-                        <img src="./../../IMG/Gallery_imgs/nefertari-tomb.jpg" alt="Tomb of Queen Nefertari - Best Preserved Colors" onclick="openLightbox('image', './../../IMG/Gallery_imgs/nefertari-tomb.jpg', 'Tomb of Queen Nefertari - Best Preserved Colors')">
-                        <img src="./../../IMG/Gallery_imgs/felucca-nile.jpg" alt="Traditional Felucca Sailboat on the Nile" onclick="openLightbox('image', './../../IMG/Gallery_imgs/felucca-nile.jpg', 'Traditional Felucca Sailboat on the Nile')">
+                        <img src="./../../New_Imgs/gettyimages-103210945.avif" alt="Tomb of Queen Nefertari - Best Preserved Colors" onclick="openLightbox('image', './../../New_Imgs/gettyimages-103210945.avif', 'Tomb of Queen Nefertari - Best Preserved Colors')" id="img_three">
+                        <img src="./../../New_Imgs/172001.jpg" alt="Traditional Felucca Sailboat on the Nile" onclick="openLightbox('image', './../../New_Imgs/172001.jpg', 'Traditional Felucca Sailboat on the Nile')" id="img_four">
+
                     </div>
                 </div>
             </div>
@@ -171,7 +172,7 @@
                     <h2>booking</h2>
                 </div>
                 <div class="btn-check">
-                    <button>Check Availability</button>
+                    <button id="check">Check Availability</button>
                 </div>
                 <div class="pay_later">
                     <i class="fa-solid fa-credit-card"></i>
@@ -476,15 +477,16 @@
                     <div class="info">
                         <div class="i_info">
                             <i class="fa-solid fa-location-dot"></i>
-                            <h3> Rua Manuel Rodrigues Abreu, 26, 3800-693 Aveiro, Portugal</h3>
+                            <h3> Shery St., Al Hadaba, Hurghada, Red Sea Governorate, Egypt  
+Coordinates: 27.220442, 33.833466</h3>
                         </div>
                         <div class="i_info">
                             <i class="fa-solid fa-phone"></i>
-                            <h3> +351 234 567 890</h3>
+                            <h3> +201100077315</h3>
                         </div>
                         <div class="i_info">
                             <i class="fa-solid fa-envelope"></i>
-                            <h3> 2RzLb@example.com</h3>
+                            <h3> younesyours7@gmail.com</h3>
                         </div>
                     </div>
                     <div class="info">

@@ -1,5 +1,25 @@
+document.getElementById('check')?.addEventListener("click", function () {
+    window.location.href = "./../booking/index.html";
+});
+document.getElementById('whatsapp')?.addEventListener("click", function () {
+    const phoneNumber = "+201100077315";
+    const message = "مرحباً! أريد الاستفسار عن الجولات السياحية";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+});
+document.getElementById('email').addEventListener("click", function () {
+    window.location.href = "https://mail.google.com/mail/?view=cm&fs=1&to=younestours7@gmail.com&su=SUBJECT&body=MESSAGE"
+})
 
+// رابط الإنستغرام
+document.getElementById('insta').addEventListener("click", function () {
+    window.location.href = "https://instagram.com"
+})
 
+// رابط الفيسبوك
+document.getElementById('face').addEventListener("click", function () {
+    window.location.href = "https://facebook.com"
+})
 // ===== DYNAMIC REVIEWS SYSTEM =====
 // نظام ديناميكي لإدارة التقييمات
 
@@ -220,11 +240,12 @@ const lightboxImage = document.getElementById('lightbox-image'); // Main image e
 
 // Array of all images - easy to add new images
 // To add a new image, simply add its path to this array
+
 const lightboxImages = [
-    './../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg',
-    './../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg',
-    './../../IMG/Gallery_imgs/Classical Tour Egypt.jpg',
-    './../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg'
+    document.getElementById("img_one").src,
+    document.getElementById("img_two").src,
+    document.getElementById("img_three").src,
+    document.getElementById("img_four").src
     // To add new images, just add the path here:
     // './../../IMG/Gallery_imgs/your-new-image.jpg',
 ];

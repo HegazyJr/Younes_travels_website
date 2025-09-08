@@ -4,13 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../../style.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./city.css">
     <title>Hurghada City Exploration Tour | Younes Tours</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (2).png">
 </head>
 <body id="body">
-    <div class="container">
+    <div class="container" >
         <!-- Header & Navigation -->
         <header>
             <div class="nov-container">
@@ -82,12 +83,12 @@
         <!-- Contact Floating Icons -->
         <div class="contact">
             <div class="desktop">
-                <div class="whatsapp">
+                <div class="whatsapp" id="whatsapp">
                     <i class="fa-brands fa-whatsapp"></i>
                 </div>
             </div>
             <div class="mobile">
-                <div class="whatsapp-m">
+                <div class="whatsapp-m" id="whatsapp">
                     <i class="fa-brands fa-whatsapp"></i>
                 </div>
                 <div class="email-m">
@@ -117,14 +118,14 @@
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star" id="not_checked"></span>
+                        <span class="fa fa-star checked"></span> <!-- خامسة ملونة بالكامل -->
                     </div>
                     <div class="rating">
                         <h2>4.8</h2>
                     </div>
                 </div>
                 <div class="review_count">
-                    <h2>85 reviews</h2>
+                    <h2>3 reviews</h2>
                 </div>
                 <div class="point"></div>
                 <div class="place">
@@ -135,15 +136,15 @@
             <!-- Image Gallery -->
             <div class="images">
                 <div class="imgs_box">
-                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg', 'Hurghada Old Market - Traditional Bazaar')">
-                        <img src="./../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg" alt="Hurghada Old Market">
+                    <div class="img_box" onclick="openLightbox('image', './../../city/city.jpeg', 'Hurghada Old Market - Traditional Bazaar')">
+                        <img src="./../../city/city.jpeg" alt="Hurghada Old Market"  id="img_one">
                     </div>
-                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg', 'Grand Marina Mosque - Sea View')">
-                        <img src="./../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg" alt="Grand Marina Mosque">
+                    <div class="img_box" onclick="openLightbox('image', './../../city/1810534-رحلات-الأجانب-فى-الغردقة--(4).webp', 'Grand Marina Mosque - Sea View')">
+                        <img src="./../../city/1810534-رحلات-الأجانب-فى-الغردقة--(4).webp" alt="Grand Marina Mosque" id="img_two">
                     </div>
                     <div class="img_box">
-                        <img src="./../../IMG/Gallery_imgs/Classical Tour Egypt.jpg" alt="Traditional Perfume Factory" onclick="openLightbox('image', './../../IMG/Gallery_imgs/Classical Tour Egypt.jpg', 'Perfume Factory Workshop')">
-                        <img src="./../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="Hurghada Marina Yachts" onclick="openLightbox('image', './../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg', 'Modern Hurghada Marina')">
+                        <img src="./../../city/ممشى-مارينا-الغردقة.jpg" alt="Traditional Perfume Factory " onclick="openLightbox('image', './../../city/ممشى-مارينا-الغردقة.jpg', 'Perfume Factory Workshop')" id="img_three">
+                        <img src="./../../city/301.jpg" alt="Hurghada Marina Yachts" onclick="openLightbox('image', './../../city/301.jpg', 'Modern Hurghada Marina')" id="img_four">
                     </div>
                 </div>
             </div>
@@ -177,7 +178,7 @@
                     <h2>per person</h2>
                 </div>
                 <div class="btn-check">
-                    <button>Check Availability</button>
+                    <button id="check">Check Availability</button>
                 </div>
                 <div class="pay_later">
                     <i class="fa-solid fa-credit-card"></i>
@@ -481,67 +482,68 @@
                 </div>
             </div>
         </div> -->
+    <footer id="footer">
+                <div class="f-container">
+                    <div class="logo">
+                        <img src="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (1).png" alt="Younes Tours Logo">
+                       <div class="text">
+                            <h2>Younes </h2>
+                            <h2>tours</h2>
+                       </div>
+                    </div>
+                    <div class="inforamtion">
+                        <div class="info">
+                            <div class="i_info">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <h3> Rua Manuel Rodrigues Abreu, 26, 3800-693 Aveiro, Portugal</h3>
+                            </div>
+                            <div class="i_info">
+                                <i class="fa-solid fa-phone"></i>
+                                <h3> +20 110 007 7315</h3>
+                                <!-- <h3> +351 234 567 890</h3> -->
+                            </div>
+                            <div class="i_info">
+                                <i class="fa-solid fa-envelope"></i>
+                                <h3> younestours7@gmail.com</h3>
+                        </div>
+                        </div>
+                        <div class="info">
+                            <h1>pages</h1>
+                            <ul>
+                                <li>Home</li>
+                                <li>Services</li>
+                                <li>Gallery</li>
+                                <li>Reviews</li>
+                                <li>About</li>
+                                <li>Contact</li>
+                            </ul>
+                        </div>
+                        <div class="info">
+                            <h1>Categories</h1>
+                            <ul>
+                                <li>Egypt tours</li>
+                                <li>Egypt tours packages</li>
+                                <li>coastal tours</li>
+                            </ul>
+                        </div>
+                        <div class="info">
+                            <h1>follow us</h1>
+                            <ul>
+                                <li><i class="fa-solid fa-share"></i></li>
+                                <li><i><i class="fa-brands fa-facebook"></i></i></li>
+                                <li><i><i class="fa-brands fa-instagram"></i></i></li>
+                                <li><i><i class="fa-brands fa-twitter"></i></i></li>
 
-        <!-- Footer -->
-        <footer>
-            <div class="f-container">
-                <div class="logo">
-                    <img src="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (1).png" alt="">
-                    <div class="text">
-                        <h2>Younes </h2>
-                        <h2>tours</h2>
+                            </ul>
+                            <div class="copyright">
+                                <h3> Copyright  2022 Younes Tours. All Rights Reserved.</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="inforamtion">
-                    <div class="info">
-                        <div class="i_info">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <h3> Rua Manuel Rodrigues Abreu, 26, 3800-693 Aveiro, Portugal</h3>
-                        </div>
-                        <div class="i_info">
-                            <i class="fa-solid fa-phone"></i>
-                            <h3> +351 234 567 890</h3>
-                        </div>
-                        <div class="i_info">
-                            <i class="fa-solid fa-envelope"></i>
-                            <h3> 2RzLb@example.com</h3>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <h1>pages</h1>
-                        <ul>
-                            <li>Home</li>
-                            <li>Services</li>
-                            <li>Gallery</li>
-                            <li>Reviews</li>
-                            <li>About</li>
-                            <li>Contact</li>
-                        </ul>
-                    </div>
-                    <div class="info">
-                        <h1>Categories</h1>
-                        <ul>
-                            <li>Egypt tours</li>
-                            <li>Egypt tours packages</li>
-                            <li>cultural tours</li>
-                        </ul>
-                    </div>
-                    <div class="info">
-                        <h1>follow us</h1>
-                        <ul>
-                            <li><i class="fa-solid fa-share"></i></li>
-                            <li><i class="fa-brands fa-facebook"></i></li>
-                            <li><i class="fa-brands fa-instagram"></i></li>
-                            <li><i class="fa-brands fa-twitter"></i></li>
-                        </ul>
-                        <div class="copyright">
-                            <h3>Copyright © 2025 Younes Tours. All Rights Reserved.</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
+            </footer>
+        </div>
+    </div>
         <!-- Scripts -->
         <script>
             const header = document.querySelector("header");

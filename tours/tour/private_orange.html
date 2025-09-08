@@ -79,12 +79,12 @@
 
         <div class="contact">
             <div class="desktop">
-                <div class="whatsapp">
+                <div class="whatsapp" id="whatsapp">
                     <i class="fa-brands fa-whatsapp"></i>
                 </div>
             </div>
             <div class="mobile">
-                <div class="whatsapp-m">
+                <div class="whatsapp-m" id="whatsapp">
                     <i class="fa-brands fa-whatsapp"></i>
                 </div>
                 <div class="email-m">
@@ -112,15 +112,15 @@
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span> <!-- رابعة غير ملونة -->
+                        <span class="fa fa-star"></span> <!-- خامسة غير ملونة -->
                     </div>
                     <div class="rating">
-                        <h2>5.0</h2>
+                        <h2>3.0</h2>
                     </div>
                 </div>
                 <div class="review_count">
-                    <h2>85 reviews</h2>
+                    <h2>1 reviews</h2>
                 </div>
                 <div class="point"></div>
                 <div class="place">
@@ -131,15 +131,19 @@
             <!-- ===== ORIGINAL IMAGE LAYOUT WITH MODAL ===== -->
             <div class="images">
                 <div class="imgs_box">
-                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg', 'Umungar Island - Crystal Clear Waters')">
-                        <img src="./../../IMG/Gallery_imgs/pexels-artem-krapivin-2149275329-30594279.jpg" alt="Umungar Island - Crystal Clear Waters">
+                    <div class="img_box" onclick="openLightbox('image', './../../New_Imgs/29.jpg', 'Umungar Island - Crystal Clear Waters')">
+                        <img src="./../../New_Imgs/29.jpg" alt="Umungar Island - Crystal Clear Waters" id="img_one">
                     </div>
-                    <div class="img_box" onclick="openLightbox('image', './../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg', 'Umungar Island - Snorkeling Adventure')">
-                        <img src="./../../IMG/Gallery_imgs/WhatsApp Image 2025-04-24 at 22.03.12_e264bf03.jpg" alt="Umungar Island - Snorkeling Adventure">
+                    <div class="img_box" onclick="openLightbox('image', './../../New_Imgs/IMG-20250424-WA0034.jpg', 'Private Giftun Island - Crystal Clear Waters')">
+                        <img src="./../../New_Imgs/IMG-20250424-WA0034.jpg" alt="Private Giftun Island - Crystal Clear Waters" id="img_two">
                     </div>
+                    
+                    <!-- Two small images container (40% width, stacked vertically) -->
                     <div class="img_box">
-                        <img src="./../../IMG/Gallery_imgs/Classical Tour Egypt.jpg" alt="Umungar Island - Fish Feeding" onclick="openLightbox('image', './../../IMG/Gallery_imgs/Classical Tour Egypt.jpg', 'Umungar Island - Fish Feeding')">
-                        <img src="./../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg" alt="Umungar Island - Natural Beach" onclick="openLightbox('image', './../../IMG/Gallery_imgs/My photo to Hurgada (egypt).jpg', 'Umungar Island - Natural Beach')">
+                        <!-- First small image -->
+                        <img src="./../../New_Imgs/IMG-20250424-WA0040.jpg" alt="Private Giftun Island - Snorkeling Adventure" onclick="openLightbox('image', './../../New_Imgs/IMG-20250424-WA0040.jpg', 'Private Giftun Island - Snorkeling Adventure')" id="img_three">
+                        <!-- Second small image -->
+                        <img src="./../../New_Imgs/IMG-20250424-WA0035.jpg" alt="Private Giftun Island - Red Sea Experience" onclick="openLightbox('image', './../../New_Imgs/IMG-20250424-WA0035.jpg', 'Private Giftun Island - Red Sea Experience')" id="img_four">
                     </div>
                 </div>
             </div>
@@ -163,6 +167,16 @@
 
             <div class="about">
                 <h4>Book the private Orange Bay Island trip in Hurghada — a luxurious 4-hour tour to a tropical paradise with complete freedom, privacy, and comfort.</h4>
+<div class="trip-switcher">
+    <button class="trip-btn active" id="speedboat-btn" onclick="location.href='./private_orange.html'">
+        <i class="fa-solid fa-ship"></i>
+        speed boat trip
+    </button>
+    <button class="trip-btn" id="yacht-btn" onclick="location.href='./private_giftun.html'">
+        <i class="fa-solid fa-anchor"></i>
+        yacht trip
+    </button>
+</div>
             </div>
 
             <div class="price-box">
@@ -172,7 +186,7 @@
                     <h2>Booking</h2>
                 </div>
                 <div class="btn-check">
-                    <button>Check Availability</button>
+                    <button id="check">Check Availability</button>
                 </div>
                 <div class="pay_later">
                     <i class="fa-solid fa-credit-card"></i>
@@ -438,15 +452,16 @@
                     <div class="info">
                         <div class="i_info">
                             <i class="fa-solid fa-location-dot"></i>
-                            <h3> Rua Manuel Rodrigues Abreu, 26, 3800-693 Aveiro, Portugal</h3>
+                            <h3> Shery St., Al Hadaba, Hurghada, Red Sea Governorate, Egypt  
+Coordinates: 27.220442, 33.833466</h3>
                         </div>
                         <div class="i_info">
                             <i class="fa-solid fa-phone"></i>
-                            <h3> +351 234 567 890</h3>
+                            <h3> +201100077315</h3>
                         </div>
                         <div class="i_info">
                             <i class="fa-solid fa-envelope"></i>
-                            <h3> 2RzLb@example.com</h3>
+                            <h3> younesyours7@gmail.com</h3>
                         </div>
                     </div>
                     <div class="info">
