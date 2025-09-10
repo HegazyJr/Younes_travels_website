@@ -115,7 +115,7 @@
       font-size: 0.97em; 
       color: #888; 
       margin-bottom: 0.2rem; 
-      margin-top: -0.7rem; 
+      margin-top: 0.7rem; 
     }
     
     /* زر الإرسال */
@@ -134,6 +134,25 @@
     }
     .submit-btn:hover { 
       background: #134b70; 
+    }
+    .submit-btn-secend { 
+      background: #134b70; 
+      color: #fff; 
+      border: none; 
+      position: relative;
+      left: 50% ;
+      transform: translateX(-50%);
+      border-radius: 8px; 
+      padding: 1rem 0; 
+      font-size: 1.15rem; 
+      font-weight: 800; 
+      cursor: pointer; 
+      margin-top: 0.7rem; 
+      transition: background 0.18s; 
+      width: 60%; 
+    }
+    .submit-btn-secend:hover { 
+      background: #ff9800; 
     }
     
     /* رسالة التأكيد */
@@ -161,6 +180,9 @@
         border-radius: 0; 
         z-index: 100; 
         margin: 0; 
+      }
+      .secend{
+        position: relative;
       }
       form { 
         padding-bottom: 4.5rem; 
@@ -201,12 +223,44 @@
         <label for="trip">Trip Name / Destination</label>
         <select id="trip" name="trip" required>
           <option value="" disabled selected hidden>Select your trip</option>
-          <option>Giftun Island</option>
-          <option>Paradise Island</option>
-          <option>Orange Bay</option>
-          <option>Dolphin House</option>
+          <!-- add all tours  -->
+          <!-- cairo tour -->
+          <option>Cairo Day Tour</option>
+          <!-- dolphin house -->
+          <option>Dolphin House Snorkeling Trip</option>
+          <!-- sharm el naga -->
+          <option>Sharm El Naga Snorkeling Trip</option>
+          <!-- fishing  -->
+          <option>Fishing Trip</option>
+          <!-- Gouna -->
+          <option>El Gouna Trip</option>
+          <!-- private hola  -->
+          <option>Private Hola Trip</option>
+          <!-- desert safari  -->
           <option>Desert Safari</option>
-          <option>Luxor Day Trip</option>
+          <!-- quad bike  -->
+          <option>Quad Bike Safari</option>
+          <!-- hola island  -->
+          <option>Hola Island Trip</option>
+          <!-- magawish  -->
+          <option>Magawish Island Trip</option>
+          <!-- luxor -->
+          <option>Luxor Day Tour</option>
+          <!-- orange -->
+          <option>Orange Bay Snorkeling Trip</option>
+          <!-- paradise -->
+          <option>Paradise Island Trip</option>
+          <!-- private cairo and dolphin and giftun and hola and luxor and orange -->
+          <option>Private Cairo Day Tour</option>
+          <option>Private Dolphin House Snorkeling Trip</option>
+          <option>Private Giftun Island Trip</option>
+          <option>Private Hola Island Trip Two</option>
+          <option>Private Luxor Day Tour</option>
+          <option>Private Orange Bay Snorkeling Trip</option>
+          <!-- private paradise 2  -->
+          <option>Private Paradise Island Trip Two</option>
+          <!-- private sea scope -->
+          <option>Private Sea Scope Trip</option>
         </select>
       </div>
       
@@ -241,6 +295,7 @@
           <option>Safaga</option>
           <option>Desert pickup</option>
         </select>
+        
         <div class="note">Transfer from these areas is included in the price.</div>
       </div>
       <!-- Translator Language -->
@@ -255,9 +310,11 @@
         <div class="form-section-title">📝 Additional Info</div>
         <label for="specialRequests">Special Requests</label>
         <textarea id="specialRequests" name="specialRequests" rows="2" placeholder="Any special requests? (optional)"></textarea>
+        
         <label><input type="checkbox" name="terms" required> I agree to the terms and cancellation policy</label>
       </div>
       <button type="submit" class="submit-btn">Book Now</button>
+      <button type="button" class="submit-btn-secend" onclick="window.location.href='./../../index.html'">Back to home</button>
       <div id="confirmation" class="confirmation" style="display:none;">Your booking has been submitted successfully. We will contact you shortly via WhatsApp.</div>
     </form>
   </div>
@@ -289,6 +346,23 @@
       setTimeout(function(){ document.getElementById('confirmation').style.display = 'none'; }, 7000);
       this.reset();
       renderPhoneFields();
+    };
+    document.getElementById('bookingForm').onsubmit = function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      let message = 'New Booking Request:%0A';
+      formData.forEach((value, key) => {
+        message += `${key}: ${value}%0A`;
+      });
+      const whatsappNumber = '+201100077315';
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+      window.open(whatsappURL, '_blank');
+      document.getElementById('confirmation').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(function(){ document.getElementById('confirmation').style.display = 'none'; }, 7000);
+      this.reset();
+      renderPhoneFields();
+      console.log(message);
     };
   </script>
 </body>
