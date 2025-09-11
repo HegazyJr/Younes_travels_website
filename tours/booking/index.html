@@ -7,6 +7,7 @@
   <!-- ملفات CSS الرئيسية -->
   <link rel="stylesheet" href="./../../style.css">
   <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" href="./../../IMG/WhatsApp_Image_2025-04-24_at_00.43.15_b0a96fa9-removebg-preview (2).png">
   <!-- مكتبة Font Awesome للأيقونات -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   
@@ -268,7 +269,7 @@
       <div class="form-section">
         <div class="form-section-title">📆 Date & Time</div>
         <label for="tripDate">Trip Date</label>
-        <input type="date" id="tripDate" name="tripDate" required>
+        <input type="date" id="tripDate" name="tripDate" required min="">
         <label for="tripTime">Trip Time</label>
         <select id="tripTime" name="tripTime" required>
           <option value="" disabled selected hidden>Select time</option>
@@ -319,6 +320,11 @@
     </form>
   </div>
   <script>
+    const dateInput = document.getElementById('tripDate');
+  
+  // Set min to today's date
+  const today = new Date().toISOString().split('T')[0];
+  dateInput.min = today;
     // Dynamic phone fields for adults
     function renderPhoneFields() {
       const adults = parseInt(document.getElementById('adults').value) || 1;
