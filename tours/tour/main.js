@@ -6,6 +6,14 @@ document.getElementById('whatsapp')?.addEventListener("click", function () {
     const message = "مرحباً! أريد الاستفسار عن الجولات السياحية";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
+    
+});
+document.getElementById('whatsapp-m')?.addEventListener("click", function () {
+    const phoneNumber = "+201100077315";
+    const message = "مرحباً! أريد الاستفسار عن الجولات السياحية";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+    console.log("clicked")
 });
 document.getElementById('email').addEventListener("click", function () {
     window.location.href = "https://mail.google.com/mail/?view=cm&fs=1&to=younestours7@gmail.com&su=SUBJECT&body=MESSAGE"

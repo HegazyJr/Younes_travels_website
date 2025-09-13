@@ -85,9 +85,9 @@
                     <i class="fa-brands fa-whatsapp"></i>
                 </div>
             </div>
-            <div class="mobile" >
-                <div class="whatsapp-m" id="whatsapp">
-                    <i class="fa-brands fa-whatsapp" ></i>
+            <div class="mobile">
+                <div class="whatsapp-m" id="whatsapp-m">
+                    <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
                 </div>
                 <div class="email-m">
                     <i class="fa-solid fa-envelope"></i>
@@ -588,7 +588,7 @@ if (header) {
     };
 }function exit() {
     document.getElementById('pop').style="width: 0%;overflow:hidden"
-    document.getElementById('container').style = "filter:blur(0px);"
+    // document.getElementById('container').style = "filter:blur(0px);"
     setTimeout(() => {
         document.getElementById('logo_menu').style = "display: none;";
         document.getElementById('links_menu').style = "display: none;";

@@ -8,7 +8,14 @@
         box-sizing: border-box;
     }
 
-*/ footer {
+*/
+header{
+    position: absolute;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+}
+footer {
   position: relative;
   left: 50%;
   width: 100vw;

@@ -302,7 +302,7 @@ document.getElementById('p_magawish')?.addEventListener("click", function () {
     window.location.href = "./tour/magawish.html";
 });
 document.getElementById('p_paradise')?.addEventListener("click", function () {
-    window.location.href = "./tour/private_paradise.html";
+    window.location.href = "./tour/Private_Paradise.html";
 });
 document.getElementById('p_dolphin')?.addEventListener("click", function () {
     window.location.href = "./tour/private_dolphin.html";
