@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <!-- Homepage -->
   <url>
-    <loc>https://hegazyjr.github.io/Younes_travels_website/</loc>
+    <loc>https://younestours.com/</loc>
     <lastmod>2025-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,93 +10,224 @@
 
   <!-- Main Pages -->
   <url>
-    <loc>https://hegazyjr.github.io/Younes_travels_website/about.html</loc>
+    <loc>https://younestours.com/about.html</loc>
     <lastmod>2025-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hegazyjr.github.io/Younes_travels_website/gallery.html</loc>
+    <loc>https://younestours.com/gallery.html</loc>
     <lastmod>2025-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Tours Section -->
+  <!-- Tours Section (Main Hub) -->
   <url>
-    <loc>https://hegazyjr.github.io/Younes_travels_website/tours/</loc>
+    <loc>https://younestours.com/tours/</loc>
     <lastmod>2025-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://hegazyjr.github.io/Younes_travels_website/tours/booking/</loc>
+    <loc>https://younestours.com/tours/booking/</loc>
     <lastmod>2025-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Section -->
+  <!-- Blog Section (Main Hub) -->
   <url>
-    <loc>https://hegazyjr.github.io/Younes_travels_website/blogs/</loc>
+    <loc>https://younestours.com/blogs/</loc>
     <lastmod>2025-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Detailed Blog Posts -->
   <url>
-    <loc>https://hegazyjr.github.io/Younes_travels_website/blogs/blog-pages/index--cairo.html</loc>
+    <loc>https://younestours.com/blogs/blog-pages/index--cairo.html</loc>
     <lastmod>2025-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hegazyjr.github.io/Younes_travels_website/blogs/blog-pages/index--egyptian-food.html</loc>
+    <loc>https://younestours.com/blogs/blog-pages/index--egyptian-food.html</loc>
     <lastmod>2025-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hegazyjr.github.io/Younes_travels_website/blogs/blog-pages/index--luxor-attractions.html</loc>
+    <loc>https://younestours.com/blogs/blog-pages/index--luxor-attractions.html</loc>
     <lastmod>2025-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
 
-  <!-- Recommended Tours -->
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/el-gouna-day-trip</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/hurghada-city-tour</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/dolphin-house-trip</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/sharm-el-naga-tour</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- Recommended Public Day Trips (Hurghada Focus) -->
+  <url>
+    <loc>https://younestours.com/tours/gouna.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/city.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/dolphin.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/elnaga.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Public Coastal Tours -->
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/hala-hala-island</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/orange-bay</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/paradise-island</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/dolphin-house-adventure</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/royal-sea-scope-submarine</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url>
+    <loc>https://younestours.com/tours/index.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/Orange.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/paradise.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/dolphin.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/private_sea_scope.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- Private Coastal Tours -->
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/private-hola-hola-yacht</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/private-paradise-island</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/private-magawish-island</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/private-dolphin-house</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/giftun-island-escape</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/abu-menkar-island</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/private-sharm-el-naga</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/fishing-expedition</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/private-el-gouna-tour</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/private-hurghada-city</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url>
+    <loc>https://younestours.com/tours/private_hola.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/Private_paradise.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/private-magawish-island</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/private_dolphin.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/Private-Giftun.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/Umungar.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/hola.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/fishing.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/private_paradise_two.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
-  <!-- Historical Tours -->
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/luxor-group-tour</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/private-luxor-experience</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/cairo-group-tour</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/private-cairo-experience</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- Historical Tours (Cairo & Luxor) -->
+  <url>
+    <loc>https://younestours.com/tours/luxor.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/private_luxor.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/cairo.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/private_cairo.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-  <!-- Safari Tours -->
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/super-safari-quad</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/complete-desert-adventure</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/morning-desert-adventure</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hegazyjr.github.io/Younes_travels_website/tours/morning-desert-safari</loc><lastmod>2025-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Desert Safari Tours -->
+  <url>
+    <loc>https://younestours.com/tours/savari.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/savari_three.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/morning.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://younestours.com/tours/super_savari.html</loc>
+    <lastmod>2025-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
 </urlset>
