@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Tour Not Available</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .text{
+            text-align: center;
+        }
+        h1 {
+            color: #1faf54;
+            font-size: 22px;
+            width: 800px;
+            padding: 15px;
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            
+        }
+        .whats_btn {
+            background-color: #25D366;
+            color: white;
+            /* display: flex; */
+            align-items: center;
+            i {
+                margin-right: 10px;
+            }
+            transition: 0.2s ;
+            &:hover{
+                background-color:#f4f4f4;
+                color: #25D366;
+
+            }
+
+        }
+        .back_btn {
+            transition: 0.2s ;
+            &:hover{
+                background-color:#f4f4f4;
+                color: #1faf54;
+
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            <h1>"Please note that the prices for this trip are subject to continuous change depending on current conditions.
+For booking and inquiries, kindly contact us via WhatsApp.
+Please note that this is a private trip only."</h1>
+        <div class="btns">
+            <button class="whats_btn" onclick="window.open('https://wa.me/2010123456789', '_blank')"><i class="fa-brands fa-whatsapp"></i><span>whatsapp</span></button>
+            <button class="back_btn" onclick="history.back()"><h3><</h3></button>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
